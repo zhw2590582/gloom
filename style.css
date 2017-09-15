@@ -241,6 +241,7 @@ img {
 
 /* queries */
 /* base */
+/* wrapper */
 #wrapper {
   position: relative;
   height: auto !important;
@@ -277,7 +278,7 @@ img {
 /* content */
 #content {
   position: relative;
-  padding-left: 245px; }
+  padding-left: 490px; }
 
 /* footer */
 /* plugins */

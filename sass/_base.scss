@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /* base */
-
 $header_w: 245px;
 $topbar_h: 30px;
 
-#wrapper{
-  position:relative;
-  height:auto !important;
-  height:100%;
-  min-height:100%;
-  min-width:1000px;
+/* wrapper */
+#wrapper {
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  min-width: 1000px;
   background: url('./images/default/bg1.jpg');
 }
 
 /* header */
-#header{
+#header {
   position: fixed;
   left: 0;
   top: 0;
@@ -22,46 +22,36 @@ $topbar_h: 30px;
   z-index: 1;
   width: $header_w;
   height: 100%;
-
   /* topbar */
-  .topbar{
+  .topbar {
     height: $topbar_h;
-    .skin{
-      a{
 
-      }
+    .skin {
+      a {}
     }
-    .sidebar_switcher{
 
-    }
+    .sidebar_switcher {}
   }
-
   /* logo */
-  .logo{
-    .logo_img{
+  .logo {
+    .logo_img {}
 
-    }
-    .blog_name{
-
-    }
+    .blog_name {}
   }
-
   /* menu */
-  .menu{
-    .wrapper{
-      .list{
-        .menu-item{
-          &.menu-item-has-children{
-
-          }
+  .menu {
+    .wrapper {
+      .list {
+        .menu-item {
+          &.menu-item-has-children {}
         }
       }
     }
   }
 }
-
 /* sidebar */
-#sidebar{
+
+#sidebar {
   position: fixed;
   left: $header_w;
   top: 0;
@@ -70,14 +60,12 @@ $topbar_h: 30px;
   width: $header_w;
   height: 100%;
 }
-
 /* content */
-#content{
+
+#content {
   position: relative;
-  padding-left: $header_w;
+  padding-left: $header_w * 2;
 }
-
 /* footer */
-#footer{
 
-}
+#footer {}
