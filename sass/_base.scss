@@ -76,16 +76,22 @@ $topbar_h: 35px;
         .menu-item {
           list-style: none;
           a{
+            display: block;
             font-size: 16px;
-            padding: 10px 20px;
+            padding: 10px 0 10px 20px;
             color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
           &.menu-item-has-children {
             .sub-menu{
+              padding: 5px 0;
+              background: #666;
               .menu-item{
                 a{
                   font-size: 14px;
-                  padding: 5px 10px;
+                  padding: 5px 0 5px 30px;
                 }
               }
             }
