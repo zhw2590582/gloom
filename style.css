@@ -265,6 +265,21 @@ img {
     height: 30px; }
 
 /* sidebar */
+#sidebar {
+  position: fixed;
+  left: 245px;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 245px;
+  height: 100%; }
+
+/* content */
+#content {
+  position: relative;
+  padding-left: 245px; }
+
+/* footer */
 /* plugins */
 
 /*# sourceMappingURL=style.css.map */

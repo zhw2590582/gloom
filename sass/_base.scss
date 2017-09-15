@@ -62,5 +62,22 @@ $topbar_h: 30px;
 
 /* sidebar */
 #sidebar{
+  position: fixed;
+  left: $header_w;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: $header_w;
+  height: 100%;
+}
+
+/* content */
+#content{
+  position: relative;
+  padding-left: $header_w;
+}
+
+/* footer */
+#footer{
 
 }

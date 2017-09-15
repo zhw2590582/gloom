@@ -26,7 +26,7 @@ $logo = cs_get_option( 'i_logo' );
 	<?php }?>
 
 	<!-- wrapper 开始-->
-	<div class="wrapper">
+	<div id="wrapper">
 
 		<!-- header 开始-->
 		<?php if (!is_mobile()) { ?>
@@ -82,6 +82,10 @@ $logo = cs_get_option( 'i_logo' );
 				<?php wp_nav_menu(array('theme_location' => 'header', 'container' => 'div','depth' => 2, 'container_class' => 'wrapper', 'menu_class' => 'list clearfix')); ?>
 			</div>
 		</nav>
+
+		<div id="sidebar">
+			
+		</div>
 
 		<!-- content 开始-->
 		<section id="content" name="content">
