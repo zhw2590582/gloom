@@ -1,2 +1,16 @@
 @charset "UTF-8";
 /* base */
+
+$header_w: 245px;
+
+/* header */
+#header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: $header_w;
+  height: 100%;
+  background: #000;
+}
