@@ -71,15 +71,18 @@ $topbar_h: 35px;
 
   /* menu */
   .menu {
-    .wrapper {
-      padding: 0 20px;
+    .menu-wrapper {
       .list {
         .menu-item {
           list-style: none;
           font-size: 18px;
-          text-align: center;
-          padding: 0 20px;
-          &.menu-item-has-children {}
+          padding: 10px 20px;
+          a{
+            color: #fff;
+          }
+          &.menu-item-has-children {
+
+          }
         }
       }
     }
