@@ -167,6 +167,78 @@ template {
 [hidden] {
   display: none; }
 
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  transition: all 0.1s; }
+
+img {
+  max-width: 100%; }
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.fl {
+  float: left !important; }
+
+.fr {
+  float: right !important; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.text-hide {
+  background: 0 0;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none; }
+
+.text-l {
+  text-align: left; }
+
+.text-r {
+  text-align: right; }
+
+.text-c {
+  text-align: center; }
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.text-clip {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap; }
+
+.text-break {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  word-wrap: break-word; }
+
+.hand {
+  cursor: pointer; }
+
 /* queries */
 /* base */
 /* header */
@@ -178,7 +250,13 @@ template {
   z-index: 1;
   width: 245px;
   height: 100%;
-  background: #000; }
+  background: #000;
+  /* topbar */
+  /* logo */
+  /* menu */ }
+  #header .topbar {
+    height: 30px;
+    background: #111; }
 
 /* plugins */
 
