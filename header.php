@@ -34,9 +34,7 @@ $logo = cs_get_option( 'i_logo' );
 							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
 							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
 						</div>
-						<div class="fr clearfix">
-							切换
-						</div>
+						<div class="fr sidebar_switcher hand on"></div>
 					</div>
 					<div class="logo">
 						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
