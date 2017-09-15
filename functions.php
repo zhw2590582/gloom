@@ -655,8 +655,17 @@ add_filter('pre_option_link_manager_enabled', '__return_true');
 
 /* 注册小工具 */
 register_sidebar(array(
-    'name' => __('Sidebar', 'island') ,
-    'description' => __('显示在右侧边栏', 'island') ,
+    'name' => __('Widget1', 'island') ,
+    'description' => __('小工具1', 'island') ,
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5 class="widget-title"><span>',
+    'after_title' => '</span></h5>',
+));
+
+register_sidebar(array(
+    'name' => __('Widget2', 'island') ,
+    'description' => __('小工具2', 'island') ,
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h5 class="widget-title"><span>',
