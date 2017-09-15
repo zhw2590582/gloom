@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";AACA,QAAQ;ACAR,aAAa",
-"sources": ["../sass/skin03_paper.scss","../sass/_mixin.scss"],
-"names": [],
-"file": "skin03_paper.css"
-}

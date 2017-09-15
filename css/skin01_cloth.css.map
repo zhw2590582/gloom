@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";AACA,QAAQ;ACAR,aAAa",
-"sources": ["../sass/skin01_cloth.scss","../sass/_mixin.scss"],
-"names": [],
-"file": "skin01_cloth.css"
-}
