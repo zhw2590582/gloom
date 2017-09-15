@@ -36,11 +36,11 @@ $logo = cs_get_option( 'i_logo' );
 						</div>
 						<div class="fr sidebar_switcher hand on"></div>
 					</div>
-					<div class="logo">
+					<div class="logo text-c">
 						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
 							<img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
 						</a>
-						<p class="blog_name"><?php bloginfo('name'); ?></p>
+						<p class="blog_name f16"><?php bloginfo('name'); ?></p>
 					</div>
 					<nav class="menu">
 						<?php wp_nav_menu(array(

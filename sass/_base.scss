@@ -30,7 +30,7 @@ $topbar_h: 35px;
   /* topbar */
   .topbar {
     height: $topbar_h;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 5px;
     background: #888;
     .skin {
@@ -54,12 +54,21 @@ $topbar_h: 35px;
       }
     }
   }
+
   /* logo */
   .logo {
-    .logo_img {}
+    margin-bottom: 30px;
+    .logo_img {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0 15px;
+    }
 
-    .blog_name {}
+    .blog_name {
+      padding: 0 15px;
+    }
   }
+
   /* menu */
   .menu {
     .wrapper {
@@ -71,8 +80,8 @@ $topbar_h: 35px;
     }
   }
 }
-/* sidebar */
 
+/* sidebar */
 #sidebar {
   position: fixed;
   left: $header_w;
@@ -86,8 +95,8 @@ $topbar_h: 35px;
 
   }
 }
-/* content */
 
+/* content */
 #content {
   position: relative;
   padding-left: $header_w * 2;
@@ -95,6 +104,6 @@ $topbar_h: 35px;
 
   }
 }
-/* footer */
 
+/* footer */
 #footer {}
