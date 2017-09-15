@@ -43,8 +43,10 @@ $profile_content = cs_get_option( 'i_profile_content' );
         </aside>
       <?php }?>
 
-        <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Widget1') ) : else : ?>
-        <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Widget2') ) : else : ?>
+      <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Widget1') ) : else : ?>
+      <?php endif; ?>
+
+      <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Widget2') ) : else : ?>
       <?php endif; ?>
     </div>
   </div>
