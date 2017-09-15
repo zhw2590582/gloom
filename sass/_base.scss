@@ -83,8 +83,12 @@ $topbar_h: 35px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-
             &:hover{
+              background: #666;
+            }
+          }
+          &.current-menu-item{
+            a {
               background: #666;
             }
           }
@@ -97,7 +101,7 @@ $topbar_h: 35px;
                   font-size: 12px;
                   padding: 8px 0 8px 30px;
                   &:hover{
-                    background: #666;
+                    background: #777;
                   }
                 }
               }

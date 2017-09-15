@@ -322,6 +322,8 @@ img {
       white-space: nowrap; }
       #header .menu .menu-wrapper .list .menu-item a:hover {
         background: #666; }
+    #header .menu .menu-wrapper .list .menu-item.current-menu-item a {
+      background: #666; }
     #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu {
       padding: 5px 0;
       background: #666; }
@@ -329,7 +331,7 @@ img {
         font-size: 12px;
         padding: 8px 0 8px 30px; }
         #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a:hover {
-          background: #666; }
+          background: #777; }
 
 /* sidebar */
 #sidebar {
