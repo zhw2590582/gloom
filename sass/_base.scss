@@ -72,8 +72,13 @@ $topbar_h: 35px;
   /* menu */
   .menu {
     .wrapper {
+      padding: 0 20px;
       .list {
         .menu-item {
+          list-style: none;
+          font-size: 18px;
+          text-align: center;
+          padding: 0 20px;
           &.menu-item-has-children {}
         }
       }

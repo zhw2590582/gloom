@@ -310,6 +310,13 @@ img {
       padding: 0 15px; }
     #header .logo .blog_name {
       padding: 0 15px; }
+  #header .menu .wrapper {
+    padding: 0 20px; }
+    #header .menu .wrapper .list .menu-item {
+      list-style: none;
+      font-size: 18px;
+      text-align: center;
+      padding: 0 20px; }
 
 /* sidebar */
 #sidebar {
