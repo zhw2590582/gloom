@@ -312,10 +312,13 @@ img {
       padding: 0 15px; }
   #header .menu .menu-wrapper .list .menu-item {
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 20px; }
     #header .menu .menu-wrapper .list .menu-item a {
       color: #fff; }
+    #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item {
+      font-size: 14px;
+      padding: 5px 10px; }
 
 /* sidebar */
 #sidebar {
