@@ -32,11 +32,8 @@ $notice_text = cs_get_option( 'i_notice_text' );
 $notice_link = cs_get_option( 'i_notice_link' );
 ?>
 
-				<a href="#top" class="post-top"></a>
-			</div>
-				<!-- content-inner 结束-->
+			<a href="#top" class="post-top"></a>
 		</div>
-		<!-- container 结束-->
 	</section>
 	<!-- content 结束-->
 
