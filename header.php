@@ -30,6 +30,9 @@ $logo = cs_get_option( 'i_logo' );
 					<div class="topbar clearfix">
 						<div class="skin fl clearfix">
 							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
 						</div>
 						<div class="fr clearfix">
 							切换

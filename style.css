@@ -264,10 +264,16 @@ img {
   /* menu */ }
   #header .topbar {
     height: 35px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 5px;
+    background: #888; }
     #header .topbar .skin a {
       display: inline-block;
-      margin-right: 15px; }
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+      border-radius: 5px;
+      background: #666; }
 
 /* sidebar */
 #sidebar {
@@ -286,6 +292,25 @@ img {
 
 /* footer */
 /* plugins */
+#mouse-tooltip {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  pointer-events: none; }
+
+.mouse-tooltip {
+  max-width: 300px;
+  font-size: small;
+  padding: 8px 12px;
+  color: #fff;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px; }
+
+.mouse-tooltip--hidden {
+  display: none !important; }
+
 .m_show {
   display: none; }
 
