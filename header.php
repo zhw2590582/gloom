@@ -46,6 +46,7 @@ $logo = cs_get_option( 'i_logo' );
 						<?php wp_nav_menu(array(
 							'theme_location' => 'header',
 							'depth' => 2,
+							'container_class' => 'menu-wrapper',
 							'menu_class' => 'list clearfix'
 						)); ?>
 					</nav>

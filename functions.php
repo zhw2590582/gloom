@@ -433,7 +433,7 @@ if (!function_exists('island_setup')):
         add_image_size('large-image', 9999, 9999, false);
         /* 启用头部菜单 */
         register_nav_menus(array(
-            'header' => __('main', 'island') ,
+            'header' => __('顶部菜单', 'island') ,
         ));
         /* 启动主题可利用的语言 */
         load_theme_textdomain('island', get_template_directory() . '/languages');
