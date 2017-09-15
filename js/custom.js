@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 
   // 切换边栏
   $(".sidebar_switcher").click(function() {
-    $(this).toggleclass('on');
+    $(this).toggleClass('on');
   });
 
   //滚动函数
