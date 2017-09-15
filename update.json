@@ -1,0 +1,38 @@
+{
+  "Name": "pluto",
+  "Version": "2.0.3",
+  "Author": "老赵",
+  "Url": "http://zhw-island.com",
+  "Switch":"on",
+  "Notice": "描述",
+  "Script": {
+    "1": "<script type='text/javascript'>",
+      "2": "jQuery(document).ready(function($) {",
+        "3": "if (jQuery('.oldVer').html() == '1.0.0') {",
+          "4": "alert('你的主题版本是公测版，将不再提供维护，请注意保存数据！');",
+          "5": "setCookie('blacklist','on','d30');",
+        "6": "}",
+      "7": "});",
+    "8": "</script>"
+  },
+  "Blacklist": {
+    "1": "172",
+    "2": "192",
+    "3": "localhost",
+    "4": "winrss"
+  },
+  "Update": {
+    "2.0.3": {
+      "1": "更新兼容性问题和样式问题"
+    },
+    "2.0.1": {
+      "1": "更新字体样式"
+    },
+    "2.0.0": {
+      "1": "发布正式版本"
+    },
+    "1.0.0": {
+      "1": "发布公测版本"
+    }
+  }
+}
