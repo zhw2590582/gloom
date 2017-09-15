@@ -57,7 +57,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 	<div class="footer-end">
 		<div class="container">
 			<?php if( ! empty( $copyright ) ){ echo ''.$copyright.'';}else{echo'&copy; '.date("Y").' All Rights Reserved.';} ?>
-			<a href="http://zhw-island.com/" target="_blank"> Theme by Pluto</a>
+			<a href="http://zhw-island.com/" target="_blank"> Theme by Gloom</a>
 			<?php if( ! empty( $tongji ) ){ echo '<script>'.$tongji.'</script>';}else{echo' ';} ?>
 		</div>
 	</div>

@@ -299,9 +299,9 @@ function Init_theme($oldthemename) {
 	global $pagenow;
 	if ('themes.php' == $pagenow && isset($_GET['activated'])) {
 		global $verify;
-		$pluto_key = cs_get_customize_option( 'pluto_key' );
-		$verify = get_option('pluto_license_key');
-		if (!empty($verify) || $pluto_key == 'zhw2590582' ) {
+		$Gloom_key = cs_get_customize_option( 'Gloom_key' );
+		$verify = get_option('Gloom_license_key');
+		if (!empty($verify) || $Gloom_key == 'zhw2590582' ) {
 			wp_redirect(admin_url('admin.php?page=cs-framework'));
 			exit;
 		} else {
@@ -366,7 +366,7 @@ function my_admin_enqueue_scripts() {
 function my_admin_print_footer_scripts() {
     $dismissed = explode(',', (string)get_user_meta(get_current_user_id() , 'dismissed_wp_pointers', true));
     if (!in_array('my_pointer', $dismissed)):
-        $pointer_content = '<h3>你好！验证 pluto 主题成功</h3>';
+        $pointer_content = '<h3>你好！验证 Gloom 主题成功</h3>';
         $pointer_content.= '<p>主题设置从这里进入，使用中若有疑问，可以联系老赵</p>';
 ?>
         <script type="text/javascript">
@@ -399,14 +399,14 @@ function my_admin_print_footer_scripts() {
 function tie_admin_bar() {
     global $wp_admin_bar;
     global $verify;
-	  $pluto_key = cs_get_customize_option( 'pluto_key' );
-    $verify = get_option('pluto_license_key');
-    if (!empty($verify) || $pluto_key == 'zhw2590582') {
+	  $Gloom_key = cs_get_customize_option( 'Gloom_key' );
+    $verify = get_option('Gloom_license_key');
+    if (!empty($verify) || $Gloom_key == 'zhw2590582') {
         if (current_user_can('switch_themes')) {
             $wp_admin_bar->add_menu(array(
                 'parent' => 0,
                 'id' => 'mpanel_page',
-                'title' => 'pluto 主题选项',
+                'title' => 'Gloom 主题选项',
                 'href' => admin_url('admin.php?page=cs-framework')
             ));
         }

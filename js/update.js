@@ -7,7 +7,7 @@
     var that = this;
     jQuery.ajax({
       type: "GET",
-      url: "https://raw.githubusercontent.com/zhw2590582/pluto/master/update.json",
+      url: "https://raw.githubusercontent.com/zhw2590582/gloom/master/update.json",
       dataType: "json",
       success: function(update) {
         that._name = update.Name;

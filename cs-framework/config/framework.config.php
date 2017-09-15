@@ -6,9 +6,9 @@
 // ===============================================================================================
 
 global $verify;
-$pluto_key = cs_get_customize_option( 'pluto_key' );
-$verify = get_option('pluto_license_key');
-if (!empty($verify) || $pluto_key == 'zhw2590582' ) {
+$Gloom_key = cs_get_customize_option( 'Gloom_key' );
+$verify = get_option('Gloom_license_key');
+if (!empty($verify) || $Gloom_key == 'zhw2590582' ) {
    $settings           = array(
       'menu_title'      => '主题选项',
       'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
