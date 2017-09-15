@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AACA,QAAQ;ACAR,aAAa",
+"sources": ["../sass/skin02_black.scss","../sass/_mixin.scss"],
+"names": [],
+"file": "skin02_black.css"
+}
