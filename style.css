@@ -311,7 +311,7 @@ img {
     #header .logo .blog_name {
       padding: 0 15px; }
   #header .menu .menu-wrapper .list .menu-item {
-    list-style-type: none; }
+    list-style: none; }
     #header .menu .menu-wrapper .list .menu-item a {
       display: block;
       font-size: 16px;
@@ -323,11 +323,9 @@ img {
     #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu {
       padding: 5px 0;
       background: #666; }
-      #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item {
-        list-style-type: disc; }
-        #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
-          font-size: 14px;
-          padding: 7px 0 7px 30px; }
+      #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
+        font-size: 14px;
+        padding: 7px 0 7px 30px; }
 
 /* sidebar */
 #sidebar {

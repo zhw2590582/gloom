@@ -74,7 +74,7 @@ $topbar_h: 35px;
     .menu-wrapper {
       .list {
         .menu-item {
-          list-style-type: none;
+          list-style: none;
           a{
             display: block;
             font-size: 16px;
@@ -89,7 +89,6 @@ $topbar_h: 35px;
               padding: 5px 0;
               background: #666;
               .menu-item{
-                list-style-type: disc;
                 a{
                   font-size: 14px;
                   padding: 7px 0 7px 30px;
