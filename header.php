@@ -83,9 +83,7 @@ $logo = cs_get_option( 'i_logo' );
 			</div>
 		</nav>
 
-		<div id="sidebar">
-			
-		</div>
+		<?php get_sidebar(); ?>
 
 		<!-- content 开始-->
 		<section id="content" name="content">

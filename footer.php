@@ -40,9 +40,6 @@ $notice_link = cs_get_option( 'i_notice_link' );
 	</section>
 	<!-- content 结束-->
 
-	<?php if ($sidebar == true && !is_mobile() ) {?>
-				<?php get_sidebar(); ?>
-	<?php }?>
 	<!-- footer 开始-->
 	<footer id="footer">
 			<div class="footer-inner">
