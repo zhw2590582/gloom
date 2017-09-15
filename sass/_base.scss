@@ -75,16 +75,18 @@ $topbar_h: 35px;
       .list {
         .menu-item {
           list-style: none;
-          font-size: 16px;
-          padding: 10px 20px;
           a{
+            font-size: 16px;
+            padding: 10px 20px;
             color: #fff;
           }
           &.menu-item-has-children {
             .sub-menu{
               .menu-item{
-                font-size: 14px;
-                padding: 5px 10px;
+                a{
+                  font-size: 14px;
+                  padding: 5px 10px;
+                }
               }
             }
           }

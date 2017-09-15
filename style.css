@@ -311,12 +311,12 @@ img {
     #header .logo .blog_name {
       padding: 0 15px; }
   #header .menu .menu-wrapper .list .menu-item {
-    list-style: none;
-    font-size: 16px;
-    padding: 10px 20px; }
+    list-style: none; }
     #header .menu .menu-wrapper .list .menu-item a {
+      font-size: 16px;
+      padding: 10px 20px;
       color: #fff; }
-    #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item {
+    #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
       font-size: 14px;
       padding: 5px 10px; }
 
