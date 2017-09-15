@@ -320,12 +320,16 @@ img {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
+      #header .menu .menu-wrapper .list .menu-item a:hover {
+        background: #666; }
     #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu {
       padding: 5px 0;
       background: #666; }
       #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
         font-size: 14px;
-        padding: 7px 0 7px 30px; }
+        padding: 8px 0 8px 30px; }
+        #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a:hover {
+          background: #666; }
 
 /* sidebar */
 #sidebar {
