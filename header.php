@@ -20,11 +20,6 @@ $logo = cs_get_option( 'i_logo' );
 </head>
 <body <?php body_class(); ?> id="top">
 
-	<?php if (is_mobile()) { ?>
-		<!-- 微信缩略图 -->
-		<div style="display:none;"><?php the_post_thumbnail( 'medium' ); ?></div>
-	<?php }?>
-
 	<!-- wrapper 开始-->
 	<div id="wrapper">
 
@@ -34,10 +29,7 @@ $logo = cs_get_option( 'i_logo' );
 				<div class="header_inner">
 					<div class="topbar clearfix">
 						<div class="skin fl clearfix">
-							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01_cloth.css" class="with-tooltip skin-cloth" data-tooltip="布质"></a>
-							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02_black.css" class="with-tooltip skin-black" data-tooltip="暗黑"></a>
-							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin03_paper.css" class="with-tooltip skin-paper" data-tooltip="纸质"></a>
-							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin04_steam.css" class="with-tooltip skin-steam" data-tooltip="朋克"></a>
+							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
 						</div>
 						<div class="fr clearfix">
 							切换
@@ -68,11 +60,3 @@ $logo = cs_get_option( 'i_logo' );
 		<!-- content 开始-->
 		<section id="content" name="content">
 	    <div class="content_inner">
-
-	        <?php if (!is_mobile()) { ?>
-	          <!-- 分类菜单 开始-->
-	          <nav class="mianmenu m_hide">
-	              <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div','depth' => 2, 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list header-item clearfix')); ?>
-	          </nav>
-	          <!-- 分类菜单 结束-->
-	        <?php } ?>
