@@ -20,7 +20,9 @@ $topbar_h: 30px;
     height: $topbar_h;
     background: #111;
     .skin{
+      a{
 
+      }
     }
     .sidebar_switcher{
 
@@ -49,4 +51,9 @@ $topbar_h: 30px;
       }
     }
   }
+}
+
+/* sidebar */
+#sidebar{
+
 }

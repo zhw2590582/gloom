@@ -3,14 +3,7 @@ error_reporting(0);
 $keywords = cs_get_option( 'i_seo_keywords' );
 $description = cs_get_option( 'i_seo_description' );
 $favicon = cs_get_option( 'i_favicon_icon' );
-$topbar = cs_get_option( 'i_topbar' );
-$search = cs_get_option( 'i_search' );
-$login = cs_get_option( 'i_login' );
-$qrPay = cs_get_option( 'i_qrPay' );
-$qrPay_btn = cs_get_option( 'i_qrPay_btn' );
-$qrPay_icon = cs_get_option( 'i_qrPay_icon' );
-$qrPay_img = cs_get_option( 'i_qrPay_img' );
-$switcher = cs_get_option( 'i_switcher' );
+$logo = cs_get_option( 'i_logo' );
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +42,7 @@ $switcher = cs_get_option( 'i_switcher' );
 
 			<div class="logo">
 				<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
-					<?php bloginfo('name'); ?>
+					<img src="<?php echo $favicon; ?>" alt="<?php bloginfo('name'); ?>">
 				</a>
 				<p class="blog_name"><?php bloginfo('name'); ?></p>
 			</div>

@@ -43,28 +43,36 @@ $options[]      = array(
 		),
 
 		// 自定义收藏站标
-        array(
-          'id'      => 'i_favicon_icon',
-          'type'    => 'upload',
-          'title'   => 'Favicon',
-		  'add_title' => '添加favicon',
-          'default' => get_template_directory_uri()."/images/default/favicon.ico",
-          'help'      => '建议制作一张400x400的png图像, 然后等比缩小到你想转换的ico尺寸,最后通过网上的工具转换成ico图标格式.',
-        ),
+    array(
+      'id'      => 'i_favicon_icon',
+      'type'    => 'upload',
+      'title'   => 'Favicon',
+      'add_title' => '添加favicon',
+      'default' => get_template_directory_uri()."/images/default/favicon.ico"
+    ),
+
+    // 自定义logo
+    array(
+      'id'      => 'i_logo',
+      'type'    => 'upload',
+      'title'   => 'Logo',
+      'add_title' => '添加logo',
+      'default' => get_template_directory_uri()."/images/default/avatar.png"
+    ),
 
     // 自定义皮肤
-        array(
-          'id'        => 'i_skin',
-          'type'      => 'select',
-          'title'     => '自定义皮肤',
-          'options'   => array(
-            'skin01_cloth' => '布质',
-            'skin02_black' => '暗黑',
-            'skin03_paper' => '纸质',
-            'skin04_steam' => '朋克',
-          ),
-          'default'   => 'i_skin01',
-        ),
+    array(
+      'id'        => 'i_skin',
+      'type'      => 'select',
+      'title'     => '自定义皮肤',
+      'options'   => array(
+        'skin01_cloth' => '布质',
+        'skin02_black' => '暗黑',
+        'skin03_paper' => '纸质',
+        'skin04_steam' => '朋克',
+      ),
+      'default'   => 'i_skin01',
+    ),
 
 
 		// 分页设置
