@@ -32,38 +32,40 @@ $notice_text = cs_get_option( 'i_notice_text' );
 $notice_link = cs_get_option( 'i_notice_link' );
 ?>
 
-			<a href="#top" class="post-top"></a>
-		</div>
-			<!-- content-inner 结束-->
-	</div>
-	<!-- container 结束-->
-</section>
-<!-- content 结束-->
-
-<?php if ($sidebar == true && !is_mobile() ) {?>
-			<?php get_sidebar(); ?>
-<?php }?>
-<!-- footer 开始-->
-<footer id="footer">
-		<div class="footer-inner">
-			<div class="container">
-	      <?php if ($footer_text && !is_mobile()) {?>
-          <div class="footer-text wb clearfix m_hide">
-              <?php echo $edit ?>
-          </div>
-	      <?php }?>
+				<a href="#top" class="post-top"></a>
 			</div>
-	</div>
-	<div class="footer-end">
-		<div class="container">
-			<?php if( ! empty( $copyright ) ){ echo ''.$copyright.'';}else{echo'&copy; '.date("Y").' All Rights Reserved.';} ?>
-			<a href="http://zhw-island.com/" target="_blank"> Theme by Gloom</a>
-			<?php if( ! empty( $tongji ) ){ echo '<script>'.$tongji.'</script>';}else{echo' ';} ?>
+				<!-- content-inner 结束-->
 		</div>
-	</div>
-</footer>
-<!-- footer 结束-->
+		<!-- container 结束-->
+	</section>
+	<!-- content 结束-->
 
+	<?php if ($sidebar == true && !is_mobile() ) {?>
+				<?php get_sidebar(); ?>
+	<?php }?>
+	<!-- footer 开始-->
+	<footer id="footer">
+			<div class="footer-inner">
+				<div class="container">
+		      <?php if ($footer_text && !is_mobile()) {?>
+	          <div class="footer-text wb clearfix m_hide">
+	              <?php echo $edit ?>
+	          </div>
+		      <?php }?>
+				</div>
+		</div>
+		<div class="footer-end">
+			<div class="container">
+				<?php if( ! empty( $copyright ) ){ echo ''.$copyright.'';}else{echo'&copy; '.date("Y").' All Rights Reserved.';} ?>
+				<a href="http://zhw-island.com/" target="_blank"> Theme by Gloom</a>
+				<?php if( ! empty( $tongji ) ){ echo '<script>'.$tongji.'</script>';}else{echo' ';} ?>
+			</div>
+		</div>
+	</footer>
+	<!-- footer 结束-->
+
+</div>
+<!-- wrapper 结束-->
 
   <?php if (!is_mobile()) { ?>
 		<!-- 浮动按钮 开始 -->
@@ -75,39 +77,6 @@ $notice_link = cs_get_option( 'i_notice_link' );
 								<i class="hand fa fa-chevron-up"></i>
 							</a>
 						</li>';
-				}?>
-
-				<?php if ($share == true) {
-					echo '<li class="item">
-                  <a href="javascript:void(0)" class="icon" title="分享">
-                      <i class="hand fa fa-share-alt"></i>
-                  </a>
-									<div class="show-box baidu-share">
-										<div class="bdsharebuttonbox show-box-inner clearfix">
-											<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">分享到QQ空间</a>
-											<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">分享到新浪微博</a>
-											<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">分享到微信</a>
-											<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">分享到豆瓣网</a>
-											<a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">分享到百度贴吧</a>
-											<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">分享到QQ好友</a>
-											<a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享">分享到一键分享</a>
-										</div>
-										<script>
-										window._bd_share_config={
-										"common":{
-													"bdSnsKey":{},
-													"bdText":"",
-													"bdMini":"2",
-													"bdPic":"",
-													"bdStyle":"0",
-													"bdSize":"16"
-												},
-												"share":{}
-											};
-											with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];
-										</script>
-									</div>
-                </li>';
 				}?>
 
 				<?php if ($comment == true && is_single ()) {

@@ -241,6 +241,14 @@ img {
 
 /* queries */
 /* base */
+#wrapper {
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  min-width: 1000px;
+  background: url("../images/default/bg1.jpg"); }
+
 /* header */
 #header {
   position: fixed;
@@ -250,13 +258,11 @@ img {
   z-index: 1;
   width: 245px;
   height: 100%;
-  background: #000;
   /* topbar */
   /* logo */
   /* menu */ }
   #header .topbar {
-    height: 30px;
-    background: #111; }
+    height: 30px; }
 
 /* sidebar */
 /* plugins */
