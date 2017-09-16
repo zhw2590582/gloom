@@ -123,16 +123,16 @@ $topbar_h: 35px;
   width: $header_w;
   height: 100%;
 
-  .sidebar_inner{
-
-  }
-
   .topbar{
     .widget_btn{
       width: 50%;
       height: $topbar_h;
       line-height: $topbar_h;
     }
+  }
+
+  .sidebar_inner{
+
   }
 }
 
