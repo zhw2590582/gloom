@@ -109,8 +109,8 @@ $topbar_h: 35px;
             .sub-menu{
               position: absolute;
               top: 0;
-              right: -$header_w;
-              width: $header_w;
+              left: $header_w;
+              width: $header_w * 2 / 3;
               display: none;
               padding: 5px 0;
               background: #666;
