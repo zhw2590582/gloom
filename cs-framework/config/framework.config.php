@@ -1,1352 +1,1830 @@
-<?php if ( ! defined( 'ABSPATH' ) ) { die; } // 不能直接访问网页.
+<?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access pages directly.
 // ===============================================================================================
 // -----------------------------------------------------------------------------------------------
-// Island 主题框架设置
+// FRAMEWORK SETTINGS
 // -----------------------------------------------------------------------------------------------
 // ===============================================================================================
-
-global $verify;
-$Gloom_key = cs_get_customize_option( 'Gloom_key' );
-$verify = get_option('Gloom_license_key');
-if (!empty($verify) || $Gloom_key == 'zhw2590582' ) {
-   $settings           = array(
-      'menu_title'      => '主题选项',
-      'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
-      'menu_slug'       => 'cs-framework',
-      'ajax_save'       => true,
-      'show_reset_all'  => false,
-      'framework_title' => ''.wp_get_theme()->display('Name').'<small class="oldVer" style="color:red;margin-left:10px">'.wp_get_theme()->display('Version').'</small>',
-   );
-} else {};
+$settings           = array(
+  'menu_title'      => 'Framework',
+  'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
+  'menu_slug'       => 'cs-framework',
+  'ajax_save'       => false,
+  'show_reset_all'  => false,
+  'framework_title' => 'Codestar Framework <small>by Codestar</small>',
+);
 
 // ===============================================================================================
 // -----------------------------------------------------------------------------------------------
-// 框架选项
+// FRAMEWORK OPTIONS
 // -----------------------------------------------------------------------------------------------
 // ===============================================================================================
 $options        = array();
 
 // ----------------------------------------
-// 常规  -
+// a option section for options overview  -
 // ----------------------------------------
 $options[]      = array(
   'name'        => 'overwiew',
-  'title'       => '常规',
+  'title'       => 'Overview',
   'icon'        => 'fa fa-star',
+
+  // begin: fields
   'fields'      => array(
 
- 		// Favicon和Logo设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => 'Favicon和Logo设置',
-		),
-
-		// 自定义收藏站标
+    // begin: a field
     array(
-      'id'      => 'i_favicon_icon',
-      'type'    => 'upload',
-      'title'   => 'Favicon',
-      'add_title' => '添加favicon',
-      'default' => get_template_directory_uri()."/images/default/favicon.ico"
-    ),
-
-    // 自定义logo
-    array(
-      'id'      => 'i_logo',
-      'type'    => 'upload',
-      'title'   => 'Logo',
-      'add_title' => '添加logo',
-      'default' => get_template_directory_uri()."/images/default/avatar.png"
-    ),
-
-    // 自定义皮肤
-    array(
-      'id'        => 'i_skin',
-      'type'      => 'select',
-      'title'     => '自定义皮肤',
-      'options'   => array(
-        'skin01_cloth' => '布质',
-        'skin02_black' => '暗黑',
-        'skin03_paper' => '纸质',
-        'skin04_steam' => '朋克',
-      ),
-      'default'   => 'i_skin01',
-    ),
-
-
-		// 分页设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '分页设置',
-		),
-
-		// 分页方式
-        array(
-          'id'         => 'i_pagination',
-          'type'       => 'radio',
-          'title'      => '分页方式',
-          'class'      => 'horizontal',
-          'options'    => array(
-            'i_ajax'   => 'ajax无限加载',
-            'i_num'   => '页码',
-          ),
-          'default'    => 'i_num',
-          'help'       => '后续增加页码显示方式',
-        ),
-
-		// 无限加载页数
-        array(
-          'id'         => 'i_ajax_num',
-          'type'       => 'number',
-          'default'    => '2',
-          'title'      => 'ajax无限加载页数',
-          'help'       => 'ajax无限加载到第几页出现下一页按钮，默认为2',
-          'after'      => ' <i class="cs-text-muted">(页)</i>',
-          'dependency' => array( 'i_pagination_i_ajax', '==', 'true' ),
-        ),
-
-		// ajax加载条颜色
-        array(
-          'id'         => 'i_ajax_color',
-          'type'       => 'color_picker',
-          'title'      => 'ajax加载条颜色',
-		  'default'    => '#60d778',
-          'dependency' => array( 'i_pagination_i_ajax', '==', 'true' ),
-        ),
-
-			// 无限加载中下一页的文字
-        array(
-          'id'         => 'i_ajax_loading',
-          'type'    => 'text',
-          'default'    => '加载更多',
-          'title'      => 'ajax无限加载中下一页的文字',
-          'dependency' => array( 'i_pagination_i_ajax', '==', 'true' ),
-        ),
-
-			// 无限加载完结的文字
-        array(
-          'id'         => 'i_ajax_end',
-          'type'       => 'text',
-          'default'    => '没有更多文章了',
-          'title'      => 'ajax无限加载完结的文字',
-          'dependency' => array( 'i_pagination_i_ajax', '==', 'true' ),
-        ),
-
-  ),
-);
-
-// ------------------------------
-// 页眉                      -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'header',
-  'title'       => '页眉',
-  'icon'        => 'fa fa-bookmark',
-  'fields'      => array(
-
- 		// 顶部
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '顶部',
-		),
-
-		// 隐藏系统工具条
-		array(
-          'id'    	  => 'i_toolbar',
-          'type'      => 'switcher',
-          'title'     => '隐藏系统工具条',
-          'label'     => '为使页面干净，建议隐藏',
-          'default'   => true,
-		  'help'      => '因为主题的页尾自带进入后台操作的按钮，建议隐藏;另你也可以进入个人资料禁用工具条',
-        ),
-
-    //Topbar
-    array(
-          'id'    	  => 'i_topbar',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => 'Topbar',
-        ),
-
-    // 开启前端换肤功能
-		array(
-          'id'    	  => 'i_switcher',
-          'type'      => 'switcher',
-          'title'     => '开启前端换肤',
-          'label'     => '一旦开启，自定义皮肤将失效，且默认显示第一套皮肤',
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-		// 搜索按钮
-		array(
-          'id'    	  => 'i_search',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '搜索按钮',
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-		// 前端登录
-		array(
-          'id'    	  => 'i_login',
-          'type'      => 'switcher',
-          'title'     => '前端登录',
-          'default'   => true,
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-    // 页眉二维码
-		array(
-          'id'    	  => 'i_qrPay',
-          'type'      => 'switcher',
-          'title'     => '页眉二维码',
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-    array(
-      'id'         => 'i_qrPay_btn',
-      'title'     => '按钮',
+      'id'      => 'text_1',
       'type'    => 'text',
-      'dependency' => array( 'i_qrPay', '==', 'true' ),
+      'title'   => 'Text',
+    ),
+    // end: a field
+
+    array(
+      'id'      => 'textarea_1',
+      'type'    => 'textarea',
+      'title'   => 'Textarea',
+      'help'    => 'This option field is useful. You will love it!',
     ),
 
     array(
-      'id'         => 'i_qrPay_icon',
-      'title'     => '图标',
-      'type'    => 'icon',
-      'dependency' => array( 'i_qrPay', '==', 'true' ),
-    ),
-
-    array(
-      'id'         => 'i_qrPay_img',
-      'title'     => '二维码',
+      'id'      => 'upload_1',
       'type'    => 'upload',
-      'dependency' => array( 'i_qrPay', '==', 'true' ),
+      'title'   => 'Upload',
+      'help'    => 'Upload a site logo for your branding.',
     ),
-
-  ),
-);
-
-// ------------------------------
-// 幻灯片                      -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'slider',
-  'title'       => '幻灯片',
-  'icon'        => 'fa fa-image',
-  'fields'      => array(
-
-		// 首页开启幻灯片
-		array(
-          'id'    	  => 'i_slider',
-          'type'      => 'switcher',
-          'title'     => '首页开启幻灯片',
-		  'help'      => '注意：幻灯片只显示在主页',
-        ),
-
-			// 自定义幻灯片
-        array(
-          'id'              => 'i_slider_custom',
-          'type'            => 'group',
-          'title'           => '自定义幻灯片',
-          'info'            => '更多详细设置方式可以浏览使用说明',
-          'button_title'    => '添加滑块',
-          'accordion_title' => '滑块',
-          'fields'          => array(
-
-			// 自定义幻灯片--标题
-          array(
-            'id'          => 'i_slider_title',
-		        'type'        => 'text',
-            'title'       => '标题',
-    			  'attributes'    => array(
-    				'placeholder' => '例如：滑块01'
-    			  )
-          ),
-
-				// 自定义幻灯片--图片
-			array(
-			  'id'      => 'i_slider_image',
-			  'type'    => 'upload',
-			  'title'   => '图片',
-			),
-
-				// 自定义幻灯片--描述
-            array(
-              'id'          => 'i_slider_text',
-			  'type'        => 'text',
-              'title'       => '描述',
-			  'attributes'    => array(
-				'placeholder' => '输入描述'
-			  )
-            ),
-
-				// 自定义幻灯片--链接
-			array(
-			  'id'            => 'i_slider_link',
-			  'type'          => 'text',
-			  'title'         => '链接',
-			  'attributes'    => array(
-				'placeholder' => 'http://...'
-			  )
-			),
-
-				// 自定义幻灯片--新标签
-			array(
-			  'id'    	  => 'i_slider_newtab',
-			  'type'      => 'switcher',
-			  'title'     => '新标签打开',
-			  'dependency'   => array( 'i_slider_link', '!=', '' ),
-			),
-
-          )
-        ),
-
-		// 切换效果
-        array(
-          'id'        => 'i_slider_effect',
-          'type'      => 'select',
-          'title'     => '切换效果',
-          'options'   => array(
-          'i_sliceDown' => 'sliceDown',
-          'i_sliceDownLeft' => 'sliceDownLeft',
-          'i_sliceUp' => 'sliceUp',
-          'i_sliceUpLeft' => 'sliceUpLeft',
-          'i_sliceUpDown' => 'sliceUpDown',
-          'i_sliceUpDownLeft' => 'sliceUpDownLeft',
-          'i_fold' => 'fold',
-          'i_fade' => 'fade',
-          'i_random' => 'random',
-          'i_slideInRight' => 'slideInRight',
-          'i_slideInLeft' => 'slideInLeft',
-          'i_boxRandom' => 'boxRandom',
-          'i_boxRain' => 'boxRain',
-          'i_boxRainReverse' => 'boxRainReverse',
-          'i_boxRainGrow' => 'boxRainGrow',
-          'i_boxRainGrowReverse' => 'boxRainGrowReverse',
-          ),
-          'default'   => 'i_boxRandom',
-        ),
-
-  ),
-);
-
-
-// ------------------------------
-// 文章                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'post',
-  'title'       => '文章',
-  'icon'        => 'fa fa-book',
-  'fields'      => array(
-
- 		// 常规设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '常规设置',
-		),
-
-
-    // 启用日期
-		array(
-          'id'    	  => 'i_post_date',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用日期',
-        ),
-
-    // 启用浏览数目
-		array(
-          'id'    	  => 'i_post_view',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用浏览数目',
-        ),
-
-    // 启用评论按钮
-		array(
-          'id'    	  => 'i_post_com',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用评论',
-        ),
-
-    // 启用分类
-		array(
-          'id'    	  => 'i_post_cat',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用分类',
-        ),
-
-    // 启用标签按钮
-		array(
-          'id'    	  => 'i_post_tag',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用标签',
-        ),
-
- 		// 启用喜欢按钮
-		array(
-          'id'    	  => 'i_post_like',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用喜欢按钮',
-        ),
-
- 		// 启用转载链接信息
-		array(
-          'id'    	  => 'i_post_link',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用转载链接',
-        ),
-
-		 // 启用相关文章
-		array(
-          'id'    	  => 'i_post_related',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用相关文章',
-        ),
-
-		// 启用Lazyload加载
-		array(
-          'id'    	  => 'i_post_image',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用Lazyload加载',
-        ),
-
-		// 随机特色图数量
-		array(
-          'id'    	  => 'i_feature_num',
-          'type'      => 'number',
-          'default'    => '5',
-          'title'     => '随机特色图数量',
-		        'help'      => '数目需与你的随机图片数目一致，否则会加载不了图片',
-        ),
-
-    // 移除修订版本
-		array(
-          'id'    	  => 'i_post_autosave',
-          'type'      => 'switcher',
-          'title'     => '移除修订版本',
-        ),
-
-  	// 移除自动保存
-		array(
-          'id'    	  => 'i_post_revision',
-          'type'      => 'switcher',
-          'title'     => '移除自动保存',
-        ),
-
- 		// 阅读更多设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '阅读更多设置',
-		),
-
- 		// 开启自定义阅读更多
-		array(
-          'id'    	  => 'i_post_readmore',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '开启自定义阅读更多',
-        ),
-
- 		// 不过滤html标签
-		array(
-          'id'    	  => 'i_post_html',
-          'type'      => 'switcher',
-          'title'     => '不过滤html标签',
-          'help'    => '支持截取支持中英文并且不过滤html标签，但对html标签支持不好，截取时会把标签截断而导致显示不全，所以建议配合文章的more标签一起使用',
-		  'dependency'   => array( 'i_post_readmore', '==', 'true' ),
-        ),
-
- 		// 自定义主页文章摘录长度
-        array(
-          'id'      => 'i_post_excerpt',
-          'type'    => 'number',
-          'title'   => '自定义主页文章摘录长度',
-          'after'   => ' <i class="cs-text-muted">(字)</i>',
-          'default' => '80',
-		  'dependency'   => array( 'i_post_readmore', '==', 'true' ),
-		),
-
-		// 自定义阅读更多的文字
-        array(
-          'id'         => 'i_post_more',
-          'type'    => 'text',
-          'default'    => '阅读更多',
-          'title'      => '自定义阅读更多的文字',
-		  'dependency'   => array( 'i_post_readmore', '==', 'true' ),
-        ),
-
-
-  ),
-);
-
-// ------------------------------
-// 评论                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'comment',
-  'title'       => '评论',
-  'icon'        => 'fa fa-comments',
-  'fields'      => array(
-
- 		// SMPT设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => 'SMPT设置',
-		),
-
- 		// 启用SMPT功能
-		array(
-          'id'    	  => 'i_comment_smpt',
-          'title'     => '启用SMPT功能',
-          'type'      => 'switcher',
-        ),
-
-		// 发件人的名称
-        array(
-          'id'         => 'i_smpt_name',
-          'type'    => 'text',
-          'default'    => 'Admin',
-          'title'      => '发件人的名称',
-          'dependency' => array( 'i_comment_smpt', '==', 'true' ),
-        ),
-
-		// SMTP服务器
-        array(
-          'id'         => 'i_smpt_server',
-          'type'    => 'text',
-          'default'    => 'smtp.qq.com',
-          'title'      => 'SMTP服务器',
-          'dependency' => array( 'i_comment_smpt', '==', 'true' ),
-        ),
-
-		// SMTP端口
-        array(
-          'id'         => 'i_smpt_port',
-          'type'    => 'text',
-          'default'    => '25',
-          'title'      => 'SMTP端口',
-          'dependency' => array( 'i_comment_smpt', '==', 'true' ),
-        ),
-
-		// 邮箱账号
-        array(
-          'id'         => 'i_smpt_email',
-          'type'    => 'text',
-          'title'      => '邮箱账号',
-          'dependency' => array( 'i_comment_smpt', '==', 'true' ),
-        ),
-
-		// 邮箱密码
-        array(
-          'id'         => 'i_smpt_password',
-          'type'    => 'password',
-          'title'      => '邮箱密码',
-          'dependency' => array( 'i_comment_smpt', '==', 'true' ),
-        ),
-
- 		// 提醒设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '提醒设置',
-		),
-
- 		// 启用邮件提醒
-		array(
-          'id'    	  => 'i_comment_mail',
-          'title'     => '启用邮件提醒',
-          'type'      => 'switcher',
-          'default' => true,
-        ),
-
-		// 评论审核通过通知用户
-        array(
-          'id'         => 'i_mail_approve',
-          'type'    => 'switcher',
-          'title'      => '评论审核通过通知用户',
-          'default' => true,
-          'dependency' => array( 'i_comment_mail', '==', 'true' ),
-        ),
-
-		// 评论回复通知用户
-        array(
-          'id'         => 'i_mail_reply',
-          'type'    => 'switcher',
-          'title'      => '评论回复通知用户',
-          'default' => true,
-          'dependency' => array( 'i_comment_mail', '==', 'true' ),
-        ),
-
-		// 网站后台登录失败通知管理员
-        array(
-          'id'         => 'i_mail_login',
-          'type'    => 'switcher',
-          'title'      => '网站后台登录失败通知管理员',
-          'dependency' => array( 'i_comment_mail', '==', 'true' ),
-        ),
-
-		// 注册用户资料信息更新通知用户
-        array(
-          'id'         => 'i_mail_update',
-          'type'    => 'switcher',
-          'title'      => '注册用户资料信息更新通知用户',
-          'dependency' => array( 'i_comment_mail', '==', 'true' ),
-        ),
-
-		// 注册用户账户被管理员删除通知用户
-        array(
-          'id'         => 'i_mail_delete',
-          'type'    => 'switcher',
-          'title'      => '注册用户账户被管理员删除通知用户',
-          'dependency' => array( 'i_comment_mail', '==', 'true' ),
-        ),
-
-		// 网站发布新文章通知用户
-        array(
-          'id'         => 'i_mail_newpost',
-          'type'    => 'switcher',
-          'title'      => '网站发布新文章通知用户',
-          'dependency' => array( 'i_comment_mail', '==', 'true' ),
-        ),
-
-
-  ),
-);
-
-// ------------------------------
-// 页面                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'pages',
-  'title'       => '页面',
-  'icon'        => 'fa fa-cube',
-  'fields'      => array(
-
- 		// 关于页面
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '关于页面',
-		),
-
-		 // 归档页面
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '归档页面',
-		),
-
-		 // 友链页面
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '友链页面',
-		),
-
-		 // 留言页面
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '留言页面',
-		),
-
-		// 启用头像Lazyload功能
-		array(
-          'id'    	  => 'i_comment_avatar',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用头像Lazyload功能',
-        ),
-
-		// 启用读者墙
-		array(
-          'id'    	  => 'i_comment_wall',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '启用读者墙',
-        ),
-
-		// 读者墙头像数目
-		array(
-          'id'    	  => 'i_comment_num',
-          'type'      => 'number',
-          'default'    => '20',
-          'title'     => '读者墙头像数目',
-        ),
-
-		 // 作品页面
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '作品页面',
-		),
-
- 		// 每页显示作品数目
-		array(
-          'id'    	  => 'i_works_num',
-          'title'     => '每页显示作品数目',
-          'default'    => '20',
-          'type'      => 'number',
-        ),
-
-		// 全局关闭评论
-		array(
-          'id'    	  => 'i_works_comment',
-          'type'      => 'switcher',
-          'title'     => '全局关闭评论',
-        ),
-
-  ),
-);
-
-// ------------------------------
-// 下载                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'download',
-  'title'       => '下载',
-  'icon'        => 'fa fa-download',
-  'fields'      => array(
-
-    // 评论回复可见
-    array(
-      'id'    	  => 'i_download_view',
-      'type'      => 'switcher',
-      'title'     => '评论回复可见',
-    ),
-
-    // 解压密码
-    array(
-      'id'    => 'i_download_jieya',
-      'type'  => 'text',
-      'title' => '解压密码',
-      'after' => '<p class="cs-text-muted">留空即无</p>',
-    ),
-
-    // 下载声明
-    array(
-      'id'    => 'i_download_shengming',
-      'type'  => 'textarea',
-      'title' => '下载声明',
-    ),
-
-  ),
-);
-
-// ------------------------------
-// 边栏                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'sidebar',
-  'title'       => '边栏',
-  'icon'        => 'fa fa-tasks',
-  'fields'      => array(
-
-
-		 // 边栏
-		array(
-		  'id'    	  => 'i_sidebar',
-		  'type'      => 'switcher',
-		  'title'     => '启用边栏',
-		),
-
-		// 边栏轮播图
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '边栏轮播图',
-		),
-
-			// 自定义轮播图
-        array(
-          'id'              => 'i_slider2_custom',
-          'type'            => 'group',
-          'title'           => '自定义幻灯片',
-          'info'            => '更多详细设置方式可以浏览使用说明',
-          'button_title'    => '添加滑块',
-          'accordion_title' => '滑块',
-          'fields'          => array(
-
-				// 自定义轮播图--标题
-            array(
-              'id'          => 'i_slider2_title',
-			  'type'        => 'text',
-              'title'       => '标题',
-			  'attributes'    => array(
-				'placeholder' => '例如：滑块01'
-			  )
-            ),
-
-				// 自定义轮播图--图片
-			array(
-			  'id'      => 'i_slider2_image',
-			  'type'    => 'upload',
-			  'title'   => '图片',
-			),
-
-				// 自定义轮播图--描述
-            array(
-              'id'          => 'i_slider2_text',
-			  'type'        => 'text',
-              'title'       => '描述',
-			  'attributes'    => array(
-				'placeholder' => '输入描述'
-			  )
-            ),
-
-				// 自定义轮播图--链接
-			array(
-			  'id'            => 'i_slider2_link',
-			  'type'          => 'text',
-			  'title'         => '链接',
-			  'attributes'    => array(
-				'placeholder' => 'http://...'
-			  )
-			),
-
-				// 自定义轮播图--新标签
-			array(
-			  'id'    	  => 'i_slider2_newtab',
-			  'type'      => 'switcher',
-			  'title'     => '新标签打开',
-			  'dependency'   => array( 'i_slider2_link', '!=', '' ),
-			),
-
-          )
-        ),
-
-    ),
-);
-
-// ------------------------------
-// 页脚                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'footer',
-  'title'       => '页脚',
-  'icon'        => 'fa fa-sliders',
-  'fields'      => array(
-
-		// 底部编辑器
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '底部编辑器',
-		),
-
-  		// 底部编辑器
- 		array(
-           'id'    	  => 'i_footer_text',
-           'type'      => 'switcher',
-           'default'   => true,
-           'title'     => '底部编辑器',
-         ),
-
-        // 底部编辑器
-        array(
-          'id'    => 'i_footer_edit',
-          'type'  => 'wysiwyg',
-          'title' => '底部编辑器',
-        ),
-
-		// 边栏按钮
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '边栏按钮',
-		),
-
- 		// 显示回到顶部按钮
-		array(
-          'id'    	  => 'i_gotop',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '显示回到顶部按钮',
-        ),
-
- 		// 开启分享按钮
-		array(
-          'id'    	  => 'i_share',
-          'type'      => 'switcher',
-          'title'     => '开启分享按钮',
-          'default'   => true,
-          'help'       => '实际上是插入百度分享代码，更多设置可以参考百度官方网站',
-        ),
-
- 		// 显示评论按钮
-		array(
-          'id'    	  => 'i_comment_switch',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '显示评论按钮',
-        ),
-
-
- 		// 显示二维码
-		array(
-          'id'    	  => 'i_qrcode',
-          'type'      => 'switcher',
-          'title'     => '显示二维码',
-        ),
-
-		// 插入二维码
-        array(
-          'id'      => 'i_qrcode_image',
-          'type'    => 'upload',
-          'title'   => '插入二维码',
-          'default' => get_template_directory_uri()."/images/default/qrcode.png",
-          'help'      => '建议二维码尺寸不超过250px',
-		  'dependency'   => array( 'i_qrcode', '==', 'true' ),
-        ),
-
-		// 版权信息
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '版权信息',
-		),
-
-		// 版权信息
-        array(
-          'id'    => 'i_foot_copyright',
-          'type'  => 'textarea',
-          'title' => '版权信息',
-          'attributes'    => array(
-            'placeholder' => '© '.date("Y").' All Rights Reserved.'
-          ),
-          'help'  	  => '当右侧边栏隐藏，版权信息将显示在页面底部',
-        ),
-
-  ),
-);
-
-// ------------------------------
-// SEO                       -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'seo',
-  'title'       => 'SEO',
-  'icon'        => 'fa fa-bug',
-  'fields'      => array(
-
- 		// 百度主动推送
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '百度主动推送',
-		),
-
- 		// 百度主动推送
-		array(
-          'id'    	  => 'i_baidu_submit',
-          'type'      => 'switcher',
-          'title'     => '百度主动推送',
-        ),
-
-		// 验证站点域名
-		array(
-		  'id'            => 'i_baidu_link',
-		  'type'          => 'text',
-		  'title'         => '验证站点域名',
-		  'after'  		  => '<p class="cs-text-muted">在站长平台验证的站点，比如www.example.com</p>',
-          'dependency' => array( 'i_baidu_submit', '==', 'true' ),
-		),
-
-		// 站点准入密钥
-		array(
-		  'id'            => 'i_baidu_key',
-		  'type'          => 'text',
-		  'title'         => '站点准入密钥',
-		  'after'  		  => '<p class="cs-text-muted">在站长平台申请的推送用的准入token值,点击<a href="http://zhanzhang.baidu.com/linksubmit/" target="_blank">这里</a>获取</p>',
-          'dependency' => array( 'i_baidu_submit', '==', 'true' ),
-		),
-
- 		// 百度手动推送
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '百度手动推送',
-		),
-
- 		// 百度手动推送
-		array(
-          'id'    	  => 'i_baidu_manual',
-          'type'      => 'switcher',
-          'title'     => '百度手动推送',
-          'label'     => '推送按钮显示在文章上，管理员可见',
-        ),
-
- 		// Sitemap.xml
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => 'Sitemap.xml',
-		),
-
- 		// 生成sitemap.xml
-		array(
-          'id'    	  => 'i_seo_sitemap',
-          'type'      => 'switcher',
-          'title'     => '生成sitemap.xml',
-        ),
-
-		array(
-		  'type'    => 'notice',
-		  'class'   => 'warning',
-		  'content' => "当前Sitemap地址为： ".home_url()."/sitemap.xml",
-          'dependency' => array( 'i_seo_sitemap', '==', 'true' ),
-		),
-
- 		//基本信息
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '基本信息',
-		),
-
-		// 关键词
-		array(
-		  'id'      => 'i_seo_keywords',
-		  'type'    => 'textarea',
-		  'title'   => '关键字',
-		  'help'    => '标识页面是关于什么的关键词，通常在搜索引擎中使用',
-		),
-
-
-		// 描述
-		array(
-		  'id'      => 'i_seo_description',
-		  'type'    => 'textarea',
-		  'title'   => '描述',
-		  'help'    => '页面的简短描述',
-		),
-
-  ),
-);
-
-// ------------------------------
-// 简介                      -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'social',
-  'title'       => '简介',
-  'icon'        => 'fa fa-globe',
-  'fields'      => array(
-
- 		// 显示简介
-		array(
-          'id'    	  => 'i_profile',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '显示简介',
-        ),
-
- 		// 头像
-        array(
-          'id'      => 'i_profile_avatar',
-          'type'    => 'upload',
-          'title'   => '头像	',
-          'default' => get_template_directory_uri()."/images/default/avatar.png",
-        ),
-
-    // 昵称
-        array(
-          'id'      => 'i_profile_name',
-          'type'    => 'text',
-          'title'   => '昵称',
-          'default' => '你的昵称',
-        ),
-
- 		// 简介
-        array(
-          'id'      => 'i_profile_content',
-          'type'    => 'textarea',
-          'title'   => '简介',
-          'default' => '你的简介',
-        ),
-
-		// 自定义社交链接
-        array(
-          'id'              => 'i_social',
-          'type'            => 'group',
-          'title'           => '自定义社交链接',
-          'info'            => '更多详细设置方式可以浏览使用说明',
-          'button_title'    => '添加链接项',
-          'accordion_title' => '链接项',
-		      'help'            => '社交链接显示在关于我小工具里面',
-          'fields'          => array(
-
-				// 自定义社交链接--标题
-            array(
-              'id'          => 'i_social_title',
-			        'type'        => 'text',
-              'title'       => '菜单标题',
-      			  'attributes'    => array(
-      				'placeholder' => '例如：我的微博'
-			         )
-            ),
-
-				// 自定义图标类型
-    			array(
-    			  'id'         => 'i_icon_style',
-    			  'type'       => 'radio',
-    			  'title'      => '图标类型',
-    			  'class'      => 'horizontal',
-    			  'options'    => array(
-    				'i_icon'   => '字体图标',
-    				'i_image'  => '自定义图片',
-    			  ),
-    			  'default'    => 'i_icon',
-    			),
-
-				// 自定义社交链接--字体图标
-    			array(
-    			  'id'      => 'i_social_icon',
-    			  'type'    => 'icon',
-    			  'title'   => '字体图标',
-    			  'dependency' => array( 'i_icon_style_i_icon', '==', 'true' ),
-    			),
-
-				// 自定义社交链接--自定义图片
-    			array(
-    			  'id'      => 'i_social_image',
-    			  'type'    => 'upload',
-    			  'title'   => '自定义图片',
-    			  'dependency' => array( 'i_icon_style_i_image', '==', 'true' ),
-    			  'help'      => '自定义图片大小建议不宜超过100px',
-    			),
-
-
-				// 自定义社交链接--链接
-    			array(
-    			  'id'            => 'i_social_link',
-    			  'type'          => 'text',
-    			  'title'         => '菜单链接',
-    			  'attributes'    => array(
-    				'placeholder' => 'http://...'
-    			  )
-    			),
-
-				// 自定义社交链接--新标签
-    			array(
-    			  'id'    	  => 'i_social_newtab',
-    			  'type'      => 'switcher',
-    			  'title'     => '新标签打开',
-    			  'dependency'   => array( 'i_social_link', '!=', '' ),
-    			),
-
-          )
-        ),
-
-  ),
-);
-
-
-// ------------------------------
-// 代码                      -
-// ------------------------------
-
-$options[]      = array(
-  'name'        => 'code',
-  'title'       => '代码',
-  'icon'        => 'fa fa-code',
-  'fields'      => array(
-
-			// 自定义CSS
-			array(
-			  'id'     => 'i_css',
-			  'type'   => 'textarea',
-			  'before' => '<h4>自定义CSS</h4>',
-			  'after'  => '<p class="cs-text-muted">注意：无需写入<strong>&lt;style></strong>标签。</p>',
-			),
-
-			// 自定义javascript
-			array(
-			  'id'     => 'i_js',
-			  'type'   => 'textarea',
-			  'before' => '<h4>自定义javascript</h4>',
-			  'after'  => '<p class="cs-text-muted">注意：无需写入<strong>&lt;script></strong>标签。</p>',
-			),
-
-			// 统计代码
-			array(
-			  'id'     => 'i_js_tongji',
-			  'type'   => 'textarea',
-			  'before' => '<h4>统计代码</h4>',
-			  'after'  => '<p class="cs-text-muted">注意：无需写入<strong>&lt;script></strong>标签。',
-			),
-
-  ),
-);
-
-// ------------------------------
-// 扩展                      -
-// ------------------------------
-$options[]   = array(
-  'name'     => 'extension',
-  'title'    => '扩展',
-  'icon'     => 'fa fa-cubes',
-  'fields'   => array(
 
     array(
-      'type'    => 'notice',
-      'class'   => 'warning',
-      'content' => '后续版本按用户需求添加各种扩展功能，每个扩展都会额外加载js或css，可按需开启',
+      'id'      => 'switcher_1',
+      'type'    => 'switcher',
+      'title'   => 'Switcher',
+      'label'   => 'You want to update for this framework ?',
+    ),
+
+    array(
+      'id'      => 'color_picker_1',
+      'type'    => 'color_picker',
+      'title'   => 'Color Picker',
+      'default' => '#3498db',
+    ),
+
+    array(
+      'id'      => 'checkbox_1',
+      'type'    => 'checkbox',
+      'title'   => 'Checkbox',
+      'label'   => 'Did you like this framework ?',
+    ),
+
+    array(
+      'id'      => 'radio_1',
+      'type'    => 'radio',
+      'title'   => 'Radio',
+      'options' => array(
+        'yes'   => 'Yes, Please.',
+        'no'    => 'No, Thank you.',
+      ),
+      'help'    => 'Are you sure for this choice?',
+    ),
+
+    array(
+      'id'             => 'select_1',
+      'type'           => 'select',
+      'title'          => 'Select',
+      'options'        => array(
+        'bmw'          => 'BMW',
+        'mercedes'     => 'Mercedes',
+        'volkswagen'   => 'Volkswagen',
+        'other'        => 'Other',
+      ),
+      'default_option' => 'Select your favorite car',
+    ),
+
+    array(
+      'id'      => 'number_1',
+      'type'    => 'number',
+      'title'   => 'Number',
+      'default' => '10',
+      'after'   => ' <i class="cs-text-muted">$ (dollars)</i>',
+    ),
+
+    array(
+      'id'        => 'image_select_1',
+      'type'      => 'image_select',
+      'title'     => 'Image Select',
+      'options'   => array(
+        'value-1' => 'http://codestarframework.com/assets/images/placeholder/100x80-2ecc71.gif',
+        'value-2' => 'http://codestarframework.com/assets/images/placeholder/100x80-e74c3c.gif',
+        'value-3' => 'http://codestarframework.com/assets/images/placeholder/100x80-ffbc00.gif',
+        'value-4' => 'http://codestarframework.com/assets/images/placeholder/100x80-3498db.gif',
+        'value-5' => 'http://codestarframework.com/assets/images/placeholder/100x80-555555.gif',
+      ),
     ),
 
     array(
       'type'    => 'notice',
       'class'   => 'info',
-      'content' => '代码高亮',
+      'content' => 'This is info notice field for your highlight sentence.',
     ),
 
- 		// 代码高亮
-		array(
-          'id'    	  => 'i_code_prettify',
-          'type'      => 'switcher',
-          'title'     => '代码高亮',
-		  'label'     => '使用前请关注使用说明',
-        ),
-
-		array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '萤火背景',
-		),
-
- 		// 萤火背景
-		array(
-          'id'    	  => 'i_circle',
-          'type'      => 'switcher',
-          'title'     => '萤火背景',
-        ),
-
-		array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '音乐播放器',
-		),
-
- 		// 音乐播放器
-		array(
-          'id'    	  => 'i_player',
-          'type'      => 'switcher',
-          'title'     => '开启音乐播放器',
-		  'label'     => '使用前请关注使用说明',
-        ),
-
-		// 歌单ID
-        array(
-          'id'         => 'i_player_id',
-          'type'       => 'number',
-          'title'      => '歌单ID',
-          'dependency' => array( 'i_player', '==', 'true' ),
-        ),
-
-		// 手机端是否显示
-		array(
-          'id'    	  => 'i_player_mobi',
-          'type'      => 'switcher',
-          'title'     => '手机端是否关闭',
-        ),
-
-  )
-);
-
-// ------------------------------
-// CDN                       -
-// ------------------------------
-$options[]   = array(
-  'name'     => 'qiniu',
-  'title'    => 'CDN',
-  'icon'     => 'fa fa-cloud-upload',
-  'fields'   => array(
+    array(
+      'id'      => 'background_1',
+      'type'    => 'background',
+      'title'   => 'Background',
+    ),
 
     array(
       'type'    => 'notice',
       'class'   => 'warning',
-      'content' => '开启CDN加速你的网站，其中需手动修改comments-ajax.js文件，详情请关注老赵博客',
+      'content' => 'This is info warning field for your highlight sentence.',
     ),
 
-		// 开启加速
-		array(
-          'id'    	  => 'i_qiniu',
-          'type'      => 'switcher',
-          'title'     => '开启加速',
+    array(
+      'id'      => 'icon_1',
+      'type'    => 'icon',
+      'title'   => 'Icon',
+      'desc'    => 'Some description here for this option field.',
+    ),
+
+    array(
+      'id'      => 'text_2',
+      'type'    => 'text',
+      'title'   => 'Text',
+      'desc'    => 'Some description here for this option field.',
+    ),
+
+    array(
+      'id'        => 'textarea_2',
+      'type'      => 'textarea',
+      'title'     => 'Textarea',
+      'info'      => 'Some information here for this option field.',
+      'shortcode' => true,
+    ),
+
+  ), // end: fields
+);
+
+// ------------------------------
+// a option section with tabs   -
+// ------------------------------
+$options[]   = array(
+  'name'     => 'options',
+  'title'    => 'Options',
+  'icon'     => 'fa fa-plus-circle',
+  'sections' => array(
+
+    // -----------------------------
+    // begin: text options         -
+    // -----------------------------
+    array(
+      'name'      => 'text_options',
+      'title'     => 'Text',
+      'icon'      => 'fa fa-check',
+
+      // begin: fields
+      'fields'    => array(
+
+        // begin: a field
+        array(
+          'id'    => 'unique_text_1',
+          'type'  => 'text',
+          'title' => 'Text Field',
+        ),
+        // end: a field
+
+        array(
+          'id'    => 'unique_text_2',
+          'type'  => 'text',
+          'title' => 'Text Field with Description',
+          'desc'  => 'Lets write some description for this text field.',
         ),
 
-		// CDN域名
-		array(
-		  'id'            => 'i_qiniu_link',
-		  'type'          => 'text',
-		  'title'         => 'CDN域名',
-		  'after'  		  => '<p class="cs-text-muted">注意：开头需写入http://，结尾不需写入/</p>',
-		  'attributes'    => array(
-			'placeholder' => 'http://'
-		  )
-		),
+        array(
+          'id'    => 'unique_text_3',
+          'type'  => 'text',
+          'title' => 'Text Field with Help',
+          'help'  => 'I am a Tooltip helper. This field important for something.',
+        ),
 
-		// 包含目录
-		array(
-		  'id'            => 'i_qiniu_dir',
-		  'type'          => 'text',
-		  'title'         => '包含目录',
-		  'default'       => 'wp-content,wp-includes',
-		),
+        array(
+          'id'      => 'unique_text_4',
+          'type'    => 'text',
+          'title'   => 'Text Field with Default',
+          'default' => 'some default value bla bla bla',
+        ),
 
-		// 排除文件
-		array(
-		  'id'            => 'i_qiniu_exc',
-		  'type'          => 'text',
-		  'title'         => '排除文件',
-		  'default'       => '.php|.xml|.html|.po|.mo',
-		),
+        array(
+          'id'            => 'unique_text_5',
+          'type'          => 'text',
+          'title'         => 'Text Field with Placeholder',
+          'attributes'    => array(
+            'placeholder' => 'do stuff...'
+          )
+        ),
+
+        array(
+          'id'    => 'unique_text_6',
+          'type'  => 'text',
+          'title' => 'Text Field with After-text',
+          'after' => ' <i class="cs-text-muted">( this option is optional )</i>',
+        ),
+
+        array(
+          'id'     => 'unique_text_7',
+          'type'   => 'text',
+          'title'  => 'Text Field with Before-text',
+          'before' => '<i class="cs-text-muted">( important )</i> ',
+        ),
+
+        array(
+          'id'    => 'unique_text_8',
+          'type'  => 'text',
+          'title' => 'Text Field with After-block-text',
+          'after' => '<p class="cs-text-info">Information: There is some description for option.</p> ',
+        ),
+
+        array(
+          'id'         => 'unique_text_9',
+          'type'       => 'text',
+          'title'      => 'Text Field with Ready-Only',
+          'attributes' => array(
+            'readonly' => 'only-key'
+          ),
+          'default'    => 'info@domain.com'
+        ),
+
+        array(
+          'id'          => 'unique_text_10',
+          'type'        => 'text',
+          'title'       => 'Text Field with Maxlength (5)',
+          'attributes'  => array(
+            'maxlength' => '5'
+          ),
+          'default'     => 'Hello',
+        ),
+
+        array(
+          'id'         => 'unique_text_11',
+          'type'       => 'text',
+          'title'      => 'Text Field with Custom Style',
+          'attributes' => array(
+            'style'    => 'width: 175px; height: 40px; border-color: #93C054;'
+          ),
+          'after'      => '<p class="cs-text-muted">There is custom css <strong>style="width: 175px; height: 40px; border-color: #93C054;"</strong></p>',
+        ),
+
+        array(
+          'id'         => 'unique_text_12',
+          'type'       => 'text',
+          'title'      => 'Text Field with Custom Style',
+          'attributes' => array(
+            'style'    => 'width: 100%;'
+          ),
+          'after'      => '<p class="cs-text-muted">There is custom css <strong>style="width: 100%;"</strong></p>'
+        ),
+
+        array(
+          'id'     => 'unique_text_13',
+          'type'   => 'text',
+          'before' => '<h4>Text Field without left title</h4>',
+          'after'  => '<p class="cs-text-muted">This Text Field do not using left title, just using before text here. also you can remove it.</h4>',
+        ),
+
+      ), // end: fields
+
+    ), // end: text options
+
+    // -----------------------------
+    // begin: textarea options     -
+    // -----------------------------
+    array(
+      'name'      => 'textarea_options',
+      'title'     => 'Textarea',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'    => 'unique_textarea_1',
+          'type'  => 'textarea',
+          'title' => 'Simple Textarea',
+        ),
+
+        array(
+          'id'        => 'unique_textarea_1_1',
+          'type'      => 'textarea',
+          'title'     => 'Textarea with Shortcoder',
+          'shortcode' => true,
+        ),
+
+        array(
+          'id'    => 'unique_textarea_2',
+          'type'  => 'textarea',
+          'title' => 'Textarea Field with Description',
+          'desc'  => 'Lets write some description for this textarea field.',
+        ),
+
+        array(
+          'id'    => 'unique_textarea_3',
+          'type'  => 'textarea',
+          'title' => 'Textarea Field with Help',
+          'help'  => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'      => 'unique_textarea_4',
+          'type'    => 'textarea',
+          'title'   => 'Textarea Field with Default',
+          'default' => 'some default value bla bla bla',
+        ),
+
+        array(
+          'id'            => 'unique_textarea_5',
+          'type'          => 'textarea',
+          'title'         => 'Textarea Field with Placeholder',
+          'attributes'    => array(
+            'placeholder' => 'do stuff...'
+          )
+        ),
+
+        array(
+          'id'    => 'unique_textarea_6',
+          'type'  => 'textarea',
+          'title' => 'Textarea Field with After-text',
+          'after' => '<p class="cs-text-muted">Information: There is some description for option.</p> ',
+        ),
+
+        array(
+          'id'     => 'unique_textarea_7',
+          'type'   => 'textarea',
+          'title'  => 'Textarea Field with Before-text',
+          'before' => '<p class="cs-text-muted">Information: There is some description for option.</p> ',
+        ),
+
+        array(
+          'id'         => 'unique_textarea_8',
+          'type'       => 'textarea',
+          'title'      => 'Textarea Field with Before-text',
+          'attributes' => array(
+            'rows'     => 10,
+          ),
+          'after'      => '<p class="cs-text-muted">custom textarea attribute rows=10</p> ',
+        ),
+
+        array(
+          'id'     => 'unique_textarea_13',
+          'type'   => 'textarea',
+          'before' => '<h4>Textarea Field without left title</h4>',
+          'after'  => '<p class="cs-text-muted">This Textarea Field do not using left title, just using before text here. also you can remove it.</h4>',
+        ),
+
+      ),
+
+    ), // end: textarea options
+
+    // -----------------------------
+    // begin: checkbox options     -
+    // -----------------------------
+    array(
+      'name'      => 'checkbox_options',
+      'title'     => 'Checkbox',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'    => 'unique_checkbox_1',
+          'type'  => 'checkbox',
+          'title' => 'Checkbox',
+          'label' => 'Yes, Please.',
+        ),
+
+        array(
+          'id'      => 'unique_checkbox_2',
+          'type'    => 'checkbox',
+          'title'   => 'Checkbox with Default Value',
+          'label'   => 'Would you like something ?',
+          'default' => true,
+        ),
+
+        array(
+          'id'    => 'unique_checkbox_3',
+          'type'  => 'checkbox',
+          'title' => 'Checkbox Field with Help',
+          'label' => 'I am an checkbox',
+          'help'  => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'       => 'unique_checkbox_4',
+          'type'     => 'checkbox',
+          'title'    => 'Checkbox Field with Options',
+          'options'  => array(
+            'blue'   => 'Blue',
+            'green'  => 'Green',
+            'yellow' => 'Yellow',
+          ),
+        ),
+
+        array(
+          'id'         => 'unique_checkbox_5',
+          'type'       => 'checkbox',
+          'title'      => 'Checkbox Field with Options and Default',
+          'options'    => array(
+            'bmw'      => 'BMW',
+            'mercedes' => 'Mercedes',
+            'jaguar'   => 'Jaguar',
+          ),
+          'default'    => 'bmw'
+        ),
+
+        array(
+          'id'         => 'unique_checkbox_6',
+          'type'       => 'checkbox',
+          'title'      => 'Checkbox Field with Options Horizontal',
+          'class'      => 'horizontal',
+          'options'    => array(
+            'blue'     => 'Blue',
+            'green'    => 'Green',
+            'yellow'   => 'Yellow',
+            'red'      => 'Red',
+            'black'    => 'Black',
+          ),
+          'default'    => array( 'green', 'yellow', 'red' )
+        ),
+
+        array(
+          'id'         => 'unique_checkbox_7',
+          'type'       => 'checkbox',
+          'title'      => 'Checkbox Field with Pages',
+          'options'    => 'pages',
+        ),
+
+        array(
+          'id'         => 'unique_checkbox_8',
+          'type'       => 'checkbox',
+          'title'      => 'Checkbox Field with Posts',
+          'options'    => 'posts',
+        ),
+
+        array(
+          'id'         => 'unique_checkbox_9',
+          'type'       => 'checkbox',
+          'title'      => 'Checkbox Field with Categories',
+          'options'    => 'categories',
+        ),
+
+        array(
+          'id'         => 'unique_checkbox_10',
+          'type'       => 'checkbox',
+          'title'      => 'Checkbox Field with Tags',
+          'options'    => 'tags',
+        ),
+
+        array(
+          'id'            => 'unique_checkbox_11',
+          'type'          => 'checkbox',
+          'title'         => 'Checkbox Field with Pages',
+          'options'       => 'pages',
+          'query_args'    => array(
+            'sort_order'  => 'desc',
+            'sort_column' => 'post_title',
+          ),
+          'after'         => '<p class="cs-text-muted"><strong>query_args:</strong> sort_order=desc, sort_column=post_title</p>',
+        ),
+
+        array(
+          'id'          => 'unique_checkbox_12',
+          'type'        => 'checkbox',
+          'title'       => 'Checkbox Field with CPT Posts',
+          'options'     => 'posts',
+          'query_args'  => array(
+            'post_type' => 'your_post_type_name',
+          ),
+          'after'       => '<div class="cs-text-muted"><strong>query_args:</strong> post_type=your_post_type_name</div>',
+        ),
+
+        array(
+          'id'          => 'unique_checkbox_13',
+          'type'        => 'checkbox',
+          'title'       => 'Checkbox Field with CPT Categories',
+          'options'     => 'categories',
+          'query_args'  => array(
+            'type'      => 'your_post_type_name',
+            'taxonomy'  => 'your_taxonomy_name',
+          ),
+          'after'       => '<div class="cs-text-muted"><strong>query_args:</strong> post_type=your_post_type_name, taxonomy=your_taxonomy_name</div>',
+        ),
+
+        array(
+          'id'           => 'unique_checkbox_14',
+          'type'         => 'checkbox',
+          'title'        => 'Checkbox Field with CPT Tags',
+          'options'      => 'tags',
+          'query_args'   => array(
+            'taxonomies' => 'your_taxonomy_name',
+            'order'      => 'asc',
+            'orderby'    => 'name',
+          ),
+          'after'        => '<div class="cs-text-muted"><strong>query_args:</strong> taxonomies=your_taxonomy_name, order=asc, orderby=name</div>',
+        ),
+
+      ),
+    ), // end: checkbox options
+
+
+    // -----------------------------
+    // begin. radio options        -
+    // -----------------------------
+    array(
+      'name'      => 'radio_options',
+      'title'     => 'Radio',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'      => 'unique_radio_1',
+          'type'    => 'radio',
+          'title'   => 'Radio Field',
+          'options' => array(
+            'yes'   => 'Yes, Please.',
+            'no'    => 'No, Thank you.',
+          ),
+        ),
+
+        array(
+          'id'        => 'unique_radio_2',
+          'type'      => 'radio',
+          'title'     => 'Radio with Default Value',
+          'options'   => array(
+            'yes'     => 'Yes, Please.',
+            'no'      => 'No, Thank you.',
+            'nothing' => 'I am not sure, yet!',
+          ),
+          'default'   => 'nothing',
+          'help'      => 'Reference site about Lorem Ipsum, a random Lipsum generator.',
+        ),
+
+        array(
+          'id'      => 'unique_radio_3',
+          'type'    => 'radio',
+          'title'   => 'Radio Field',
+          'class'   => 'horizontal',
+          'options' => array(
+            'yes'   => 'Yes, Please.',
+            'no'    => 'No, Thank you.',
+          ),
+          'after'   => '<div class="cs-text-muted">Reference site about Lorem Ipsum, a random Lipsum generator.</div>',
+        ),
+
+        array(
+          'id'         => 'unique_radio_4',
+          'type'       => 'radio',
+          'title'      => 'Radio Field with Pages',
+          'options'    => 'pages',
+        ),
+
+        array(
+          'id'         => 'unique_radio_5',
+          'type'       => 'radio',
+          'title'      => 'Radio Field with Posts',
+          'options'    => 'posts',
+        ),
+
+        array(
+          'id'         => 'unique_radio_6',
+          'type'       => 'radio',
+          'title'      => 'Radio Field with Categories',
+          'options'    => 'categories',
+        ),
+
+        array(
+          'id'         => 'unique_radio_7',
+          'type'       => 'radio',
+          'title'      => 'Radio Field with Tags',
+          'options'    => 'tags',
+        ),
+
+        array(
+          'id'            => 'unique_radio_8',
+          'type'          => 'radio',
+          'title'         => 'Radio Field with Pages',
+          'options'       => 'pages',
+          'query_args'    => array(
+            'sort_order'  => 'desc',
+            'sort_column' => 'post_title',
+          ),
+          'after'         => '<p class="cs-text-muted"><strong>query_args:</strong> sort_order=desc, sort_column=post_title</p>',
+        ),
+
+        array(
+          'id'          => 'unique_radio_9',
+          'type'        => 'radio',
+          'title'       => 'Radio Field with CPT Posts',
+          'options'     => 'posts',
+          'query_args'  => array(
+            'post_type' => 'your_post_type_name',
+          ),
+          'after'       => '<div class="cs-text-muted"><strong>query_args:</strong> post_type=your_post_type_name</div>',
+        ),
+
+        array(
+          'id'          => 'unique_radio_10',
+          'type'        => 'radio',
+          'title'       => 'Radio Field with CPT Categories',
+          'options'     => 'categories',
+          'query_args'  => array(
+            'type'      => 'your_post_type_name',
+            'taxonomy'  => 'your_taxonomy_name',
+          ),
+          'after'       => '<div class="cs-text-muted"><strong>query_args:</strong> post_type=your_post_type_name, taxonomy=your_taxonomy_name</div>',
+        ),
+
+        array(
+          'id'         => 'unique_radio_11',
+          'type'       => 'radio',
+          'title'      => 'Radio Field',
+          'options'    => array(
+            'yes'      => 'Yes, Please.',
+            'no'       => 'No, Thank you.',
+            'nothing'  => 'Nothing.',
+          ),
+        ),
+
+      ),
+    ), // end: radio options
+
+
+    // -----------------------------
+    // begin: select options       -
+    // -----------------------------
+    array(
+      'name'      => 'select_options',
+      'title'     => 'Select',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'      => 'unique_select_1',
+          'type'    => 'select',
+          'title'   => 'Select',
+          'options' => array(
+            'yes'   => 'Yes, Please.',
+            'no'    => 'No, Thank you.'
+          )
+        ),
+
+        array(
+          'id'             => 'unique_select_2',
+          'type'           => 'select',
+          'title'          => 'Select with First Empty Value',
+          'options'        => array(
+            'yes'          => 'Yes, Please.',
+            'no'           => 'No, Thank you.'
+          ),
+          'default_option' => 'Select an option',
+          'help'           => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'             => 'unique_select_3',
+          'type'           => 'select',
+          'title'          => 'Select with Help',
+          'options'        => array(
+            'green'        => 'Green',
+            'red'          => 'Red',
+            'blue'         => 'Blue',
+            'yellow'       => 'Yellow',
+            'black'        => 'Black',
+          ),
+          'default_option' => 'Select a color',
+          'info'           => 'Choose your favorite skin.',
+        ),
+
+        array(
+          'id'             => 'unique_select_4',
+          'type'           => 'select',
+          'title'          => 'Select with Default Value',
+          'options'        => array(
+            'primary'      => 'Primary Option',
+            'secondary'    => 'Secondry Option',
+            'tertiary'     => 'Tertiary Option',
+          ),
+          'default'        => 'tertiary',
+          'default_option' => 'Select an option',
+        ),
+
+        array(
+          'id'         => 'unique_select_6',
+          'type'       => 'select',
+          'title'      => 'Select Field with Multi-select',
+          'options'    => array(
+            'bmw'      => 'BMW',
+            'mercedes' => 'Mercedes',
+            'jaguar'   => 'Jaguar',
+            'opel'     => 'Opel',
+            'golf'     => 'Golf',
+            'ferrari'  => 'Ferrari',
+            'subaru'   => 'Subaru',
+            'seat'     => 'Seat',
+          ),
+          'attributes' => array(
+            'multiple' => 'only-key',
+            'style'    => 'width: 150px; height: 125px;'
+          )
+        ),
+
+        array(
+          'id'         => 'unique_select_7',
+          'type'       => 'select',
+          'title'      => 'Select Field with Multi-default',
+          'options'    => array(
+            'bmw'      => 'BMW',
+            'mercedes' => 'Mercedes',
+            'jaguar'   => 'Jaguar',
+            'opel'     => 'Opel',
+            'golf'     => 'Golf',
+            'ferrari'  => 'Ferrari',
+            'subaru'   => 'Subaru',
+            'seat'     => 'Seat',
+          ),
+          'attributes' => array(
+            'multiple' => 'only-key',
+            'style'    => 'width: 150px; height: 125px;'
+          ),
+          'default'    => array( 'bmw', 'mercedes', 'opel' ),
+          'info'       => 'Choose your favorite cars.',
+        ),
+
+        array(
+          'id'             => 'unique_select_8',
+          'type'           => 'select',
+          'title'          => 'Select with Pages',
+          'options'        => 'pages',
+          'default_option' => 'Select a page'
+        ),
+
+        array(
+          'id'             => 'unique_select_9',
+          'type'           => 'select',
+          'title'          => 'Select with Posts',
+          'options'        => 'posts',
+          'default_option' => 'Select a post'
+        ),
+
+        array(
+          'id'             => 'unique_select_10',
+          'type'           => 'select',
+          'title'          => 'Select with Categories',
+          'options'        => 'categories',
+          'default_option' => 'Select a tag'
+        ),
+
+        array(
+          'id'             => 'unique_select_10_1',
+          'type'           => 'select',
+          'title'          => 'Select with Menus',
+          'options'        => 'menus',
+          'default_option' => 'Select a menu'
+        ),
+
+        array(
+          'id'         => 'unique_select_11',
+          'type'       => 'select',
+          'title'      => 'Select with Pages with Multi-Select',
+          'options'    => 'pages',
+          'attributes' => array(
+            'multiple' => 'only-key',
+            'style'    => 'width: 150px; height: 125px;'
+          )
+        ),
+
+        array(
+          'id'                 => 'unique_select_12',
+          'type'               => 'select',
+          'title'              => 'Select with Chosen',
+          'options'            => array(
+            'bmw'              => 'BMW',
+            'mercedes'         => 'Mercedes',
+            'jaguar'           => 'Jaguar',
+            'opel'             => 'Opel',
+            'golf'             => 'Golf',
+            'ferrari'          => 'Ferrari',
+            'subaru'           => 'Subaru',
+            'seat'             => 'Seat',
+          ),
+          'class'              => 'chosen',
+          'default_option'     => 'Select your car',
+        ),
+
+        array(
+          'id'                 => 'unique_select_13',
+          'type'               => 'select',
+          'title'              => 'Select with Chosen Multi-Select',
+          'options'            => array(
+            'bmw'              => 'BMW',
+            'mercedes'         => 'Mercedes',
+            'jaguar'           => 'Jaguar',
+            'opel'             => 'Opel',
+            'golf'             => 'Golf',
+            'ferrari'          => 'Ferrari',
+            'subaru'           => 'Subaru',
+            'seat'             => 'Seat',
+          ),
+          'class'              => 'chosen',
+          'attributes'         => array(
+            'data-placeholder' => 'Select your favrorite cars',
+            'multiple'         => 'only-key',
+            'style'            => 'width: 200px;'
+          ),
+        ),
+
+        array(
+          'id'             => 'unique_select_14',
+          'type'           => 'select',
+          'title'          => 'Select with Chosen with Pages',
+          'options'        => 'pages',
+          'class'          => 'chosen',
+          'default_option' => 'Select a page'
+        ),
+
+        array(
+          'id'                 => 'unique_select_15',
+          'type'               => 'select',
+          'title'              => 'Select with Chosen with Posts Multi-Select',
+          'options'            => 'posts',
+          'class'              => 'chosen',
+          'attributes'         => array(
+            'data-placeholder' => 'Select your favrorite posts',
+            'multiple'         => 'only-key',
+            'style'            => 'width: 200px;'
+          ),
+          'info'               => 'and much more select options for you!',
+        ),
+
+      ),
+    ), // end: select options
+
+
+    // -----------------------------
+    // begin: switcher options     -
+    // -----------------------------
+    array(
+      'name'      => 'switcher_options',
+      'title'     => 'Switcher',
+      'icon'      => 'fa fa-toggle-on',
+      'fields'    => array(
+
+        array(
+          'id'    => 'unique_switcher_1',
+          'type'  => 'switcher',
+          'title' => 'Simple Switcher',
+        ),
+
+        array(
+          'id'    => 'unique_switcher_2',
+          'type'  => 'switcher',
+          'title' => 'Switcher Field with Label',
+          'label' => 'Yes, Please do it.',
+        ),
+
+        array(
+          'id'    => 'unique_switcher_3',
+          'type'  => 'switcher',
+          'title' => 'Switcher Field with Help',
+          'help'  => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'      => 'unique_switcher_4',
+          'type'    => 'switcher',
+          'title'   => 'Switcher Field with Default',
+          'default' => true,
+        ),
+
+      ),
+    ), // end: switcher options
+
+
+    // -----------------------------
+    // begin: number options       -
+    // -----------------------------
+    array(
+      'name'        => 'number_options',
+      'title'       => 'Number',
+      'icon'        => 'fa fa-check',
+      'fields'      => array(
+
+        array(
+          'id'      => 'unique_number_1',
+          'type'    => 'number',
+          'title'   => 'Simple Number',
+        ),
+
+        array(
+          'id'      => 'unique_number_2',
+          'type'    => 'number',
+          'title'   => 'Number Field with Description',
+          'desc'    => 'Lets write some description for this number field.',
+        ),
+
+        array(
+          'id'      => 'unique_number_3',
+          'type'    => 'number',
+          'title'   => 'Number Field with Help',
+          'help'    => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'      => 'unique_number_4',
+          'type'    => 'number',
+          'title'   => 'Number Field with Default',
+          'default' => '10',
+        ),
+
+        array(
+          'id'            => 'unique_number_5',
+          'type'          => 'number',
+          'title'         => 'Number Field with Placeholder',
+          'attributes'    => array(
+            'placeholder' => '25'
+          )
+        ),
+
+        array(
+          'id'      => 'unique_number_6',
+          'type'    => 'number',
+          'title'   => 'Number Field with After-text',
+          'after'   => ' <i class="cs-text-muted">(px)</i>',
+        ),
+
+      ),
+    ), // end: number options
+
+    // -----------------------------
+    // begin: icon options       -
+    // -----------------------------
+    array(
+      'name'        => 'icon_options',
+      'title'       => 'Icons',
+      'icon'        => 'fa fa-check',
+      'fields'      => array(
+
+        array(
+          'id'      => 'unique_icon_1',
+          'type'    => 'icon',
+          'title'   => 'Simple Icon',
+        ),
+
+        array(
+          'id'      => 'unique_icon_2',
+          'type'    => 'icon',
+          'title'   => 'Icon Field with Description',
+          'desc'    => 'Lets write some description for this icon field.',
+        ),
+
+        array(
+          'id'      => 'unique_icon_3',
+          'type'    => 'icon',
+          'title'   => 'Icon Field with Help',
+          'help'    => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'      => 'unique_icon_4',
+          'type'    => 'icon',
+          'title'   => 'Icon Field with Default',
+          'default' => 'fa fa-check',
+        ),
+
+        array(
+          'id'      => 'unique_icon_5',
+          'type'    => 'icon',
+          'title'   => 'Icon Field with After-text',
+          'after'   => '<p class="cs-text-muted">Lets write some description for this icon field.</i>',
+        ),
+
+      ),
+    ), // end: icon options
+
+
+    // -----------------------------
+    // begin: group options        -
+    // -----------------------------
+    array(
+      'name'      => 'group_options',
+      'title'     => 'Group',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'              => 'unique_group_1',
+          'type'            => 'group',
+          'title'           => 'Group Field',
+          'button_title'    => 'Add New',
+          'accordion_title' => 'Add New Field',
+          'fields'          => array(
+
+            array(
+              'id'          => 'unique_group_1_text',
+              'type'        => 'text',
+              'title'       => 'Text Field',
+            ),
+
+            array(
+              'id'          => 'unique_group_1_switcher',
+              'type'        => 'switcher',
+              'title'       => 'Switcher Field',
+            ),
+
+            array(
+              'id'          => 'unique_group_1_textarea',
+              'type'        => 'textarea',
+              'title'       => 'Upload Field',
+            ),
+
+          )
+        ),
+
+        array(
+          'id'              => 'unique_group_2',
+          'type'            => 'group',
+          'title'           => 'Group Field with Default',
+          'button_title'    => 'Add New',
+          'accordion_title' => 'Add New Field',
+          'fields'          => array(
+
+            array(
+              'id'          => 'unique_group_2_text',
+              'type'        => 'text',
+              'title'       => 'Text Field',
+            ),
+
+            array(
+              'id'          => 'unique_group_2_switcher',
+              'type'        => 'switcher',
+              'title'       => 'Switcher Field',
+            ),
+
+            array(
+              'id'          => 'unique_group_2_textarea',
+              'type'        => 'textarea',
+              'title'       => 'Upload Field',
+            ),
+
+          ),
+          'default'                     => array(
+            array(
+              'unique_group_2_text'     => 'Some text',
+              'unique_group_2_switcher' => true,
+              'unique_group_2_textarea' => 'Some content',
+            ),
+            array(
+              'unique_group_2_text'     => 'Some text 2',
+              'unique_group_2_switcher' => true,
+              'unique_group_2_textarea' => 'Some content 2',
+            ),
+          )
+        ),
+
+        array(
+          'id'              => 'unique_group_3',
+          'type'            => 'group',
+          'title'           => 'Group Field',
+          'info'            => 'You can use any option field on group',
+          'button_title'    => 'Add New Something',
+          'accordion_title' => 'Adding New Thing',
+          'fields'          => array(
+
+            array(
+              'id'          => 'unique_group_3_text',
+              'type'        => 'upload',
+              'title'       => 'Text Field',
+            ),
+
+          )
+        ),
+
+        array(
+          'id'              => 'unique_group_4',
+          'type'            => 'group',
+          'title'           => 'Group Field',
+          'desc'            => 'Accordion title using the ID of the field, for eg. "Text Field 2" using as accordion title here.',
+          'button_title'    => 'Add New',
+          'accordion_title' => 'unique_group_4_text_2',
+          'fields'          => array(
+
+            array(
+              'id'          => 'unique_group_4_text_1',
+              'type'        => 'text',
+              'title'       => 'Text Field 1',
+            ),
+
+            array(
+              'id'          => 'unique_group_4_text_2',
+              'type'        => 'text',
+              'title'       => 'Text Field 2',
+            ),
+
+            array(
+              'id'          => 'unique_group_4_text_3',
+              'type'        => 'text',
+              'title'       => 'Text Field 3',
+            ),
+
+          )
+        ),
+
+      ),
+    ), // end: group options
+
+
+    // -----------------------------
+    // begin: upload options       -
+    // -----------------------------
+    array(
+      'name'      => 'upload_options',
+      'title'     => 'Upload',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'      => 'unique_upload_1',
+          'type'    => 'upload',
+          'title'   => 'Simple Upload',
+        ),
+
+        array(
+          'id'      => 'unique_upload_2',
+          'type'    => 'upload',
+          'title'   => 'Upload Field with Description',
+          'desc'    => 'Lets write some description for this upload field.',
+        ),
+
+        array(
+          'id'      => 'unique_upload_3',
+          'type'    => 'upload',
+          'title'   => 'Upload Field with Help',
+          'help'    => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'      => 'unique_upload_4',
+          'type'    => 'upload',
+          'title'   => 'Upload Field with Default',
+          'default' => 'screenshot-1.png',
+        ),
+
+        array(
+          'id'      => 'unique_upload_5',
+          'type'    => 'upload',
+          'title'   => 'Upload Field with After-text',
+          'after'   => '<p class="cs-text-muted">You can use default value <strong>get_template_directory_uri()</strong>."/images/screenshot-1.png"</p>',
+        ),
+
+        array(
+          'id'            => 'unique_upload_6',
+          'type'          => 'upload',
+          'title'         => 'Upload Field with Placeholder',
+          'attributes'    => array(
+            'placeholder' => 'http://'
+          ),
+        ),
+
+        array(
+          'id'             => 'unique_upload_7',
+          'type'           => 'upload',
+          'title'          => 'Upload Field with Custom Title',
+          'settings'       => array(
+            'button_title' => 'Upload Logo',
+            'frame_title'  => 'Choose a image',
+            'insert_title' => 'Use this image',
+          ),
+        ),
+
+        array(
+          'id'             => 'unique_upload_8',
+          'type'           => 'upload',
+          'title'          => 'Upload Field with Video',
+          'settings'       => array(
+            'upload_type'  => 'video',
+            'button_title' => 'Upload Video',
+            'frame_title'  => 'Choose a Video',
+            'insert_title' => 'Use This Video',
+          ),
+        ),
+
+      ),
+    ), // end: upload options
+
+
+    // -----------------------------
+    // begin: background options   -
+    // -----------------------------
+    array(
+      'name'      => 'background_options',
+      'title'     => 'Background',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'    => 'unique_background_1',
+          'type'  => 'background',
+          'title' => 'Background',
+        ),
+
+        array(
+          'id'    => 'unique_background_2',
+          'type'  => 'background',
+          'title' => 'Background Field with Description',
+          'desc'  => 'Lets write some description for this background field.',
+          'help'  => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'           => 'unique_background_3',
+          'type'         => 'background',
+          'title'        => 'Background Field with Default',
+          'default'      => array(
+            'image'      => 'something.png',
+            'repeat'     => 'repeat-x',
+            'position'   => 'center center',
+            'attachment' => 'fixed',
+            'color'      => '#ffbc00',
+          ),
+        ),
+
+        array(
+          'id'      => 'unique_background_4',
+          'type'    => 'background',
+          'title'   => 'Background Field with Description',
+          'after'   => '<p class="cs-text-muted">Information: There is some description for option.</p> ',
+          'default' => array(
+            'color' => '#222',
+          ),
+        ),
+
+      ),
+    ), // end: background options
+
+
+    // -----------------------------
+    // begin: color picker options -
+    // -----------------------------
+    array(
+      'name'      => 'color_picker_options',
+      'title'     => 'Color Picker',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'      => 'unique_color_picker_1',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker',
+          'default' => '#dd3333',
+        ),
+
+        array(
+          'id'      => 'unique_color_picker_2',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker RGBA disabled',
+          'rgba'    => false,
+        ),
+
+        array(
+          'id'      => 'unique_color_picker_3',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker Field with Description',
+          'desc'    => 'Lets write some description for this color picker field.',
+        ),
+
+        array(
+          'id'      => 'unique_color_picker_4',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker Field with Help',
+          'help'    => 'I am a Tooltip helper. This field important for something.',
+        ),
+
+        array(
+          'id'      => 'unique_color_picker_5',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker Field with Default',
+          'default' => 'rgba(0, 0, 255, 0.25)',
+        ),
+
+        array(
+          'id'      => 'unique_color_picker_6',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker Field with Default',
+          'after'   => '<p class="cs-text-muted">Information: There is some description for option.</p> ',
+          'default' => 'rgba(0, 255, 0, 0.75)',
+        ),
+
+      ),
+    ), // end: color picker options
+
+
+    // -----------------------------
+    // begin: image select options -
+    // -----------------------------
+    array(
+      'name'      => 'image_select_options',
+      'title'     => 'Image Select',
+      'icon'      => 'fa fa-check',
+      'fields'    => array(
+
+        array(
+          'id'           => 'unique_image_select_1',
+          'type'         => 'image_select',
+          'title'        => 'Image Select (Checkbox)',
+          'options'      => array(
+            'value-1'    => 'http://codestarframework.com/assets/images/placeholder/150x125-2ecc71.gif',
+            'value-2'    => 'http://codestarframework.com/assets/images/placeholder/150x125-e74c3c.gif',
+            'value-3'    => 'http://codestarframework.com/assets/images/placeholder/150x125-ffbc00.gif',
+            'value-4'    => 'http://codestarframework.com/assets/images/placeholder/150x125-3498db.gif',
+          ),
+        ),
+
+        array(
+          'id'           => 'unique_image_select_2',
+          'type'         => 'image_select',
+          'title'        => 'Image Select (Checkbox) with Default',
+          'options'      => array(
+            'value-1'    => 'http://codestarframework.com/assets/images/placeholder/150x125-ffbc00.gif',
+            'value-2'    => 'http://codestarframework.com/assets/images/placeholder/150x125-3498db.gif',
+            'value-3'    => 'http://codestarframework.com/assets/images/placeholder/150x125-e74c3c.gif',
+            'value-4'    => 'http://codestarframework.com/assets/images/placeholder/150x125-2ecc71.gif',
+            'value-5'    => 'http://codestarframework.com/assets/images/placeholder/150x125-555555.gif',
+          ),
+          'default'      => 'value-2'
+        ),
+
+        array(
+          'id'           => 'unique_image_select_3',
+          'type'         => 'image_select',
+          'title'        => 'Image Select (Radio) with Default',
+          'options'      => array(
+            'value-1'    => 'http://codestarframework.com/assets/images/placeholder/150x125-2ecc71.gif',
+            'value-2'    => 'http://codestarframework.com/assets/images/placeholder/150x125-e74c3c.gif',
+            'value-3'    => 'http://codestarframework.com/assets/images/placeholder/150x125-ffbc00.gif',
+            'value-4'    => 'http://codestarframework.com/assets/images/placeholder/150x125-3498db.gif',
+          ),
+          'radio'        => true,
+          'default'      => 'value-3'
+        ),
+
+        array(
+          'id'           => 'unique_image_select_4',
+          'type'         => 'image_select',
+          'title'        => 'Image Select (Radio) with Default',
+          'options'      => array(
+            'value-1'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-2'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-3'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-4'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-5'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-6'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-7'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-8'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+          ),
+          'radio'        => true,
+          'default'      => 'value-2'
+        ),
+
+        array(
+          'id'           => 'unique_image_select_5',
+          'type'         => 'image_select',
+          'title'        => 'Image Select with Multi Select',
+          'options'      => array(
+            'value-1'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-2'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-3'    => 'http://codestarframework.com/assets/images/placeholder/80x80-e74c3c.gif',
+            'value-4'    => 'http://codestarframework.com/assets/images/placeholder/80x80-ffbc00.gif',
+            'value-5'    => 'http://codestarframework.com/assets/images/placeholder/80x80-3498db.gif',
+            'value-6'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2ecc71.gif',
+            'value-7'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+            'value-8'    => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
+          ),
+          'multi_select' => true,
+          'default'      => array( 'value-3', 'value-4', 'value-5', 'value-6' )
+        ),
+
+      ),
+    ), // end: image select options
+
+
+    // -----------------------------
+    // begin: typography options   -
+    // -----------------------------
+    array(
+      'name'          => 'typography_options',
+      'title'         => 'Typography',
+      'icon'          => 'fa fa-check',
+      'fields'        => array(
+
+        array(
+          'id'        => 'unique_typography_1',
+          'type'      => 'typography',
+          'title'     => 'Typography with Default',
+          'default'   => array(
+            'family'  => 'Open Sans',
+            'font'    => 'google', // this is helper for output ( google, websafe, custom )
+            'variant' => '800',
+          ),
+        ),
+
+        array(
+          'id'        => 'unique_typography_2',
+          'type'      => 'typography',
+          'title'     => 'Typography without Chosen',
+          'default'   => array(
+            'family'  => 'Ubuntu',
+            'font'    => 'google',
+          ),
+          'chosen'    => false,
+        ),
+
+        array(
+          'id'        => 'unique_typography_3',
+          'type'      => 'typography',
+          'title'     => 'Typography without Chosen/Variant',
+          'default'   => array(
+            'family'  => 'Arial',
+            'font'    => 'websafe',
+          ),
+          'variant'   => false,
+          'chosen'    => false,
+        ),
+
+      ),
+    ), // end: typography options
+
+
+    // -----------------------------
+    // begin: new fields options   -
+    // -----------------------------
+    array(
+      'name'         => 'wysiwyg_options',
+      'title'        => 'Wysiwyg',
+      'icon'         => 'fa fa-check',
+      'fields'       => array(
+
+        array(
+          'id'       => 'wysiwyg_1',
+          'type'     => 'wysiwyg',
+          'title'    => 'Wysiwyg',
+        ),
+
+        array(
+          'id'       => 'wysiwyg_2',
+          'type'     => 'wysiwyg',
+          'title'    => 'Wysiwyg with Custom Settings',
+          'settings' => array(
+            'textarea_rows' => 5,
+            'tinymce'       => false,
+            'media_buttons' => false,
+          )
+        ),
+
+
+      ),
+    ), // end: new fields options
+
+
+    // -----------------------------
+    // begin: image options        -
+    // -----------------------------
+    array(
+      'name'          => 'image_options',
+      'title'         => 'Image',
+      'icon'          => 'fa fa-check',
+      'fields'        => array(
+
+        array(
+          'id'        => 'image_1',
+          'type'      => 'image',
+          'title'     => 'Image',
+        ),
+
+        array(
+          'id'        => 'image_2',
+          'type'      => 'image',
+          'title'     => 'Image with After Text',
+          'desc'      => 'Lets write some description for this image field.',
+          'help'      => 'This option field is useful. You will love it!',
+        ),
+
+        array(
+          'id'        => 'image_3',
+          'type'      => 'image',
+          'title'     => 'Image with Custom Title',
+          'add_title' => 'Add Logo',
+        ),
+
+      ),
+    ), // end: image options
+
+
+    // -----------------------------
+    // begin: gallery options      -
+    // -----------------------------
+    array(
+      'name'            => 'gallery_options',
+      'title'           => 'Gallery',
+      'icon'            => 'fa fa-check',
+      'fields'          => array(
+
+        array(
+          'id'          => 'gallery_1',
+          'type'        => 'gallery',
+          'title'       => 'Gallery',
+        ),
+
+        array(
+          'id'          => 'gallery_2',
+          'type'        => 'gallery',
+          'title'       => 'Gallery with Custom Title',
+          'add_title'   => 'Add Images',
+          'edit_title'  => 'Edit Images',
+          'clear_title' => 'Remove Images',
+        ),
+
+        array(
+          'id'          => 'gallery_3',
+          'type'        => 'gallery',
+          'title'       => 'Gallery with Custom Title',
+          'desc'        => 'Lets write some description for this image field.',
+          'help'        => 'This option field is useful. You will love it!',
+          'add_title'   => 'Add Image(s)',
+          'edit_title'  => 'Edit Image(s)',
+          'clear_title' => 'Clear Image(s)',
+        ),
+
+      ),
+    ), // end: gallery options
+
+
+    // -----------------------------
+    // begin: sorter options       -
+    // -----------------------------
+    array(
+      'name'     => 'sorter_options',
+      'title'    => 'Sorter',
+      'icon'     => 'fa fa-check',
+      'fields'   => array(
+
+        array(
+          'id'             => 'sorter_1',
+          'type'           => 'sorter',
+          'title'          => 'Sorter',
+          'default'        => array(
+            'enabled'      => array(
+              'bmw'        => 'BMW',
+              'mercedes'   => 'Mercedes',
+              'volkswagen' => 'Volkswagen',
+            ),
+            'disabled'     => array(
+              'ferrari'    => 'Ferrari',
+              'mustang'    => 'Mustang',
+            ),
+          ),
+        ),
+
+        array(
+          'id'             => 'sorter_2',
+          'type'           => 'sorter',
+          'title'          => 'Sorter',
+          'default'        => array(
+            'enabled'      => array(
+              'blue'       => 'Blue',
+              'green'      => 'Green',
+              'red'        => 'Red',
+              'yellow'     => 'Yellow',
+              'orange'     => 'Orange',
+              'ocean'      => 'Ocean',
+            ),
+            'disabled'     => array(
+              'black'      => 'Black',
+              'white'      => 'White',
+            ),
+          ),
+          'enabled_title'  => 'Active Colors',
+          'disabled_title' => 'Deactive Colors',
+        ),
+      ),
+
+    ), // end: sorter options
+
+
+    // -----------------------------
+    // begin: sorter options       -
+    // -----------------------------
+    array(
+      'name'     => 'fieldset_options',
+      'title'    => 'Fieldset',
+      'icon'     => 'fa fa-check',
+      'fields'   => array(
+
+        array(
+          'id'        => 'fieldset_1',
+          'type'      => 'fieldset',
+          'title'     => 'Fieldset Field',
+          'fields'    => array(
+
+            array(
+              'id'    => 'fieldset_1_text',
+              'type'  => 'text',
+              'title' => 'Text Field',
+            ),
+
+            array(
+              'id'    => 'fieldset_1_upload',
+              'type'  => 'upload',
+              'title' => 'Upload Field',
+            ),
+
+            array(
+              'id'    => 'fieldset_1_textarea',
+              'type'  => 'textarea',
+              'title' => 'Textarea Field',
+            ),
+
+          ),
+        ),
+
+        array(
+          'id'        => 'fieldset_2',
+          'type'      => 'fieldset',
+          'title'     => 'Fieldset Field with Default',
+          'fields'    => array(
+
+            array(
+              'type'    => 'subheading',
+              'content' => 'Title of Fieldset',
+            ),
+
+            array(
+              'id'      => 'fieldset_2_text',
+              'type'    => 'text',
+              'title'   => 'Text Field',
+            ),
+
+            array(
+              'id'      => 'fieldset_2_checkbox',
+              'type'    => 'checkbox',
+              'title'   => 'Checkbox Field',
+              'label'   => 'Are you sure?',
+            ),
+
+            array(
+              'id'      => 'fieldset_2_textarea',
+              'type'    => 'textarea',
+              'title'   => 'Upload Field',
+            ),
+
+          ),
+          'default'   => array(
+            'fieldset_2_text'     => 'Hello',
+            'fieldset_2_checkbox' => true,
+            'fieldset_2_textarea' => 'Do stuff',
+          )
+        ),
+
+      ),
+    ), // end: sorter options
+
+
+    // -----------------------------
+    // begin: others options       -
+    // -----------------------------
+    array(
+      'name'        => 'others_options',
+      'title'       => 'Others',
+      'icon'        => 'fa fa-check',
+      'fields'      => array(
+
+        array(
+          'type'    => 'heading',
+          'content' => 'Heading',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_1',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 1',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_2',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 2',
+        ),
+
+        array(
+          'type'    => 'subheading',
+          'content' => 'Sub Heading',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_3',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 3',
+        ),
+
+        array(
+          'type'    => 'notice',
+          'class'   => 'success',
+          'content' => 'Notice Success: Lorem Ipsum, a random Lipsum generator.',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_4',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 4',
+        ),
+
+        array(
+          'type'    => 'notice',
+          'class'   => 'info',
+          'content' => 'Notice Info: Lorem Ipsum, a random Lipsum generator.',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_5',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 5',
+        ),
+
+        array(
+          'type'    => 'notice',
+          'class'   => 'warning',
+          'content' => 'Notice Warning: Lorem Ipsum, a random Lipsum generator.',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_6',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 6',
+        ),
+
+        array(
+          'type'    => 'notice',
+          'class'   => 'danger',
+          'content' => 'Notice Danger: Lorem Ipsum, a random Lipsum generator.',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_7',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 7',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_8',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 8',
+        ),
+
+        array(
+          'type'    => 'content',
+          'content' => 'Content Field: It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+        ),
+
+        array(
+          'id'      => 'unique_others_text_9',
+          'type'    => 'text',
+          'title'   => 'Others Text Field 9',
+          'after'   => '<p class="cs-text-warning">This field using debug=true</p>',
+          'debug'   => true,
+        ),
+
+
+      ),
+    ), // end: other options
 
   )
 );
 
 // ------------------------------
-// 备份                       -
+// a seperator                  -
+// ------------------------------
+$options[] = array(
+  'name'   => 'seperator_1',
+  'title'  => 'A Seperator',
+  'icon'   => 'fa fa-bookmark'
+);
+
+// ------------------------------
+// backup                       -
 // ------------------------------
 $options[]   = array(
-  'name'     => 'advanced',
-  'title'    => '备份',
+  'name'     => 'backup_section',
+  'title'    => 'Backup',
   'icon'     => 'fa fa-shield',
   'fields'   => array(
 
     array(
       'type'    => 'notice',
       'class'   => 'warning',
-      'content' => '您可以保存当前的选项，下载一个备份和导入.',
+      'content' => 'You can save your current options. Download a Backup and Import.',
     ),
 
-	// 备份
     array(
       'type'    => 'backup',
     ),
@@ -1355,213 +1833,597 @@ $options[]   = array(
 );
 
 // ------------------------------
-// 管理                       -
+// validate                     -
 // ------------------------------
 $options[]   = array(
-  'name'     => 'admin',
-  'title'    => '管理',
-  'icon'     => 'fa fa-gears',
+  'name'     => 'validate_section',
+  'title'    => 'Validate',
+  'icon'     => 'fa fa-check-circle',
   'fields'   => array(
 
-		array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '维护模式',
-		),
+    array(
+      'id'       => 'validate_text_1',
+      'type'     => 'text',
+      'title'    => 'Email Text',
+      'desc'     => 'This text field only accepted email address.',
+      'default'  => 'info@domain.com',
+      'validate' => 'email',
+    ),
 
- 		// 维护模式
-		array(
-          'id'    	  => 'i_maintenance',
-          'type'      => 'switcher',
-          'title'     => '维护模式',
-        ),
+    array(
+      'id'       => 'numeric_text_1',
+      'type'     => 'text',
+      'title'    => 'Numeric Text',
+      'desc'     => 'This text field only accepted numbers',
+      'default'  => '123456',
+      'validate' => 'numeric',
+    ),
 
-		// 标题
-        array(
-          'id'         => 'i_maintenance_title',
-          'type'       => 'text',
-          'title'      => '标题',
-          'default'    => '维护中...',
-          'dependency' => array( 'i_maintenance', '==', 'true' ),
-        ),
-
-		// 通知
-        array(
-          'id'         => 'i_maintenance_notice',
-          'type'       => 'textarea',
-          'title'      => '通知',
-          'default'    => '网站升级维护中...',
-          'dependency' => array( 'i_maintenance', '==', 'true' ),
-        ),
-
-		array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '保护后台登录',
-		),
-
- 		// 保护登录地址
-		array(
-          'id'    	  => 'i_login_protection',
-          'type'      => 'switcher',
-          'title'     => '保护登录地址',
-        ),
-
-		// 前缀
-        array(
-          'id'         => 'i_login_prefix',
-          'type'       => 'text',
-          'title'      => '前缀',
-          'default'    => 'admin',
-          'dependency' => array( 'i_login_protection', '==', 'true' ),
-        ),
-
-		// 后缀
-        array(
-          'id'         => 'i_login_suffix',
-          'type'       => 'text',
-          'title'      => '后缀',
-          'default'    => 'true',
-          'dependency' => array( 'i_login_protection', '==', 'true' ),
-        ),
-
-		// 非法登录跳转
-        array(
-          'id'         => 'i_login_link',
-          'type'       => 'text',
-          'title'      => '非法登录跳转',
-          'default'    => home_url(),
-          'dependency' => array( 'i_login_protection', '==', 'true' ),
-        ),
-
-		array(
-		  'type'    => 'notice',
-		  'class'   => 'warning',
-		  'content' => "当前登录地址为： ".home_url()."/wp-login.php?".cs_get_option('i_login_prefix')."=".cs_get_option('i_login_suffix'),
-          'dependency' => array( 'i_login_protection', '==', 'true' ),
-		),
-
- 		// 过滤HTTP 1.0的登录POST请求
-		array(
-          'id'    	  => 'i_login_http',
-          'type'      => 'switcher',
-          'title'     => '过滤HTTP 1.0',
-        ),
-
- 		// POST Cookie 保护
-		array(
-          'id'    	  => 'i_login_cookie',
-          'type'      => 'switcher',
-          'title'     => 'POST Cookie 保护',
-        ),
-
- 		// 增加额外登录验证
-		array(
-          'id'    	  => 'i_login_auth',
-          'type'      => 'switcher',
-          'title'     => '增加额外登录验证',
-        ),
+    array(
+      'id'       => 'required_text_1',
+      'type'     => 'text',
+      'title'    => 'Requried Text',
+      'after'    => ' <small class="cs-text-warning">( * required )</small>',
+      'default'  => 'lorem ipsum',
+      'validate' => 'required',
+    ),
 
     array(
       'type'    => 'notice',
       'class'   => 'info',
-      'content' => '公告弹窗',
-    ),
-
-      // 弹窗控件
-    array(
-          'id'        => 'i_notice',
-          'type'      => 'switcher',
-          'title'     => '启用公告弹窗',
-          'label'     => 'Cookie默认保存1小时',
-     ),
-
-     // 封面
-     array(
-       'id'      => 'i_notice_img',
-       'type'    => 'upload',
-       'title'   => '封面',
-       'dependency' => array( 'i_notice', '==', 'true' ),
-     ),
-
-     // 标题
-     array(
-       'id'      => 'i_notice_title',
-       'type'    => 'text',
-       'title'   => '标题',
-       'dependency' => array( 'i_notice', '==', 'true' ),
-     ),
-
-    // 内容
-    array(
-      'id'      => 'i_notice_text',
-      'type'    => 'textarea',
-      'title'   => '内容',
-      'dependency' => array( 'i_notice', '==', 'true' ),
-    ),
-
-    // 链接
-    array(
-      'id'      => 'i_notice_link',
-      'type'    => 'text',
-      'title'   => '链接',
-      'dependency' => array( 'i_notice', '==', 'true' ),
+      'content' => 'Also you can add your own validate from <strong>themename/cs-framework/functions/validate.php</strong>',
     ),
 
   )
 );
 
 // ------------------------------
-// 更新                       -
+// sanitize                     -
 // ------------------------------
 $options[]   = array(
-  'name'     => 'update',
-  'title'    => '更新',
-  'icon'     => 'fa fa-refresh',
-  'fields' => array(
+  'name'     => 'sanitize_section',
+  'title'    => 'Sanitize',
+  'icon'     => 'fa fa-repeat',
+  'fields'   => array(
 
     array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '检测更新',
-		),
+      'id'       => 'sanitie_text_1',
+      'type'     => 'text',
+      'title'    => 'Sanitized Text',
+      'after'    => '<p class="cs-text-muted">This text field sanitized already, without any settings. we are using wordpress core.<br /> for eg. try too add <strong>&lt;p></strong> html tag</p>',
+    ),
 
     array(
-      'type'    => 'content',
-      'content' => '<input type="button" name="update" id="update" class="button button-primary cs-update" value="检测更新">',
-		),
+      'id'       => 'sanitie_text_2',
+      'type'     => 'text',
+      'title'    => 'Disable Sanitized Text',
+      'after'    => '<p class="cs-text-muted">Disabled sanitize for this field (sanitize=false). try too add <strong>&lt;p></strong> html tag so, you can write anything</p>',
+      'sanitize' => false,
+    ),
 
     array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '更新日志',
-		),
+      'id'       => 'sanitie_textarea_1',
+      'type'     => 'textarea',
+      'title'    => 'Sanitized Textarea',
+      'after'    => '<p class="cs-text-muted">This textarea field sanitized already, without any settings. we are using wordpress core.<br /> just allowing this tags wp core $allowedposttags</p>',
+    ),
 
     array(
-      'type'    => 'content',
-      'content' => '<div id="update-list"></div>',
-		),
+      'id'       => 'sanitie_textarea_2',
+      'type'     => 'textarea',
+      'title'    => 'Disabled Sanitized Textarea',
+      'after'    => '<p class="cs-text-muted">Disabled sanitize for this field (sanitize=false). you can write anything</p>',
+      'sanitize' => false,
+    ),
+
+    array(
+      'type'    => 'notice',
+      'class'   => 'info',
+      'content' => 'Custom Sanitize, Also you can add your own validate from <strong>themename/cs-framework/functions/sanitize.php</strong>',
+    ),
+
+    array(
+      'id'       => 'sanitie_text_1',
+      'type'     => 'text',
+      'title'    => 'Custom Sanitize Text',
+      'after'    => '<p class="cs-text-muted">This text field sanitized as slug title (sanitize="title")</p>',
+      'sanitize' => 'title',
+    ),
+
+  )
+);
+
+// ----------------------------------------
+// dependencies                           -
+// ----------------------------------------
+$options[]           = array(
+  'name'             => 'dependencies',
+  'title'            => 'Dependencies',
+  'icon'             => 'fa fa-code-fork',
+  'fields'           => array(
+
+    // ------------------------------------
+    // Basic Dependencies
+    // ------------------------------------
+    array(
+      'type'         => 'subheading',
+      'content'      => 'Basic Dependencies',
+    ),
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_1',
+      'type'         => 'text',
+      'title'        => 'If text <u>not be empty</u>',
+    ),
+
+    array(
+      'id'           => 'dummy_1',
+      'type'         => 'notice',
+      'class'        => 'info',
+      'content'      => 'Done, this text option have something.',
+      'dependency'   => array( 'dep_1', '!=', '' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_2',
+      'type'         => 'switcher',
+      'title'        => 'If switcher mode <u>ON</u>',
+    ),
+
+    array(
+      'id'           => 'dummy_2',
+      'type'         => 'notice',
+      'class'        => 'success',
+      'content'      => 'Woow! Switcher is ON',
+      'dependency'   => array( 'dep_2', '==', 'true' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_3',
+      'type'         => 'select',
+      'title'        => 'Select color <u>black or white</u>',
+      'options'      => array(
+        'blue'       => 'Blue',
+        'yellow'     => 'Yellow',
+        'green'      => 'Green',
+        'black'      => 'Black',
+        'white'      => 'White',
+      ),
+    ),
+
+    array(
+      'id'           => 'dummy_3',
+      'type'         => 'notice',
+      'class'        => 'danger',
+      'content'      => 'Well done!',
+      'dependency'   => array( 'dep_3', 'any', 'black,white' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_4',
+      'type'         => 'radio',
+      'title'        => 'If set <u>No, Thanks</u>',
+      'options'      => array(
+        'yes'        => 'Yes, Please',
+        'no'         => 'No, Thanks',
+        'not-sure'   => 'I am not sure!',
+      ),
+      'default'      => 'yes'
+    ),
+
+    array(
+      'id'           => 'dummy_4',
+      'type'         => 'notice',
+      'class'        => 'info',
+      'content'      => 'Uh why?!!!',
+      'dependency'   => array( 'dep_4_no', '==', 'true' ),
+      //'dependency' => array( '{ID}_{VALUE}', '==', 'true' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_5',
+      'type'         => 'checkbox',
+      'title'        => 'If checked <u>danger</u>',
+      'options'      => array(
+        'success'    => 'Success',
+        'danger'     => 'Danger',
+        'info'       => 'Info',
+        'warning'    => 'Warning',
+      ),
+    ),
+
+    array(
+      'id'           => 'dummy_5',
+      'type'         => 'notice',
+      'class'        => 'danger',
+      'content'      => 'Danger!',
+      'dependency'   => array( 'dep_5_danger', '==', 'true' ),
+      //'dependency' => array( '{ID}_{VALUE}', '==', 'true' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_6',
+      'type'         => 'image_select',
+      'title'        => 'If check <u>Blue box</u> (checkbox)',
+      'options'      => array(
+        'green'      => 'http://codestarframework.com/assets/images/placeholder/100x80-2ecc71.gif',
+        'red'        => 'http://codestarframework.com/assets/images/placeholder/100x80-e74c3c.gif',
+        'yellow'     => 'http://codestarframework.com/assets/images/placeholder/100x80-ffbc00.gif',
+        'blue'       => 'http://codestarframework.com/assets/images/placeholder/100x80-3498db.gif',
+        'gray'       => 'http://codestarframework.com/assets/images/placeholder/100x80-555555.gif',
+      ),
+      'info'         => 'Image select field input="checkbox" model. in checkbox model unselected available.',
+    ),
+
+    array(
+      'id'           => 'dummy_6',
+      'type'         => 'notice',
+      'class'        => 'info',
+      'content'      => 'Blue box selected!',
+      'dependency'   => array( 'dep_6_blue', '==', 'true' ),
+      //'dependency' => array( '{ID}_{VALUE}', '==', 'true' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_6_alt',
+      'type'         => 'image_select',
+      'title'        => 'If check <u>Green box or Blue box</u> (checkbox)',
+      'options'      => array(
+        'green'      => 'http://codestarframework.com/assets/images/placeholder/100x80-2ecc71.gif',
+        'red'        => 'http://codestarframework.com/assets/images/placeholder/100x80-e74c3c.gif',
+        'yellow'     => 'http://codestarframework.com/assets/images/placeholder/100x80-ffbc00.gif',
+        'blue'       => 'http://codestarframework.com/assets/images/placeholder/100x80-3498db.gif',
+        'gray'       => 'http://codestarframework.com/assets/images/placeholder/100x80-555555.gif',
+      ),
+      'info'         => 'Multipel Image select field input="checkbox" model. in checkbox model unselected available.',
+      'default'      => 'gray',
+      'attributes'   => array(
+        'data-depend-id' => 'dep_6_alt',
+      ),
+    ),
+
+    array(
+      'id'           => 'dummy_6_alt',
+      'type'         => 'notice',
+      'class'        => 'success',
+      'content'      => 'Green or Blue box selected!',
+      'dependency'   => array( 'dep_6_alt', 'any', 'green,blue' ),
+      //'dependency' => array( 'data-depend-id', 'any', 'value,value' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_7',
+      'type'         => 'image_select',
+      'title'        => 'If check <u>Green box</u> (radio)',
+      'options'      => array(
+        'green'      => 'http://codestarframework.com/assets/images/placeholder/100x80-2ecc71.gif',
+        'red'        => 'http://codestarframework.com/assets/images/placeholder/100x80-e74c3c.gif',
+        'yellow'     => 'http://codestarframework.com/assets/images/placeholder/100x80-ffbc00.gif',
+        'blue'       => 'http://codestarframework.com/assets/images/placeholder/100x80-3498db.gif',
+        'gray'       => 'http://codestarframework.com/assets/images/placeholder/100x80-555555.gif',
+      ),
+      'info'         => 'Image select field input="radio" model. in radio model unselected unavailable.',
+      'radio'        => true,
+      'default'      => 'gray',
+    ),
+
+    array(
+      'id'           => 'dummy_7',
+      'type'         => 'notice',
+      'class'        => 'success',
+      'content'      => 'Green box selected!',
+      'dependency'   => array( 'dep_7_green', '==', 'true' ),
+      //'dependency' => array( '{ID}_{VALUE}', '==', 'true' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_7_alt',
+      'type'         => 'image_select',
+      'title'        => 'If check <u>Green box or Blue box</u> (radio)',
+      'options'      => array(
+        'green'      => 'http://codestarframework.com/assets/images/placeholder/100x80-2ecc71.gif',
+        'red'        => 'http://codestarframework.com/assets/images/placeholder/100x80-e74c3c.gif',
+        'yellow'     => 'http://codestarframework.com/assets/images/placeholder/100x80-ffbc00.gif',
+        'blue'       => 'http://codestarframework.com/assets/images/placeholder/100x80-3498db.gif',
+        'gray'       => 'http://codestarframework.com/assets/images/placeholder/100x80-555555.gif',
+      ),
+      'info'         => 'Multipel Image select field input="radio" model. in radio model unselected unavailable.',
+      'radio'        => true,
+      'default'      => 'gray',
+      'attributes'   => array(
+        'data-depend-id' => 'dep_7_alt',
+      ),
+    ),
+
+    array(
+      'id'           => 'dummy_7_alt',
+      'type'         => 'notice',
+      'class'        => 'success',
+      'content'      => 'Green or Blue box selected!',
+      'dependency'   => array( 'dep_7_alt', 'any', 'green,blue' ),
+      //'dependency' => array( 'data-depend-id', 'any', 'value,value' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_8',
+      'type'         => 'image',
+      'title'        => 'Add a image',
+    ),
+
+    array(
+      'id'           => 'dummy_8',
+      'type'         => 'notice',
+      'class'        => 'success',
+      'content'      => 'Added a image!',
+      'dependency'   => array( 'dep_8', '!=', '' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_9',
+      'type'         => 'icon',
+      'title'        => 'Add a icon',
+    ),
+
+    array(
+      'id'           => 'dummy_9',
+      'type'         => 'notice',
+      'class'        => 'success',
+      'content'      => 'Added a icon!',
+      'dependency'   => array( 'dep_9', '!=', '' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    // Advanced Dependencies
+    // ------------------------------------
+    array(
+      'type'         => 'subheading',
+      'content'      => 'Advanced Dependencies',
+    ),
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_10',
+      'type'         => 'text',
+      'title'        => 'If text string <u>hello</u>',
+    ),
+
+    array(
+      'id'           => 'dep_11',
+      'type'         => 'text',
+      'title'        => 'and this text string <u>world</u>',
+    ),
+
+    array(
+      'id'           => 'dep_12',
+      'type'         => 'checkbox',
+      'title'        => 'and checkbox mode <u>checked</u>',
+      'label'        => 'Check me!'
+    ),
+
+    array(
+      'id'           => 'dummy_10',
+      'type'         => 'notice',
+      'class'        => 'info',
+      'content'      => 'Done, Multiple Dependencies worked.',
+      'dependency'   => array( 'dep_10|dep_11|dep_12', '==|==|==', 'hello|world|true' ),
+    ),
+    // ------------------------------------
+
+    // ------------------------------------
+    // Another Dependencies
+    // ------------------------------------
+    array(
+      'type'         => 'subheading',
+      'content'      => 'Another Dependencies',
+    ),
+
+    // ------------------------------------
+    array(
+      'id'           => 'dep_13',
+      'type'         => 'select',
+      'title'        => 'If color <u>black or white</u>',
+      'options'      => array(
+        'blue'       => 'Blue',
+        'black'      => 'Black',
+        'white'      => 'White',
+      ),
+    ),
+
+    array(
+      'id'           => 'dep_14',
+      'type'         => 'select',
+      'title'        => 'If size <u>middle</u>',
+      'options'      => array(
+        'small'      => 'Small',
+        'middle'     => 'Middle',
+        'large'      => 'Large',
+        'xlage'      => 'XLarge',
+      ),
+    ),
+
+    array(
+      'id'           => 'dep_15',
+      'type'         => 'select',
+      'title'        => 'If text is <u>world</u>',
+      'options'      => array(
+        'hello'      => 'Hello',
+        'world'      => 'World',
+      ),
+      'dependency'   => array( 'dep_13|dep_14', 'any|==', 'black,white|middle' ),
+    ),
+
+    array(
+      'id'           => 'dummy_11',
+      'type'         => 'notice',
+      'class'        => 'info',
+      'content'      => 'Well done, Correctly!',
+      'dependency'   => array( 'dep_15', '==', 'world' ),
+    ),
+    // ------------------------------------
 
   ),
 );
 
 // ------------------------------
-// 关于                       -
+// a seperator                  -
+// ------------------------------
+$options[] = array(
+  'name'   => 'seperator_2',
+  'title'  => 'Section Examples',
+  'icon'   => 'fa fa-cog'
+);
+
+// ------------------------------
+// normal section               -
 // ------------------------------
 $options[]   = array(
-  'name'     => 'about',
-  'title'    => '关于',
-  'icon'     => 'fa fa-info-circle',
-  'fields' => array(
+  'name'     => 'normal_section',
+  'title'    => 'Normal Section',
+  'icon'     => 'fa fa-minus',
+  'fields'   => array(
 
-		// 关于主题
+    array(
+      'type'    => 'content',
+      'content' => 'This section is empty, add some options...',
+    ),
+
+  )
+);
+
+// ------------------------------
+// accordion sections           -
+// ------------------------------
+$options[]   = array(
+  'name'     => 'accordion_section',
+  'title'    => 'Accordion Sections',
+  'icon'     => 'fa fa-bars',
+  'sections' => array(
+
+    // sub section 1
+    array(
+      'name'     => 'sub_section_1',
+      'title'    => 'Sub Sections 1',
+      'icon'     => 'fa fa-minus',
+      'fields'   => array(
+
         array(
           'type'    => 'content',
-          'content' => '<iframe src="http://7xigsj.com1.z0.glb.clouddn.com/index.html" style="width:100%;height:900px;"></iframe>',
-		),
+          'content' => 'This section is empty, add some options...',
+        ),
+
+      )
+    ),
+
+    // sub section 2
+    array(
+      'name'     => 'sub_section_2',
+      'title'    => 'Sub Sections 2',
+      'icon'     => 'fa fa-minus',
+      'fields'   => array(
+
+        array(
+          'type'    => 'content',
+          'content' => 'This section is empty, add some options...',
+        ),
+
+      )
+    ),
+
+    // sub section 3
+    array(
+      'name'     => 'sub_section_3',
+      'title'    => 'Sub Sections 3',
+      'icon'     => 'fa fa-minus',
+      'fields'   => array(
+
+        array(
+          'type'    => 'content',
+          'content' => 'This section is empty, add some options...',
+        ),
+
+      )
+    ),
 
   ),
 );
 
+// ------------------------------
+// a seperator                  -
+// ------------------------------
+$options[] = array(
+  'name'   => 'seperator_3',
+  'title'  => 'Others',
+  'icon'   => 'fa fa-gift'
+);
+
+// ------------------------------
+// donate                       -
+// ------------------------------
+$options[]   = array(
+  'name'     => 'donate_section',
+  'title'    => 'Donate',
+  'icon'     => 'fa fa-heart',
+  'fields'   => array(
+
+    array(
+      'type'    => 'heading',
+      'content' => 'You Guys!'
+    ),
+
+    array(
+      'type'    => 'content',
+      'content' => 'If you want to see more functions and features for this framework, you can buy me a coffee. I need a lot of it when I am creating new stuff for you. Thank you in advance.',
+    ),
+
+    array(
+      'type'    => 'content',
+      'content' => '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7PQ35KWFK8G4N&lc=US&item_name=Codestar%20Framework&item_number=CSF1000&currency_code=USD" target="_blank"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate" /></a>',
+    ),
+
+  )
+);
+
+// ------------------------------
+// license                      -
+// ------------------------------
+$options[]   = array(
+  'name'     => 'license_section',
+  'title'    => 'License',
+  'icon'     => 'fa fa-info-circle',
+  'fields'   => array(
+
+    array(
+      'type'    => 'heading',
+      'content' => '100% GPL License, Yes it is free!'
+    ),
+    array(
+      'type'    => 'content',
+      'content' => 'Codestar Framework is <strong>free</strong> to use both personal and commercial. If you used commercial, <strong>please credit</strong>. Read more about <a href="http://www.gnu.org/licenses/gpl-2.0.txt" target="_blank">GNU License</a>',
+    ),
+
+  )
+);
 
 CSFramework::instance( $settings, $options );

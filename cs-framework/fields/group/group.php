@@ -17,12 +17,13 @@ class CSFramework_Option_group extends CSFramework_Options {
 
     echo $this->element_before();
 
+    $fields      = array_values( $this->field['fields'] );
     $last_id     = ( is_array( $this->value ) ) ? max( array_keys( $this->value ) ) : 0;
     $acc_title   = ( isset( $this->field['accordion_title'] ) ) ? $this->field['accordion_title'] : __( 'Adding', 'cs-framework' );
-    $field_title = ( isset( $this->field['fields'][0]['title'] ) ) ? $this->field['fields'][0]['title'] : $this->field['fields'][1]['title'];
-    $field_id    = ( isset( $this->field['fields'][0]['id'] ) ) ? $this->field['fields'][0]['id'] : $this->field['fields'][1]['id'];
+    $field_title = ( isset( $fields[0]['title'] ) ) ? $fields[0]['title'] : $fields[1]['title'];
+    $field_id    = ( isset( $fields[0]['id'] ) ) ? $fields[0]['id'] : $fields[1]['id'];
     $el_class    = ( isset( $this->field['title'] ) ) ? sanitize_title( $field_title ) : 'no-title';
-    $search_id   = cs_array_search( $this->field['fields'], 'id', $acc_title );
+    $search_id   = cs_array_search( $fields, 'id', $acc_title );
 
     if( ! empty( $search_id ) ) {
 
@@ -35,7 +36,7 @@ class CSFramework_Option_group extends CSFramework_Options {
 
       echo '<h4 class="cs-group-title">'. $acc_title .'</h4>';
       echo '<div class="cs-group-content">';
-      foreach ( $this->field['fields'] as $field_key => $field ) {
+      foreach ( $fields as $field ) {
         $field['sub']   = true;
         $unique         = $this->unique .'[_nonce]['. $this->field['id'] .']['. $last_id .']';
         $field_default  = ( isset( $field['default'] ) ) ? $field['default'] : '';
@@ -66,7 +67,7 @@ class CSFramework_Option_group extends CSFramework_Options {
           echo '<h4 class="cs-group-title">'. $field_title .': '. $title .'</h4>';
           echo '<div class="cs-group-content">';
 
-          foreach ( $this->field['fields'] as $field_key => $field ) {
+          foreach ( $fields as $field ) {
             $field['sub'] = true;
             $unique = $this->unique . '[' . $this->field['id'] . ']['.$key.']';
             $value  = ( isset( $field['id'] ) && isset( $this->value[$key][$field['id']] ) ) ? $this->value[$key][$field['id']] : '';

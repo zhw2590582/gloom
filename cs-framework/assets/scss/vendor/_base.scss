@@ -259,10 +259,6 @@
       @include box-shadow(none);
     }
   }
-
-  .cs-element:last-child{
-    border-bottom: 0 !important;
-  }
 }
 
 .cs-metabox-framework{
@@ -278,10 +274,9 @@
 .cs-element{
   position: relative;
   padding: 30px;
-  border-bottom: 1px solid #eee;
 
-  &:hover{
-    background-color: #f9f9f9;
+  + .cs-element{
+    border-top: 1px solid #eee;
   }
 
   p:last-child{
@@ -746,7 +741,10 @@
 .cs-field-notice{
   padding: 0 !important;
   border: 0 !important;
-  margin-top: -1px;
+
+  + .cs-element{
+    border-top: 0;
+  }
 
   .cs-notice{
     font-size: 12px;
@@ -957,11 +955,7 @@
   margin: 0;
 
   > .cs-element{
-    border-bottom: 0;
-
-    &:hover{
-      background: none;
-    }
+    border-top: 0;
   }
 
   > .cs-field-heading{
@@ -1019,7 +1013,6 @@
 
   > .cs-element{
     padding: 20px 0;
-    border-bottom: 0;
 
     > .cs-title{
       width: 225px;
@@ -1393,14 +1386,6 @@
     top: -10px;
     margin-bottom: 0;
 
-    &:last-child{
-      margin-bottom: -25px;
-
-      .cs-element{
-        border-bottom: none;
-      }
-    }
-
     .chosen-container{
       &.chosen-with-drop .chosen-drop{
         position: relative;
@@ -1409,8 +1394,8 @@
   }
 
   .cs-element{
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: -15px;
+    margin-left: -15px;
     padding: 12px 15px;
 
     .cs-title{

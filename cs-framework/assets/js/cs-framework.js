@@ -47,7 +47,7 @@
 
         } else {
 
-          $('#cs-tab-'+$target).fadeIn('fast').siblings().hide();
+          $('#cs-tab-'+$target).show().siblings().hide();
           $nav.find('a').removeClass('cs-section-active');
           $el.addClass('cs-section-active');
           $reset.val($target);
@@ -333,7 +333,7 @@
         wp_media_frame.on( 'select', function() {
 
           var attachment = wp_media_frame.state().get('selection').first().attributes;
-          var thumbnail  = ( typeof attachment.sizes.thumbnail !== 'undefined' ) ? attachment.sizes.thumbnail.url : attachment.url;
+          var thumbnail = ( typeof attachment.sizes !== 'undefined' && typeof attachment.sizes.thumbnail !== 'undefined' ) ? attachment.sizes.thumbnail.url : attachment.url;
 
           $preview.removeClass('hidden');
           $img.attr('src', thumbnail);
@@ -668,7 +668,7 @@
           $parent = $this.parent();
 
       // Only works in add-tag form
-      if( $parent.attr('id') == 'addtag' ) {
+      if( $parent.attr('id') === 'addtag' ) {
 
         var $submit  = $parent.find('#submit'),
             $name    = $parent.find('#tag-name'),
@@ -996,8 +996,6 @@
             // main-shortcode attributes
             $('[' + ruleAttr + ']', '.cs-dialog-load .cs-element:not(.hidden)').each( function() {
               var _this_main = $(this), _this_main_atts = _this_main.data('atts');
-
-              console.log(_this_main_atts);
               send_to_shortcode += base.validate_atts( _this_main_atts, _this_main );  // validate empty atts
             });
 
@@ -1322,7 +1320,7 @@
                 $container.on('click', '.wp-picker-clear', function() {
 
                   a8cIris._color._alpha = 1;
-                  $alpha_text.text('');
+                  $alpha_text.text('').trigger('change');
                   $alpha_slider.slider('option', 'value', 100).trigger('slide');
 
                 });
@@ -1429,7 +1427,7 @@
     $('.cs-field-group').CSFRAMEWORK_GROUP();
     $('.cs-save').CSFRAMEWORK_SAVE();
     $('.cs-taxonomy').CSFRAMEWORK_TAXONOMY();
-    $cs_body.CSFRAMEWORK_RELOAD_PLUGINS();
+    $('.cs-framework, #widgets-right').CSFRAMEWORK_RELOAD_PLUGINS();
     $.CSFRAMEWORK.ICONS_MANAGER();
     $.CSFRAMEWORK.SHORTCODE_MANAGER();
     $.CSFRAMEWORK.WIDGET_RELOAD_PLUGINS();

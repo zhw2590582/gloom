@@ -1,306 +1,196 @@
-<?php if ( ! defined( 'ABSPATH' ) ) { die; } //不能直接访问网页.
+<?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access pages directly.
 // ===============================================================================================
 // -----------------------------------------------------------------------------------------------
-// 文章和页面属性选项
+// METABOX OPTIONS
 // -----------------------------------------------------------------------------------------------
 // ===============================================================================================
 $options      = array();
 
 // -----------------------------------------
-// 页面选项                -
+// Page Metabox Options                    -
 // -----------------------------------------
 $options[]    = array(
-  'id'        => 'default_page',
-  'title'     => '默认模板选项',
+  'id'        => '_custom_page_options',
+  'title'     => 'Custom Page Options',
   'post_type' => 'page',
   'context'   => 'normal',
   'priority'  => 'default',
   'sections'  => array(
 
+    // begin: a section
     array(
-      'name'  => 'page_section_1',
+      'name'  => 'section_1',
+      'title' => 'Section 1',
+      'icon'  => 'fa fa-cog',
+
+      // begin: fields
       'fields' => array(
 
+        // begin: a field
+        array(
+          'id'    => 'section_1_text',
+          'type'  => 'text',
+          'title' => 'Text Field',
+        ),
+        // end: a field
+
+        array(
+          'id'    => 'section_1_textarea',
+          'type'  => 'textarea',
+          'title' => 'Textarea Field',
+        ),
+
+        array(
+          'id'    => 'section_1_upload',
+          'type'  => 'upload',
+          'title' => 'Upload Field',
+        ),
+
+        array(
+          'id'    => 'section_1_switcher',
+          'type'  => 'switcher',
+          'title' => 'Switcher Field',
+          'label' => 'Yes, Please do it.',
+        ),
+
+      ), // end: fields
+    ), // end: a section
+
+    // begin: a section
+    array(
+      'name'  => 'section_2',
+      'title' => 'Section 2',
+      'icon'  => 'fa fa-tint',
+      'fields' => array(
+
+        array(
+          'id'      => 'section_2_color_picker_1',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker 1',
+          'default' => '#2ecc71',
+        ),
+
+        array(
+          'id'      => 'section_2_color_picker_2',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker 2',
+          'default' => '#3498db',
+        ),
+
+        array(
+          'id'      => 'section_2_color_picker_3',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker 3',
+          'default' => '#9b59b6',
+        ),
+
+        array(
+          'id'      => 'section_2_color_picker_4',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker 4',
+          'default' => '#34495e',
+        ),
+
+        array(
+          'id'      => 'section_2_color_picker_5',
+          'type'    => 'color_picker',
+          'title'   => 'Color Picker 5',
+          'default' => '#e67e22',
+        ),
 
       ),
     ),
+    // end: a section
 
   ),
 );
-
-$options[]    = array(
-  'id'        => 'about_page',
-  'title'     => '关于模板选项',
-  'post_type' => 'page',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'  => 'page_section_1',
-      'fields' => array(
-
-
-      ),
-    ),
-
-  ),
-);
-
-$options[]    = array(
-  'id'        => 'archive_page',
-  'title'     => '归档模板选项',
-  'post_type' => 'page',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'  => 'page_section_1',
-      'fields' => array(
-
-
-      ),
-    ),
-
-  ),
-);
-
-$options[]    = array(
-  'id'        => 'work_page',
-  'title'     => '作品模板选项',
-  'post_type' => 'page',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'  => 'page_section_1',
-      'fields' => array(
-
-      ),
-    ),
-
-  ),
-);
-
-
-$options[]    = array(
-  'id'        => 'friend_page',
-  'title'     => '友链模板选项',
-  'post_type' => 'page',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'  => 'page_section_1',
-      'fields' => array(
-
-      ),
-    ),
-
-  ),
-);
-
-$options[]    = array(
-  'id'        => 'message_page',
-  'title'     => '留言模板选项',
-  'post_type' => 'page',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'  => 'page_section_1',
-      'fields' => array(
-
-
-      ),
-    ),
-
-  ),
-);
-
-$options[]    = array(
-  'id'        => 'about_page',
-  'title'     => '关于模板选项',
-  'post_type' => 'page',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'  => 'page_section_1',
-      'fields' => array(
-
-
-      ),
-    ),
-
-  ),
-);
-
 
 // -----------------------------------------
-// 文章属性选项                    -
+// Page Side Metabox Options               -
 // -----------------------------------------
-
-// 标准文章选项
 $options[]    = array(
-  'id'        => 'standard_options',
-  'title'     => '标准文章选项',
+  'id'        => '_custom_page_side_options',
+  'title'     => 'Custom Page Side Options',
+  'post_type' => 'page',
+  'context'   => 'side',
+  'priority'  => 'default',
+  'sections'  => array(
+
+    array(
+      'name'   => 'section_3',
+      'fields' => array(
+
+        array(
+          'id'        => 'section_3_image_select',
+          'type'      => 'image_select',
+          'options'   => array(
+            'value-1' => 'http://codestarframework.com/assets/images/placeholder/65x65-2ecc71.gif',
+            'value-2' => 'http://codestarframework.com/assets/images/placeholder/65x65-e74c3c.gif',
+            'value-3' => 'http://codestarframework.com/assets/images/placeholder/65x65-3498db.gif',
+          ),
+          'default'   => 'value-2',
+        ),
+
+        array(
+          'id'            => 'section_3_text',
+          'type'          => 'text',
+          'attributes'    => array(
+            'placeholder' => 'do stuff'
+          )
+        ),
+
+        array(
+          'id'      => 'section_3_switcher',
+          'type'    => 'switcher',
+          'label'   => 'Are you sure ?',
+          'default' => true
+        ),
+
+      ),
+    ),
+
+  ),
+);
+
+// -----------------------------------------
+// Post Metabox Options                    -
+// -----------------------------------------
+$options[]    = array(
+  'id'        => '_custom_post_options',
+  'title'     => 'Custom Post Options',
   'post_type' => 'post',
   'context'   => 'normal',
   'priority'  => 'default',
   'sections'  => array(
 
     array(
-      'name'   => 'aside_section_0',
-      'title' => ' 状态',
-      'icon'  => 'fa fa-music',
+      'name'   => 'section_4',
       'fields' => array(
 
-      // 状态
-      array(
-        'id'    	  => 'i_state',
-        'type'      => 'switcher',
-        'title'     => '启用状态',
-      ),
-
-      // 文字
-      array(
-        'id'         => 'i_state_text',
-        'type'       => 'text',
-        'title'      => '文字',
-        'dependency' => array( 'i_state', '==', 'true' ),
-      ),
-
-      // 图标
-      array(
-        'id'         => 'i_state_icon',
-        'type'       => 'icon',
-        'title'      => '图标',
-        'dependency' => array( 'i_state', '==', 'true' ),
-      ),
-
-      ),
-    ),
-
-    array(
-      'name'   => 'aside_section_1',
-      'title' => ' 音乐',
-      'icon'  => 'fa fa-music',
-      'fields' => array(
-
-	  // 音乐外链
         array(
-          'id'        => 'i_post_music',
-          'type'      => 'text',
-          'title'     => '音乐外链',
-		      'help'     => '前提是正确开启Cue播放器，并且Cue歌单里存在歌曲',
-          'attributes'    => array(
-            'placeholder' => 'http://...'
-          )
+          'id'    => 'section_4_text',
+          'type'  => 'text',
+          'title' => 'Text Field',
         ),
 
-      ),
-    ),
-
-    array(
-      'name'   => 'aside_section_2',
-      'title' => ' 下载',
-      'icon'  => 'fa fa-download',
-      'fields' => array(
-
-          // 资源下载
-		array(
-          'id'    	  => 'i_download',
-          'type'      => 'switcher',
-          'title'     => '资源下载',
-        ),
-
-          // 官方网站
         array(
-          'id'         => 'i_download_web',
-          'type'       => 'text',
-          'title'      => '官方网站',
-          'attributes'    => array(
-            'placeholder' => 'http://...'
-          ),
+          'id'    => 'section_4_textarea',
+          'type'  => 'textarea',
+          'title' => 'Textarea Field',
         ),
 
-		// 软件性质
         array(
-          'id'        => 'i_download_charge',
-          'type'      => 'select',
-          'title'     => '软件性质',
-          'options'   => array(
-          'i_charge01' => '免费',
-          'i_charge02' => '收费',
-          ),
-          'default'   => 'i_charge01',
+          'id'    => 'section_4_upload',
+          'type'  => 'upload',
+          'title' => 'Upload Field',
         ),
 
-          // 下载地址
         array(
-          'id'         => 'i_download_link',
-          'type'       => 'text',
-          'title'      => '下载地址',
-          'attributes'    => array(
-            'placeholder' => 'http://...'
-          ),
+          'id'    => 'section_4_switcher',
+          'type'  => 'switcher',
+          'title' => 'Switcher Field',
+          'label' => 'Yes, Please do it.',
         ),
-
-          // 提取码
-        array(
-          'id'         => 'i_download_code',
-          'type'       => 'text',
-          'title'      => '提取码',
-		  'after'  		  => '<p class="cs-text-muted">留空即无</p>',
-        ),
-
-      ),
-    ),
-
-    array(
-      'name'   => 'aside_section_3',
-      'title' => ' 目录',
-      'icon'  => 'fa fa-list-ul',
-      'fields' => array(
-
-        // 文章目录
-		array(
-          'id'    	  => 'i_index',
-          'type'      => 'switcher',
-          'title'     => '文章目录',
-        ),
-
-      ),
-    ),
-
-  ),
-);
-
-
-
-// -----------------------------------------
-// 作品属性选项                    -
-// -----------------------------------------
-
-// 日志文章选项
-$options[]    = array(
-  'id'        => 'work_options',
-  'title'     => '作品选项',
-  'post_type' => 'work',
-  'context'   => 'normal',
-  'priority'  => 'default',
-  'sections'  => array(
-
-    array(
-      'name'   => 'aside_section_1',
-      'fields' => array(
-
 
       ),
     ),

@@ -118,11 +118,11 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: fields/group/group.php:21
+#: fields/group/group.php:22
 msgid "Adding"
 msgstr ""
 
-#: fields/group/group.php:43 fields/group/group.php:75
+#: fields/group/group.php:45 fields/group/group.php:77
 msgid "Remove"
 msgstr ""
 
@@ -174,7 +174,7 @@ msgstr ""
 msgid "Loading..."
 msgstr ""
 
-#: functions/helpers.php:48
+#: functions/helpers.php:49
 msgid "This field class is not available!"
 msgstr ""
 

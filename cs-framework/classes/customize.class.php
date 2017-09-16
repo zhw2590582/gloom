@@ -41,6 +41,8 @@ class CSFramework_Customize extends CSFramework_Abstract {
 
     $this->options = apply_filters( 'cs_customize_options', $options );
 
+    do_action( 'cs_customize_options_config', $this->options );
+
     if( ! empty( $this->options ) ) {
       $this->addAction( 'customize_register', 'customize_register' );
     }
@@ -60,7 +62,7 @@ class CSFramework_Customize extends CSFramework_Abstract {
 
     // load extra WP_Customize_Control
     cs_locate_template( 'functions/customize.php' );
-    do_action( 'cs_customize_register' );
+    do_action( 'cs_customize_register', $wp_customize );
 
     $panel_priority = 1;
 
