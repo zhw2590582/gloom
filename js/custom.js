@@ -13,14 +13,8 @@ function getStorage(name) {
   return gloom_setting[name];
 }
 
-if(getStorage('sidebar')){
-  jQuery('#wrapper').addClass('sidebar_off');
-}
-
-if(getStorage('widget') === 1){
-  jQuery('#wrapper').addClass('sidebar_off');
-  jQuery('.sidebar_inner .item').hide().eq(1).show();
-}
+!getStorage('sidebar') && jQuery('#wrapper').addClass('sidebar_off');
+getStorage('widget') === 1 && jQuery('.sidebar_inner .item').hide().eq(1).show();
 
 jQuery(document).ready(function($) {
 
