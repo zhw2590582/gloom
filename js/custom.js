@@ -14,12 +14,12 @@ function getStorage(name) {
 }
 
 if(!getStorage('sidebar')){
-  $('#wrapper').addClass('sidebar_off');
+  jQuery('#wrapper').addClass('sidebar_off');
 }
 
 if(getStorage('widget') === 1){
-  $('#wrapper').addClass('sidebar_off');
-  $('.sidebar_inner .item').hide().eq(1).show();
+  jQuery('#wrapper').addClass('sidebar_off');
+  jQuery('.sidebar_inner .item').hide().eq(1).show();
 }
 
 jQuery(document).ready(function($) {
