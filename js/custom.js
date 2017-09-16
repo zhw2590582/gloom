@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
   // 切换小工具
   $(".widget_btn").click(function() {
     var index = $(this).index();
-    $(this).removeClass('on').eq(index).addClass('on');
+    $(this).addClass('on').siblings().removeClass('on');
     $('.sidebar_inner .item').hide().eq(index).show();
     setStorage('widget', index);
   });
