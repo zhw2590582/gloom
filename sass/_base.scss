@@ -126,6 +126,14 @@ $topbar_h: 35px;
   .sidebar_inner{
 
   }
+
+  .topbar{
+    .widget_btn{
+      width: 50%;
+      height: $topbar_h;
+      line-height: $topbar_h;
+    }
+  }
 }
 
 /* content */

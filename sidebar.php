@@ -7,6 +7,10 @@ $profile_content = cs_get_option( 'i_profile_content' );
 ?>
 <!-- sidebar 开始-->
 <aside id="sidebar" class="m_hide">
+  <div class="topbar clearfix">
+    <div class="widget_btn text-c fl">小工具1</div>
+    <div class="widget_btn text-c fr">小工具2</div>
+  </div>
   <div class="sidebar_inner">
     <div class="item">
       <?php if ($profile == true) {?>

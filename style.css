@@ -33,7 +33,8 @@ figure {
 
 hr {
   overflow: visible;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 pre {
@@ -121,7 +122,8 @@ fieldset {
 
 legend {
   display: table;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   max-width: 100%;
   color: inherit;
@@ -135,7 +137,8 @@ textarea {
   overflow: auto; }
 
 [type=checkbox], [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0; }
 
 [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
@@ -168,7 +171,8 @@ template {
   display: none; }
 
 *, ::after, ::before {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 * {
   margin: 0;
@@ -176,6 +180,7 @@ template {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s; }
 
 img {
@@ -342,6 +347,10 @@ img {
   z-index: 2;
   width: 245px;
   height: 100%; }
+  #sidebar .topbar .widget_btn {
+    width: 50%;
+    height: 35px;
+    line-height: 35px; }
 
 /* content */
 #content {
