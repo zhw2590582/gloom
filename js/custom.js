@@ -6,7 +6,13 @@ jQuery(document).ready(function($) {
 
   // 切换边栏
   $(".sidebar_switcher").click(function() {
-    $(this).toggleClass('on');
+    $('#wrapper').toggleClass('sidebar_off');
+  });
+
+  // 切换小工具
+  $(".widget_btn").click(function() {
+    var index = $(this).index();
+    $('.sidebar_inner .item').hide().eq(index).show();
   });
 
   //滚动函数
