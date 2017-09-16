@@ -2,27 +2,27 @@
 var temp = jQuery("script").last().attr("src");
 var url = temp.substring(0, temp.indexOf("js"));
 
+function setStorage(name, value) {
+  var gloom_setting = JSON.parse(localStorage.getItem('gloom_setting')) || {};
+  gloom_setting[name] = value;
+  localStorage.setItem('gloom_setting', JSON.stringify(gloom_setting));
+}
+
+function getStorage(name) {
+  var gloom_setting = JSON.parse(localStorage.getItem('gloom_setting')) || {};
+  return gloom_setting[name];
+}
+
+if(!getStorage('sidebar')){
+  $('#wrapper').addClass('sidebar_off');
+}
+
+if(getStorage('widget') === 1){
+  $('#wrapper').addClass('sidebar_off');
+  $('.sidebar_inner .item').hide().eq(1).show();
+}
+
 jQuery(document).ready(function($) {
-
-  function setStorage(name, value) {
-    var gloom_setting = JSON.parse(localStorage.getItem('gloom_setting')) || {};
-    gloom_setting[name] = value;
-    localStorage.setItem('gloom_setting', JSON.stringify(gloom_setting));
-  }
-
-  function getStorage(name) {
-    var gloom_setting = JSON.parse(localStorage.getItem('gloom_setting')) || {};
-    return gloom_setting[name];
-  }
-
-  if(!getStorage('sidebar')){
-    $('#wrapper').addClass('sidebar_off');
-  }
-
-  if(getStorage('widget') === 1){
-    $('#wrapper').addClass('sidebar_off');
-    $('.sidebar_inner .item').hide().eq(1).show();
-  }
 
   // 切换边栏
   $(".sidebar_switcher").click(function() {
