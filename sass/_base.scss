@@ -102,7 +102,14 @@ $topbar_h: 35px;
             }
           }
           &.menu-item-has-children {
+            position: relative;
+            &:hover .sub-menu{
+              display: block !important;
+            }
             .sub-menu{
+              position: absolute;
+              top: 0;
+              display: none;
               padding: 5px 0;
               background: #666;
               .menu-item{
