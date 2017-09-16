@@ -13,7 +13,9 @@ function getStorage(name) {
   return gloom_setting[name];
 }
 
+console.log(!getStorage('sidebar'));
 if(!getStorage('sidebar')){
+  console.log(1);
   jQuery('#wrapper').addClass('sidebar_off');
 }
 
