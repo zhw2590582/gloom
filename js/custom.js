@@ -4,15 +4,28 @@ var url = temp.substring(0, temp.indexOf("js"));
 
 jQuery(document).ready(function($) {
 
+  function setStorage(name, value) {
+    var gloom_setting = JSON.parse(localStorage.getItem('gloom_setting')) || {};
+    gloom_setting[name] = value;
+    localStorage.setItem('gloom_setting', JSON.stringify(gloom_setting));
+  }
+
+  function getStorage(name) {
+    var gloom_setting = JSON.parse(localStorage.getItem('gloom_setting')) || {};
+    return gloom_setting[name];
+  }
+
   // 切换边栏
   $(".sidebar_switcher").click(function() {
     $('#wrapper').toggleClass('sidebar_off');
+    setStorage('sidebar', !$('#wrapper').hasClass('sidebar_off'))
   });
 
   // 切换小工具
   $(".widget_btn").click(function() {
     var index = $(this).index();
     $('.sidebar_inner .item').hide().eq(index).show();
+    setStorage('widget', index);
   });
 
   //滚动函数
@@ -31,22 +44,6 @@ jQuery(document).ready(function($) {
     }
   });
 
-  //左侧栏
-  $(".sidectrl").click(function() {
-    var lC = $(this).width();
-    var lS = $("#sidebar").width();
-    if ($("#sidebar").hasClass("open")) {
-      $("#sidebar").removeClass("open");
-    } else {
-      $("#sidebar").addClass("open");
-    }
-  });
-
-  //菜单hack
-  $(".topmenu .menu-list > li").each(function(i) {
-    var index = +$(this).index() + 1;
-    $(this).addClass("nth" + index);
-  });
 
   //评论分页
   $body = window.opera
