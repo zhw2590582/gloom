@@ -359,7 +359,9 @@ img {
   #sidebar .sidebar_inner {
     height: 100%;
     width: 265px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 50px;
     overflow-y: scroll;
     overflow-x: hidden; }
 
