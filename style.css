@@ -280,7 +280,7 @@ img {
   #wrapper.sidebar_off #content {
     padding-left: 245px; }
   #wrapper.sidebar_off .sidebar_switcher {
-    background: #444; }
+    background: #444 !important; }
 
 /* header */
 #header {

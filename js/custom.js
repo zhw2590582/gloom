@@ -15,6 +15,15 @@ jQuery(document).ready(function($) {
     return gloom_setting[name];
   }
 
+  if(!getStorage('sidebar')){
+    $('#wrapper').addClass('sidebar_off');
+  }
+
+  if(getStorage('widget') === 1){
+    $('#wrapper').addClass('sidebar_off');
+    $('.sidebar_inner .item').hide().eq(1).show();
+  }
+
   // 切换边栏
   $(".sidebar_switcher").click(function() {
     $('#wrapper').toggleClass('sidebar_off');
