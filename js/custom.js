@@ -14,7 +14,8 @@ function getStorage(name) {
 }
 
 !getStorage('sidebar') && jQuery('#wrapper').addClass('sidebar_off');
-getStorage('widget') === 1 && jQuery('.sidebar_inner .item').hide().eq(1).show();
+jQuery('.topbar .widget_btn').removeClass('on').eq(getStorage('widget')).addClass('on');
+jQuery('.sidebar_inner .item').hide().eq(getStorage('widget')).show();
 
 jQuery(document).ready(function($) {
 
@@ -27,6 +28,7 @@ jQuery(document).ready(function($) {
   // 切换小工具
   $(".widget_btn").click(function() {
     var index = $(this).index();
+    $(this).removeClass('on').eq(index).addClass('on');
     $('.sidebar_inner .item').hide().eq(index).show();
     setStorage('widget', index);
   });
