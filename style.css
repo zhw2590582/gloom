@@ -340,6 +340,8 @@ img {
       #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu {
         position: absolute;
         top: 0;
+        right: -245px;
+        width: 245px;
         display: none;
         padding: 5px 0;
         background: #666; }
