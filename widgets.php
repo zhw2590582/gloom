@@ -121,7 +121,6 @@ add_action('widgets_init', 'EfanBlogStat');
 //图像链接
 if (!class_exists('CS_Widget_Link')) {
     class CS_Widget_Link extends WP_Widget {
-        //构建函数
         function __construct() {
             $widget_ops = array(
                 'classname' => 'cs_widget_link',
@@ -129,7 +128,6 @@ if (!class_exists('CS_Widget_Link')) {
             );
             parent::__construct('cs_widget_link', 'Owl图像链接', $widget_ops);
         }
-        //前台显示函数
         function widget($args, $instance) {
             extract($args);
             echo $before_widget;
@@ -137,7 +135,7 @@ if (!class_exists('CS_Widget_Link')) {
                 echo $before_title . $instance['title'] . $after_title;
             }
             $NewTab = $instance['sure'];
-            echo '<div class="textwidget cs_widget_link">';
+            echo '<div class="textwidget">';
             echo '<a href="' . $instance['link'] . '"';
             if ($NewTab == true) {
                 echo 'target="_black"';
@@ -147,7 +145,6 @@ if (!class_exists('CS_Widget_Link')) {
             echo '</div>';
             echo $after_widget;
         }
-        //数据更新函数
         function update($new_instance, $old_instance) {
             $instance = $old_instance;
             $instance['title'] = $new_instance['title'];
@@ -156,20 +153,14 @@ if (!class_exists('CS_Widget_Link')) {
             $instance['sure'] = $new_instance['sure'];
             return $instance;
         }
-        //后台表单函数
         function form($instance) {
-            //
-            // 设置默认值
-            // -------------------------------------------------
             $instance = wp_parse_args($instance, array(
                 'title' => '图像链接',
                 'advertising' => '',
                 'link' => '',
                 'sure' => '',
             ));
-            //
-            // 标题
-            // -------------------------------------------------
+
             $text_value = esc_attr($instance['title']);
             $text_field = array(
                 'id' => $this->get_field_name('title') ,
@@ -178,9 +169,7 @@ if (!class_exists('CS_Widget_Link')) {
                 'title' => '标题',
             );
             echo cs_add_element($text_field, $text_value);
-            //
-            // 图像
-            // -------------------------------------------------
+
             $upload_value = esc_attr($instance['advertising']);
             $upload_field = array(
                 'id' => $this->get_field_name('advertising') ,
@@ -189,9 +178,7 @@ if (!class_exists('CS_Widget_Link')) {
                 'title' => '图像',
             );
             echo cs_add_element($upload_field, $upload_value);
-            //
-            // 链接
-            // -------------------------------------------------
+
             $link_value = esc_attr($instance['link']);
             $link_field = array(
                 'id' => $this->get_field_name('link') ,
@@ -203,9 +190,7 @@ if (!class_exists('CS_Widget_Link')) {
                 )
             );
             echo cs_add_element($link_field, $link_value);
-            //
-            // 新标签打开
-            // -------------------------------------------------
+
             $switcher_value = esc_attr($instance['sure']);
             $switcher_field = array(
                 'id' => $this->get_field_name('sure') ,
@@ -223,14 +208,10 @@ if (!function_exists('cs_widget_init_Link')) {
     }
     add_action('widgets_init', 'cs_widget_init_Link', 2);
 }
-/**
- *
- * 最新评论
- *
- */
+
+// 最新评论
 if (!class_exists('CS_Widget_comment')) {
     class CS_Widget_comment extends WP_Widget {
-        //构建函数
         function __construct() {
             $widget_ops = array(
                 'classname' => 'cs_widget_comment',
@@ -238,7 +219,6 @@ if (!class_exists('CS_Widget_comment')) {
             );
             parent::__construct('cs_widget_comment', 'Owl最新评论', $widget_ops);
         }
-        //前台显示函数
         function widget($args, $instance) {
             extract($args);
             echo $before_widget;
@@ -250,25 +230,18 @@ if (!class_exists('CS_Widget_comment')) {
             echo '</ul></div>';
             echo $after_widget;
         }
-        //数据更新函数
         function update($new_instance, $old_instance) {
             $instance = $old_instance;
             $instance['title'] = $new_instance['title'];
             $instance['number'] = $new_instance['number'];
             return $instance;
         }
-        //后台表单函数
         function form($instance) {
-            //
-            // 设置默认值
-            // -------------------------------------------------
             $instance = wp_parse_args($instance, array(
                 'title' => '最新评论',
                 'number' => '10',
             ));
-            //
-            // 标题
-            // -------------------------------------------------
+
             $text_value = esc_attr($instance['title']);
             $text_field = array(
                 'id' => $this->get_field_name('title') ,
@@ -277,9 +250,7 @@ if (!class_exists('CS_Widget_comment')) {
                 'title' => '标题',
             );
             echo cs_add_element($text_field, $text_value);
-            //
-            // 金额
-            // -------------------------------------------------
+
             $number_value = esc_attr($instance['number']);
             $number_field = array(
                 'id' => $this->get_field_name('number') ,
@@ -297,14 +268,10 @@ if (!function_exists('cs_widget_init_comment')) {
     }
     add_action('widgets_init', 'cs_widget_init_comment', 2);
 }
-/**
- *
- * CS框架_轮播图
- *
- */
+
+//轮播图
 if (!class_exists('CS_Widget_Slider')) {
     class CS_Widget_Slider extends WP_Widget {
-        //构建函数
         function __construct() {
             $widget_ops = array(
                 'classname' => 'cs_widget_slider',
@@ -315,7 +282,10 @@ if (!class_exists('CS_Widget_Slider')) {
         //前台显示函数
         function widget($args, $instance) {
             extract($args);
-            echo '<aside class="textwidget cs_widget_slider">';
+            echo $before_widget;
+            if (!empty($instance['title'])) {
+                echo $before_title . $instance['title'] . $after_title;
+            }
             echo '<div id="widget_slider" class="nivoSlider">';
             $my_sliders2 = cs_get_option('i_slider2_custom');
             if (!empty($my_sliders2)) {
@@ -338,24 +308,21 @@ if (!class_exists('CS_Widget_Slider')) {
             }
             echo '</div>';
             echo '</aside>';
+            echo $after_widget;
         }
-        //数据更新函数
+
         function update($new_instance, $old_instance) {
             $instance = $old_instance;
             $instance['title'] = $new_instance['title'];
             return $instance;
         }
-        //后台表单函数
+
         function form($instance) {
-            //
-            // 设置默认值
-            // -------------------------------------------------
+
             $instance = wp_parse_args($instance, array(
                 'title' => '轮播图',
             ));
-            //
-            // 标题
-            // -------------------------------------------------
+
             $text_value = esc_attr($instance['title']);
             $text_field = array(
                 'id' => $this->get_field_name('title') ,

@@ -206,7 +206,7 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .widget_archive li:before { content: "\f115"; }
 #sidebar .sidebar_inner .widget_links li:before { content: "\f0c1"; }
 #sidebar .sidebar_inner .widget_categories li:before { content: "\f097"; }
-#sidebar .sidebar_inner .cs_widget_link { text-align: center; }
+#sidebar .sidebar_inner .cs_widget_link a { display: block; text-align: center; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li { padding-bottom: 5px; margin-bottom: 10px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a { line-height: 16px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_name { display: block; }

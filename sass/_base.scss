@@ -286,7 +286,8 @@ $topbar_h: 35px; /* wrapper */
       }
     }
 
-    .cs_widget_link{
+    .cs_widget_link a{
+      display: block;
       text-align: center;
     }
 
