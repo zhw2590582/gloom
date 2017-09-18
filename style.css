@@ -209,7 +209,7 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li { padding-bottom: 5px; margin-bottom: 10px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a { line-height: 16px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_name { display: block; }
-#sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_desc { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_desc { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; border-radius: 20px; overflow: hidden; opacity: .75; background: #f7f7f7; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box img { vertical-align: top; width: 32px; height: 32px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .comment_box { padding-left: 5px; }
