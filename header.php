@@ -1,9 +1,9 @@
 <?php
-error_reporting(0);
-$keywords = cs_get_option( 'i_seo_keywords' );
-$description = cs_get_option( 'i_seo_description' );
-$favicon = cs_get_option( 'i_favicon_icon' );
-$logo = cs_get_option( 'i_logo' );
+	error_reporting(0);
+	$keywords = cs_get_option( 'i_seo_keywords' );
+	$description = cs_get_option( 'i_seo_description' );
+	$favicon = cs_get_option( 'i_favicon_icon' );
+	$logo = cs_get_option( 'i_logo' );
 ?>
 
 <!DOCTYPE html>
