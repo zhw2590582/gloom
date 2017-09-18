@@ -46,7 +46,11 @@ template{display:none}
 
 *,::after,::before{box-sizing:border-box}
 *{margin:0;padding:0}
-html{-webkit-tap-highlight-color:transparent}
+html{
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body{font-family:"Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif}
 a{text-decoration:none;transition:all .1s}
 img{max-width:100%}
