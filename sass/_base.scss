@@ -1,5 +1,5 @@
 @charset "UTF-8"; /* base */
-$header_w: 245px;
+$header_w: 230px;
 $topbar_h: 35px; /* wrapper */
 
 #wrapper {
@@ -419,6 +419,7 @@ $topbar_h: 35px; /* wrapper */
         }
       }
       .profile-content{
+        line-height: 1.5;
         margin-bottom: 15px;
       }
       .profile-social{
