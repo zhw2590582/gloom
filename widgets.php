@@ -132,18 +132,20 @@ if (!class_exists('CS_Widget_Link')) {
         //前台显示函数
         function widget($args, $instance) {
             extract($args);
+            echo $before_widget;
             if (!empty($instance['title'])) {
                 echo $before_title . $instance['title'] . $after_title;
             }
             $NewTab = $instance['sure'];
-            echo '<aside class="textwidget cs_widget_link">';
+            echo '<div class="textwidget cs_widget_link">';
             echo '<a href="' . $instance['link'] . '"';
             if ($NewTab == true) {
                 echo 'target="_black"';
             }
             echo '><img src="' . $instance['advertising'] . '" />';
             echo '</a>';
-            echo '</aside>';
+            echo '</div>';
+            echo $after_widget;
         }
         //数据更新函数
         function update($new_instance, $old_instance) {
