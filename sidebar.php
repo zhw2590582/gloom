@@ -20,7 +20,8 @@
               <img src="<?php echo $profile_avatar; ?>" alt="" />
             </div>
             <div class="name fl">
-              <?php echo $profile_name; ?>
+              <p class="f16"><?php echo $profile_name; ?></p>
+              <p class="f14">会UI的前端攻城狮</p>
             </div>
           </div>
           <div class="profile-content f13">

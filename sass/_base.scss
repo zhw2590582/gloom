@@ -410,12 +410,13 @@ $topbar_h: 35px; /* wrapper */
 
     #profile{
       .profile-header{
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         .avatar{
           width: 20%;
         }
         .name{
           width: 80%;
+          padding-left: 10px;
         }
       }
       .profile-content{
