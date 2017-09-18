@@ -270,8 +270,10 @@ img {
   min-height: 100%; }
   #wrapper.sidebar_off #sidebar {
     display: none; }
-  #wrapper.sidebar_off #content, #wrapper.sidebar_off #content .topbar {
+  #wrapper.sidebar_off #content {
     padding-left: 245px; }
+    #wrapper.sidebar_off #content .topbar {
+      padding-left: 265px; }
   #wrapper.sidebar_off .sidebar_switcher .fa-toggle-off {
     display: block !important; }
   #wrapper.sidebar_off .sidebar_switcher .fa-toggle-on {
@@ -293,26 +295,31 @@ img {
   #header .topbar {
     height: 35px;
     margin-bottom: 30px;
-    padding: 7px 5px 0px 5px;
+    padding: 8px 5px 0px 5px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
-    #header .topbar .skin a {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-      border-radius: 5px;
-      border: 1px solid #c7c7c7; }
-      #header .topbar .skin a.skin_1 {
-        background: #dadada; }
-      #header .topbar .skin a.skin_2 {
-        background: #dadada; }
-      #header .topbar .skin a.skin_3 {
-        background: #dadada; }
-      #header .topbar .skin a.skin_4 {
-        background: #dadada; }
+    #header .topbar .skin {
+      margin-top: 1px; }
+      #header .topbar .skin a {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+        border-radius: 3px; }
+        #header .topbar .skin a.skin_1 {
+          background: #dadada;
+          border: 1px solid #c7c7c7; }
+        #header .topbar .skin a.skin_2 {
+          background: #dadada;
+          border: 1px solid #c7c7c7; }
+        #header .topbar .skin a.skin_3 {
+          background: #dadada;
+          border: 1px solid #c7c7c7; }
+        #header .topbar .skin a.skin_4 {
+          background: #dadada;
+          border: 1px solid #c7c7c7; }
     #header .topbar .sidebar_switcher {
-      color: #bbbbbb; }
+      color: #cecece; }
       #header .topbar .sidebar_switcher .fa-toggle-off {
         display: none; }
       #header .topbar .sidebar_switcher .fa-toggle-on {
@@ -402,8 +409,19 @@ img {
     padding: 0 20px 0 510px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
-    #content .topbar .grid {
-      position: relative; }
+    #content .topbar .layouts span {
+      background: #bbbbbb; }
+    #content .topbar .layouts .layout_width {
+      width: 18px; }
+      #content .topbar .layouts .layout_width span {
+        display: block;
+        width: 18px; }
+    #content .topbar .layouts .layout_box {
+      width: 20px; }
+      #content .topbar .layouts .layout_box span {
+        display: inline-block;
+        float: left;
+        width: 8px; }
   #content .content_inner {
     padding: 50px 20px 200px; }
 

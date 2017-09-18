@@ -13,8 +13,11 @@ $topbar_h: 35px; /* wrapper */
       display: none;
     }
 
-    #content, #content .topbar {
+    #content{
       padding-left: $header_w;
+       .topbar {
+         padding-left: $header_w + 20px;
+       }
     }
 
     .sidebar_switcher {
@@ -44,36 +47,40 @@ $topbar_h: 35px; /* wrapper */
   .topbar {
     height: $topbar_h;
     margin-bottom: 30px;
-    padding: 7px 5px 0px 5px;
+    padding: 8px 5px 0px 5px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5;
 
     .skin {
+      margin-top: 1px;
       a {
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         margin-right: 5px;
-        border-radius: 5px;
-        border: 1px solid #c7c7c7;
+        border-radius: 3px;
 
         &.skin_1{
           background: #dadada;
+          border: 1px solid #c7c7c7;
         }
         &.skin_2{
           background: #dadada;
+          border: 1px solid #c7c7c7;
         }
         &.skin_3{
           background: #dadada;
+          border: 1px solid #c7c7c7;
         }
         &.skin_4{
           background: #dadada;
+          border: 1px solid #c7c7c7;
         }
       }
     }
 
     .sidebar_switcher {
-      color: #bbbbbb;
+      color: #cecece;
       .fa-toggle-off{
         display: none;
       }
@@ -212,8 +219,25 @@ $topbar_h: 35px; /* wrapper */
     .breadcrumbs{
 
     }
-    .grid{
-      position: relative;
+    .layouts{
+      span{
+        background: #bbbbbb;
+      }
+      .layout_width{
+        width: 18px;
+        span{
+          display: block;
+          width: 18px;
+        }
+      }
+      .layout_box{
+        width: 20px;
+        span{
+          display: inline-block;
+          float: left;
+          width: 8px;
+        }
+      }
     }
   }
   .content_inner {
