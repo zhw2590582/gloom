@@ -33,8 +33,7 @@ figure {
 
 hr {
   overflow: visible;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0; }
 
 pre {
@@ -122,8 +121,7 @@ fieldset {
 
 legend {
   display: table;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   max-width: 100%;
   color: inherit;
@@ -137,8 +135,7 @@ textarea {
   overflow: auto; }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0; }
 
 [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
@@ -171,8 +168,7 @@ template {
   display: none; }
 
 *, ::after, ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 * {
   margin: 0;
@@ -180,7 +176,6 @@ template {
 
 a {
   text-decoration: none;
-  -webkit-transition: all 0.1s;
   transition: all 0.1s; }
 
 img {
@@ -272,9 +267,7 @@ img {
   position: relative;
   height: auto !important;
   height: 100%;
-  min-height: 100%;
-  min-width: 1000px;
-  background: url("./images/default/bg1.jpg") no-repeat top left fixed; }
+  min-height: 100%; }
   #wrapper.sidebar_off #sidebar {
     display: none; }
   #wrapper.sidebar_off #content {
@@ -339,6 +332,7 @@ img {
         display: block !important; }
       #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu {
         position: absolute;
+        z-index: 3;
         top: 0;
         left: 245px;
         width: 163.33333px;
