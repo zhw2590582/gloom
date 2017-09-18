@@ -358,8 +358,10 @@ img {
       text-overflow: ellipsis;
       white-space: nowrap; }
       #header .menu .menu-wrapper .list .menu-item a:hover {
+        color: #02b875;
         background: #efefef; }
     #header .menu .menu-wrapper .list .menu-item.current-menu-item a {
+      color: #02b875;
       background: #efefef; }
     #header .menu .menu-wrapper .list .menu-item.menu-item-has-children {
       position: relative; }
@@ -380,8 +382,6 @@ img {
           #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
             font-size: 12px;
             padding: 8px 0 8px 20px; }
-            #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a:hover {
-              background: #777; }
 
 /* sidebar */
 #sidebar {

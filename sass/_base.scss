@@ -132,12 +132,14 @@ $topbar_h: 35px; /* wrapper */
             white-space: nowrap;
 
             &:hover {
+              color: #02b875;
               background: #efefef;
             }
           }
 
           &.current-menu-item {
             a {
+              color: #02b875;
               background: #efefef;
             }
           }
@@ -165,10 +167,6 @@ $topbar_h: 35px; /* wrapper */
                 a {
                   font-size: 12px;
                   padding: 8px 0 8px 20px;
-
-                  &:hover {
-                    background: #777;
-                  }
                 }
               }
             }
