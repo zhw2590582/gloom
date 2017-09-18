@@ -101,6 +101,8 @@ $topbar_h: 35px; /* wrapper */
 
     .blog_name {
       padding: 0 15px;
+      line-height: 1.5;
+      color: #9c9c9c;
     }
   }
   /* menu */
@@ -220,6 +222,7 @@ $topbar_h: 35px; /* wrapper */
 
     }
     .layouts{
+      margin-top: 8px;
       span{
         height: 8px;
         margin-bottom: 2px;

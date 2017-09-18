@@ -43,7 +43,7 @@ $logo = cs_get_option( 'i_logo' );
 						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
 							<img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
 						</a>
-						<p class="blog_name f16"><?php bloginfo('name'); ?></p>
+						<p class="blog_name f14"><?php bloginfo('description') ?></p>
 					</div>
 					<nav class="menu">
 						<?php wp_nav_menu(array(
