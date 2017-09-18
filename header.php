@@ -59,4 +59,5 @@ $logo = cs_get_option( 'i_logo' );
 
 		<!-- content 开始-->
 		<section id="content" name="content">
+			<div class="breadcrumbs">breadcrumbs</div>
 	    <div class="content_inner">
