@@ -198,6 +198,11 @@ $topbar_h: 35px; /* wrapper */
       width: 50%;
       height: $topbar_h;
       line-height: $topbar_h;
+
+      &.on{
+        color: #02b875;
+        border: 1px solid #02b875;
+      }
     }
   }
 
