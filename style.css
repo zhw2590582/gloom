@@ -308,7 +308,7 @@ img {
   #header .topbar {
     height: 35px;
     margin-bottom: 30px;
-    padding: 8px 5px 0px 5px;
+    padding: 8px 5px 0;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
     #header .topbar .skin {
@@ -414,6 +414,28 @@ img {
     overflow-x: hidden; }
     #sidebar .sidebar_inner aside {
       margin-bottom: 30px; }
+      #sidebar .sidebar_inner aside > ul li {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        line-height: 20px; }
+        #sidebar .sidebar_inner aside > ul li:before {
+          font-family: FontAwesome;
+          margin-right: 5px; }
+      #sidebar .sidebar_inner aside .comm_posts li:before,
+      #sidebar .sidebar_inner aside .new-posts li:before {
+        font-family: FontAwesome;
+        margin-right: 5px; }
+    #sidebar .sidebar_inner .comm_posts li:before,
+    #sidebar .sidebar_inner .new-posts li:before,
+    #sidebar .sidebar_inner .widget_pages li:before,
+    #sidebar .sidebar_inner .widget_recent_entries li:before {
+      content: "\f0f6"; }
+    #sidebar .sidebar_inner .widget_archive li:before {
+      content: "\f115"; }
+    #sidebar .sidebar_inner .widget_links li:before {
+      content: "\f0c1"; }
+    #sidebar .sidebar_inner .widget_categories li:before {
+      content: "\f097"; }
     #sidebar .sidebar_inner .widget-title {
       font-size: 18px;
       font-weight: normal;
