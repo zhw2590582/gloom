@@ -273,9 +273,9 @@ img {
   #wrapper.sidebar_off #content, #wrapper.sidebar_off #content .topbar {
     padding-left: 245px; }
   #wrapper.sidebar_off .sidebar_switcher .fa-toggle-off {
-    display: block; }
+    display: block !important; }
   #wrapper.sidebar_off .sidebar_switcher .fa-toggle-on {
-    display: none; }
+    display: none !important; }
 
 /* header */
 #header {
@@ -311,10 +311,12 @@ img {
         background: #dadada; }
       #header .topbar .skin a.skin_4 {
         background: #dadada; }
-    #header .topbar .sidebar_switcher .fa-toggle-off {
-      display: none; }
-    #header .topbar .sidebar_switcher .fa-toggle-on {
-      display: block; }
+    #header .topbar .sidebar_switcher {
+      color: #bbbbbb; }
+      #header .topbar .sidebar_switcher .fa-toggle-off {
+        display: none; }
+      #header .topbar .sidebar_switcher .fa-toggle-on {
+        display: block; }
   #header .logo {
     margin-bottom: 30px; }
     #header .logo .logo_img {

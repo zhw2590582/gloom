@@ -34,7 +34,7 @@ $logo = cs_get_option( 'i_logo' );
 							<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
 							<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
 						</div>
-						<div class="fr sidebar_switcher hand">
+						<div class="fr sidebar_switcher f22 hand">
 							<i class="fa fa-toggle-off" aria-hidden="true"></i>
 							<i class="fa fa-toggle-on" aria-hidden="true"></i>
 						</div>

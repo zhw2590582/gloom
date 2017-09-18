@@ -19,10 +19,10 @@ $topbar_h: 35px; /* wrapper */
 
     .sidebar_switcher {
       .fa-toggle-off{
-        display: block;
+        display: block !important;
       }
       .fa-toggle-on{
-        display: none;
+        display: none !important;
       }
     }
   }
@@ -73,6 +73,7 @@ $topbar_h: 35px; /* wrapper */
     }
 
     .sidebar_switcher {
+      color: #bbbbbb;
       .fa-toggle-off{
         display: none;
       }
