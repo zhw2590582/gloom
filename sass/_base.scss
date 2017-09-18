@@ -133,7 +133,7 @@ $topbar_h: 35px; /* wrapper */
 
             &:hover {
               color: #02b875;
-              background: #efefef;
+              background: #f7f7f7;
             }
           }
 
@@ -208,12 +208,27 @@ $topbar_h: 35px; /* wrapper */
 
   .sidebar_inner {
     height: 100%;
-    width: $header_w + 20px;
-    padding-right: 30px;
-    padding-left: 10px;
-    padding-bottom: 50px;
+    width: $header_w + 35px;
+    padding: 10px 30px 50px 10px;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    aside{
+      margin-bottom: 30px;
+    }
+
+    .widget-title{
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      color: #444;
+      border-bottom: 1px solid #e5e5e5;
+      span{
+        padding-bottom: 5px;
+        border-bottom: 1px solid #444;
+      }
+    }
   }
 }
 /* content */
