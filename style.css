@@ -410,6 +410,9 @@ img {
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
     #content .topbar .layouts span {
+      height: 8px;
+      margin-bottom: 2px;
+      border-radius: 2px;
       background: #bbbbbb; }
     #content .topbar .layouts .layout_width {
       width: 18px; }

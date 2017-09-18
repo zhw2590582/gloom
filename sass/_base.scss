@@ -221,6 +221,9 @@ $topbar_h: 35px; /* wrapper */
     }
     .layouts{
       span{
+        height: 8px;
+        margin-bottom: 2px;
+        border-radius: 2px;
         background: #bbbbbb;
       }
       .layout_width{
