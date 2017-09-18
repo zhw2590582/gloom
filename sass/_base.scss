@@ -32,6 +32,7 @@ $topbar_h: 35px; /* wrapper */
   z-index: 2;
   width: $header_w;
   height: 100%;
+  border-right: 1px solid #e5e5e5;
 
   .header_inner {}
   /* topbar */
@@ -145,9 +146,12 @@ $topbar_h: 35px; /* wrapper */
   z-index: 1;
   width: $header_w;
   height: 100%;
+  border-right: 1px solid #e5e5e5;
   overflow: hidden;
 
   .topbar {
+    height: $topbar_h;
+    line-height: $topbar_h;
     background: rgba(255,255,255,0.6);
     border-bottom: 1px solid #e5e5e5;
     .widget_btn {
@@ -174,6 +178,11 @@ $topbar_h: 35px; /* wrapper */
   padding-left: $header_w * 2;
 
   .breadcrumbs{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding-left: $header_w * 2;
     height: $topbar_h;
     line-height: $topbar_h;
     padding: 0 20px;

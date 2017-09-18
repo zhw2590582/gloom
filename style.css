@@ -284,6 +284,7 @@ img {
   z-index: 2;
   width: 245px;
   height: 100%;
+  border-right: 1px solid #e5e5e5;
   /* topbar */
   /* logo */
   /* menu */ }
@@ -355,8 +356,11 @@ img {
   z-index: 1;
   width: 245px;
   height: 100%;
+  border-right: 1px solid #e5e5e5;
   overflow: hidden; }
   #sidebar .topbar {
+    height: 35px;
+    line-height: 35px;
     background: rgba(255, 255, 255, 0.6);
     border-bottom: 1px solid #e5e5e5; }
     #sidebar .topbar .widget_btn {
@@ -377,6 +381,11 @@ img {
   position: relative;
   padding-left: 490px; }
   #content .breadcrumbs {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding-left: 490px;
     height: 35px;
     line-height: 35px;
     padding: 0 20px;
