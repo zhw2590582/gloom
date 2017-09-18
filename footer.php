@@ -253,11 +253,12 @@ $notice_link = cs_get_option( 'i_notice_link' );
         jQuery(window).load(function() {
             jQuery('.nivoSlider').nivoSlider({
                 effect: '<?php echo $effect_style; ?>',
-                boxCols: 10,
+                boxCols: 5,
                 boxRows: 5,
                 animSpeed: 300,
                 prevText: '',
                 nextText: '',
+								controlNav: false,
 								afterLoad: function(){
 									jQuery('.app_slider .slider_inner').removeClass('loading');
 								}
