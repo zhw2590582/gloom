@@ -313,8 +313,8 @@ function Init_theme($oldthemename) {
 
 /* 统一标签尺寸 */
 function custom_tag_cloud_widget($args) {
-  $args['largest'] = 12;
-  $args['smallest'] = 12;
+  $args['largest'] = 14;
+  $args['smallest'] = 14;
   $args['unit'] = 'px';
   $args['number'] = '50';
   $args['orderby'] = 'count';
