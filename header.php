@@ -66,17 +66,17 @@ $logo = cs_get_option( 'i_logo' );
 				<div class="fl breadcrumbs">
 					breadcrumbs
 				</div>
-				<div class="fr layouts">
-					<div class="layout_width selected">
+				<div class="fr layouts clearfix">
+					<a class="layout_width fl selected" href="#">
             <span></span>
             <span></span>
-          </div>
-					<div class="layout_box">
+          </a>
+					<a class="layout_box fl" href="#">
             <span style="margin-right:2px"></span>
             <span></span>
             <span style="margin-right:2px"></span>
             <span></span>
-          </div>
+          </a>
 				</div>
 			</div>
 	    <div class="content_inner">

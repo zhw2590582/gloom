@@ -227,6 +227,8 @@ $topbar_h: 35px; /* wrapper */
         background: #bbbbbb;
       }
       .layout_width{
+        display: inline-block;
+        margin-right: 10px;
         width: 18px;
         span{
           display: block;
@@ -234,6 +236,7 @@ $topbar_h: 35px; /* wrapper */
         }
       }
       .layout_box{
+        display: inline-block;
         width: 20px;
         span{
           display: inline-block;

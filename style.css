@@ -415,11 +415,14 @@ img {
       border-radius: 2px;
       background: #bbbbbb; }
     #content .topbar .layouts .layout_width {
+      display: inline-block;
+      margin-right: 10px;
       width: 18px; }
       #content .topbar .layouts .layout_width span {
         display: block;
         width: 18px; }
     #content .topbar .layouts .layout_box {
+      display: inline-block;
       width: 20px; }
       #content .topbar .layouts .layout_box span {
         display: inline-block;
