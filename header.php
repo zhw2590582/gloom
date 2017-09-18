@@ -29,10 +29,10 @@ $logo = cs_get_option( 'i_logo' );
 				<div class="header_inner">
 					<div class="topbar clearfix">
 						<div class="skin fl clearfix">
-							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
-							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
-							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
-							<a href="#" class="with-tooltip skin_cloth fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_1 fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_2 fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
+							<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
 						</div>
 						<div class="fr sidebar_switcher hand on"></div>
 					</div>
@@ -59,5 +59,12 @@ $logo = cs_get_option( 'i_logo' );
 
 		<!-- content 开始-->
 		<section id="content" name="content">
-			<div class="breadcrumbs">breadcrumbs</div>
+			<div class="topbar clearfix">
+				<div class="fl breadcrumbs">
+					breadcrumbs
+				</div>
+				<div class="fr grid">
+
+				</div>
+			</div>
 	    <div class="content_inner">

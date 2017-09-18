@@ -291,21 +291,29 @@ img {
   #header .topbar {
     height: 35px;
     margin-bottom: 30px;
-    padding: 5px;
+    padding: 7px 5px 0px 5px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
     #header .topbar .skin a {
       display: inline-block;
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       margin-right: 5px;
       border-radius: 5px;
-      background: #666; }
+      border: 1px solid #c7c7c7; }
+      #header .topbar .skin a.skin_1 {
+        background: #dadada; }
+      #header .topbar .skin a.skin_2 {
+        background: #dadada; }
+      #header .topbar .skin a.skin_3 {
+        background: #dadada; }
+      #header .topbar .skin a.skin_4 {
+        background: #dadada; }
     #header .topbar .sidebar_switcher {
-      width: 50px;
-      height: 25px;
+      width: 40px;
+      height: 20px;
       border-radius: 25px;
-      background: #333; }
+      background: #dadada; }
   #header .logo {
     margin-bottom: 30px; }
     #header .logo .logo_img {
@@ -380,7 +388,7 @@ img {
 #content {
   position: relative;
   padding-left: 490px; }
-  #content .breadcrumbs {
+  #content .topbar {
     position: fixed;
     z-index: 0;
     left: 0;
@@ -391,6 +399,8 @@ img {
     padding: 0 20px 0 510px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
+    #content .topbar .grid {
+      position: relative; }
   #content .content_inner {
     padding: 50px 20px 200px; }
 

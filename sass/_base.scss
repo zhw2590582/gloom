@@ -39,26 +39,39 @@ $topbar_h: 35px; /* wrapper */
   .topbar {
     height: $topbar_h;
     margin-bottom: 30px;
-    padding: 5px;
+    padding: 7px 5px 0px 5px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5;
 
     .skin {
       a {
         display: inline-block;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         margin-right: 5px;
         border-radius: 5px;
-        background: #666;
+        border: 1px solid #c7c7c7;
+
+        &.skin_1{
+          background: #dadada;
+        }
+        &.skin_2{
+          background: #dadada;
+        }
+        &.skin_3{
+          background: #dadada;
+        }
+        &.skin_4{
+          background: #dadada;
+        }
       }
     }
 
     .sidebar_switcher {
-      width: 50px;
-      height: 25px;
+      width: 40px;
+      height: 20px;
       border-radius: 25px;
-      background: #333;
+      background: #dadada;
     }
   }
   /* logo */
@@ -177,7 +190,7 @@ $topbar_h: 35px; /* wrapper */
   position: relative;
   padding-left: $header_w * 2;
 
-  .breadcrumbs{
+  .topbar{
     position: fixed;
     z-index: 0;
     left: 0;
@@ -188,6 +201,12 @@ $topbar_h: 35px; /* wrapper */
     padding: 0 20px 0 $header_w * 2 + 20px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5;
+    .breadcrumbs{
+
+    }
+    .grid{
+      position: relative;
+    }
   }
   .content_inner {
     padding: 50px 20px 200px;
