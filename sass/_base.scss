@@ -8,6 +8,7 @@ $topbar_h: 35px; /* wrapper */
   height: 100%;
   min-height: 100%;
   font-size: 14px;
+  background: #fff;
   color: #9c9c9c;
 
   a{
@@ -124,20 +125,20 @@ $topbar_h: 35px; /* wrapper */
 
           a {
             display: block;
-            font-size: 16px;
+            font-size: 14px;
             padding: 10px 0;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
 
             &:hover {
-              background: #666;
+              background: #efefef;
             }
           }
 
           &.current-menu-item {
             a {
-              background: #000;
+              background: #efefef;
             }
           }
 
@@ -152,11 +153,12 @@ $topbar_h: 35px; /* wrapper */
               position: absolute;
               z-index: 3;
               top: 0;
-              left: $header_w;
+              left: $header_w - 1px;
               width: $header_w * 2 / 3;
               display: none;
               padding: 5px 0;
-              background: #666;
+              background: #fff;
+              border: 1px solid #e5e5e5;
 
               .menu-item {
                 text-align: left;

@@ -275,6 +275,7 @@ img {
   height: 100%;
   min-height: 100%;
   font-size: 14px;
+  background: #fff;
   color: #9c9c9c; }
   #wrapper a {
     color: #9c9c9c; }
@@ -351,15 +352,15 @@ img {
     text-align: center; }
     #header .menu .menu-wrapper .list .menu-item a {
       display: block;
-      font-size: 16px;
+      font-size: 14px;
       padding: 10px 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
       #header .menu .menu-wrapper .list .menu-item a:hover {
-        background: #666; }
+        background: #efefef; }
     #header .menu .menu-wrapper .list .menu-item.current-menu-item a {
-      background: #000; }
+      background: #efefef; }
     #header .menu .menu-wrapper .list .menu-item.menu-item-has-children {
       position: relative; }
       #header .menu .menu-wrapper .list .menu-item.menu-item-has-children:hover .sub-menu {
@@ -368,11 +369,12 @@ img {
         position: absolute;
         z-index: 3;
         top: 0;
-        left: 245px;
+        left: 244px;
         width: 163.33333px;
         display: none;
         padding: 5px 0;
-        background: #666; }
+        background: #fff;
+        border: 1px solid #e5e5e5; }
         #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item {
           text-align: left; }
           #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
