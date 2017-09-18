@@ -316,6 +316,8 @@ $topbar_h: 35px; /* wrapper */
               width: 32px;
               height: 32px;
               border-radius: 20px;
+              overflow: hidden;
+              opacity: .75;
               background: #f7f7f7;
             }
           }
