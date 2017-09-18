@@ -1,7 +1,7 @@
 @charset "UTF-8"; /* base */
 $header_w: 245px;
-$topbar_h: 35px; /* wrapper */
-
+$topbar_h: 35px;
+/* wrapper */
 #wrapper {
   position: relative;
   height: auto !important;
@@ -44,7 +44,6 @@ $topbar_h: 35px; /* wrapper */
   }
 }
 /* header */
-
 #header {
   position: fixed;
   left: 0;
@@ -187,7 +186,6 @@ $topbar_h: 35px; /* wrapper */
   }
 }
 /* sidebar */
-
 #sidebar {
   position: fixed;
   left: $header_w;
@@ -286,7 +284,7 @@ $topbar_h: 35px; /* wrapper */
       }
     }
 
-    .cs_widget_link a{
+    .cs_widget_link a {
       display: block;
       text-align: center;
     }
@@ -318,7 +316,7 @@ $topbar_h: 35px; /* wrapper */
             width: 32px;
             border-radius: 20px;
             overflow: hidden;
-            opacity: .75;
+            opacity: 0.75;
             background: #f7f7f7;
 
             img {
@@ -335,51 +333,77 @@ $topbar_h: 35px; /* wrapper */
       }
     }
 
-    .widget_search{
-      fieldset{
-        .search-form-input{
-          padding:7px 8px;
+    .widget_search {
+      fieldset {
+        .search-form-input {
+          padding: 7px 8px;
           font-size: 12px;
           vertical-align: middle;
           height: 26px;
-    	    line-height:26px;
+          line-height: 26px;
           width: 100%;
           border-radius: 3px;
-          color:#808080;
+          color: #808080;
           border: 1px solid #ddd;
         }
-        .search-button{
+
+        .search-button {
           display: none;
         }
       }
     }
 
-    .widget_calendar{
-      #wp-calendar{
+    .widget_calendar {
+      #wp-calendar {
         margin: 0;
         width: 100%;
         font-size: 13px;
         font-size: 0.928571429rem;
         line-height: 1.846153846;
-        #today,th{
-          text-align:center;
+
+        #today,
+        th {
+          text-align: center;
+          font-weight: normal;
         }
-        td{
-          text-align:center;
-          &#prev{
-            text-align:left;
+
+        td {
+          text-align: center;
+
+          &#prev {
+            text-align: left;
             padding-left: 10px;
           }
-          &#next{
+
+          &#next {
             text-align: right;
             padding-right: 10px;
           }
         }
-        caption{
-          letter-spacing:-0.05em;
-          font-size:100%;
-          text-align:left;
-          padding-bottom:5px;
+
+        caption {
+          letter-spacing: -0.05em;
+          font-size: 100%;
+          text-align: left;
+          padding-bottom: 5px;
+        }
+      }
+    }
+
+    .widget_tag_cloud{
+      .tagcloud{
+        &:after{
+          clear: both;
+          display: block;
+          content: " "
+        }
+
+        a{
+          padding: 2px 5px;
+          border-radius: 3px;
+          float: left;
+          margin-right: 5px;
+          margin-bottom: 5px;
         }
       }
     }
@@ -400,7 +424,6 @@ $topbar_h: 35px; /* wrapper */
   }
 }
 /* content */
-
 #content {
   position: relative;
   padding-left: $header_w * 2;
@@ -458,5 +481,4 @@ $topbar_h: 35px; /* wrapper */
   }
 }
 /* footer */
-
 #footer {}
