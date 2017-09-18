@@ -23,7 +23,7 @@
               <?php echo $profile_name; ?>
             </div>
           </div>
-          <div class="profile-content">
+          <div class="profile-content f13">
             <?php echo $profile_content; ?>
           </div>
           <ul class="profile-social clearfix">

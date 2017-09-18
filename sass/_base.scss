@@ -1,5 +1,5 @@
 @charset "UTF-8"; /* base */
-$header_w: 230px;
+$header_w: 235px;
 $topbar_h: 35px; /* wrapper */
 
 #wrapper {
@@ -9,7 +9,7 @@ $topbar_h: 35px; /* wrapper */
   min-height: 100%;
   font-size: 14px;
   background: #fff;
-  color: #9c9c9c;
+  color: #777777;
 
   a {
     color: #9c9c9c;
@@ -397,7 +397,7 @@ $topbar_h: 35px; /* wrapper */
         &:after {
           clear: both;
           display: block;
-          content: " ";
+          content: '';
         }
 
         a {
@@ -424,6 +424,7 @@ $topbar_h: 35px; /* wrapper */
       }
       .profile-social{
         li{
+          list-style: none;
           float: left;
           width: 20%;
           height: 20px;
