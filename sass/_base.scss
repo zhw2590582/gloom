@@ -415,13 +415,18 @@ $topbar_h: 35px; /* wrapper */
           width: 20%;
           img{
             vertical-align: bottom;
+            border-radius: 5px;
           }
         }
         .name{
           width: 80%;
           padding: 3px 0 0 10px;
           .name_inner{
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+          }
+          .fa-check-circle{
+            margin-right: 5px;
+            color: #bbb;
           }
         }
       }
