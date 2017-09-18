@@ -13,12 +13,17 @@ $topbar_h: 35px; /* wrapper */
       display: none;
     }
 
-    #content, .breadcrumbs {
+    #content, #content .topbar {
       padding-left: $header_w;
     }
 
     .sidebar_switcher {
-      background: #444 !important;
+      .fa-toggle-off{
+        display: block;
+      }
+      .fa-toggle-on{
+        display: none;
+      }
     }
   }
 }
@@ -68,10 +73,12 @@ $topbar_h: 35px; /* wrapper */
     }
 
     .sidebar_switcher {
-      width: 40px;
-      height: 20px;
-      border-radius: 25px;
-      background: #dadada;
+      .fa-toggle-off{
+        display: none;
+      }
+      .fa-toggle-on{
+        display: block;
+      }
     }
   }
   /* logo */

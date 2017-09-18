@@ -34,7 +34,10 @@ $logo = cs_get_option( 'i_logo' );
 							<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
 							<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
 						</div>
-						<div class="fr sidebar_switcher hand on"></div>
+						<div class="fr sidebar_switcher hand">
+							<i class="fa fa-toggle-off" aria-hidden="true"></i>
+							<i class="fa fa-toggle-on" aria-hidden="true"></i>
+						</div>
 					</div>
 					<div class="logo text-c">
 						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
