@@ -225,9 +225,10 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .widget_tag_cloud .tagcloud:after { clear: both; display: block; content: " "; }
 #sidebar .sidebar_inner .widget_tag_cloud .tagcloud a { float: left; margin-right: 10px; margin-bottom: 10px; }
 #sidebar .sidebar_inner #profile .profile-header { margin-bottom: 15px; }
-#sidebar .sidebar_inner #profile .profile-header .avatar { width: 30%; }
-#sidebar .sidebar_inner #profile .profile-header .name { width: 70%; }
+#sidebar .sidebar_inner #profile .profile-header .avatar { width: 20%; }
+#sidebar .sidebar_inner #profile .profile-header .name { width: 80%; }
 #sidebar .sidebar_inner #profile .profile-content { margin-bottom: 15px; }
+#sidebar .sidebar_inner #profile .profile-social li { float: left; width: 20%; height: 20px; line-height: 20px; font-size: 18px; text-align: center; }
 #sidebar .sidebar_inner .widget-title { font-size: 18px; font-weight: normal; margin-bottom: 15px; padding-bottom: 5px; color: #444; border-bottom: 1px solid #e5e5e5; }
 #sidebar .sidebar_inner .widget-title span { padding-bottom: 5px; border-bottom: 1px solid #444; }
 

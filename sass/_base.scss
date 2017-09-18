@@ -412,17 +412,24 @@ $topbar_h: 35px; /* wrapper */
       .profile-header{
         margin-bottom: 15px;
         .avatar{
-          width: 30%;
+          width: 20%;
         }
         .name{
-          width: 70%;
+          width: 80%;
         }
       }
       .profile-content{
         margin-bottom: 15px;
       }
       .profile-social{
-
+        li{
+          float: left;
+          width: 20%;
+          height: 20px;
+          line-height: 20px;
+          font-size: 18px;
+          text-align: center;
+        }
       }
     }
 
