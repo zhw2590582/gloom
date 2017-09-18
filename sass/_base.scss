@@ -413,10 +413,16 @@ $topbar_h: 35px; /* wrapper */
         margin-bottom: 10px;
         .avatar{
           width: 20%;
+          img{
+            vertical-align: bottom;
+          }
         }
         .name{
           width: 80%;
-          padding-left: 10px;
+          padding: 3px 0 0 10px;
+          .name_inner{
+            margin-bottom: 5px;
+          }
         }
       }
       .profile-content{
