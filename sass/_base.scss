@@ -335,6 +335,24 @@ $topbar_h: 35px; /* wrapper */
       }
     }
 
+    .widget_search{
+      fieldset{
+        .search-form-input{
+          padding:7px 8px;
+          font-size: 12px;
+          color:#808080;
+          vertical-align: middle;
+          height: 26px;
+    	    line-height:26px;
+          width: 100%;
+          border-radius: 3px;
+        }
+        .search-button{
+          display: none;
+        }
+      }
+    }
+
     .widget-title {
       font-size: 18px;
       font-weight: normal;

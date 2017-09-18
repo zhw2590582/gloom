@@ -214,6 +214,8 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; border-radius: 20px; overflow: hidden; opacity: .75; background: #f7f7f7; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box img { vertical-align: top; width: 32px; height: 32px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .comment_box { padding-left: 5px; }
+#sidebar .sidebar_inner .widget_search fieldset .search-form-input { padding: 7px 8px; font-size: 12px; color: #808080; vertical-align: middle; height: 26px; line-height: 26px; width: 100%; border-radius: 3px; }
+#sidebar .sidebar_inner .widget_search fieldset .search-button { display: none; }
 #sidebar .sidebar_inner .widget-title { font-size: 18px; font-weight: normal; margin-bottom: 10px; padding-bottom: 5px; color: #444; border-bottom: 1px solid #e5e5e5; }
 #sidebar .sidebar_inner .widget-title span { padding-bottom: 5px; border-bottom: 1px solid #444; }
 
