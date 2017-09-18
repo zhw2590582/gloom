@@ -273,7 +273,13 @@ img {
   position: relative;
   height: auto !important;
   height: 100%;
-  min-height: 100%; }
+  min-height: 100%;
+  font-size: 14px;
+  color: #9c9c9c; }
+  #wrapper a {
+    color: #9c9c9c; }
+    #wrapper a:hover {
+      color: #444; }
   #wrapper.sidebar_off #sidebar {
     display: none; }
   #wrapper.sidebar_off #content {
@@ -331,7 +337,7 @@ img {
       #header .topbar .sidebar_switcher .fa-toggle-on {
         display: block; }
   #header .logo {
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
     #header .logo .logo_img {
       display: block;
       margin-bottom: 20px;
@@ -341,19 +347,19 @@ img {
       line-height: 1.5;
       color: #9c9c9c; }
   #header .menu .menu-wrapper .list .menu-item {
-    list-style: none; }
+    list-style: none;
+    text-align: center; }
     #header .menu .menu-wrapper .list .menu-item a {
       display: block;
       font-size: 16px;
-      padding: 10px 0 10px 20px;
-      color: #fff;
+      padding: 10px 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
       #header .menu .menu-wrapper .list .menu-item a:hover {
         background: #666; }
     #header .menu .menu-wrapper .list .menu-item.current-menu-item a {
-      background: #666; }
+      background: #000; }
     #header .menu .menu-wrapper .list .menu-item.menu-item-has-children {
       position: relative; }
       #header .menu .menu-wrapper .list .menu-item.menu-item-has-children:hover .sub-menu {
@@ -367,11 +373,13 @@ img {
         display: none;
         padding: 5px 0;
         background: #666; }
-        #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
-          font-size: 12px;
-          padding: 8px 0 8px 20px; }
-          #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a:hover {
-            background: #777; }
+        #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item {
+          text-align: left; }
+          #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a {
+            font-size: 12px;
+            padding: 8px 0 8px 20px; }
+            #header .menu .menu-wrapper .list .menu-item.menu-item-has-children .sub-menu .menu-item a:hover {
+              background: #777; }
 
 /* sidebar */
 #sidebar {
