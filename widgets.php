@@ -113,6 +113,7 @@ class EfanBlogStat extends WP_Widget {
         echo $output;
     }
 }
+
 function EfanBlogStat() {
     register_widget('EfanBlogStat');
 }
@@ -160,7 +161,6 @@ if (!class_exists('CS_Widget_Link')) {
                 'link' => '',
                 'sure' => '',
             ));
-
             $text_value = esc_attr($instance['title']);
             $text_field = array(
                 'id' => $this->get_field_name('title') ,
@@ -169,7 +169,6 @@ if (!class_exists('CS_Widget_Link')) {
                 'title' => '标题',
             );
             echo cs_add_element($text_field, $text_value);
-
             $upload_value = esc_attr($instance['advertising']);
             $upload_field = array(
                 'id' => $this->get_field_name('advertising') ,
@@ -178,7 +177,6 @@ if (!class_exists('CS_Widget_Link')) {
                 'title' => '图像',
             );
             echo cs_add_element($upload_field, $upload_value);
-
             $link_value = esc_attr($instance['link']);
             $link_field = array(
                 'id' => $this->get_field_name('link') ,
@@ -190,7 +188,6 @@ if (!class_exists('CS_Widget_Link')) {
                 )
             );
             echo cs_add_element($link_field, $link_value);
-
             $switcher_value = esc_attr($instance['sure']);
             $switcher_field = array(
                 'id' => $this->get_field_name('sure') ,
@@ -202,6 +199,7 @@ if (!class_exists('CS_Widget_Link')) {
         }
     }
 }
+
 if (!function_exists('cs_widget_init_Link')) {
     function cs_widget_init_Link() {
         register_widget('CS_Widget_Link');
@@ -241,7 +239,6 @@ if (!class_exists('CS_Widget_comment')) {
                 'title' => '最新评论',
                 'number' => '10',
             ));
-
             $text_value = esc_attr($instance['title']);
             $text_field = array(
                 'id' => $this->get_field_name('title') ,
@@ -250,7 +247,6 @@ if (!class_exists('CS_Widget_comment')) {
                 'title' => '标题',
             );
             echo cs_add_element($text_field, $text_value);
-
             $number_value = esc_attr($instance['number']);
             $number_field = array(
                 'id' => $this->get_field_name('number') ,
@@ -262,6 +258,7 @@ if (!class_exists('CS_Widget_comment')) {
         }
     }
 }
+
 if (!function_exists('cs_widget_init_comment')) {
     function cs_widget_init_comment() {
         register_widget('CS_Widget_comment');
@@ -279,7 +276,6 @@ if (!class_exists('CS_Widget_Slider')) {
             );
             parent::__construct('cs_widget_slider', 'Owl轮播图', $widget_ops);
         }
-        //前台显示函数
         function widget($args, $instance) {
             extract($args);
             echo $before_widget;
@@ -310,19 +306,15 @@ if (!class_exists('CS_Widget_Slider')) {
             echo '</aside>';
             echo $after_widget;
         }
-
         function update($new_instance, $old_instance) {
             $instance = $old_instance;
             $instance['title'] = $new_instance['title'];
             return $instance;
         }
-
         function form($instance) {
-
             $instance = wp_parse_args($instance, array(
                 'title' => '轮播图',
             ));
-
             $text_value = esc_attr($instance['title']);
             $text_field = array(
                 'id' => $this->get_field_name('title') ,
@@ -334,6 +326,7 @@ if (!class_exists('CS_Widget_Slider')) {
         }
     }
 }
+
 if (!function_exists('cs_widget_init_Slider')) {
     function cs_widget_init_Slider() {
         register_widget('CS_Widget_Slider');
