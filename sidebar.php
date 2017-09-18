@@ -15,13 +15,11 @@
     <div class="item">
       <?php if ($profile == true) {?>
         <aside id="profile" class="widget">
-          <div class="profile-avatar">
-            <div class="profile-avatar-inner">
+          <div class="profile-header clearfix">
+            <div class="avatar fl">
               <img src="<?php echo $profile_avatar; ?>" alt="" />
             </div>
-          </div>
-          <div class="profile-name">
-            <div class="profile-name-inner">
+            <div class="name fl">
               <?php echo $profile_name; ?>
             </div>
           </div>

@@ -408,6 +408,24 @@ $topbar_h: 35px; /* wrapper */
       }
     }
 
+    #profile{
+      .profile-header{
+        margin-bottom: 15px;
+        .avatar{
+          width: 30%;
+        }
+        .name{
+          width: 70%;
+        }
+      }
+      .profile-content{
+        margin-bottom: 15px;
+      }
+      .profile-social{
+
+      }
+    }
+
     .widget-title {
       font-size: 18px;
       font-weight: normal;
