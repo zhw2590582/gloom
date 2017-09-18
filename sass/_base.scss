@@ -39,7 +39,8 @@ $topbar_h: 35px; /* wrapper */
     height: $topbar_h;
     margin-bottom: 30px;
     padding: 5px;
-    background: #888;
+    background: rgba(255,255,255,0.6);
+    border-bottom: 1px solid #e5e5e5;
 
     .skin {
       a {
@@ -147,6 +148,8 @@ $topbar_h: 35px; /* wrapper */
   overflow: hidden;
 
   .topbar {
+    background: rgba(255,255,255,0.6);
+    border-bottom: 1px solid #e5e5e5;
     .widget_btn {
       width: 50%;
       height: $topbar_h;
@@ -174,6 +177,8 @@ $topbar_h: 35px; /* wrapper */
     height: $topbar_h;
     line-height: $topbar_h;
     padding: 0 20px;
+    background: rgba(255,255,255,0.6);
+    border-bottom: 1px solid #e5e5e5;
   }
   .content_inner {}
 }

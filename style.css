@@ -291,7 +291,8 @@ img {
     height: 35px;
     margin-bottom: 30px;
     padding: 5px;
-    background: #888; }
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid #e5e5e5; }
     #header .topbar .skin a {
       display: inline-block;
       width: 25px;
@@ -355,10 +356,13 @@ img {
   width: 245px;
   height: 100%;
   overflow: hidden; }
-  #sidebar .topbar .widget_btn {
-    width: 50%;
-    height: 35px;
-    line-height: 35px; }
+  #sidebar .topbar {
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid #e5e5e5; }
+    #sidebar .topbar .widget_btn {
+      width: 50%;
+      height: 35px;
+      line-height: 35px; }
   #sidebar .sidebar_inner {
     height: 100%;
     width: 265px;
@@ -375,7 +379,9 @@ img {
   #content .breadcrumbs {
     height: 35px;
     line-height: 35px;
-    padding: 0 20px; }
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid #e5e5e5; }
 
 /* footer */
 /* plugins */
