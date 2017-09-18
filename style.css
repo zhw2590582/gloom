@@ -405,7 +405,7 @@ img {
       line-height: 35px; }
       #sidebar .topbar .widget_btn.on {
         color: #02b875;
-        border: 1px solid #02b875; }
+        border-bottom: 1px solid #02b875; }
   #sidebar .sidebar_inner {
     height: 100%;
     width: 265px;
