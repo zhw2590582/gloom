@@ -68,7 +68,7 @@ button, select { text-transform: none; }
 
 [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring { outline: 1px dotted ButtonText; }
 
-fieldset { padding: .35em .75em .625em; }
+fieldset { border: 0; margin: 0; padding: 0; }
 
 legend { display: table; box-sizing: border-box; padding: 0; max-width: 100%; color: inherit; white-space: normal; }
 
@@ -214,8 +214,14 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; border-radius: 20px; overflow: hidden; opacity: .75; background: #f7f7f7; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box img { vertical-align: top; width: 32px; height: 32px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .comment_box { padding-left: 5px; }
-#sidebar .sidebar_inner .widget_search fieldset .search-form-input { padding: 7px 8px; font-size: 12px; color: #808080; vertical-align: middle; height: 26px; line-height: 26px; width: 100%; border-radius: 3px; }
+#sidebar .sidebar_inner .widget_search fieldset .search-form-input { padding: 7px 8px; font-size: 12px; vertical-align: middle; height: 26px; line-height: 26px; width: 100%; border-radius: 3px; color: #808080; border: 1px solid #ddd; }
 #sidebar .sidebar_inner .widget_search fieldset .search-button { display: none; }
+#sidebar .sidebar_inner .widget_calendar #wp-calendar { margin: 0; width: 100%; font-size: 13px; font-size: 0.928571429rem; line-height: 1.846153846; }
+#sidebar .sidebar_inner .widget_calendar #wp-calendar #today, #sidebar .sidebar_inner .widget_calendar #wp-calendar th { text-align: center; }
+#sidebar .sidebar_inner .widget_calendar #wp-calendar td { text-align: center; }
+#sidebar .sidebar_inner .widget_calendar #wp-calendar td#prev { text-align: left; padding-left: 10px; }
+#sidebar .sidebar_inner .widget_calendar #wp-calendar td#next { text-align: right; padding-right: 10px; }
+#sidebar .sidebar_inner .widget_calendar #wp-calendar caption { letter-spacing: -0.05em; font-size: 100%; text-align: left; padding-bottom: 5px; }
 #sidebar .sidebar_inner .widget-title { font-size: 18px; font-weight: normal; margin-bottom: 10px; padding-bottom: 5px; color: #444; border-bottom: 1px solid #e5e5e5; }
 #sidebar .sidebar_inner .widget-title span { padding-bottom: 5px; border-bottom: 1px solid #444; }
 

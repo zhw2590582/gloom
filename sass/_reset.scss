@@ -29,7 +29,7 @@ button,select{text-transform:none}
 [type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}
 [type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}
 [type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}
-fieldset{padding:.35em .75em .625em}
+fieldset{border:0;margin:0;padding:0;}
 legend{display:table;box-sizing:border-box;padding:0;max-width:100%;color:inherit;white-space:normal}
 progress{display:inline-block;vertical-align:baseline}
 textarea{overflow:auto}

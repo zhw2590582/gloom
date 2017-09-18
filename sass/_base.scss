@@ -340,15 +340,46 @@ $topbar_h: 35px; /* wrapper */
         .search-form-input{
           padding:7px 8px;
           font-size: 12px;
-          color:#808080;
           vertical-align: middle;
           height: 26px;
     	    line-height:26px;
           width: 100%;
           border-radius: 3px;
+          color:#808080;
+          border: 1px solid #ddd;
         }
         .search-button{
           display: none;
+        }
+      }
+    }
+
+    .widget_calendar{
+      #wp-calendar{
+        margin: 0;
+        width: 100%;
+        font-size: 13px;
+        font-size: 0.928571429rem;
+        line-height: 1.846153846;
+        #today,th{
+          text-align:center;
+        }
+        td{
+          text-align:center;
+          &#prev{
+            text-align:left;
+            padding-left: 10px;
+          }
+          &#next{
+            text-align: right;
+            padding-right: 10px;
+          }
+        }
+        caption{
+          letter-spacing:-0.05em;
+          font-size:100%;
+          text-align:left;
+          padding-bottom:5px;
         }
       }
     }
