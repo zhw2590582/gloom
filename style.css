@@ -292,7 +292,7 @@ img {
     height: 35px;
     margin-bottom: 30px;
     padding: 5px;
-    background: rgba(255, 255, 255, 0.6);
+    background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
     #header .topbar .skin a {
       display: inline-block;
@@ -361,7 +361,7 @@ img {
   #sidebar .topbar {
     height: 35px;
     line-height: 35px;
-    background: rgba(255, 255, 255, 0.6);
+    background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
     #sidebar .topbar .widget_btn {
       width: 50%;
@@ -385,11 +385,10 @@ img {
     left: 0;
     top: 0;
     right: 0;
-    padding-left: 490px;
     height: 35px;
     line-height: 35px;
-    padding: 0 20px;
-    background: rgba(255, 255, 255, 0.6);
+    padding: 0 20px 0 510px;
+    background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
 
 /* footer */
