@@ -13,7 +13,7 @@ $topbar_h: 35px; /* wrapper */
       display: none;
     }
 
-    #content {
+    #content, .breadcrumbs {
       padding-left: $header_w;
     }
 
@@ -179,6 +179,7 @@ $topbar_h: 35px; /* wrapper */
 
   .breadcrumbs{
     position: fixed;
+    z-index: 0;
     left: 0;
     top: 0;
     right: 0;
@@ -188,7 +189,9 @@ $topbar_h: 35px; /* wrapper */
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5;
   }
-  .content_inner {}
+  .content_inner {
+    padding: 50px 20px 200px;
+  }
 }
 /* footer */
 

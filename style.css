@@ -270,7 +270,7 @@ img {
   min-height: 100%; }
   #wrapper.sidebar_off #sidebar {
     display: none; }
-  #wrapper.sidebar_off #content {
+  #wrapper.sidebar_off #content, #wrapper.sidebar_off .breadcrumbs {
     padding-left: 245px; }
   #wrapper.sidebar_off .sidebar_switcher {
     background: #444 !important; }
@@ -382,6 +382,7 @@ img {
   padding-left: 490px; }
   #content .breadcrumbs {
     position: fixed;
+    z-index: 0;
     left: 0;
     top: 0;
     right: 0;
@@ -390,6 +391,8 @@ img {
     padding: 0 20px 0 510px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5; }
+  #content .content_inner {
+    padding: 50px 20px 200px; }
 
 /* footer */
 /* plugins */

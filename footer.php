@@ -63,7 +63,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 
   <?php if (!is_mobile()) { ?>
 		<!-- 浮动按钮 开始 -->
-		<div id="footer-btn" class="m_hide">
+		<div id="footer-btn" class="hide">
 			<ul>
 				<?php if ($gotop == true) {
 					echo '<li class="item">
@@ -106,7 +106,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 
 	<?php if ( is_single() && !is_mobile() && $download) {?>
 		<!-- 下载弹窗 开始 -->
-    <div class="modal-wrap download-modal m_hide">
+    <div class="modal-wrap download-modal hide">
       <div class="modal-container">
 				<div class="modal-header clearfix">
 					<span class="modal-title fl">
@@ -132,7 +132,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 
   <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
 		<!-- 登陆弹窗 开始 -->
-    <div class="modal-wrap login-modal m_hide">
+    <div class="modal-wrap login-modal hide">
       <div class="modal-container">
 				<div class="modal-header clearfix">
 					<span class="modal-title fl">
@@ -166,7 +166,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 
 	<?php if ( $notice == true && !is_mobile()  ) { ?>
 		<!-- 公告弹窗 开始 -->
-		<div class="notice clearfix">
+		<div class="notice clearfix hide">
 			<div class="notice-img fl">
 				<img src="<?php echo $notice_img; ?>" alt="" class="">
 			</div>
