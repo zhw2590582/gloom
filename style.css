@@ -203,6 +203,13 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .widget_archive li:before { content: "\f115"; }
 #sidebar .sidebar_inner .widget_links li:before { content: "\f0c1"; }
 #sidebar .sidebar_inner .widget_categories li:before { content: "\f097"; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li { padding-bottom: 5px; margin-bottom: 10px; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li a { line-height: 16px; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_name { display: block; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_desc { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box img { width: 32px; height: 32px; border-radius: 5px; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li .comment_box { padding-left: 5px; }
 #sidebar .sidebar_inner .widget-title { font-size: 18px; font-weight: normal; margin-bottom: 10px; padding-bottom: 5px; color: #444; border-bottom: 1px solid #e5e5e5; }
 #sidebar .sidebar_inner .widget-title span { padding-bottom: 5px; border-bottom: 1px solid #444; }
 
