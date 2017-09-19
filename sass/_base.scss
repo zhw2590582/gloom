@@ -497,7 +497,7 @@ $slider_h: 300px;
       overflow: hidden;
       margin-bottom: 30px;
       .nivoSlider{
-        width: 70%;
+        width: 60%;
         .nivo-directionNav a{
           top: $slider_h / 2 - 30px;
           margin-top: 0;
@@ -508,7 +508,7 @@ $slider_h: 300px;
         }
       }
       .nivoThumb{
-        width: 30%;
+        width: 40%;
         padding-left: 15px;
       }
     }

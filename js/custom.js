@@ -96,18 +96,28 @@
     });
 
     // 公告条
-    var element = document.querySelector('.notices');
-    var notices = element.dataset.notices.split(/\r?\n/).filter(function (item) {
+    var noticesEl = document.querySelector('.notices');
+    var noticesEffect = noticesEl.dataset.effect;
+    var noticesArr = noticesEl.dataset.notices.split(/\r?\n/).filter(function (item) {
       return item !== '';
     });
-    element && notices.length > 0 && ityped.init(element, {
-      strings: notices,
-      typeSpeed: 100,
-      backSpeed: 50,
-      startDelay: 1000,
-      backDelay: 3000,
-      loop: true,
-    });
+    if(noticesEl && noticesArr.length > 0){
+      if(noticesEffect == 'i_type'){
+        ityped.init(noticesEl, {
+          strings: noticesArr,
+          typeSpeed: 100,
+          backSpeed: 50,
+          startDelay: 1000,
+          backDelay: 3000,
+          loop: true,
+        });
+      } else if (noticesEffect == 'i_fade') {
+        var noticesIndex = 0;
+        setInterval(function () {
+          $('.notices').text(noticesArr[noticesIndex++]);
+        }, 2000)
+      }
+    }
 
     // 验证是否已评论 --- 待优化
     if (!!localStorage.getItem("postDownload")) {
