@@ -240,7 +240,7 @@ img { max-width: 100%; }
 #content .topbar .layouts .layout_box { display: inline-block; width: 20px; }
 #content .topbar .layouts .layout_box span { display: inline-block; float: left; width: 8px; }
 #content .content_inner { padding: 50px 20px 200px; }
-#content .content_inner .slider { height: 300px; }
+#content .content_inner .slider { height: 300px; overflow: hidden; margin-bottom: 30px; }
 
 /* footer */
 /* plugins */

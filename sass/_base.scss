@@ -1,6 +1,9 @@
-@charset "UTF-8"; /* base */
+@charset "UTF-8";
+/* base */
 $header_w: 235px;
-$topbar_h: 35px; /* wrapper */
+$topbar_h: 35px;
+$slider_h: 300px;
+/* wrapper */
 
 #wrapper {
   position: relative;
@@ -490,7 +493,9 @@ $topbar_h: 35px; /* wrapper */
   .content_inner {
     padding: 50px 20px 200px;
     .slider{
-      height: 300px;
+      height: $slider_h;
+      overflow: hidden;
+      margin-bottom: 30px;
     }
   }
 }
