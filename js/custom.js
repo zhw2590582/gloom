@@ -86,7 +86,8 @@
 		});
 
     slider.on('unslider.ready', function() {
-      $('.sliderWrap').removeClass('loading');
+      alert('msg');
+      $('.content_header').removeClass('loading');
     });
 
     // 切换小工具
