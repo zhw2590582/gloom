@@ -21,7 +21,6 @@
 
   <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
     <div class="post-left col ">
-      <!-- 特色图 开始 -->
         <div class="post-featured" >
           <a
             class="bg-img"
@@ -35,10 +34,7 @@
           >
           </a>
         </div>
-      <!-- 特色图 结束 -->
-
       <?php if (!empty($music)) { ?>
-        <!-- 播放器 开始 -->
         <div class="audio-wrapper">
           <audio class="wp-audio-shortcode" preload="none" style="width: 100%">
             <source type="audio/mpeg" src="<?php echo $music; ?>">
@@ -51,27 +47,17 @@
             });
           </script>
         </div>
-        <!-- 播放器 结束 -->
       <?php } ?>
-
       <?php if (is_sticky()) { ?>
-        <!-- 置顶文章 -->
         <div class="post-sticky with-tooltip m_hide" data-tooltip="置顶文章"></div>
       <?php } ?>
-
     </div>
   <?php } ?>
-
   <div class="post-right col">
-    <header class="post-title clearfix wb">
-      <?php if ( $state == true && !is_mobile()  ) { ?>
-        <i class="with-tooltip m_hide fl state fa <?php echo $state_icon; ?>" data-tooltip="<?php echo $state_text; ?>" aria-hidden="true"></i>
-      <?php }?>
-      <div class="fl">
-        <a class="" href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
-          <?php the_title(); ?>
-        </a>
-      </div>
+    <header class="post-title">
+      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        <?php the_title(); ?>
+      </a>
     </header>
     <div class="post-content clearfix">
       <?php if(is_search() || is_archive()) { ?>
@@ -82,7 +68,7 @@
         <?php if(is_home()) { ?>
           <?php if ($excerpt == true) {
             the_excerpt('Read More');
-          }else{
+          } else {
             the_content('Read More');
           }?>
         <?php } else { ?>
@@ -90,7 +76,6 @@
         <?php } ?>
       <?php } ?>
     </div>
-
   </div>
 </div>
 

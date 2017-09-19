@@ -606,6 +606,9 @@ $post_h: 230px;
 /* posts */
 .posts{
   article{
+    .post-inner{
+      border: 1px solid #e5e5e5;
+    }
     .post-left{
       position: relative;
       width: $featured_w;
@@ -622,7 +625,12 @@ $post_h: 230px;
       }
     }
     .post-right{
-
+      padding: 10px 15px 0 15px;
+      .post-title{
+        a{
+          
+        }
+      }
     }
   }
 }
