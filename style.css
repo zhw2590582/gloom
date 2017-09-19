@@ -233,6 +233,7 @@ img { max-width: 100%; }
 /* content */
 #content { position: relative; padding-left: 470px; max-width: 2000px; }
 #content .topbar { position: fixed; z-index: 0; left: 0; top: 0; right: 0; height: 35px; max-width: 2000px; line-height: 35px; padding: 0 20px 0 490px; background: #fafafa; border-bottom: 1px solid #e5e5e5; }
+#content .topbar .fa-bell-o { margin: 10px 10px 0 0; }
 #content .topbar .layouts { margin-top: 8px; }
 #content .topbar .layouts span { height: 8px; margin-bottom: 2px; border-radius: 2px; background: #bbbbbb; }
 #content .topbar .layouts .layout_width { display: inline-block; margin-right: 10px; width: 18px; }

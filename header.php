@@ -74,6 +74,7 @@
 		<section id="content" name="content">
 			<div class="topbar clearfix">
 				<?php if ($notices) {?>
+					<i class="fa fa-bell-o fl" aria-hidden="true"></i>
 					<div class="fl notices" data-effect="<?php echo $notices_effect; ?>" data-notices="<?php echo $notices_text; ?>"></div>
 				<?php } ?>
 				<?php if ($layout) {?>
