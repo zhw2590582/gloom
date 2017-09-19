@@ -499,16 +499,13 @@ $slider_h: 300px;
       max-height: $slider_h;
       overflow: hidden;
       margin-bottom: 30px;
-      .nivoSlider{
+      .sliderWrap{
         width: 60%;
         background: #efefef;
-        .nivo-directionNav a{
-          top: $slider_h / 2 - 30px;
-          margin-top: 0;
-        }
-        .nivo-caption{
-          top: $slider_h - 35px;
-          bottom: auto;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
         }
       }
       .nivoThumb{

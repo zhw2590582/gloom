@@ -74,7 +74,7 @@
 
   $(function(){
     // 轮播图
-    $('.unslider').unslider({
+    $('.sliderWrap').unslider({
 			infinite: true
 		});
 

@@ -19,7 +19,7 @@
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
           <div class="slider clearfix loading">
-              <div class="unslider fl" data-effect="<?php echo $slider_effect; ?>">
+              <div class="sliderWrap fl" data-effect="<?php echo $slider_effect; ?>">
                 <ul>
                   <?php
                       $my_sliders = cs_get_option( 'i_slider_custom' );

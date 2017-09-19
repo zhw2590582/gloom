@@ -242,9 +242,8 @@ img { max-width: 100%; }
 #content .topbar .layouts .layout_box span { display: inline-block; float: left; width: 8px; }
 #content .content_inner { padding: 50px 20px 200px; }
 #content .content_inner .slider { max-height: 300px; overflow: hidden; margin-bottom: 30px; }
-#content .content_inner .slider .nivoSlider { width: 60%; background: #efefef; }
-#content .content_inner .slider .nivoSlider .nivo-directionNav a { top: 120px; margin-top: 0; }
-#content .content_inner .slider .nivoSlider .nivo-caption { top: 265px; bottom: auto; }
+#content .content_inner .slider .sliderWrap { width: 60%; background: #efefef; }
+#content .content_inner .slider .sliderWrap a { display: block; width: 100%; height: 100%; }
 #content .content_inner .slider .nivoThumb { width: 40%; padding-left: 15px; }
 
 /* footer */
