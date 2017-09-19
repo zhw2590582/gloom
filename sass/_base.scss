@@ -566,8 +566,12 @@ $slider_h: 300px;
           display: block;
           width: 100%;
           height: ($slider_h - 15px) / 2;
+          overflow: hidden;
           &:first-child{
             margin-bottom: 15px;
+          }
+          &:nth-child(3n + 0){
+            display: none;
           }
           a{
             position: relative;
