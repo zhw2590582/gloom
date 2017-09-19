@@ -83,18 +83,18 @@ $options[]      = array(
 		),
 
 		// 分页方式
-        array(
-          'id'         => 'i_pagination',
-          'type'       => 'radio',
-          'title'      => '分页方式',
-          'class'      => 'horizontal',
-          'options'    => array(
-            'i_ajax'   => 'ajax无限加载',
-            'i_num'   => '页码',
-          ),
-          'default'    => 'i_num',
-          'help'       => '后续增加页码显示方式',
+      array(
+        'id'         => 'i_pagination',
+        'type'       => 'radio',
+        'title'      => '分页方式',
+        'class'      => 'horizontal',
+        'options'    => array(
+          'i_ajax'   => 'ajax无限加载',
+          'i_num'   => '页码',
         ),
+        'default'    => 'i_num',
+        'help'       => '后续增加页码显示方式',
+      ),
 
 		// 无限加载页数
         array(
@@ -112,7 +112,7 @@ $options[]      = array(
           'id'         => 'i_ajax_color',
           'type'       => 'color_picker',
           'title'      => 'ajax加载条颜色',
-		  'default'    => '#60d778',
+		      'default'    => '#60d778',
           'dependency' => array( 'i_pagination_i_ajax', '==', 'true' ),
         ),
 
@@ -156,76 +156,21 @@ $options[]      = array(
 
 		// 隐藏系统工具条
 		array(
-          'id'    	  => 'i_toolbar',
-          'type'      => 'switcher',
-          'title'     => '隐藏系统工具条',
-          'label'     => '为使页面干净，建议隐藏',
-          'default'   => true,
-		  'help'      => '因为主题的页尾自带进入后台操作的按钮，建议隐藏;另你也可以进入个人资料禁用工具条',
-        ),
-
-    //Topbar
-    array(
-          'id'    	  => 'i_topbar',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => 'Topbar',
-        ),
+      'id'    	  => 'i_toolbar',
+      'type'      => 'switcher',
+      'title'     => '隐藏系统工具条',
+      'label'     => '为使页面干净，建议隐藏',
+      'default'   => true,
+       'help'      => '因为主题的页尾自带进入后台操作的按钮，建议隐藏;另你也可以进入个人资料禁用工具条',
+    ),
 
     // 开启前端换肤功能
 		array(
-          'id'    	  => 'i_switcher',
-          'type'      => 'switcher',
-          'title'     => '开启前端换肤',
-          'label'     => '一旦开启，自定义皮肤将失效，且默认显示第一套皮肤',
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-		// 搜索按钮
-		array(
-          'id'    	  => 'i_search',
-          'type'      => 'switcher',
-          'default'   => true,
-          'title'     => '搜索按钮',
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-		// 前端登录
-		array(
-          'id'    	  => 'i_login',
-          'type'      => 'switcher',
-          'title'     => '前端登录',
-          'default'   => true,
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-    // 页眉二维码
-		array(
-          'id'    	  => 'i_qrPay',
-          'type'      => 'switcher',
-          'title'     => '页眉二维码',
-          'dependency' => array( 'i_topbar', '==', 'true' ),
-        ),
-
-    array(
-      'id'         => 'i_qrPay_btn',
-      'title'     => '按钮',
-      'type'    => 'text',
-      'dependency' => array( 'i_qrPay', '==', 'true' ),
-    ),
-
-    array(
-      'id'         => 'i_qrPay_icon',
-      'title'     => '图标',
-      'type'    => 'icon',
-      'dependency' => array( 'i_qrPay', '==', 'true' ),
-    ),
-
-    array(
-      'id'         => 'i_qrPay_img',
-      'title'     => '二维码',
-      'type'    => 'upload',
-      'dependency' => array( 'i_qrPay', '==', 'true' ),
+      'id'    	  => 'i_switcher',
+      'type'      => 'switcher',
+      'title'     => '开启前端换肤',
+      'label'     => '一旦开启，自定义皮肤将失效，且默认显示第一套皮肤',
+      'dependency' => array( 'i_topbar', '==', 'true' ),
     ),
 
   ),
@@ -243,23 +188,23 @@ $options[]      = array(
 
 		// 首页开启幻灯片
 		array(
-          'id'    	  => 'i_slider',
-          'type'      => 'switcher',
-          'title'     => '首页开启幻灯片',
-		  'help'      => '注意：幻灯片只显示在主页',
-        ),
+      'id'    	  => 'i_slider',
+      'type'      => 'switcher',
+      'title'     => '首页开启幻灯片',
+       'help'      => '注意：幻灯片只显示在主页',
+    ),
 
 			// 自定义幻灯片
-        array(
-          'id'              => 'i_slider_custom',
-          'type'            => 'group',
-          'title'           => '自定义幻灯片',
-          'info'            => '更多详细设置方式可以浏览使用说明',
-          'button_title'    => '添加滑块',
-          'accordion_title' => '滑块',
-          'fields'          => array(
+    array(
+      'id'              => 'i_slider_custom',
+      'type'            => 'group',
+      'title'           => '自定义幻灯片',
+      'info'            => '更多详细设置方式可以浏览使用说明',
+      'button_title'    => '添加滑块',
+      'accordion_title' => '滑块',
+      'fields'          => array(
 
-			// 自定义幻灯片--标题
+			    // 自定义幻灯片--标题
           array(
             'id'          => 'i_slider_title',
 		        'type'        => 'text',
@@ -269,43 +214,42 @@ $options[]      = array(
     			  )
           ),
 
-				// 自定义幻灯片--图片
-			array(
-			  'id'      => 'i_slider_image',
-			  'type'    => 'upload',
-			  'title'   => '图片',
-			),
+				 // 自定义幻灯片--图片
+    			array(
+    			  'id'      => 'i_slider_image',
+    			  'type'    => 'upload',
+    			  'title'   => '图片',
+    			),
 
-				// 自定义幻灯片--描述
-            array(
-              'id'          => 'i_slider_text',
-			  'type'        => 'text',
-              'title'       => '描述',
-			  'attributes'    => array(
-				'placeholder' => '输入描述'
-			  )
-            ),
+				 // 自定义幻灯片--描述
+          array(
+            'id'          => 'i_slider_text',
+		        'type'        => 'text',
+            'title'       => '描述',
+      			'attributes'    => array(
+      				 'placeholder' => '输入描述'
+      			)
+          ),
 
-				// 自定义幻灯片--链接
-			array(
-			  'id'            => 'i_slider_link',
-			  'type'          => 'text',
-			  'title'         => '链接',
-			  'attributes'    => array(
-				'placeholder' => 'http://...'
-			  )
-			),
+				 // 自定义幻灯片--链接
+    			array(
+    			  'id'            => 'i_slider_link',
+    			  'type'          => 'text',
+    			  'title'         => '链接',
+    			  'attributes'    => array(
+    				'placeholder' => 'http://...'
+    			  )
+    			),
 
-				// 自定义幻灯片--新标签
-			array(
-			  'id'    	  => 'i_slider_newtab',
-			  'type'      => 'switcher',
-			  'title'     => '新标签打开',
-			  'dependency'   => array( 'i_slider_link', '!=', '' ),
-			),
-
-          )
-        ),
+				 // 自定义幻灯片--新标签
+    			array(
+    			  'id'    	  => 'i_slider_newtab',
+    			  'type'      => 'switcher',
+    			  'title'     => '新标签打开',
+    			  'dependency'   => array( 'i_slider_link', '!=', '' ),
+    			),
+      )
+    ),
 
 		// 切换效果
         array(
