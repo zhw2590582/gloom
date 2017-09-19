@@ -55,19 +55,6 @@ $options[] = array(
             'add_title' => '添加logo',
             'default' => get_template_directory_uri() . "/images/default/avatar.png"
         ) ,
-        // 自定义皮肤
-        array(
-            'id' => 'i_skin',
-            'type' => 'select',
-            'title' => '自定义皮肤',
-            'options' => array(
-                'skin01_cloth' => '布质',
-                'skin02_black' => '暗黑',
-                'skin03_paper' => '纸质',
-                'skin04_steam' => '朋克',
-            ) ,
-            'default' => 'i_skin01',
-        ) ,
         // 分页设置
         array(
             'type' => 'notice',
@@ -168,11 +155,25 @@ $options[] = array(
             'type' => 'switcher',
             'title' => '开启前端换肤',
             'label' => '一旦开启，自定义皮肤将失效，且默认显示第一套皮肤',
-            'dependency' => array(
-                'i_topbar',
-                '==',
-                'true'
+        ) ,
+        // 自定义皮肤
+        array(
+            'id' => 'i_skin',
+            'type' => 'select',
+            'title' => '自定义皮肤',
+            'options' => array(
+                'skin01_cloth' => '布质',
+                'skin02_black' => '暗黑',
+                'skin03_paper' => '纸质',
+                'skin04_steam' => '朋克',
             ) ,
+            'default' => 'skin01_cloth',
+        ) ,
+        // 开启前端设置按钮
+        array(
+            'id' => 'i_setting',
+            'type' => 'switcher',
+            'title' => '开启前端设置按钮',
         ) ,
     ) ,
 );

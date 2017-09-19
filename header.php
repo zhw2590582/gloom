@@ -4,6 +4,8 @@
 	$description = cs_get_option( 'i_seo_description' );
 	$favicon = cs_get_option( 'i_favicon_icon' );
 	$logo = cs_get_option( 'i_logo' );
+	$skin = cs_get_option( 'i_skin' );
+	$setting = cs_get_option( 'i_setting' );
 ?>
 
 <!DOCTYPE html>
@@ -28,15 +30,19 @@
 		  <header id="header" class="m_hide">
 				<div class="header_inner">
 					<div class="topbar clearfix">
-						<div class="skin fl clearfix">
-							<a href="#" class="with-tooltip skin_1 fl" data-tooltip="布质"></a>
-							<a href="#" class="with-tooltip skin_2 fl" data-tooltip="布质"></a>
-							<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
-							<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
-						</div>
-						<a class="fr setting f18" href="#">
-							<i class="fa fa-cog" aria-hidden="true"></i>
-						</a>
+						<?php if ($skin) {?>
+							<div class="skin fl clearfix">
+								<a href="#" class="with-tooltip skin_1 fl" data-tooltip="布质"></a>
+								<a href="#" class="with-tooltip skin_2 fl" data-tooltip="布质"></a>
+								<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
+								<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
+							</div>
+						<?php } ?>
+						<?php if ($setting) {?>
+							<a class="fr setting f18" href="#">
+								<i class="fa fa-cog" aria-hidden="true"></i>
+							</a>
+						<?php } ?>
 					</div>
 					<div class="logo text-c">
 						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
