@@ -3,6 +3,8 @@
 $header_w: 235px;
 $topbar_h: 35px;
 $slider_h: 300px;
+$featured_w: 200px;
+$post_h: 230px;
 /* wrapper */
 
 #wrapper {
@@ -604,7 +606,26 @@ $slider_h: 300px;
 /* posts */
 .posts{
   article{
-    
+    .post-left{
+      position: relative;
+      width: $featured_w;
+      height: $post_h;
+      .post-featured{
+        width: $featured_w;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          img{
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+    .post-right{
+
+    }
   }
 }
 

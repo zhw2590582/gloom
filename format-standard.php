@@ -41,16 +41,16 @@
       <?php if (!empty($music)) { ?>
         <!-- 播放器 开始 -->
         <div class="audio-wrapper">
-            <audio class="wp-audio-shortcode" preload="none" style="width: 100%">
-                <source type="audio/mpeg" src="<?php echo $music; ?>">
-            </audio>
-            <?php wp_enqueue_script('mediaelement'); ?>
-            <?php wp_enqueue_style('mediaelement'); ?>
-            <script>
-                jQuery(document).ready(function($) {
-                    $('.audio-wrapper audio').mediaelementplayer();
-                });
-            </script>
+          <audio class="wp-audio-shortcode" preload="none" style="width: 100%">
+            <source type="audio/mpeg" src="<?php echo $music; ?>">
+          </audio>
+          <?php wp_enqueue_script('mediaelement'); ?>
+          <?php wp_enqueue_style('mediaelement'); ?>
+          <script>
+            jQuery(document).ready(function($) {
+                $('.audio-wrapper audio').mediaelementplayer();
+            });
+          </script>
         </div>
         <!-- 播放器 结束 -->
       <?php } ?>
