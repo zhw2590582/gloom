@@ -20,7 +20,7 @@
           <!-- slider 开始 -->
           <div class="content_header clearfix">
             <div class="header_left fl">
-              <div class="sliderWrap" data-effect="<?php echo $slider_effect; ?>">
+              <div class="sliderWrap loading" data-effect="<?php echo $slider_effect; ?>">
                 <ul>
                   <?php
                       $my_sliders = cs_get_option( 'i_slider_custom' );

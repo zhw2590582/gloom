@@ -74,7 +74,7 @@
 
   $(function(){
     // 轮播图
-    $('.sliderWrap').unslider({
+    var slider = $('.sliderWrap').unslider({
       animation: $('.sliderWrap').data('effect'),
       autoplay: true,
 			infinite: true,
@@ -84,6 +84,10 @@
       	next: '<a class="unslider-arrow next"><i class="fa fa-angle-left" aria-hidden="true"></i></a>',
       }
 		});
+
+    slider.on('unslider.ready', function() {
+      $('.sliderWrap').removeClass('loading');
+    });
 
     // 切换小工具
     $(".widget_btn").click(function() {
