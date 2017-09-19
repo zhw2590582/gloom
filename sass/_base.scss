@@ -436,6 +436,7 @@ $topbar_h: 35px; /* wrapper */
 #content {
   position: relative;
   padding-left: $header_w * 2;
+  max-width: 2000px;
 
   .topbar {
     position: fixed;
@@ -444,6 +445,7 @@ $topbar_h: 35px; /* wrapper */
     top: 0;
     right: 0;
     height: $topbar_h;
+    max-width: 2000px;
     line-height: $topbar_h;
     padding: 0 20px 0 $header_w * 2 + 20px;
     background: #fafafa;
