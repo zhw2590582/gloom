@@ -147,7 +147,7 @@ $pagination = cs_get_option('i_pagination');
                     <li class="mate-com fr">
                       <i class="fa fa-comments-o"></i>
                       <span class="mate-num">
-                        <?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?>
+                        <?php comments_number('0', '1', '%');?>
                       </span>
                     </li>
                   <?php } ?>
