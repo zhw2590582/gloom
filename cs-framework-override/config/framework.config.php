@@ -213,6 +213,23 @@ $options[] = array(
             'type' => 'switcher',
             'title' => '开启公告条',
         ) ,
+        // 公告条特效
+        array(
+            'id' => 'i_notices_effect',
+            'type' => 'radio',
+            'title' => '公告条特效',
+            'class' => 'horizontal',
+            'options' => array(
+                'i_fade' => '淡出淡入',
+                'i_type' => '打字效果',
+            ) ,
+            'default' => 'i_fade',
+            'dependency' => array(
+                'i_notices',
+                '==',
+                'true'
+            ) ,
+        ) ,
         // 公告条文本
         array(
             'id' => 'i_notices_text',

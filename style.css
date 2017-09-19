@@ -242,9 +242,9 @@ img { max-width: 100%; }
 #content .content_inner { padding: 50px 20px 200px; }
 #content .content_inner .slider { height: 300px; overflow: hidden; margin-bottom: 30px; }
 #content .content_inner .slider .nivoSlider { width: 70%; }
-#content .content_inner .slider .nivoSlider .nivo-directionNav a { top: 150px -30px; margin-top: 0; }
+#content .content_inner .slider .nivoSlider .nivo-directionNav a { top: 120px; margin-top: 0; }
 #content .content_inner .slider .nivoSlider .nivo-caption { top: 265px; bottom: auto; }
-#content .content_inner .slider .nivoThumb { width: 30%; }
+#content .content_inner .slider .nivoThumb { width: 30%; padding-left: 15px; }
 
 /* footer */
 /* plugins */

@@ -9,6 +9,7 @@
 	$layout = cs_get_option('i_layout');
 	$notices = cs_get_option('i_notices');
 	$notices_text = cs_get_option('i_notices_text');
+	$notices_effect = cs_get_option('i_notices_effect');
 	$layout_list = cs_get_option('i_layout_list');
 ?>
 
@@ -73,7 +74,7 @@
 		<section id="content" name="content">
 			<div class="topbar clearfix">
 				<?php if ($notices) {?>
-					<div class="fl notices" data-notices="<?php echo $notices_text; ?>"></div>
+					<div class="fl notices" data-effect="<?php echo $notices_effect; ?>" data-notices="<?php echo $notices_text; ?>"></div>
 				<?php } ?>
 				<?php if ($layout) {?>
 					<div class="fr layouts clearfix">

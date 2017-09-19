@@ -499,7 +499,7 @@ $slider_h: 300px;
       .nivoSlider{
         width: 70%;
         .nivo-directionNav a{
-          top: $slider_h / 2 -30px;
+          top: $slider_h / 2 - 30px;
           margin-top: 0;
         }
         .nivo-caption{
@@ -509,6 +509,7 @@ $slider_h: 300px;
       }
       .nivoThumb{
         width: 30%;
+        padding-left: 15px;
       }
     }
   }
