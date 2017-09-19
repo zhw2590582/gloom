@@ -55,7 +55,7 @@
   <?php } ?>
   <div class="post-right col">
     <header class="post-title">
-      <a class="f18" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <a class="f20" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         <?php the_title(); ?>
       </a>
     </header>
