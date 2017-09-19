@@ -3,6 +3,7 @@
   $profile = cs_get_option('i_profile');
   $profile_avatar = cs_get_option('i_profile_avatar');
   $profile_name = cs_get_option('i_profile_name');
+  $profile_title = cs_get_option('i_profile_title');
   $profile_content = cs_get_option('i_profile_content');
   $widget1 = cs_get_option('i_widget1');
   $widget2 = cs_get_option('i_widget2');
@@ -25,7 +26,7 @@
               <p class="f16 text-ellipsis name_inner"><?php echo $profile_name; ?></p>
               <p class="f13 text-ellipsis">
                 <i class="fa fa-check-circle f14" aria-hidden="true"></i>
-                会UI的前端攻城狮
+                <?php echo $profile_title; ?>
               </p>
             </div>
           </div>

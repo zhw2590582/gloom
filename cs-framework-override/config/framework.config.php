@@ -1036,6 +1036,13 @@ $options[] = array(
             'title' => '昵称',
             'default' => '你的昵称',
         ) ,
+        // 头衔
+        array(
+            'id' => 'i_profile_title',
+            'type' => 'text',
+            'title' => '头衔',
+            'default' => '你的头衔',
+        ) ,
         // 简介
         array(
             'id' => 'i_profile_content',
