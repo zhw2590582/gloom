@@ -61,18 +61,14 @@
     </header>
     <div class="post-content clearfix">
       <?php if(is_search() || is_archive()) { ?>
-        <div class="excerpt-more">
-          <?php the_excerpt('Read More'); ?>
-        </div>
+        <?php the_excerpt('Read More'); ?>
       <?php } else { ?>
         <?php if(is_home()) { ?>
-          <div class="excerpt-more">
-            <?php if ($excerpt == true) {
-              the_excerpt('Read More');
-            } else {
-              the_content('Read More');
-            }?>
-          </div>
+          <?php if ($excerpt == true) {
+            the_excerpt('Read More');
+          } else {
+            the_content('Read More');
+          }?>
         <?php } else { ?>
           <?php the_content('Read More'); ?>
         <?php } ?>
