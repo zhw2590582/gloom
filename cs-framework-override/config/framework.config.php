@@ -55,6 +55,18 @@ $options[] = array(
             'add_title' => '添加logo',
             'default' => get_template_directory_uri() . "/images/default/avatar.png"
         ) ,
+        // 自定义文章布局
+        array(
+            'id' => 'i_layout_list',
+            'type' => 'radio',
+            'title' => '自定义文章布局',
+            'class' => 'horizontal',
+            'options' => array(
+                'i_box' => '盒子布局',
+                'i_width' => '宽屏布局',
+            ) ,
+            'default' => 'i_width'
+        ) ,
         // 分页设置
         array(
             'type' => 'notice',

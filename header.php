@@ -9,6 +9,7 @@
 	$layout = cs_get_option('i_layout');
 	$notices = cs_get_option('i_notices');
 	$notices_text = cs_get_option('i_notices_text');
+	$layout_list = cs_get_option('i_layout_list');
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
 <body <?php body_class(); ?> id="top">
 
 	<!-- wrapper 开始-->
-	<div id="wrapper">
+	<div id="wrapper" class="<?php echo $layout_list; ?>">
 
 		<!-- header 开始-->
 		<?php if (!is_mobile()) { ?>
