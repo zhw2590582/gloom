@@ -81,6 +81,20 @@
       $('.sidebar_inner .item').hide().eq(index).show();
     });
 
+    // 公告条
+    var element = document.querySelector('.notices');
+    var notices = element.dataset.notices.split(/\r?\n/).filter(function (item) {
+      return item !== '';
+    });
+    element && notices.length > 0 && ityped.init(element, {
+      strings: notices,
+      typeSpeed: 100,
+      backSpeed: 50,
+      startDelay: 1000,
+      backDelay: 3000,
+      loop: true,
+    });
+
     // 验证是否已评论 --- 待优化
     if (!!localStorage.getItem("postDownload")) {
       var postDownload = JSON.parse(localStorage.getItem("postDownload"));
@@ -118,7 +132,7 @@
       }
       $(this).prepend('<img src="' + linkhref + 'favicon.ico">');
     });
-    
+
     $(".linkcat img").on("error", function() {
       $(this).prop("src", url + "images/default/d_favicon.ico");
     });

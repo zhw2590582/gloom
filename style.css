@@ -313,6 +313,11 @@ img { max-width: 100%; }
   40% { -webkit-transform: translateX(0%); -moz-transform: translateX(0%); -o-transform: translateX(0%); transform: translateX(0%); }
   60% { -webkit-transform: translateX(0%); -moz-transform: translateX(0%); -o-transform: translateX(0%); transform: translateX(0%); }
   100% { -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -o-transform: translateX(100%); transform: translateX(100%); } }
+.ityped-cursor { font-size: 2.2rem; opacity: 1; -webkit-animation: blink 0.3s infinite; -moz-animation: blink 0.3s infinite; animation: blink 0.3s infinite; animation-direction: alternate; }
+
+@keyframes blink { 100% { opacity: 0; } }
+@-webkit-keyframes blink { 100% { opacity: 0; } }
+@-moz-keyframes blink { 100% { opacity: 0; } }
 .m_show { display: none; }
 
 /*# sourceMappingURL=style.css.map */
