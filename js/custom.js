@@ -75,8 +75,10 @@
   $(function(){
     // 轮播图
     $('.sliderWrap').unslider({
+      animation: $('.sliderWrap').data('effect'),
       autoplay: true,
-			infinite: true
+			infinite: true,
+      nav: false
 		});
 
     // 切换小工具
@@ -218,21 +220,5 @@
     MouseTooltip.init();
 
   });
-
-  // 轮播图
-  // $(window).load(function() {
-  //     $('.nivoSlider').length > 0 && $('.nivoSlider').nivoSlider({
-  //         effect: $('.nivoSlider').data('effect'),
-  //         boxCols: 5,
-  //         boxRows: 5,
-  //         animSpeed: 300,
-  //         prevText: '',
-  //         nextText: '',
-  //         controlNav: false,
-  //         afterLoad: function(){
-  //           $('.slider').removeClass('loading');
-  //         }
-  //     });
-  // });
 
 })(jQuery);

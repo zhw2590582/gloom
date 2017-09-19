@@ -496,9 +496,26 @@ $slider_h: 300px;
   .content_inner {
     padding: 50px 20px 200px;
     .content_header{
+      max-height: $slider_h;
       margin-bottom: 30px;
-      .sliderWrap{
+      overflow: hidden;
+      .unslider{
+        position: relative;
         width: 60%;
+        float: left;
+        .unslider-arrow{
+          position: absolute;
+          top: 50%;
+          &.next{
+            left: 0;
+          }
+          &.prev{
+            right: 0;
+          }
+        }
+      }
+      .sliderWrap{
+        width: 100%;
         background: #efefef;
         a {
           display: block;
