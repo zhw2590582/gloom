@@ -1,13 +1,14 @@
 <?php
 	error_reporting(0);
-	$keywords = cs_get_option( 'i_seo_keywords' );
-	$description = cs_get_option( 'i_seo_description' );
-	$favicon = cs_get_option( 'i_favicon_icon' );
-	$logo = cs_get_option( 'i_logo' );
-	$switcher = cs_get_option( 'i_switcher' );
-	$setting = cs_get_option( 'i_setting' );
-	$layout = cs_get_option( 'i_layout' );
-	$notices = cs_get_option( 'i_notices' );
+	$keywords = cs_get_option('i_seo_keywords');
+	$description = cs_get_option('i_seo_description');
+	$favicon = cs_get_option('i_favicon_icon');
+	$logo = cs_get_option('i_logo' );
+	$switcher = cs_get_option('i_switcher');
+	$setting = cs_get_option('i_setting');
+	$layout = cs_get_option('i_layout');
+	$notices = cs_get_option('i_notices');
+	$notices_text = cs_get_option('i_notices_text');
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +72,7 @@
 		<section id="content" name="content">
 			<div class="topbar clearfix">
 				<?php if ($notices) {?>
-					<div class="fl breadcrumbs">
+					<div class="fl notices" data-notices="<?php echo $$notices_text; ?>">
 						breadcrumbs
 					</div>
 				<?php } ?>

@@ -173,7 +173,7 @@ $options[] = array(
         array(
             'id' => 'i_setting',
             'type' => 'switcher',
-            'title' => '开启前端设置按钮',
+            'title' => '开启设置按钮',
         ) ,
         // 小工具1名称
         array(
