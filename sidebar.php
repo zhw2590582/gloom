@@ -20,10 +20,14 @@
               <img src="<?php echo $profile_avatar; ?>" alt="" />
             </div>
             <div class="name fl">
-              <?php echo $profile_name; ?>
+              <p class="f16 text-ellipsis name_inner"><?php echo $profile_name; ?></p>
+              <p class="f13 text-ellipsis">
+                <i class="fa fa-check-circle f14" aria-hidden="true"></i>
+                会UI的前端攻城狮
+              </p>
             </div>
           </div>
-          <div class="profile-content">
+          <div class="profile-content f13">
             <?php echo $profile_content; ?>
           </div>
           <ul class="profile-social clearfix">

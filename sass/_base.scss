@@ -1,5 +1,5 @@
 @charset "UTF-8"; /* base */
-$header_w: 245px;
+$header_w: 235px;
 $topbar_h: 35px; /* wrapper */
 
 #wrapper {
@@ -9,7 +9,7 @@ $topbar_h: 35px; /* wrapper */
   min-height: 100%;
   font-size: 14px;
   background: #fff;
-  color: #9c9c9c;
+  color: #777777;
 
   a {
     color: #9c9c9c;
@@ -397,7 +397,7 @@ $topbar_h: 35px; /* wrapper */
         &:after {
           clear: both;
           display: block;
-          content: " ";
+          content: '';
         }
 
         a {
@@ -410,19 +410,33 @@ $topbar_h: 35px; /* wrapper */
 
     #profile{
       .profile-header{
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         .avatar{
           width: 20%;
+          img{
+            vertical-align: bottom;
+            border-radius: 5px;
+          }
         }
         .name{
           width: 80%;
+          padding: 3px 0 0 10px;
+          .name_inner{
+            margin-bottom: 6px;
+            color: #444;
+          }
+          .fa-check-circle{
+            color: #bbb;
+          }
         }
       }
       .profile-content{
+        line-height: 1.5;
         margin-bottom: 15px;
       }
       .profile-social{
         li{
+          list-style: none;
           float: left;
           width: 20%;
           height: 20px;
