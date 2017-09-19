@@ -13,10 +13,6 @@ function getStorage(name) {
   return gloom_setting[name];
 }
 
-!getStorage('sidebar') && jQuery('#wrapper').addClass('sidebar_off');
-jQuery('.topbar .widget_btn').removeClass('on').eq(getStorage('widget')).addClass('on');
-jQuery('.sidebar_inner .item').hide().eq(getStorage('widget')).show();
-
 jQuery(document).ready(function($) {
 
   // 切换边栏

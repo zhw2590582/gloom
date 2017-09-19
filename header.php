@@ -34,10 +34,9 @@
 							<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
 							<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
 						</div>
-						<div class="fr sidebar_switcher f22 hand">
-							<i class="fa fa-toggle-off" aria-hidden="true"></i>
-							<i class="fa fa-toggle-on" aria-hidden="true"></i>
-						</div>
+						<a class="fr setting f22" href="#">
+							<i class="fa fa-cog" aria-hidden="true"></i>
+						</a>
 					</div>
 					<div class="logo text-c">
 						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">

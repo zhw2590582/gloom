@@ -18,30 +18,6 @@ $topbar_h: 35px; /* wrapper */
       color: #444;
     }
   }
-
-  &.sidebar_off {
-    #sidebar {
-      display: none;
-    }
-
-    #content {
-      padding-left: $header_w;
-
-      .topbar {
-        padding-left: $header_w + 20px;
-      }
-    }
-
-    .sidebar_switcher {
-      .fa-toggle-off {
-        display: block !important;
-      }
-
-      .fa-toggle-on {
-        display: none !important;
-      }
-    }
-  }
 }
 /* header */
 
@@ -96,16 +72,9 @@ $topbar_h: 35px; /* wrapper */
       }
     }
 
-    .sidebar_switcher {
+    .setting {
+      display: inline-block;
       color: #cecece;
-
-      .fa-toggle-off {
-        display: none;
-      }
-
-      .fa-toggle-on {
-        display: block;
-      }
     }
   }
   /* logo */
@@ -220,7 +189,7 @@ $topbar_h: 35px; /* wrapper */
   .sidebar_inner {
     height: 100%;
     width: $header_w + 35px;
-    padding: 10px 30px 50px 10px;
+    padding: 20px 30px 50px 10px;
     overflow-y: scroll;
     overflow-x: hidden;
 

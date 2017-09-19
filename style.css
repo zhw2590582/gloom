@@ -163,11 +163,6 @@ img { max-width: 100%; }
 #wrapper { position: relative; height: auto !important; height: 100%; min-height: 100%; font-size: 14px; background: #fff; color: #777777; }
 #wrapper a { color: #9c9c9c; }
 #wrapper a:hover { color: #444; }
-#wrapper.sidebar_off #sidebar { display: none; }
-#wrapper.sidebar_off #content { padding-left: 235px; }
-#wrapper.sidebar_off #content .topbar { padding-left: 255px; }
-#wrapper.sidebar_off .sidebar_switcher .fa-toggle-off { display: block !important; }
-#wrapper.sidebar_off .sidebar_switcher .fa-toggle-on { display: none !important; }
 
 /* header */
 #header { position: fixed; left: 0; top: 0; bottom: 0; z-index: 2; width: 235px; height: 100%; border-right: 1px solid #e5e5e5; /* topbar */ /* logo */ /* menu */ }
@@ -178,9 +173,7 @@ img { max-width: 100%; }
 #header .topbar .skin a.skin_2 { background: #dadada; border: 1px solid #c7c7c7; }
 #header .topbar .skin a.skin_3 { background: #dadada; border: 1px solid #c7c7c7; }
 #header .topbar .skin a.skin_4 { background: #dadada; border: 1px solid #c7c7c7; }
-#header .topbar .sidebar_switcher { color: #cecece; }
-#header .topbar .sidebar_switcher .fa-toggle-off { display: none; }
-#header .topbar .sidebar_switcher .fa-toggle-on { display: block; }
+#header .topbar .setting { display: inline-block; color: #cecece; }
 #header .logo { margin-bottom: 50px; }
 #header .logo .logo_img { display: block; margin-bottom: 20px; padding: 0 15px; }
 #header .logo .blog_name { padding: 0 15px; line-height: 1.5; color: #9c9c9c; }
@@ -199,7 +192,7 @@ img { max-width: 100%; }
 #sidebar .topbar { height: 35px; line-height: 35px; background: #fafafa; border-bottom: 1px solid #e5e5e5; }
 #sidebar .topbar .widget_btn { width: 50%; height: 35px; line-height: 35px; }
 #sidebar .topbar .widget_btn.on { color: #02b875; border-bottom: 1px solid #02b875; }
-#sidebar .sidebar_inner { height: 100%; width: 270px; padding: 10px 30px 50px 10px; overflow-y: scroll; overflow-x: hidden; }
+#sidebar .sidebar_inner { height: 100%; width: 270px; padding: 20px 30px 50px 10px; overflow-y: scroll; overflow-x: hidden; }
 #sidebar .sidebar_inner aside { margin-bottom: 30px; }
 #sidebar .sidebar_inner aside > ul li { padding-bottom: 5px; margin-bottom: 5px; line-height: 20px; }
 #sidebar .sidebar_inner aside > ul li:before { font-family: FontAwesome; margin-right: 5px; }
