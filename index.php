@@ -12,28 +12,35 @@ $pagination = cs_get_option('i_pagination');
 
 <?php get_header(); ?>
 
-
-        <?php if(is_home() && !is_paged()) { ?>
+        <?php if(is_home() && !is_paged() && $sliders) { ?>
           <!-- slider 开始 -->
-          <?php if ($sliders == true) { ?>
-              <div class="app_slider">
-                  <div class="slider_inner loading">
-                      <div id="slider" class="nivoSlider">
-                          <?php
-                              $my_sliders = cs_get_option( 'i_slider_custom' );
-                              if( ! empty( $my_sliders ) ) {
-                                foreach ( $my_sliders as $slider ) {
-                                  if( ! empty( $slider['i_slider_link'] ) ){ echo '<a href="'. $slider['i_slider_link'] .'"';}
-                                  if ( ! empty( $slider['i_slider_link'] ) && $slider['i_slider_newtab'] == true) { echo 'target="_black">';}else{ if ( ! empty( $slider['i_slider_link'] )){ echo '>';}}
-                                  echo '<img class=" " src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
-                                  if( ! empty( $slider['i_slider_link'] ) ){ echo '</a>';}
+          <div class="app_slider">
+              <div class="slider_inner loading">
+                  <div id="slider" class="nivoSlider">
+                      <?php
+                          $my_sliders = cs_get_option( 'i_slider_custom' );
+                          if(!empty($my_sliders)) {
+                            foreach ( $my_sliders as $slider ) {
+                              if(!empty( $slider['i_slider_link'])){
+                                echo '<a href="'. $slider['i_slider_link'] .'"';
+                              }
+                              if (!empty($slider['i_slider_link']) && $slider['i_slider_newtab'] == true) {
+                                echo 'target="_black">';
+                              } else {
+                                if (!empty( $slider['i_slider_link'])){
+                                  echo '>';
                                 }
                               }
-                          ?>
-                      </div>
+                              echo '<img class=" " src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
+                              if(!empty( $slider['i_slider_link'])){
+                                echo '</a>';
+                              }
+                            }
+                          }
+                      ?>
                   </div>
               </div>
-          <?php } ?>
+          </div>
           <!-- slider 结束 -->
         <?php } ?>
 
