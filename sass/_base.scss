@@ -496,27 +496,36 @@ $slider_h: 300px;
   .content_inner {
     padding: 50px 20px 200px;
     .content_header{
-      max-height: $slider_h;
       margin-bottom: 30px;
-      overflow: hidden;
       .unslider{
         position: relative;
         width: 60%;
         float: left;
         .unslider-arrow{
           position: absolute;
+          z-index: 9;
           top: 50%;
+          width: 30px;
+          height: 50px;
+          line-height: 30px;
+          margin-top: -25px;
+          text-align: center;
           &.next{
             left: 0;
+            right: auto;
           }
           &.prev{
+            left: auto;
             right: 0;
           }
         }
       }
       .sliderWrap{
+        max-height: $slider_h;
         width: 100%;
+        overflow: hidden;
         background: #efefef;
+        z-index: 8;
         a {
           display: block;
           width: 100%;
@@ -525,6 +534,18 @@ $slider_h: 300px;
           background-position: center center;
           background-repeat: no-repeat;
           background-color: #eaeaea;
+          p{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 15px;
+            background: #000;
+            color: #fff;
+          }
         }
       }
       .nivoThumb{
