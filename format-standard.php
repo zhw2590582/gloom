@@ -19,20 +19,24 @@
 
 <div class="post-inner colbox">
 
-  <?php if ( !is_single() && !is_page() && !is_mobile() ) { ?>
+  <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
     <div class="post-left col m_hide">
 
       <!-- 特色图 开始 -->
-      <?php if ( has_post_thumbnail() ) { ?>
+      <?php if (has_post_thumbnail()) { ?>
         <div class="post-featured" >
           <a href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
             <?php the_post_thumbnail( 'thumbnail' ); ?>
           </a>
         </div>
-      <?php }else{?>
+      <?php } else { ?>
         <div class="post-featured" >
           <a href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1,$feature_num)?>.png" alt="<?php the_title(); ?>" />
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-echo="<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1,$feature_num)?>.png"
+              alt="<?php the_title(); ?>"
+             />
           </a>
         </div>
       <?php } ?>
