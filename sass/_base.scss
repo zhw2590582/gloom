@@ -502,6 +502,7 @@ $slider_h: 300px;
         width: 60%;
         float: left;
         .unslider-arrow{
+          opacity: .5;
           position: absolute;
           z-index: 9;
           top: 50%;
@@ -510,6 +511,12 @@ $slider_h: 300px;
           line-height: 30px;
           margin-top: -25px;
           text-align: center;
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          text-indent: -999em;
+          &:hover{
+            opacity: 1;
+          }
           &.next{
             left: 0;
             right: auto;
@@ -521,7 +528,7 @@ $slider_h: 300px;
         }
       }
       .sliderWrap{
-        max-height: $slider_h;
+        height: $slider_h;
         width: 100%;
         overflow: hidden;
         background: #efefef;
@@ -543,7 +550,7 @@ $slider_h: 300px;
             height: 30px;
             line-height: 30px;
             padding: 0 15px;
-            background: #000;
+            background: rgba(0, 0, 0, 0.5);
             color: #fff;
           }
         }
