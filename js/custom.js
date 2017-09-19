@@ -80,8 +80,8 @@
 			infinite: true,
       nav: false,
       arrows: {
-      	prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>',
-      	next: '<a class="unslider-arrow next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>',
+      	prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-right" aria-hidden="true"></i></a>',
+      	next: '<a class="unslider-arrow next"><i class="fa fa-angle-left" aria-hidden="true"></i></a>',
       }
 		});
 

@@ -243,7 +243,7 @@ img { max-width: 100%; }
 #content .content_inner { padding: 50px 20px 200px; }
 #content .content_inner .content_header { margin-bottom: 30px; }
 #content .content_inner .content_header .unslider { position: relative; width: 60%; float: left; }
-#content .content_inner .content_header .unslider .unslider-arrow { opacity: .5; position: absolute; z-index: 9; top: 50%; width: 30px; height: 50px; line-height: 30px; margin-top: -25px; text-align: center; background: rgba(0, 0, 0, 0.5); color: #fff; }
+#content .content_inner .content_header .unslider .unslider-arrow { opacity: .5; position: absolute; z-index: 9; top: 50%; width: 30px; height: 50px; font-size: 20px; line-height: 50px; margin-top: -25px; text-align: center; background: rgba(0, 0, 0, 0.5); color: #fff; }
 #content .content_inner .content_header .unslider .unslider-arrow:hover { opacity: 1; }
 #content .content_inner .content_header .unslider .unslider-arrow.next { left: 0; right: auto; }
 #content .content_inner .content_header .unslider .unslider-arrow.prev { left: auto; right: 0; }
