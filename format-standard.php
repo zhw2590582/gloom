@@ -1,34 +1,21 @@
 <?php
-error_reporting(0);
-$excerpt = cs_get_option( 'i_post_readmore' );
-$view = cs_get_option( 'i_post_view' );
-$meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
-$state = $meta_data['i_state'];
-$state_text = $meta_data['i_state_text'];
-$state_icon = $meta_data['i_state_icon'];
-$music = $meta_data['i_post_music'];
-$download = $meta_data['i_download'];
-$web = $meta_data['i_download_web'];
-$charge = $meta_data['i_download_charge'];
-$link = $meta_data['i_download_link'];
-$code = $meta_data['i_download_code'];
-$jieya = cs_get_option( 'i_download_jieya' );
-$dlview = cs_get_option( 'i_download_view' );
-$feature_num = cs_get_option( 'i_feature_num' );
+  error_reporting(0);
+  $excerpt = cs_get_option( 'i_post_readmore' );
+  $view = cs_get_option( 'i_post_view' );
+  $meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
+  $state = $meta_data['i_state'];
+  $state_text = $meta_data['i_state_text'];
+  $state_icon = $meta_data['i_state_icon'];
+  $music = $meta_data['i_post_music'];
+  $download = $meta_data['i_download'];
+  $web = $meta_data['i_download_web'];
+  $charge = $meta_data['i_download_charge'];
+  $link = $meta_data['i_download_link'];
+  $code = $meta_data['i_download_code'];
+  $jieya = cs_get_option( 'i_download_jieya' );
+  $dlview = cs_get_option( 'i_download_view' );
+  $feature_num = cs_get_option( 'i_feature_num' );
 ?>
-
-<header class="post-title clearfix wb">
-
-  <?php if ( $state == true && !is_mobile()  ) { ?>
-    <i class="with-tooltip m_hide fl state fa <?php echo $state_icon; ?>" data-tooltip="<?php echo $state_text; ?>" aria-hidden="true"></i>
-  <?php }?>
-
-  <div class="fl">
-    <a class="" href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
-      <?php the_title(); ?>
-    </a>
-  </div>
-</header>
 
 <div class="post-inner colbox">
 
@@ -78,21 +65,30 @@ $feature_num = cs_get_option( 'i_feature_num' );
   <?php } ?>
 
   <div class="post-right col">
-
-    <div class="post-content wb clearfix">
+    <header class="post-title clearfix wb">
+      <?php if ( $state == true && !is_mobile()  ) { ?>
+        <i class="with-tooltip m_hide fl state fa <?php echo $state_icon; ?>" data-tooltip="<?php echo $state_text; ?>" aria-hidden="true"></i>
+      <?php }?>
+      <div class="fl">
+        <a class="" href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
+          <?php the_title(); ?>
+        </a>
+      </div>
+    </header>
+    <div class="post-content clearfix">
       <?php if(is_search() || is_archive()) { ?>
         <div class="excerpt-more">
-            <?php the_excerpt(__( 'Read More','island')); ?>
+            <?php the_excerpt('Read More'); ?>
         </div>
       <?php } else { ?>
         <?php if(is_home()) { ?>
           <?php if ($excerpt == true) {
-            the_excerpt(__( 'Read More','island'));
+            the_excerpt('Read More');
           }else{
-            the_content(__( 'Read More','island'));
+            the_content('Read More');
           }?>
         <?php } else { ?>
-          <?php the_content(__( 'Read More','island')); ?>
+          <?php the_content('Read More'); ?>
         <?php } ?>
       <?php } ?>
     </div>
