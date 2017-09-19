@@ -496,6 +496,12 @@ $slider_h: 300px;
       height: $slider_h;
       overflow: hidden;
       margin-bottom: 30px;
+      .nivoSlider{
+        width: 70%;
+      }
+      .nivoThumb{
+        width: 30%;
+      }
     }
   }
 }
