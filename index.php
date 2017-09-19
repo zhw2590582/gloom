@@ -9,6 +9,9 @@ $cat = cs_get_option( 'i_post_cat' );
 $tag = cs_get_option( 'i_post_tag' );
 $like = cs_get_option( 'i_post_like' );
 $pagination = cs_get_option('i_pagination');
+$loadmore = cs_get_option( 'i_ajax_loading' );
+$loadend = cs_get_option( 'i_ajax_end' );
+$loadnum = cs_get_option( 'i_ajax_num' );
 ?>
 
 <?php get_header(); ?>
@@ -91,7 +94,7 @@ $pagination = cs_get_option('i_pagination');
         <?php } ?>
         <!-- archive title 结束  -->
 
-        <div class="posts clearfix">
+        <div class="posts clearfix" data-pagination="<?php echo $pagination; ?>" data-more="<?php echo $loadmore; ?>" data-end="<?php echo $loadend; ?>" data-num="<?php echo $loadnum; ?>">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php setPostViews(get_the_ID());?>
           <article <?php post_class('index-post'); ?>>
@@ -160,8 +163,8 @@ $pagination = cs_get_option('i_pagination');
           <?php endif; ?>
         </div>
 
-        <?php if ( $pagination == 'i_ajax') { ?>
-          <?php if( island_page_has_nav() ) : ?>
+        <?php if ($pagination == 'i_ajax') { ?>
+          <?php if(island_page_has_nav()) : ?>
             <div class="post-nav">
               <div class="post-nav-inside text-c clearfix">
                 <div class="post-nav-left"><?php previous_posts_link(__('上一页')) ?></div>

@@ -151,7 +151,7 @@
       $(this).prop("src", url + "images/default/d_favicon.ico");
     });
 
-    // 轮播图
+    // 加载更多
 
     // 图像懒加载
     echo.init({offset: 100, throttle: 250, unload: false});
@@ -161,6 +161,7 @@
 
   });
 
+  // 轮播图
   $(window).load(function() {
       $('.nivoSlider').length > 0 && $('.nivoSlider').nivoSlider({
           effect: $('.nivoSlider').data('effect'),
