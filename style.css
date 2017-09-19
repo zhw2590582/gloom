@@ -267,7 +267,8 @@ img { max-width: 100%; }
 .posts article .post-left .post-featured a { display: block; width: 100%; height: 100%; overflow: hidden; background-color: #efefef; }
 .posts article .post-right { padding: 15px 15px 0 15px; }
 .posts article .post-right .post-title { margin-bottom: 15px; }
-.posts article .post-right .post-title a { color: #444 !important; }
+.posts article .post-right .post-title a { color: #444 !important; line-height: 1.5; }
+.posts article .post-right .post-title a:hover { color: #02b875 !important; }
 .posts article .post-right .post-content { margin-bottom: 15px; line-height: 1.5; }
 
 /* footer */

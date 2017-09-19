@@ -631,6 +631,10 @@ $post_h: 230px;
         margin-bottom: 15px;
         a{
           color: #444 !important;
+          line-height: 1.5;
+          &:hover{
+            color: #02b875 !important;
+          }
         }
       }
       .post-content{
