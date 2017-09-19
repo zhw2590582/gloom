@@ -18,14 +18,14 @@
 
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
-          <div class="slider clearfix loading">
+          <div class="content_header clearfix loading">
               <div class="sliderWrap fl" data-effect="<?php echo $slider_effect; ?>">
                 <ul>
                   <?php
                       $my_sliders = cs_get_option( 'i_slider_custom' );
                       if(!empty($my_sliders)) {
                         foreach ($my_sliders as $slider) {
-                          echo '<li><a target="_black" href="'. $slider['i_slider_link'] .'" background-image="url('. $slider['i_slider_image'] .')">';
+                          echo '<li><a target="_black" href="'. $slider['i_slider_link'] .'" style="background-image: url('. $slider['i_slider_image'] .')">';
                           echo '<p>'. $slider['i_slider_text'] .'</p>';
                           echo '</a></li>';
                         }
