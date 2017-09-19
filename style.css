@@ -242,8 +242,8 @@ img { max-width: 100%; }
 #content .topbar .layouts .layout_box span { display: inline-block; float: left; width: 8px; }
 #content .content_inner { padding: 50px 20px 200px; }
 #content .content_inner .content_header { margin-bottom: 30px; }
-#content .content_inner .content_header .header_left { width: 60%; }
-#content .content_inner .content_header .header_right { width: 40%; padding-left: 15px; }
+#content .content_inner .content_header .header_left { width: 70%; }
+#content .content_inner .content_header .header_right { width: 30%; padding-left: 15px; }
 #content .content_inner .content_header .unslider { position: relative; }
 #content .content_inner .content_header .unslider .unslider-arrow { opacity: .5; position: absolute; z-index: 9; top: 50%; width: 30px; height: 50px; font-size: 20px; line-height: 50px; margin-top: -25px; text-align: center; background: rgba(0, 0, 0, 0.5); color: #fff; }
 #content .content_inner .content_header .unslider .unslider-arrow:hover { opacity: 1; }
@@ -252,7 +252,7 @@ img { max-width: 100%; }
 #content .content_inner .content_header .sliderWrap { height: 300px; width: 100%; overflow: hidden; background: #efefef; z-index: 8; }
 #content .content_inner .content_header .sliderWrap a { position: relative; display: block; width: 100%; height: 300px; background-size: cover; background-position: center center; background-repeat: no-repeat; background-color: #eaeaea; }
 #content .content_inner .content_header .sliderWrap a p { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 30px; line-height: 30px; padding: 0 15px; background: rgba(0, 0, 0, 0.5); color: #fff; }
-#content .content_inner .content_header .featured li { display: inline-block; width: 50%; height: 150px; }
+#content .content_inner .content_header .featured li { display: block; height: 135px; }
 #content .content_inner .content_header .featured li a { display: block; width: 100%; height: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; background-color: #eaeaea; }
 
 /* footer */

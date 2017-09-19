@@ -498,10 +498,10 @@ $slider_h: 300px;
     .content_header{
       margin-bottom: 30px;
       .header_left{
-        width: 60%;
+        width: 70%;
       }
       .header_right{
-        width: 40%;
+        width: 30%;
         padding-left: 15px;
       }
       .unslider{
@@ -563,9 +563,8 @@ $slider_h: 300px;
       }
       .featured{
         li{
-          display: inline-block;
-          width: 50%;
-          height: $slider_h / 2;
+          display: block;
+          height: $slider_h / 2 - 15px;
           a{
             display: block;
             width: 100%;
