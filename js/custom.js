@@ -152,6 +152,37 @@
     });
 
     // 加载更多
+    if($('body').hasClass('home') || $('body').hasClass('archive')){
+      var posts = $('.posts');
+      if(posts.data('pagination') != 'i_ajax') return;
+      var more = posts.data('more');
+      var end = posts.data('end');
+      var num = posts.data('num');
+
+      var ias = $.ias({
+        container: ".posts",
+        item: ".post",
+        pagination: ".post-nav-inside",
+        next: ".post-nav-right a",
+      });
+
+      ias.extension(new IASTriggerExtension({
+        textPrev: ' ',
+        text: more,
+        offset: num,
+      }));
+
+      ias.extension(new IASNoneLeftExtension({
+        text: end,
+      }));
+
+      ias.extension(new IASSpinnerExtension());
+      ias.extension(new IASPagingExtension());
+      ias.extension(new IASHistoryExtension({
+        prev: '.post-nav-right a',
+      }));
+
+    }
 
     // 图像懒加载
     echo.init({offset: 100, throttle: 250, unload: false});

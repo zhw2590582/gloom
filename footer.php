@@ -188,57 +188,57 @@ $notice_link = cs_get_option( 'i_notice_link' );
 
 	<?php wp_footer(); ?>
 	<script>
-
-	jQuery(document).ready(function($) {
-
-	<?php if ( $pagination == 'i_ajax' && is_home() || $pagination == 'i_ajax' && is_archive()) { ?>
-		// ajax加载
-		var ias = $.ias({
-			container: ".posts",
-			item: ".post",
-			pagination: ".post-nav-inside",
-			next: ".post-nav-right a",
-		});
-
-		ias.extension(new IASTriggerExtension({
-			textPrev: ' ',
-			text: '<?php echo $loadmore ?>',
-			offset: <?php echo $loadnum ?>,
-		}));
-		ias.extension(new IASNoneLeftExtension({
-			text: '<?php echo $loadend ?>',
-		}));
-		ias.extension(new IASSpinnerExtension());
-		ias.extension(new IASPagingExtension());
-		ias.extension(new IASHistoryExtension({
-			prev: '.post-nav-right a',
-		}));
-
-		ias.on('rendered', function(items) {
-			echo.init({
-				offset: 100,
-				throttle: 250,
-				unload: false,
-			});
-
-			if($(".audio-wrapper audio").length>0){
-				$('.audio-wrapper audio').mediaelementplayer();
-			};
-
-			$("img").not($(".wp-smiley")) .addClass('ajax_gif').load(function() {
-				$(this).removeClass('ajax_gif');
-			}).on('error', function () {
-				$(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-			}).each(function(){
-		    if ($(this).attr('src') == '') {
-		      $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-		    }
-		  });
-
-
-		});
-	<?php } ?>
-	});
+	// 
+	// jQuery(document).ready(function($) {
+	//
+	// <?php if ( $pagination == 'i_ajax' && is_home() || $pagination == 'i_ajax' && is_archive()) { ?>
+	// 	// ajax加载
+	// 	var ias = $.ias({
+	// 		container: ".posts",
+	// 		item: ".post",
+	// 		pagination: ".post-nav-inside",
+	// 		next: ".post-nav-right a",
+	// 	});
+	//
+	// 	ias.extension(new IASTriggerExtension({
+	// 		textPrev: ' ',
+	// 		text: '<?php echo $loadmore ?>',
+	// 		offset: <?php echo $loadnum ?>,
+	// 	}));
+	// 	ias.extension(new IASNoneLeftExtension({
+	// 		text: '<?php echo $loadend ?>',
+	// 	}));
+	// 	ias.extension(new IASSpinnerExtension());
+	// 	ias.extension(new IASPagingExtension());
+	// 	ias.extension(new IASHistoryExtension({
+	// 		prev: '.post-nav-right a',
+	// 	}));
+	//
+	// 	ias.on('rendered', function(items) {
+	// 		echo.init({
+	// 			offset: 100,
+	// 			throttle: 250,
+	// 			unload: false,
+	// 		});
+	//
+	// 		if($(".audio-wrapper audio").length>0){
+	// 			$('.audio-wrapper audio').mediaelementplayer();
+	// 		};
+	//
+	// 		$("img").not($(".wp-smiley")) .addClass('ajax_gif').load(function() {
+	// 			$(this).removeClass('ajax_gif');
+	// 		}).on('error', function () {
+	// 			$(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+	// 		}).each(function(){
+	// 	    if ($(this).attr('src') == '') {
+	// 	      $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+	// 	    }
+	// 	  });
+	//
+	//
+	// 	});
+	// <?php } ?>
+	// });
 	</script>
 
 </body>
