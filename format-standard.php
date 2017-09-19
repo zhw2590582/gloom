@@ -22,25 +22,19 @@
   <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
     <div class="post-left col ">
       <!-- 特色图 开始 -->
-      <?php if (has_post_thumbnail()) { ?>
         <div class="post-featured" >
           <a
+            class="bg-img"
             href="<?php the_permalink(); ?>"
             title="<?php the_title(); ?>"
-            style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"
+            <?php if (has_post_thumbnail()) { ?>
+              style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"
+            <?php } else { ?>
+              style="background-image: url('<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1, $feature_num)?>.png')"
+            <?php } ?>
           >
           </a>
         </div>
-      <?php } else { ?>
-        <div class="post-featured" >
-          <a
-            href="<?php the_permalink(); ?>"
-            title="<?php the_title(); ?>"
-            style="background-image: url('<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1, $feature_num)?>.png')"
-          >
-          </a>
-        </div>
-      <?php } ?>
       <!-- 特色图 结束 -->
 
       <?php if (!empty($music)) { ?>
@@ -60,11 +54,10 @@
         <!-- 播放器 结束 -->
       <?php } ?>
 
-      <?php if ( is_sticky() ) : ?>
+      <?php if (is_sticky()) { ?>
         <!-- 置顶文章 -->
         <div class="post-sticky with-tooltip m_hide" data-tooltip="置顶文章"></div>
-        <?php else : ?>
-      <?php endif; ?>
+      <?php } ?>
 
     </div>
   <?php } ?>

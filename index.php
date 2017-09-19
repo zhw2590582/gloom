@@ -26,7 +26,7 @@
                       $my_sliders = cs_get_option( 'i_slider_custom' );
                       if(!empty($my_sliders)) {
                         foreach ($my_sliders as $slider) {
-                          echo '<li><a target="_black" href="'. $slider['i_slider_link'] .'" style="background-image: url('. $slider['i_slider_image'] .')">';
+                          echo '<li><a class="bg-img" target="_black" href="'. $slider['i_slider_link'] .'" style="background-image: url('. $slider['i_slider_image'] .')">';
                           echo '<p class="text-ellipsis">'. $slider['i_slider_text'] .'</p>';
                           echo '</a></li>';
                         }
@@ -41,7 +41,7 @@
                     $my_ad = cs_get_option( 'i_ad_custom' );
                     if(!empty($my_ad)) {
                       foreach ($my_ad as $ad) {
-                        echo '<li class="fl"><a target="_black" href="'. $ad['i_ad_link'] .'" style="background-image: url('. $ad['i_ad_image'] .')">';
+                        echo '<li class="fl"><a class="bg-img" target="_black" href="'. $ad['i_ad_link'] .'" style="background-image: url('. $ad['i_ad_image'] .')">';
                         echo '<p class="text-ellipsis">'. $ad['i_ad_text'] .'</p>';
                         echo '</a></li>';
                       }
