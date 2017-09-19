@@ -18,7 +18,7 @@
 
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
-          <div class="content_header loading clearfix">
+          <div class="content_header clearfix">
             <div class="header_left fl">
               <div class="sliderWrap" data-effect="<?php echo $slider_effect; ?>">
                 <ul>
@@ -36,7 +36,18 @@
               </div>
             </div>
             <div class="header_right fr">
-              header_right
+              <ul class="adWrap">
+                <?php
+                    $my_ad = cs_get_option( 'i_ad_custom' );
+                    if(!empty($my_ad)) {
+                      foreach ($my_ad as $ad) {
+                        echo '<li><a target="_black" href="'. $ad['i_slider_link'] .'" style="background-image: url('. $ad['i_slider_image'] .')">';
+                        echo '<p>'. $ad['i_slider_text'] .'</p>';
+                        echo '</a></li>';
+                      }
+                    }
+                ?>
+              </ul>
             </div>
           </div>
           <!-- slider 结束 -->

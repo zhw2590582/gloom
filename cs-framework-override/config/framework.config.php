@@ -333,6 +333,7 @@ $options[] = array(
             'id' => 'i_ad_custom',
             'type' => 'group',
             'title' => '自定义广告',
+            'info' => '最多添加四个广告',
             'button_title' => '添加滑块',
             'accordion_title' => '滑块',
             'fields' => array(
