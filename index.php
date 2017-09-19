@@ -19,17 +19,19 @@
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
           <div class="slider clearfix loading">
-              <div class="nivoSlider fl" data-effect="<?php echo $slider_effect; ?>">
+              <div class="unslider fl" data-effect="<?php echo $slider_effect; ?>">
+                <ul>
                   <?php
                       $my_sliders = cs_get_option( 'i_slider_custom' );
                       if(!empty($my_sliders)) {
                         foreach ($my_sliders as $slider) {
-                          echo '<a target="_black" href="'. $slider['i_slider_link'] .'">';
-                          echo '<img src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
-                          echo '</a>';
+                          echo '<li><a target="_black" href="'. $slider['i_slider_link'] .'" background-image="url('. $slider['i_slider_image'] .')">';
+                          echo '<p>'. $slider['i_slider_text'] .'</p>';
+                          echo '</a></li>';
                         }
                       }
                   ?>
+                </ul>
               </div>
               <div class="nivoThumb fr">
                 nivoThumb

@@ -73,6 +73,10 @@
   });
 
   $(function(){
+    // 轮播图
+    $('.unslider').unslider({
+			infinite: true
+		});
 
     // 切换小工具
     $(".widget_btn").click(function() {
@@ -215,19 +219,19 @@
   });
 
   // 轮播图
-  $(window).load(function() {
-      $('.nivoSlider').length > 0 && $('.nivoSlider').nivoSlider({
-          effect: $('.nivoSlider').data('effect'),
-          boxCols: 5,
-          boxRows: 5,
-          animSpeed: 300,
-          prevText: '',
-          nextText: '',
-          controlNav: false,
-          afterLoad: function(){
-            $('.slider').removeClass('loading');
-          }
-      });
-  });
+  // $(window).load(function() {
+  //     $('.nivoSlider').length > 0 && $('.nivoSlider').nivoSlider({
+  //         effect: $('.nivoSlider').data('effect'),
+  //         boxCols: 5,
+  //         boxRows: 5,
+  //         animSpeed: 300,
+  //         prevText: '',
+  //         nextText: '',
+  //         controlNav: false,
+  //         afterLoad: function(){
+  //           $('.slider').removeClass('loading');
+  //         }
+  //     });
+  // });
 
 })(jQuery);
