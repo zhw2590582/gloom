@@ -34,7 +34,7 @@
 							<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
 							<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
 						</div>
-						<a class="fr setting f22" href="#">
+						<a class="fr setting f18" href="#">
 							<i class="fa fa-cog" aria-hidden="true"></i>
 						</a>
 					</div>
