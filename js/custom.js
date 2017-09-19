@@ -85,7 +85,14 @@
     $(".layout").click(function() {
       var index = $(this).index();
       $(this).addClass('on').siblings().removeClass('on');
-      index === 1 ? $('#wrapper').addClass('layout_box') : $('#wrapper').removeClass('layout_box');
+      if(index === 1){
+        $('#wrapper').addClass('layout_box')
+        setStorage('layout', 'box');
+      } else {
+        $('#wrapper').removeClass('layout_box');
+        setStorage('layout', 'width');
+      }
+      return false;
     });
 
     // 公告条
