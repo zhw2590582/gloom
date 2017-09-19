@@ -74,6 +74,13 @@
 
   $(function(){
 
+    // 切换小工具
+    $(".widget_btn").click(function() {
+      var index = $(this).index();
+      $(this).addClass('on').siblings().removeClass('on');
+      $('.sidebar_inner .item').hide().eq(index).show();
+    });
+
     // 验证是否已评论 --- 待优化
     if (!!localStorage.getItem("postDownload")) {
       var postDownload = JSON.parse(localStorage.getItem("postDownload"));
@@ -93,7 +100,7 @@
     });
 
     // 图像CSS类
-    $("img").not($(".wp-smiley,.avatar")).addClass("ajax_gif").load(function() {
+    $("img").not($(".wp-smiley, .avatar")).addClass("ajax_gif").load(function() {
       $(this).removeClass("ajax_gif");
     }).on("error", function() {
       $(this).removeClass("ajax_gif").prop("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
@@ -111,6 +118,7 @@
       }
       $(this).prepend('<img src="' + linkhref + 'favicon.ico">');
     });
+    
     $(".linkcat img").on("error", function() {
       $(this).prop("src", url + "images/default/d_favicon.ico");
     });
