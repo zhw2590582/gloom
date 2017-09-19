@@ -264,8 +264,11 @@ img { max-width: 100%; }
 .posts article .post-inner { border: 1px solid #e5e5e5; }
 .posts article .post-left { position: relative; width: 200px; height: 230px; }
 .posts article .post-left .post-featured { width: 100%; height: 100%; }
-.posts article .post-left .post-featured a { display: block; width: 100%; height: 100%; overflow: hidden; }
+.posts article .post-left .post-featured a { display: block; width: 100%; height: 100%; overflow: hidden; background-color: #efefef; }
 .posts article .post-right { padding: 10px 15px 0 15px; }
+.posts article .post-right .post-title { margin-bottom: 10px; }
+.posts article .post-right .post-title a { color: #444; }
+.posts article .post-right .post-content { margin-bottom: 15px; line-height: 1.5; }
 
 /* footer */
 /* plugins */

@@ -55,22 +55,24 @@
   <?php } ?>
   <div class="post-right col">
     <header class="post-title">
-      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <a class="f18" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         <?php the_title(); ?>
       </a>
     </header>
     <div class="post-content clearfix">
       <?php if(is_search() || is_archive()) { ?>
         <div class="excerpt-more">
-            <?php the_excerpt('Read More'); ?>
+          <?php the_excerpt('Read More'); ?>
         </div>
       <?php } else { ?>
         <?php if(is_home()) { ?>
-          <?php if ($excerpt == true) {
-            the_excerpt('Read More');
-          } else {
-            the_content('Read More');
-          }?>
+          <div class="excerpt-more">
+            <?php if ($excerpt == true) {
+              the_excerpt('Read More');
+            } else {
+              the_content('Read More');
+            }?>
+          </div>
         <?php } else { ?>
           <?php the_content('Read More'); ?>
         <?php } ?>
