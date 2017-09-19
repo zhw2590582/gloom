@@ -33,10 +33,11 @@ $pagination = cs_get_option('i_pagination');
                                   }
                                 }
                                 echo '<img class=" " src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
-                                if( ! empty( $slider['i_slider_link'] ) ){
+                                if(!empty( $slider['i_slider_link'])){
                                   echo '</a>';
                                 }
                               }
+                            }
                           ?>
                       </div>
                   </div>
