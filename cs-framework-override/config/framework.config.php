@@ -280,20 +280,10 @@ $options[] = array(
                     'id' => 'i_slider_link',
                     'type' => 'text',
                     'title' => '链接',
+                    'default' => '#',
                     'attributes' => array(
                         'placeholder' => 'http://...'
                     )
-                ) ,
-                // 自定义幻灯片--新标签
-                array(
-                    'id' => 'i_slider_newtab',
-                    'type' => 'switcher',
-                    'title' => '新标签打开',
-                    'dependency' => array(
-                        'i_slider_link',
-                        '!=',
-                        ''
-                    ) ,
                 ) ,
             )
         ) ,

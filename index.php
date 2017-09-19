@@ -1,17 +1,17 @@
 <?php
   error_reporting(0);
-  $slider = cs_get_option( 'i_slider' );
-  $slider_effect = cs_get_option( 'i_slider_effect' );
-  $date = cs_get_option( 'i_post_date' );
-  $view = cs_get_option( 'i_post_view' );
-  $com = cs_get_option( 'i_post_com' );
-  $cat = cs_get_option( 'i_post_cat' );
-  $tag = cs_get_option( 'i_post_tag' );
-  $like = cs_get_option( 'i_post_like' );
+  $slider = cs_get_option('i_slider');
+  $slider_effect = cs_get_option('i_slider_effect');
+  $date = cs_get_option('i_post_date');
+  $view = cs_get_option('i_post_view');
+  $com = cs_get_option('i_post_com');
+  $cat = cs_get_option('i_post_cat');
+  $tag = cs_get_option('i_post_tag');
+  $like = cs_get_option('i_post_like');
   $pagination = cs_get_option('i_pagination');
-  $loadmore = cs_get_option( 'i_ajax_loading' );
-  $loadend = cs_get_option( 'i_ajax_end' );
-  $loadnum = cs_get_option( 'i_ajax_num' );
+  $loadmore = cs_get_option('i_ajax_loading');
+  $loadend = cs_get_option('i_ajax_end');
+  $loadnum = cs_get_option('i_ajax_num');
 ?>
 
 <?php get_header(); ?>
@@ -24,21 +24,10 @@
                       <?php
                           $my_sliders = cs_get_option( 'i_slider_custom' );
                           if(!empty($my_sliders)) {
-                            foreach ( $my_sliders as $slider ) {
-                              if(!empty( $slider['i_slider_link'])){
-                                echo '<a href="'. $slider['i_slider_link'] .'"';
-                              }
-                              if (!empty($slider['i_slider_link']) && $slider['i_slider_newtab']) {
-                                echo 'target="_black">';
-                              } else {
-                                if (!empty( $slider['i_slider_link'])){
-                                  echo '>';
-                                }
-                              }
-                              echo '<img class=" " src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
-                              if(!empty( $slider['i_slider_link'])){
-                                echo '</a>';
-                              }
+                            foreach ($my_sliders as $slider) {
+                              echo '<a target="_black" href="'. $slider['i_slider_link'] .'">';
+                              echo '<img src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
+                              echo '</a>';
                             }
                           }
                       ?>
@@ -52,7 +41,7 @@
         <?php if(is_search()) { ?>
           <h6 class="archive-title">
             <div class="title-inner">
-              <?php printf( __( '搜索:  %s' ), '<span>' . get_search_query() . '</span>' ); ?>
+              <?php printf('搜索:  %s', '<span>' . get_search_query() . '</span>' ); ?>
             </div>
           </h6>
         <?php } else if(is_tag()) { ?>
@@ -119,7 +108,7 @@
                 <?php if(current_user_can('level_10')){  ?>
                   <!-- 编辑  -->
                   <div class="post-edit">
-                      <?php edit_post_link( __( '<i class="fa fa-edit"></i><span class="view-num">编辑</span>' ), '<div class="edit-link">', '</div>' ); ?>
+                      <?php edit_post_link('<i class="fa fa-edit"></i><span class="view-num">编辑</span>', '<div class="edit-link">', '</div>' ); ?>
                   </div>
                 <?php } ?>
               </div>
@@ -131,7 +120,7 @@
                   <?php if ($cat) { ?>
                     <li class="mate-cat fl clearfix">
                       <i class="fa fa-bookmark"></i>
-                      <?php the_category(' '); ?>
+                      <?php the_category(''); ?>
                     </li>
                   <?php } ?>
                   <?php if ($tag) { ?>
@@ -144,7 +133,7 @@
                   <?php } ?>
                   <?php if ($like) { ?>
                     <li class="meta-like fr mr0">
-                      <?php echo getPostLikeLink( get_the_ID() ); ?>
+                      <?php echo getPostLikeLink(get_the_ID()); ?>
                     </li>
                   <?php } ?>
                   <?php if ($com) { ?>
@@ -167,8 +156,8 @@
           <?php if(island_page_has_nav()) : ?>
             <div class="post-nav">
               <div class="post-nav-inside text-c clearfix">
-                <div class="post-nav-left"><?php previous_posts_link(__('上一页')) ?></div>
-                <div class="post-nav-right"><?php next_posts_link(__('下一页')) ?></div>
+                <div class="post-nav-left"><?php previous_posts_link('上一页') ?></div>
+                <div class="post-nav-right"><?php next_posts_link('下一页') ?></div>
               </div>
             </div>
             <?php endif; ?>

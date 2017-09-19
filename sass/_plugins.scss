@@ -367,7 +367,9 @@
   _width: 130px;
   display: block;
   float: none;
-  padding: 7px 12px;
+  padding: 0 12px;
+  height: 35px;
+  line-height: 35px;
   background-color: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -379,7 +381,7 @@
 
   a {
     color: #d32;
-    font-size: 1.4rem;
+    font-size: 14px;
     text-decoration: none;
   }
 }
