@@ -7,20 +7,18 @@
 $options              = array();
 
 // -----------------------------------------
-// Customize Core Fields                   -
+// Gloom密钥验证                   -
 // -----------------------------------------
 $options[]            = array(
   'name'              => 'Gloom',
   'title'             => 'Gloom密钥验证',
   'settings'          => array(
-
-    // text
     array(
       'name'          => 'Gloom_key',
       'control'       => array(
         'label'       => '密钥',
         'wrap_class'  => 'hide',
-        'class'  => 'hide',
+        'class'       => 'hide',
         'type'        => 'password',
       ),
     ),

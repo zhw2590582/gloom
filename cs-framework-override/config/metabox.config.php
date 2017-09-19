@@ -16,11 +16,9 @@ $options[]    = array(
   'context'   => 'normal',
   'priority'  => 'default',
   'sections'  => array(
-
     array(
       'name'  => 'page_section_1',
       'fields' => array(
-
 
       ),
     ),
@@ -40,7 +38,6 @@ $options[]    = array(
       'name'  => 'page_section_1',
       'fields' => array(
 
-
       ),
     ),
 
@@ -58,7 +55,6 @@ $options[]    = array(
     array(
       'name'  => 'page_section_1',
       'fields' => array(
-
 
       ),
     ),
@@ -115,7 +111,6 @@ $options[]    = array(
       'name'  => 'page_section_1',
       'fields' => array(
 
-
       ),
     ),
 
@@ -133,7 +128,6 @@ $options[]    = array(
     array(
       'name'  => 'page_section_1',
       'fields' => array(
-
 
       ),
     ),
@@ -161,14 +155,12 @@ $options[]    = array(
       'icon'  => 'fa fa-music',
       'fields' => array(
 
-      // 状态
       array(
         'id'    	  => 'i_state',
         'type'      => 'switcher',
         'title'     => '启用状态',
       ),
 
-      // 文字
       array(
         'id'         => 'i_state_text',
         'type'       => 'text',
@@ -176,7 +168,6 @@ $options[]    = array(
         'dependency' => array( 'i_state', '==', 'true' ),
       ),
 
-      // 图标
       array(
         'id'         => 'i_state_icon',
         'type'       => 'icon',
@@ -193,11 +184,10 @@ $options[]    = array(
       'icon'  => 'fa fa-music',
       'fields' => array(
 
-	  // 音乐外链
         array(
-          'id'        => 'i_post_music',
-          'type'      => 'text',
-          'title'     => '音乐外链',
+          'id'       => 'i_post_music',
+          'type'     => 'text',
+          'title'    => '音乐外链',
 		      'help'     => '前提是正确开启Cue播放器，并且Cue歌单里存在歌曲',
           'attributes'    => array(
             'placeholder' => 'http://...'
@@ -213,14 +203,12 @@ $options[]    = array(
       'icon'  => 'fa fa-download',
       'fields' => array(
 
-          // 资源下载
-		array(
+    		array(
           'id'    	  => 'i_download',
           'type'      => 'switcher',
           'title'     => '资源下载',
         ),
 
-          // 官方网站
         array(
           'id'         => 'i_download_web',
           'type'       => 'text',
@@ -230,7 +218,6 @@ $options[]    = array(
           ),
         ),
 
-		// 软件性质
         array(
           'id'        => 'i_download_charge',
           'type'      => 'select',
@@ -242,7 +229,6 @@ $options[]    = array(
           'default'   => 'i_charge01',
         ),
 
-          // 下载地址
         array(
           'id'         => 'i_download_link',
           'type'       => 'text',
@@ -252,12 +238,11 @@ $options[]    = array(
           ),
         ),
 
-          // 提取码
         array(
           'id'         => 'i_download_code',
           'type'       => 'text',
           'title'      => '提取码',
-		  'after'  		  => '<p class="cs-text-muted">留空即无</p>',
+		      'after'  		 => '<p class="cs-text-muted">留空即无</p>',
         ),
 
       ),
@@ -269,16 +254,13 @@ $options[]    = array(
       'icon'  => 'fa fa-list-ul',
       'fields' => array(
 
-        // 文章目录
-		array(
+      	array(
           'id'    	  => 'i_index',
           'type'      => 'switcher',
           'title'     => '文章目录',
         ),
-
       ),
     ),
-
   ),
 );
 
@@ -300,7 +282,6 @@ $options[]    = array(
     array(
       'name'   => 'aside_section_1',
       'fields' => array(
-
 
       ),
     ),

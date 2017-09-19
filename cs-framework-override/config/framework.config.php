@@ -11,7 +11,7 @@ $verify = get_option('Gloom_license_key');
 if (!empty($verify) || $Gloom_key == 'zhw2590582' ) {
    $settings           = array(
       'menu_title'      => '主题选项',
-      'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
+      'menu_type'       => 'menu',
       'menu_slug'       => 'cs-framework',
       'ajax_save'       => true,
       'show_reset_all'  => false,

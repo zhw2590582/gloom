@@ -199,7 +199,7 @@ img { max-width: 100%; }
 #sidebar .topbar .widget_btn.on { color: #02b875; border-bottom: 1px solid #02b875; }
 #sidebar .sidebar_inner { height: 100%; width: 280px; padding: 10px 30px 50px 10px; overflow-y: scroll; overflow-x: hidden; }
 #sidebar .sidebar_inner aside { margin-bottom: 30px; }
-#sidebar .sidebar_inner aside > ul li { padding-bottom: 5px; margin-bottom: 10px; line-height: 20px; }
+#sidebar .sidebar_inner aside > ul li { padding-bottom: 5px; margin-bottom: 5px; line-height: 20px; }
 #sidebar .sidebar_inner aside > ul li:before { font-family: FontAwesome; margin-right: 5px; }
 #sidebar .sidebar_inner aside .comm_posts li:before, #sidebar .sidebar_inner aside .new-posts li:before { font-family: FontAwesome; margin-right: 5px; }
 #sidebar .sidebar_inner .comm_posts li:before, #sidebar .sidebar_inner .new-posts li:before, #sidebar .sidebar_inner .widget_pages li:before, #sidebar .sidebar_inner .widget_recent_entries li:before { content: "\f0f6"; }
