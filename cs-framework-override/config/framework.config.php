@@ -245,30 +245,36 @@ $options[] = array(
     ) ,
 );
 // ------------------------------
-// 幻灯片                      -
+// 轮播图                      -
 // ------------------------------
 $options[] = array(
     'name' => 'slider',
-    'title' => '幻灯片',
+    'title' => '轮播图',
     'icon' => 'fa fa-image',
     'fields' => array(
-        // 首页开启幻灯片
+        // 首页开启轮播图
         array(
             'id' => 'i_slider',
             'type' => 'switcher',
-            'title' => '首页开启幻灯片',
-            'help' => '注意：幻灯片只显示在主页',
+            'title' => '首页开启轮播图',
+            'help' => '注意：轮播图只显示在主页',
         ) ,
-        // 自定义幻灯片
+        // 轮播图设置
+        array(
+            'type' => 'notice',
+            'class' => 'info',
+            'content' => '轮播图设置',
+        ) ,
+        // 自定义轮播图
         array(
             'id' => 'i_slider_custom',
             'type' => 'group',
-            'title' => '自定义幻灯片',
+            'title' => '自定义轮播图',
             'info' => '更多详细设置方式可以浏览使用说明',
             'button_title' => '添加滑块',
             'accordion_title' => '滑块',
             'fields' => array(
-                // 自定义幻灯片--标题
+                // 自定义轮播图--标题
                 array(
                     'id' => 'i_slider_title',
                     'type' => 'text',
@@ -277,13 +283,13 @@ $options[] = array(
                         'placeholder' => '例如：滑块01'
                     )
                 ) ,
-                // 自定义幻灯片--图片
+                // 自定义轮播图--图片
                 array(
                     'id' => 'i_slider_image',
                     'type' => 'upload',
                     'title' => '图片',
                 ) ,
-                // 自定义幻灯片--描述
+                // 自定义轮播图--描述
                 array(
                     'id' => 'i_slider_text',
                     'type' => 'text',
@@ -292,7 +298,7 @@ $options[] = array(
                         'placeholder' => '输入描述'
                     )
                 ) ,
-                // 自定义幻灯片--链接
+                // 自定义轮播图--链接
                 array(
                     'id' => 'i_slider_link',
                     'type' => 'text',
@@ -328,6 +334,56 @@ $options[] = array(
                 'boxRainGrowReverse' => 'boxRainGrowReverse',
             ) ,
             'default' => 'boxRandom',
+        ) ,
+        // 广告设置
+        array(
+            'type' => 'notice',
+            'class' => 'info',
+            'content' => '广告设置',
+        ) ,
+        // 自定义广告
+        array(
+            'id' => 'i_ad_custom',
+            'type' => 'group',
+            'title' => '自定义广告',
+            'button_title' => '添加滑块',
+            'accordion_title' => '滑块',
+            'fields' => array(
+                // 自定义广告--标题
+                array(
+                    'id' => 'i_ad_title',
+                    'type' => 'text',
+                    'title' => '标题',
+                    'attributes' => array(
+                        'placeholder' => '例如：滑块01'
+                    )
+                ) ,
+                // 自定义广告--图片
+                array(
+                    'id' => 'i_ad_image',
+                    'type' => 'upload',
+                    'title' => '图片',
+                ) ,
+                // 自定义广告--描述
+                array(
+                    'id' => 'i_ad_text',
+                    'type' => 'text',
+                    'title' => '描述',
+                    'attributes' => array(
+                        'placeholder' => '输入描述'
+                    )
+                ) ,
+                // 自定义广告--链接
+                array(
+                    'id' => 'i_ad_link',
+                    'type' => 'text',
+                    'title' => '链接',
+                    'default' => '#',
+                    'attributes' => array(
+                        'placeholder' => 'http://...'
+                    )
+                ) ,
+            )
         ) ,
     ) ,
 );
@@ -768,7 +824,7 @@ $options[] = array(
         array(
             'id' => 'i_slider2_custom',
             'type' => 'group',
-            'title' => '自定义幻灯片',
+            'title' => '自定义轮播图',
             'info' => '更多详细设置方式可以浏览使用说明',
             'button_title' => '添加滑块',
             'accordion_title' => '滑块',
