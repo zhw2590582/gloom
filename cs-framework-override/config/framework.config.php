@@ -149,7 +149,7 @@ $options[] = array(
             'default' => true,
             'help' => '因为主题的页尾自带进入后台操作的按钮，建议隐藏;另你也可以进入个人资料禁用工具条',
         ) ,
-        // 开启前端换肤功能
+        // 开启换肤功能
         array(
             'id' => 'i_switcher',
             'type' => 'switcher',
@@ -169,11 +169,35 @@ $options[] = array(
             ) ,
             'default' => 'skin01_cloth',
         ) ,
-        // 开启前端设置按钮
+        // 开启设置按钮
         array(
             'id' => 'i_setting',
             'type' => 'switcher',
             'title' => '开启前端设置按钮',
+        ) ,
+        // 小工具1名称
+        array(
+            'id' => 'i_widget1',
+            'type' => 'text',
+            'default' => '小工具1',
+        ) ,
+        // 小工具2名称
+        array(
+            'id' => 'i_widget2',
+            'type' => 'text',
+            'default' => '小工具2',
+        ) ,
+        // 开启布局切换
+        array(
+            'id' => 'i_layout',
+            'type' => 'switcher',
+            'title' => '开启前端布局切换',
+        ) ,
+        // 开启公告条
+        array(
+            'id' => 'i_notice',
+            'type' => 'switcher',
+            'title' => '开启公告条',
         ) ,
     ) ,
 );

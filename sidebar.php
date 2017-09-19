@@ -1,15 +1,17 @@
 <?php
   error_reporting(0);
-  $profile = cs_get_option( 'i_profile' );
-  $profile_avatar = cs_get_option( 'i_profile_avatar' );
-  $profile_name = cs_get_option( 'i_profile_name' );
-  $profile_content = cs_get_option( 'i_profile_content' );
+  $profile = cs_get_option('i_profile');
+  $profile_avatar = cs_get_option('i_profile_avatar');
+  $profile_name = cs_get_option('i_profile_name');
+  $profile_content = cs_get_option('i_profile_content');
+  $widget1 = cs_get_option('i_widget1');
+  $widget2 = cs_get_option('i_widget2');
 ?>
 <!-- sidebar 开始-->
 <aside id="sidebar" class="m_hide">
   <div class="topbar clearfix">
-    <div class="widget_btn text-c hand fl on">小工具1</div>
-    <div class="widget_btn text-c hand fr">小工具2</div>
+    <div class="widget_btn text-c hand fl on"><?php echo $widget1; ?></div>
+    <div class="widget_btn text-c hand fr"><?php echo $widget2; ?></div>
   </div>
   <div class="sidebar_inner">
     <div class="item">

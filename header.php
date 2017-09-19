@@ -4,8 +4,10 @@
 	$description = cs_get_option( 'i_seo_description' );
 	$favicon = cs_get_option( 'i_favicon_icon' );
 	$logo = cs_get_option( 'i_logo' );
-	$skin = cs_get_option( 'i_skin' );
+	$switcher = cs_get_option( 'i_switcher' );
 	$setting = cs_get_option( 'i_setting' );
+	$layout = cs_get_option( 'i_layout' );
+	$notice = cs_get_option( 'i_notice' );
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +32,7 @@
 		  <header id="header" class="m_hide">
 				<div class="header_inner">
 					<div class="topbar clearfix">
-						<?php if ($skin) {?>
+						<?php if ($switcher) {?>
 							<div class="skin fl clearfix">
 								<a href="#" class="with-tooltip skin_1 fl" data-tooltip="布质"></a>
 								<a href="#" class="with-tooltip skin_2 fl" data-tooltip="布质"></a>
@@ -68,20 +70,24 @@
 		<!-- content 开始-->
 		<section id="content" name="content">
 			<div class="topbar clearfix">
-				<div class="fl breadcrumbs">
-					breadcrumbs
-				</div>
-				<div class="fr layouts clearfix">
-					<a class="layout_width fl selected" href="#">
-            <span></span>
-            <span></span>
-          </a>
-					<a class="layout_box fl" href="#">
-            <span style="margin-right:2px"></span>
-            <span></span>
-            <span style="margin-right:2px"></span>
-            <span></span>
-          </a>
-				</div>
+				<?php if ($notice) {?>
+					<div class="fl breadcrumbs">
+						breadcrumbs
+					</div>
+				<?php } ?>
+				<?php if ($layout) {?>
+					<div class="fr layouts clearfix">
+						<a class="layout_width fl selected" href="#">
+	            <span></span>
+	            <span></span>
+	          </a>
+						<a class="layout_box fl" href="#">
+	            <span style="margin-right:2px"></span>
+	            <span></span>
+	            <span style="margin-right:2px"></span>
+	            <span></span>
+	          </a>
+					</div>
+				<?php } ?>
 			</div>
 	    <div class="content_inner">
