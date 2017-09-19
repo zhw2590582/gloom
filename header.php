@@ -76,11 +76,11 @@
 				<?php } ?>
 				<?php if ($layout) {?>
 					<div class="fr layouts clearfix">
-						<a class="layout_width fl selected" href="#">
+						<a class="layout layout_width fl on" data-layout="width" href="#">
 	            <span></span>
 	            <span></span>
 	          </a>
-						<a class="layout_box fl" href="#">
+						<a class="layout layout_box fl" data-layout="box" href="#">
 	            <span style="margin-right:2px"></span>
 	            <span></span>
 	            <span style="margin-right:2px"></span>

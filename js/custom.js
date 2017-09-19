@@ -81,6 +81,13 @@
       $('.sidebar_inner .item').hide().eq(index).show();
     });
 
+    // 切换布局
+    $(".layout").click(function() {
+      var index = $(this).index();
+      $(this).addClass('on').siblings().removeClass('on');
+      index === 1 ? $('#wrapper').addClass('layout_box') : $('#wrapper').removeClass('layout_box');
+    });
+
     // 公告条
     var element = document.querySelector('.notices');
     var notices = element.dataset.notices.split(/\r?\n/).filter(function (item) {
