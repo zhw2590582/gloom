@@ -242,6 +242,8 @@ img { max-width: 100%; }
 #content .topbar .layouts .layout_box span { display: inline-block; float: left; width: 8px; }
 #content .content_inner { padding: 50px 20px 200px; }
 #content .content_inner .content_header { margin-bottom: 30px; }
+#content .content_inner .content_header .header_left { width: 60%; }
+#content .content_inner .content_header .header_right { width: 40%; padding-left: 15px; }
 #content .content_inner .content_header .unslider { position: relative; }
 #content .content_inner .content_header .unslider .unslider-arrow { opacity: .5; position: absolute; z-index: 9; top: 50%; width: 30px; height: 50px; font-size: 20px; line-height: 50px; margin-top: -25px; text-align: center; background: rgba(0, 0, 0, 0.5); color: #fff; }
 #content .content_inner .content_header .unslider .unslider-arrow:hover { opacity: 1; }

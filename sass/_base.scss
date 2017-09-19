@@ -497,6 +497,13 @@ $slider_h: 300px;
     padding: 50px 20px 200px;
     .content_header{
       margin-bottom: 30px;
+      .header_left{
+        width: 60%;
+      }
+      .header_right{
+        width: 40%;
+        padding-left: 15px;
+      }
       .unslider{
         position: relative;
         .unslider-arrow{
@@ -553,6 +560,11 @@ $slider_h: 300px;
             color: #fff;
           }
         }
+      }
+    }
+    .posts{
+      article{
+
       }
     }
   }

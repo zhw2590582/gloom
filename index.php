@@ -18,7 +18,8 @@
 
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
-          <div class="content_header loading">
+          <div class="content_header clearfix">
+            <div class="header_left fl">
               <div class="sliderWrap" data-effect="<?php echo $slider_effect; ?>">
                 <ul>
                   <?php
@@ -33,6 +34,10 @@
                   ?>
                 </ul>
               </div>
+            </div>
+            <div class="header_right fr">
+              header_right
+            </div>
           </div>
           <!-- slider 结束 -->
         <?php } ?>
