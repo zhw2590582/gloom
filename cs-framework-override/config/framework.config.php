@@ -59,11 +59,11 @@ $options[] = array(
         array(
             'id' => 'i_layout_list',
             'type' => 'radio',
-            'title' => '自定义文章布局',
+            'title' => '文章布局',
             'class' => 'horizontal',
             'options' => array(
-                'i_box' => '盒子布局',
-                'i_width' => '宽屏布局',
+                'layout_box' => '盒子布局',
+                'layout_width' => '宽屏布局',
             ) ,
             'default' => 'i_width'
         ) ,

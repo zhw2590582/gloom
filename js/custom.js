@@ -86,10 +86,10 @@
       var index = $(this).index();
       $(this).addClass('on').siblings().removeClass('on');
       if(index === 1){
-        $('#wrapper').addClass('layout_box')
+        $('#wrapper').addClass('layout_box').removeClass('layout_width');
         setStorage('layout', 'box');
       } else {
-        $('#wrapper').removeClass('layout_box');
+        $('#wrapper').addClass('layout_width').removeClass('layout_box');
         setStorage('layout', 'width');
       }
       return false;
