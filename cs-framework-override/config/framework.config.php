@@ -206,7 +206,7 @@ $options[] = array(
             'id' => 'i_notices_text',
             'type' => 'textarea',
             'title' => '公告条文本',
-            'label' => '多条可使用中文分号 ；隔开',
+            'after' => '<p class="cs-text-muted">多条可使用中文分号 ；隔开</p>',
             'dependency' => array(
                 'i_notices',
                 '==',
