@@ -27,7 +27,7 @@
                       if(!empty($my_sliders)) {
                         foreach ($my_sliders as $slider) {
                           echo '<li><a target="_black" href="'. $slider['i_slider_link'] .'" style="background-image: url('. $slider['i_slider_image'] .')">';
-                          echo '<p>'. $slider['i_slider_text'] .'</p>';
+                          echo '<p class="text-ellipsis">'. $slider['i_slider_text'] .'</p>';
                           echo '</a></li>';
                         }
                       }
@@ -42,7 +42,7 @@
                     if(!empty($my_ad)) {
                       foreach ($my_ad as $ad) {
                         echo '<li class="fl"><a target="_black" href="'. $ad['i_ad_link'] .'" style="background-image: url('. $ad['i_ad_image'] .')">';
-                        echo '<p>'. $ad['i_ad_text'] .'</p>';
+                        echo '<p class="text-ellipsis">'. $ad['i_ad_text'] .'</p>';
                         echo '</a></li>';
                       }
                     }
