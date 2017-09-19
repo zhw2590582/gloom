@@ -179,12 +179,14 @@ $options[] = array(
         array(
             'id' => 'i_widget1',
             'type' => 'text',
+            'title' => '小工具1名称',
             'default' => '小工具1',
         ) ,
         // 小工具2名称
         array(
             'id' => 'i_widget2',
             'type' => 'text',
+            'title' => '小工具2名称',
             'default' => '小工具2',
         ) ,
         // 开启布局切换
@@ -195,9 +197,21 @@ $options[] = array(
         ) ,
         // 开启公告条
         array(
-            'id' => 'i_notice',
+            'id' => 'i_notices',
             'type' => 'switcher',
             'title' => '开启公告条',
+        ) ,
+        // 公告条文本
+        array(
+            'id' => 'i_notices_text',
+            'type' => 'textarea',
+            'title' => '公告条文本',
+            'label' => '多条可使用中文分号 ；隔开',
+            'dependency' => array(
+                'i_notices',
+                '==',
+                'true'
+            ) ,
         ) ,
     ) ,
 );

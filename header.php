@@ -7,7 +7,7 @@
 	$switcher = cs_get_option( 'i_switcher' );
 	$setting = cs_get_option( 'i_setting' );
 	$layout = cs_get_option( 'i_layout' );
-	$notice = cs_get_option( 'i_notice' );
+	$notices = cs_get_option( 'i_notices' );
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@
 		<!-- content 开始-->
 		<section id="content" name="content">
 			<div class="topbar clearfix">
-				<?php if ($notice) {?>
+				<?php if ($notices) {?>
 					<div class="fl breadcrumbs">
 						breadcrumbs
 					</div>
