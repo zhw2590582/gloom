@@ -36,12 +36,12 @@
               </div>
             </div>
             <div class="header_right fr">
-              <ul class="adWrap">
+              <ul class="featured clearfix">
                 <?php
                     $my_ad = cs_get_option( 'i_ad_custom' );
                     if(!empty($my_ad)) {
                       foreach ($my_ad as $ad) {
-                        echo '<li><a target="_black" href="'. $ad['i_slider_link'] .'" style="background-image: url('. $ad['i_slider_image'] .')">';
+                        echo '<li class="fl"><a target="_black" href="'. $ad['i_slider_link'] .'" style="background-image: url('. $ad['i_slider_image'] .')">';
                         echo '<p>'. $ad['i_slider_text'] .'</p>';
                         echo '</a></li>';
                       }

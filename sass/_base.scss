@@ -561,8 +561,12 @@ $slider_h: 300px;
           }
         }
       }
-      .adWrap{
-        
+      .featured{
+        li{
+          display: inline-block;
+          width: 50%;
+          height: $slider_h / 2;
+        }
       }
     }
     .posts{
