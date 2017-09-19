@@ -498,6 +498,14 @@ $slider_h: 300px;
       margin-bottom: 30px;
       .nivoSlider{
         width: 70%;
+        .nivo-directionNav a{
+          top: $slider_h / 2 -30px;
+          margin-top: 0;
+        }
+        .nivo-caption{
+          top: $slider_h - 35px;
+          bottom: auto;
+        }
       }
       .nivoThumb{
         width: 30%;
