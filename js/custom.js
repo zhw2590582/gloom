@@ -78,7 +78,11 @@
       animation: $('.sliderWrap').data('effect'),
       autoplay: true,
 			infinite: true,
-      nav: false
+      nav: false,
+      arrows: {
+      	prev: '<a class="unslider-arrow prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>',
+      	next: '<a class="unslider-arrow next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>',
+      }
 		});
 
     // 切换小工具

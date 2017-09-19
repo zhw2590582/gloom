@@ -513,7 +513,7 @@ $slider_h: 300px;
           text-align: center;
           background: rgba(0, 0, 0, 0.5);
           color: #fff;
-          text-indent: -999em;
+          //text-indent: -999em;
           &:hover{
             opacity: 1;
           }
@@ -534,6 +534,7 @@ $slider_h: 300px;
         background: #efefef;
         z-index: 8;
         a {
+          position: relative;
           display: block;
           width: 100%;
           height: $slider_h;
