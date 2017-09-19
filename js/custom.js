@@ -114,9 +114,10 @@
       } else if (noticesEffect == 'i_fade') {
         var noticesIndex = 0;
         setInterval(function () {
-          $('.notices').text(noticesArr[noticesIndex]);
+          $('.notices').html('<span class="notice hide">' + noticesArr[noticesIndex] + '</span>');
+          $('.notice').fadeIn(500);
           noticesIndex = (noticesIndex === noticesArr.length - 1) ? 0 : (noticesIndex + 1);
-        }, 2000)
+        }, 3000)
       }
     }
 
