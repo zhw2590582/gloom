@@ -1,17 +1,17 @@
 <?php
-error_reporting(0);
-$slider = cs_get_option( 'i_slider' );
-$slider_effect = cs_get_option( 'i_slider_effect' );
-$date = cs_get_option( 'i_post_date' );
-$view = cs_get_option( 'i_post_view' );
-$com = cs_get_option( 'i_post_com' );
-$cat = cs_get_option( 'i_post_cat' );
-$tag = cs_get_option( 'i_post_tag' );
-$like = cs_get_option( 'i_post_like' );
-$pagination = cs_get_option('i_pagination');
-$loadmore = cs_get_option( 'i_ajax_loading' );
-$loadend = cs_get_option( 'i_ajax_end' );
-$loadnum = cs_get_option( 'i_ajax_num' );
+  error_reporting(0);
+  $slider = cs_get_option( 'i_slider' );
+  $slider_effect = cs_get_option( 'i_slider_effect' );
+  $date = cs_get_option( 'i_post_date' );
+  $view = cs_get_option( 'i_post_view' );
+  $com = cs_get_option( 'i_post_com' );
+  $cat = cs_get_option( 'i_post_cat' );
+  $tag = cs_get_option( 'i_post_tag' );
+  $like = cs_get_option( 'i_post_like' );
+  $pagination = cs_get_option('i_pagination');
+  $loadmore = cs_get_option( 'i_ajax_loading' );
+  $loadend = cs_get_option( 'i_ajax_end' );
+  $loadnum = cs_get_option( 'i_ajax_num' );
 ?>
 
 <?php get_header(); ?>

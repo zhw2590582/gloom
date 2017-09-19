@@ -1,35 +1,25 @@
 <?php
- // 获取选项
-error_reporting(0);
-$edit = cs_get_option( 'i_footer_edit' );
-$copyright = cs_get_option( 'i_foot_copyright' );
-$gotop = cs_get_option( 'i_gotop' );
-$qrcode = cs_get_option( 'i_qrcode' );
-$qrcodeimg = cs_get_option( 'i_qrcode_image' );
-$loadmore = cs_get_option( 'i_ajax_loading' );
-$loadend = cs_get_option( 'i_ajax_end' );
-$loadnum = cs_get_option( 'i_ajax_num' );
-$pagination = cs_get_option('i_pagination');
-$comment = cs_get_option( 'i_comment_switch' );
-$player_id = cs_get_option( 'i_player_id' );
-$player = cs_get_option('i_player');
-$player_mobi = cs_get_option('i_player_mobi');
-$share = cs_get_option( 'i_share' );
-$tongji = cs_get_option( 'i_js_tongji' );
-$shengming = cs_get_option( 'i_download_shengming' );
-$sliders = cs_get_option( 'i_slider' );
-$login = cs_get_option( 'i_login' );
-$sidebar = cs_get_option( 'i_sidebar' );
-$meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
-$download = $meta_data['i_download'];
-$index = $meta_data['i_index'];
-$circle = cs_get_option( 'i_circle' );
-$footer_text = cs_get_option( 'i_footer_text' );
-$notice = cs_get_option( 'i_notice' );
-$notice_img = cs_get_option( 'i_notice_img' );
-$notice_title = cs_get_option( 'i_notice_title' );
-$notice_text = cs_get_option( 'i_notice_text' );
-$notice_link = cs_get_option( 'i_notice_link' );
+	error_reporting(0);
+	$edit = cs_get_option( 'i_footer_edit' );
+	$copyright = cs_get_option( 'i_foot_copyright' );
+	$gotop = cs_get_option( 'i_gotop' );
+	$qrcode = cs_get_option( 'i_qrcode' );
+	$qrcodeimg = cs_get_option( 'i_qrcode_image' );
+	$comment = cs_get_option( 'i_comment_switch' );
+	$player_id = cs_get_option( 'i_player_id' );
+	$player = cs_get_option('i_player');
+	$player_mobi = cs_get_option('i_player_mobi');
+	$shengming = cs_get_option( 'i_download_shengming' );
+	$login = cs_get_option( 'i_login' );
+	$meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
+	$download = $meta_data['i_download'];
+	$index = $meta_data['i_index'];
+	$footer_text = cs_get_option( 'i_footer_text' );
+	$notice = cs_get_option( 'i_notice' );
+	$notice_img = cs_get_option( 'i_notice_img' );
+	$notice_title = cs_get_option( 'i_notice_title' );
+	$notice_text = cs_get_option( 'i_notice_text' );
+	$notice_link = cs_get_option( 'i_notice_link' );
 ?>
 
 			<a href="#top" class="post-top"></a>
@@ -187,59 +177,6 @@ $notice_link = cs_get_option( 'i_notice_link' );
 	<?php }?>
 
 	<?php wp_footer(); ?>
-	<script>
-	// 
-	// jQuery(document).ready(function($) {
-	//
-	// <?php if ( $pagination == 'i_ajax' && is_home() || $pagination == 'i_ajax' && is_archive()) { ?>
-	// 	// ajax加载
-	// 	var ias = $.ias({
-	// 		container: ".posts",
-	// 		item: ".post",
-	// 		pagination: ".post-nav-inside",
-	// 		next: ".post-nav-right a",
-	// 	});
-	//
-	// 	ias.extension(new IASTriggerExtension({
-	// 		textPrev: ' ',
-	// 		text: '<?php echo $loadmore ?>',
-	// 		offset: <?php echo $loadnum ?>,
-	// 	}));
-	// 	ias.extension(new IASNoneLeftExtension({
-	// 		text: '<?php echo $loadend ?>',
-	// 	}));
-	// 	ias.extension(new IASSpinnerExtension());
-	// 	ias.extension(new IASPagingExtension());
-	// 	ias.extension(new IASHistoryExtension({
-	// 		prev: '.post-nav-right a',
-	// 	}));
-	//
-	// 	ias.on('rendered', function(items) {
-	// 		echo.init({
-	// 			offset: 100,
-	// 			throttle: 250,
-	// 			unload: false,
-	// 		});
-	//
-	// 		if($(".audio-wrapper audio").length>0){
-	// 			$('.audio-wrapper audio').mediaelementplayer();
-	// 		};
-	//
-	// 		$("img").not($(".wp-smiley")) .addClass('ajax_gif').load(function() {
-	// 			$(this).removeClass('ajax_gif');
-	// 		}).on('error', function () {
-	// 			$(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-	// 		}).each(function(){
-	// 	    if ($(this).attr('src') == '') {
-	// 	      $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-	// 	    }
-	// 	  });
-	//
-	//
-	// 	});
-	// <?php } ?>
-	// });
-	</script>
 
 </body>
 </html>

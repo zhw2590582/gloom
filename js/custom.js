@@ -158,30 +158,38 @@
       var more = posts.data('more');
       var end = posts.data('end');
       var num = posts.data('num');
-
       var ias = $.ias({
         container: ".posts",
         item: ".post",
         pagination: ".post-nav-inside",
         next: ".post-nav-right a",
       });
-
       ias.extension(new IASTriggerExtension({
         textPrev: ' ',
         text: more,
         offset: num,
       }));
-
       ias.extension(new IASNoneLeftExtension({
         text: end,
       }));
-
       ias.extension(new IASSpinnerExtension());
       ias.extension(new IASPagingExtension());
       ias.extension(new IASHistoryExtension({
         prev: '.post-nav-right a',
       }));
-
+      ias.on('rendered', function(items) {
+        echo.init({offset: 100, throttle: 250, unload: false});
+        $(".audio-wrapper audio").length > 0 && $('.audio-wrapper audio').mediaelementplayer();
+        $("img").not($(".wp-smiley")) .addClass('ajax_gif').load(function() {
+          $(this).removeClass('ajax_gif');
+        }).on('error', function () {
+          $(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+        }).each(function(){
+          if ($(this).attr('src') == '') {
+            $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+          }
+        });
+      });
     }
 
     // 图像懒加载

@@ -1,10 +1,10 @@
 <?php
-error_reporting(0);
+  error_reporting(0);
 ?>
 
 <?php get_header(); ?>
 
-                      <!-- 作品详情 -->
+                      <!-- 404 -->
         	            <div class="posts clearfix">
         								<article <?php post_class('post-404'); ?>>
         									<div class="post-wrap">
