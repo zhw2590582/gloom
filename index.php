@@ -1,6 +1,7 @@
 <?php
 error_reporting(0);
-$sliders = cs_get_option( 'i_slider' );
+$slider = cs_get_option( 'i_slider' );
+$slider_effect = cs_get_option( 'i_slider_effect' );
 $date = cs_get_option( 'i_post_date' );
 $view = cs_get_option( 'i_post_view' );
 $com = cs_get_option( 'i_post_com' );
@@ -12,11 +13,11 @@ $pagination = cs_get_option('i_pagination');
 
 <?php get_header(); ?>
 
-        <?php if(is_home() && !is_paged() && $sliders) { ?>
+        <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
           <div class="app_slider">
               <div class="slider_inner loading">
-                  <div id="slider" class="nivoSlider">
+                  <div id="slider" class="nivoSlider" data-effect="<?php echo $slider_effect; ?>">
                       <?php
                           $my_sliders = cs_get_option( 'i_slider_custom' );
                           if(!empty($my_sliders)) {

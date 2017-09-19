@@ -151,12 +151,29 @@
       $(this).prop("src", url + "images/default/d_favicon.ico");
     });
 
+    // 轮播图
+
     // 图像懒加载
     echo.init({offset: 100, throttle: 250, unload: false});
 
     // 提示文本
     MouseTooltip.init();
 
+  });
+
+  $(window).load(function() {
+      $('.nivoSlider').length > 0 && $('.nivoSlider').nivoSlider({
+          effect: $('.nivoSlider').data('effect'),
+          boxCols: 5,
+          boxRows: 5,
+          animSpeed: 300,
+          prevText: '',
+          nextText: '',
+          controlNav: false,
+          afterLoad: function(){
+            $('.slider_inner').removeClass('loading');
+          }
+      });
   });
 
 })(jQuery);

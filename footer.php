@@ -186,86 +186,8 @@ $notice_link = cs_get_option( 'i_notice_link' );
 		<!-- 公告弹窗 结束 -->
 	<?php }?>
 
-	<?php if ( $circle == true && !is_mobile()  ) { ?>
-		<canvas id="pixie"></canvas>
-	<?php }?>
-
 	<?php wp_footer(); ?>
 	<script>
-
-    <?php if ($sliders == true) { ?>
-
-        <?php
-            $effect = cs_get_option( 'i_slider_effect' );
-            $effect_style = '';
-            switch ($effect) {
-                case "i_sliceDown":
-                    $effect_style = 'sliceDown';
-                    break;
-                case "i_sliceDownLeft":
-                    $effect_style = 'sliceDownLeft';
-                    break;
-                case "i_sliceUp":
-                    $effect_style = 'sliceUp';
-                    break;
-                case "i_sliceUpLeft":
-                    $effect_style = 'sliceUpLeft';
-                    break;
-                case "i_sliceUpDown":
-                    $effect_style = 'sliceUpDown';
-                    break;
-                case "i_sliceUpDownLeft":
-                    $effect_style = 'sliceUpDownLeft';
-                    break;
-                case "i_fold":
-                    $effect_style = 'fold';
-                    break;
-                case "i_fade":
-                    $effect_style = 'fade';
-                    break;
-                case "i_random":
-                    $effect_style = 'random';
-                    break;
-                case "i_slideInRight":
-                    $effect_style = 'slideInRight';
-                    break;
-                case "i_slideInLeft":
-                    $effect_style = 'slideInLeft';
-                    break;
-                case "i_boxRandom":
-                    $effect_style = 'boxRandom';
-                    break;
-                case "i_boxRain":
-                    $effect_style = 'boxRain';
-                    break;
-                case "i_boxRainReverse":
-                    $effect_style = 'boxRainReverse';
-                    break;
-                case "i_boxRainGrow":
-                    $effect_style = 'boxRainGrow';
-                    break;
-                case "i_boxRainGrowReverse":
-                    $effect_style = 'boxRainGrowReverse';
-                    break;
-            }
-         ?>
-
-        jQuery(window).load(function() {
-            jQuery('.nivoSlider').nivoSlider({
-                effect: '<?php echo $effect_style; ?>',
-                boxCols: 5,
-                boxRows: 5,
-                animSpeed: 300,
-                prevText: '',
-                nextText: '',
-								controlNav: false,
-								afterLoad: function(){
-									jQuery('.app_slider .slider_inner').removeClass('loading');
-								}
-            });
-        });
-    <?php } ?>
-
 
 	jQuery(document).ready(function($) {
 
