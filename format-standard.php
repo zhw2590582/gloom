@@ -21,12 +21,12 @@
 
   <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
     <div class="post-left col m_hide">
-
+      <?php wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ) ?>
+      <?php the_post_thumbnail_url('large'); ?>
       <!-- 特色图 开始 -->
       <?php if (has_post_thumbnail()) { ?>
         <div class="post-featured" >
           <a href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
-            <?php wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ) ?>
             <?php the_post_thumbnail( 'thumbnail' ); ?>
           </a>
         </div>
