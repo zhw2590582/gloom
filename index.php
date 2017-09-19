@@ -18,20 +18,18 @@
 
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
-          <div class="app_slider">
-              <div class="slider_inner loading">
-                  <div id="slider" class="nivoSlider" data-effect="<?php echo $slider_effect; ?>">
-                      <?php
-                          $my_sliders = cs_get_option( 'i_slider_custom' );
-                          if(!empty($my_sliders)) {
-                            foreach ($my_sliders as $slider) {
-                              echo '<a target="_black" href="'. $slider['i_slider_link'] .'">';
-                              echo '<img src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
-                              echo '</a>';
-                            }
-                          }
-                      ?>
-                  </div>
+          <div class="slider loading">
+              <div class="nivoSlider" data-effect="<?php echo $slider_effect; ?>">
+                  <?php
+                      $my_sliders = cs_get_option( 'i_slider_custom' );
+                      if(!empty($my_sliders)) {
+                        foreach ($my_sliders as $slider) {
+                          echo '<a target="_black" href="'. $slider['i_slider_link'] .'">';
+                          echo '<img src="'. $slider['i_slider_image'] .'" data-thumb="'. $slider['i_slider_image'] .'" title="'. $slider['i_slider_text'] .'"/>';
+                          echo '</a>';
+                        }
+                      }
+                  ?>
               </div>
           </div>
           <!-- slider 结束 -->

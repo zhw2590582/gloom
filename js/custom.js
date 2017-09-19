@@ -211,7 +211,7 @@
           nextText: '',
           controlNav: false,
           afterLoad: function(){
-            $('.slider_inner').removeClass('loading');
+            $('.slider').removeClass('loading');
           }
       });
   });
