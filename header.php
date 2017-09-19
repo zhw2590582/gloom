@@ -72,7 +72,7 @@
 		<section id="content" name="content">
 			<div class="topbar clearfix">
 				<?php if ($notices) {?>
-					<div class="fl notices" data-notices="<?php echo $$notices_text; ?>">
+					<div class="fl notices" data-notices="<?php echo $notices_text; ?>">
 						breadcrumbs
 					</div>
 				<?php } ?>
