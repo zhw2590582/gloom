@@ -493,11 +493,12 @@ $slider_h: 300px;
   .content_inner {
     padding: 50px 20px 200px;
     .slider{
-      height: $slider_h;
+      max-height: $slider_h;
       overflow: hidden;
       margin-bottom: 30px;
       .nivoSlider{
         width: 60%;
+        background: #efefef;
         .nivo-directionNav a{
           top: $slider_h / 2 - 30px;
           margin-top: 0;

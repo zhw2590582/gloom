@@ -99,7 +99,7 @@
     var noticesEl = document.querySelector('.notices');
     var noticesEffect = noticesEl.dataset.effect;
     var noticesArr = noticesEl.dataset.notices.split(/\r?\n/).filter(function (item) {
-      return item !== '';
+      return item.trim() !== '';
     });
     if(noticesEl && noticesArr.length > 0){
       if(noticesEffect == 'i_type'){
@@ -117,11 +117,11 @@
           $('.notices').html('<span class="notice hide">' + noticesArr[noticesIndex] + '</span>');
           $('.notice').fadeIn(500);
           noticesIndex = (noticesIndex === noticesArr.length - 1) ? 0 : (noticesIndex + 1);
-        }, 3000)
+        }, 4000)
       }
     }
 
-    // 验证是否已评论 --- 待优化
+    // 验证是否已评论
     if (!!localStorage.getItem("postDownload")) {
       var postDownload = JSON.parse(localStorage.getItem("postDownload"));
       var id = $("#comment_post_ID").attr("value");
