@@ -18,8 +18,8 @@
 
         <?php if(is_home() && !is_paged() && $slider) { ?>
           <!-- slider 开始 -->
-          <div class="content_header clearfix loading">
-              <div class="sliderWrap fl" data-effect="<?php echo $slider_effect; ?>">
+          <div class="content_header loading">
+              <div class="sliderWrap" data-effect="<?php echo $slider_effect; ?>">
                 <ul>
                   <?php
                       $my_sliders = cs_get_option( 'i_slider_custom' );
@@ -32,9 +32,6 @@
                       }
                   ?>
                 </ul>
-              </div>
-              <div class="nivoThumb fr">
-                nivoThumb
               </div>
           </div>
           <!-- slider 结束 -->

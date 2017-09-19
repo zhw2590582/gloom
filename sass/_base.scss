@@ -499,8 +499,6 @@ $slider_h: 300px;
       margin-bottom: 30px;
       .unslider{
         position: relative;
-        width: 60%;
-        float: left;
         .unslider-arrow{
           opacity: .5;
           position: absolute;
@@ -514,7 +512,6 @@ $slider_h: 300px;
           text-align: center;
           background: rgba(0, 0, 0, 0.5);
           color: #fff;
-          //text-indent: -999em;
           &:hover{
             opacity: 1;
           }
@@ -556,10 +553,6 @@ $slider_h: 300px;
             color: #fff;
           }
         }
-      }
-      .nivoThumb{
-        width: 40%;
-        padding-left: 15px;
       }
     }
   }
