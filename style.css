@@ -234,8 +234,8 @@ a:hover { color: #444; }
 #sidebar .sidebar_inner #profile .profile-header .name .fa-check-circle { color: #bbb; }
 #sidebar .sidebar_inner #profile .profile-content { line-height: 1.5; margin-bottom: 15px; }
 #sidebar .sidebar_inner #profile .profile-social li { list-style: none; float: left; width: 20%; height: 20px; line-height: 20px; font-size: 18px; text-align: center; }
-#sidebar .sidebar_inner .widget-title { font-size: 18px; font-weight: normal; margin-bottom: 15px; padding-bottom: 5px; color: #444; border-bottom: 1px solid #e5e5e5; }
-#sidebar .sidebar_inner .widget-title span { padding-bottom: 5px; border-bottom: 1px solid #444; }
+#sidebar .sidebar_inner .widget-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; color: #444; border-bottom: 1px solid #e5e5e5; }
+#sidebar .sidebar_inner .widget-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #444; }
 
 /* content */
 #content { position: relative; padding-left: 470px; max-width: 2000px; }
@@ -266,6 +266,9 @@ a:hover { color: #444; }
 #content .content_inner .content_header .featured li a p { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; line-height: 70px; padding: 0 15px; }
 
 /* posts */
+.archive-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; color: #444; border-bottom: 1px solid #e5e5e5; }
+.archive-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #444; }
+
 .posts article { margin-bottom: 20px; }
 .posts article .post-inner { border: 1px solid #e5e5e5; }
 .posts article .post-left { position: relative; width: 200px; height: 230px; }

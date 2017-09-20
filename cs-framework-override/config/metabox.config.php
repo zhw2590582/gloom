@@ -150,35 +150,6 @@ $options[]    = array(
   'sections'  => array(
 
     array(
-      'name'   => 'aside_section_0',
-      'title' => ' 状态',
-      'icon'  => 'fa fa-music',
-      'fields' => array(
-
-      array(
-        'id'    	  => 'i_state',
-        'type'      => 'switcher',
-        'title'     => '启用状态',
-      ),
-
-      array(
-        'id'         => 'i_state_text',
-        'type'       => 'text',
-        'title'      => '文字',
-        'dependency' => array( 'i_state', '==', 'true' ),
-      ),
-
-      array(
-        'id'         => 'i_state_icon',
-        'type'       => 'icon',
-        'title'      => '图标',
-        'dependency' => array( 'i_state', '==', 'true' ),
-      ),
-
-      ),
-    ),
-
-    array(
       'name'   => 'aside_section_1',
       'title' => ' 音乐',
       'icon'  => 'fa fa-music',

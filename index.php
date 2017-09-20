@@ -49,47 +49,47 @@
 
         <!-- archive title 开始  -->
         <?php if(is_search()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               <?php printf('搜索:  %s', '<span>' . get_search_query() . '</span>' ); ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } else if(is_tag()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               标签： <?php single_tag_title(); ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } else if(is_day()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               日期： <?php _e('归档'); ?> <?php echo get_the_date(); ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } else if(is_month()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               日期： <?php echo get_the_date('F Y'); ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } else if(is_year()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               日期： <?php echo get_the_date('Y'); ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } else if(is_category()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               分类： <?php single_cat_title(); ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } else if(is_author()) { ?>
-          <h6 class="archive-title">
-            <div class="title-inner">
+          <div class="archive-title">
+            <span class="title-inner">
               作者： <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->display_name; ?>
-            </div>
-          </h6>
+            </span>
+          </div>
         <?php } ?>
         <!-- archive title 结束  -->
 

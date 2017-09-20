@@ -15,9 +15,6 @@
   $dlview = cs_get_option('i_download_view');
 
   $meta_data = get_post_meta(get_the_ID(), 'standard_options', true);
-  $state = $meta_data['i_state'];
-  $state_text = $meta_data['i_state_text'];
-  $state_icon = $meta_data['i_state_icon'];
   $music = $meta_data['i_post_music'];
   $download = $meta_data['i_download'];
   $web = $meta_data['i_download_web'];

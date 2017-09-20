@@ -432,14 +432,18 @@ a {
     }
 
     .widget-title {
+      position: relative;
       font-size: 18px;
       font-weight: normal;
+      height: 30px;
       margin-bottom: 15px;
-      padding-bottom: 5px;
       color: #444;
       border-bottom: 1px solid #e5e5e5;
 
       span {
+        position: absolute;
+        left: 0;
+        bottom: 0;
         padding-bottom: 5px;
         border-bottom: 1px solid #444;
       }
@@ -610,6 +614,24 @@ a {
 }
 
 /* posts */
+.archive-title{
+  position: relative;
+  font-size: 18px;
+  font-weight: normal;
+  height: 30px;
+  margin-bottom: 15px;
+  color: #444;
+  border-bottom: 1px solid #e5e5e5;
+
+  span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444;
+  }
+}
+
 .posts{
   article{
     margin-bottom: 20px;
