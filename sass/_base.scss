@@ -23,6 +23,9 @@ $post_h: 230px;
       &:nth-of-type(odd){
         margin-right: 2%;
       }
+      .meta-tabs{
+        display: none;
+      }
     }
   }
 }

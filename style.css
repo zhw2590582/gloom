@@ -167,6 +167,7 @@ img { max-width: 100%; }
 #wrapper { position: relative; height: auto !important; height: 100%; min-height: 100%; font-size: 14px; background: #fff; color: #777777; }
 #wrapper.layout_box .posts article.index-post { width: 49%; float: left; }
 #wrapper.layout_box .posts article.index-post:nth-of-type(odd) { margin-right: 2%; }
+#wrapper.layout_box .posts article.index-post .meta-tabs { display: none; }
 
 a { color: #9c9c9c; }
 a:hover { color: #444; }
