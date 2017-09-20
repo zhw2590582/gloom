@@ -29,20 +29,22 @@
 
 	<!-- footer 开始-->
 	<footer id="footer">
-			<div class="footer-inner">
-				<div class="container">
-		      <?php if ($footer_text && !is_mobile()) {?>
-	          <div class="footer-text wb clearfix m_hide">
-	              <?php echo $edit ?>
-	          </div>
-		      <?php }?>
-				</div>
-		</div>
-		<div class="footer-end">
-			<div class="container">
-				<?php if( ! empty( $copyright ) ){ echo ''.$copyright.'';}else{echo'&copy; '.date("Y").' All Rights Reserved.';} ?>
-				<a href="http://zhw-island.com/" target="_blank"> Theme by Gloom</a>
-				<?php if( ! empty( $tongji ) ){ echo '<script>'.$tongji.'</script>';}else{echo' ';} ?>
+		<div class="footer-inner">
+      <?php if ($footer_text && !is_mobile()) {?>
+        <div class="footer-text wb clearfix m_hide">
+            <?php echo $edit ?>
+        </div>
+      <?php }?>
+			<div class="footer-end">
+					<?php if(!empty($copyright)){
+						echo ''.$copyright.'';
+					} else {
+						echo'&copy; '.date("Y").' All Rights Reserved.';
+					} ?>
+					<a href="http://zhw-island.com/" target="_blank"> Theme by Gloom</a>
+					<?php if(!empty($tongji)){?>
+						echo '<script>'.$tongji.'</script>';
+					<?php }?>
 			</div>
 		</div>
 	</footer>
