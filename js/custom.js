@@ -1,6 +1,6 @@
 (function ($){
   // 获取地址
-  var temp = jQuery("script").last().attr("src");
+  var temp = $("script").last().attr("src");
   var url = temp.substring(0, temp.indexOf("js"));
 
   // 操作localStorage

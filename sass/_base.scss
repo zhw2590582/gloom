@@ -624,6 +624,23 @@ $post_h: 230px;
           background-color: #efefef;
         }
       }
+      .post-tool{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 80px;
+        padding: 5px;
+      }
+      .post-edit{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+      }
     }
     .post-right{
       padding: 15px 15px 0 15px;
@@ -640,6 +657,9 @@ $post_h: 230px;
       .post-content{
         margin-bottom: 15px;
         line-height: 1.5;
+        .read_more{
+          display: none;
+        }
       }
     }
   }

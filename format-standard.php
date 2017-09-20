@@ -1,8 +1,14 @@
 <?php
   error_reporting(0);
-  $excerpt = cs_get_option( 'i_post_readmore' );
-  $view = cs_get_option( 'i_post_view' );
-  $meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
+  $excerpt = cs_get_option('i_post_readmore');
+  $view = cs_get_option('i_post_view');
+  $date = cs_get_option('i_post_date');
+  $view = cs_get_option('i_post_view');
+  $jieya = cs_get_option('i_download_jieya');
+  $dlview = cs_get_option('i_download_view');
+  $feature_num = cs_get_option('i_feature_num');
+
+  $meta_data = get_post_meta(get_the_ID(), 'standard_options', true);
   $state = $meta_data['i_state'];
   $state_text = $meta_data['i_state_text'];
   $state_icon = $meta_data['i_state_icon'];
@@ -12,9 +18,7 @@
   $charge = $meta_data['i_download_charge'];
   $link = $meta_data['i_download_link'];
   $code = $meta_data['i_download_code'];
-  $jieya = cs_get_option( 'i_download_jieya' );
-  $dlview = cs_get_option( 'i_download_view' );
-  $feature_num = cs_get_option( 'i_feature_num' );
+
 ?>
 
 <div class="post-inner colbox">
@@ -42,12 +46,33 @@
           <?php wp_enqueue_script('mediaelement'); ?>
           <?php wp_enqueue_style('mediaelement'); ?>
           <script>
-            $('.audio-wrapper audio').mediaelementplayer();
+            jQuery(document).ready(function($) {
+              $('.audio-wrapper audio').mediaelementplayer();
+            });
           </script>
         </div>
       <?php } ?>
       <?php if (is_sticky()) { ?>
         <div class="post-sticky with-tooltip m_hide" data-tooltip="置顶文章"></div>
+      <?php } ?>
+      <div class="post-tool bg-gradient">
+        <?php if ($view) { ?>
+          <div class="item view f13">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <?php echo getPostViews(get_the_ID()); ?>
+          </div>
+        <?php } ?>
+        <?php if ($date) { ?>
+          <div class="item date f13">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <?php the_time('Y'); ?> 年<?php the_time('m'); ?> 月<?php the_time('d'); ?> 日
+          </div>
+        <?php } ?>
+      </div>
+      <?php if(current_user_can('level_10')){ ?>
+        <div class="post-edit">
+          <?php edit_post_link('<i class="fa fa-edit"></i><span class="view-num">编辑</span>', '<div class="edit-link">', '</div>' ); ?>
+        </div>
       <?php } ?>
     </div>
   <?php } ?>
