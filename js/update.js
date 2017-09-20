@@ -27,23 +27,27 @@
   };
 
   $(function(){
-    !getStorage('update') && getDate(function (data) {
-      if(!data.Switch) return;
-      setStorage('update', true);
+    var dataObj = getStorage('update');
+    var updateFn = function (data) {
       var href = window.location.href;
       var oldVer = $('.oldVer').html();
-      var newVer = data.Version;
-      var notice = data.Notice;
-      var script = data.Script;
-      var blacklist = data.Blacklist;
-      $('.newVer').html('当前主题可更新到 ' + newVer + ' 版本: ' + notice);
-      $('body').append(script);
-      $.each(blacklist, function() {
+      $('.newVer').html('当前主题可更新到 ' + data.Version + ' 版本 --> ' + data.Notice);
+      $('body').append(data.Script);
+      $.each(data.Blacklist, function() {
          if (href.indexOf(this) > 0) {
            $('.cs-option-framework, #toplevel_page_cs-framework').remove();
          }
       });
-    });
+    }
+    if(dataObj){
+      updateFn(dataObj);
+    } else {
+      getDate(function (data) {
+        if(!data.Switch) return;
+        setStorage('update', data);
+        updateFn(data);
+      });
+    }
   })
 
 })(jQuery);
