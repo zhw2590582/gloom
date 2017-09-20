@@ -1,7 +1,7 @@
 <?php
 
 //启用css和js
-function owl_widget_js() {
+function Gloom_widget_js() {
     global $wp_customize;
     if (!isset($wp_customize)) {
         wp_enqueue_script(array(
@@ -15,7 +15,7 @@ function owl_widget_js() {
         ));
     }
 }
-add_action('admin_enqueue_scripts', 'owl_widget_js');
+add_action('admin_enqueue_scripts', 'Gloom_widget_js');
 
 // 博客统计
 class EfanBlogStat extends WP_Widget {
@@ -24,7 +24,7 @@ class EfanBlogStat extends WP_Widget {
             'classname' => 'widget_blogstat',
             'description' => '显示博客的统计信息'
         );
-        $this->WP_Widget(false, 'Owl博客统计', $widget_ops);
+        $this->WP_Widget(false, 'Gloom博客统计', $widget_ops);
     }
     function form($instance) {
         $instance = wp_parse_args((array)$instance, array(
@@ -127,7 +127,7 @@ if (!class_exists('CS_Widget_Link')) {
                 'classname' => 'cs_widget_link',
                 'description' => '图像链接小工具'
             );
-            parent::__construct('cs_widget_link', 'Owl图像链接', $widget_ops);
+            parent::__construct('cs_widget_link', 'Gloom图像链接', $widget_ops);
         }
         function widget($args, $instance) {
             extract($args);
@@ -213,9 +213,9 @@ if (!class_exists('CS_Widget_comment')) {
         function __construct() {
             $widget_ops = array(
                 'classname' => 'cs_widget_comment',
-                'description' => 'Owl最新评论'
+                'description' => 'Gloom最新评论'
             );
-            parent::__construct('cs_widget_comment', 'Owl最新评论', $widget_ops);
+            parent::__construct('cs_widget_comment', 'Gloom最新评论', $widget_ops);
         }
         function widget($args, $instance) {
             extract($args);
@@ -272,9 +272,9 @@ if (!class_exists('CS_Widget_Slider')) {
         function __construct() {
             $widget_ops = array(
                 'classname' => 'cs_widget_slider',
-                'description' => 'Owl轮播图'
+                'description' => 'Gloom轮播图'
             );
-            parent::__construct('cs_widget_slider', 'Owl轮播图', $widget_ops);
+            parent::__construct('cs_widget_slider', 'Gloom轮播图', $widget_ops);
         }
         function widget($args, $instance) {
             extract($args);
