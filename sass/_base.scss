@@ -697,11 +697,12 @@ a {
         margin-bottom: 30px;
       }
       .post-related{
+        margin-bottom: 30px;
         li{
           display: inline-block;
           width: 25%;
           height: 130px;
-          padding: 0 10px;
+          padding: 0 5px;
 
           a{
             position: relative;
@@ -720,6 +721,29 @@ a {
               height: 50px;
               padding: 25px 10px 0 10px;
             }
+          }
+        }
+      }
+      .post-meta{
+        li{
+          list-style: none;
+          margin-right: 10px;
+          &.meta-like{
+            margin-right: 0;
+          }
+          &.meta-tabs{
+            a{
+              display: inline-block;
+            }
+          }
+          &.mate-cat{
+            li{
+              display: inline-block;
+            }
+          }
+          .fa{
+            margin-right: 5px;
+            margin-top: 2px;
           }
         }
       }
@@ -776,7 +800,7 @@ a {
       .post-title{
         margin-bottom: 15px;
         a{
-          display: block;
+          display: inline-block;
           color: #444;
           line-height: 1.5;
           &:hover{

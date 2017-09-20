@@ -52,7 +52,7 @@
               <?php if ($related && !is_mobile()) { ?>
                 <ul class="related_box clearfix">
                   <?php
-                    $post_num = 5;
+                    $post_num = 4;
                     $exclude_id = $post->ID;
                     $posttags = get_the_tags(); $i = 0;
                     if ($posttags) {
@@ -110,17 +110,36 @@
           </div>
 
           <ul class="post-meta clearfix">
-            <?php if ($cat == true) { ?>
-              <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
+            <?php if ($cat) { ?>
+              <li class="mate-cat fl clearfix">
+                <i class="fa fa-bookmark fl"></i>
+                <div class="fl">
+                  <?php the_category(''); ?>
+                </div>
+              </li>
             <?php } ?>
-            <?php if ($tag == true) { ?>
-              <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix m_hide"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
+            <?php if ($tag) { ?>
+              <?php $posttags = get_the_tags(); if ($posttags) { ?>
+                <li class="meta-tabs fl clearfix">
+                  <i class="fa fa-tags fl"></i>
+                  <div class="fl">
+                    <?php the_tags('', ' ', ''); ?>
+                  </div>
+                </li>
+              <?php } ?>
             <?php } ?>
-            <?php if ($like == true) { ?>
-              <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li>
+            <?php if ($like) { ?>
+              <li class="meta-like fr">
+                <?php echo getPostLikeLink(get_the_ID()); ?>
+              </li>
             <?php } ?>
-            <?php if ($com == true) { ?>
-              <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
+            <?php if ($com) { ?>
+              <li class="mate-com fr">
+                <i class="fa fa-comments-o"></i>
+                <span class="mate-num">
+                  <?php comments_number('0', '1', '%');?>
+                </span>
+              </li>
             <?php } ?>
           </ul>
         </div>

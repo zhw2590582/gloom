@@ -284,9 +284,15 @@ a:hover { color: #444; }
 .posts article.single-post .post-title a { font-size: 26px; }
 .posts article.single-post .post-content { margin-bottom: 50px; }
 .posts article.single-post .post-copyright { margin-bottom: 30px; }
-.posts article.single-post .post-related li { display: inline-block; width: 25%; height: 130px; padding: 0 10px; }
+.posts article.single-post .post-related { margin-bottom: 30px; }
+.posts article.single-post .post-related li { display: inline-block; width: 25%; height: 130px; padding: 0 5px; }
 .posts article.single-post .post-related li a { position: relative; display: block; width: 100%; height: 100%; border-radius: 5px; overflow: hidden; background-color: #ccc; }
 .posts article.single-post .post-related li a p { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; padding: 25px 10px 0 10px; }
+.posts article.single-post .post-meta li { list-style: none; margin-right: 10px; }
+.posts article.single-post .post-meta li.meta-like { margin-right: 0; }
+.posts article.single-post .post-meta li.meta-tabs a { display: inline-block; }
+.posts article.single-post .post-meta li.mate-cat li { display: inline-block; }
+.posts article.single-post .post-meta li .fa { margin-right: 5px; margin-top: 2px; }
 .posts article .post-left { position: relative; width: 200px; height: 230px; }
 .posts article .post-left .post-featured { width: 100%; height: 100%; }
 .posts article .post-left .post-featured a { display: block; width: 100%; height: 100%; overflow: hidden; background-color: #efefef; }
@@ -298,7 +304,7 @@ a:hover { color: #444; }
 .posts article .post-left .post-edit a { color: rgba(255, 255, 255, 0.8); }
 .posts article .post-right { position: relative; }
 .posts article .post-right .post-title { margin-bottom: 15px; }
-.posts article .post-right .post-title a { display: block; color: #444; line-height: 1.5; }
+.posts article .post-right .post-title a { display: inline-block; color: #444; line-height: 1.5; }
 .posts article .post-right .post-title a:hover { color: #02b875 !important; }
 .posts article .post-right .post-content { position: relative; line-height: 1.5; }
 .posts article .post-right .post-content .read_more { display: none; }
