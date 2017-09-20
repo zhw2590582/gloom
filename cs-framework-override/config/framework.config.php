@@ -45,7 +45,7 @@ $options[] = array(
             'type' => 'upload',
             'title' => 'Favicon',
             'add_title' => '添加favicon',
-            'default' => get_template_directory_uri() . "/images/default/favicon.ico"
+            'default' => get_template_directory_uri() . "/images/default/d_favicon.ico"
         ) ,
         // 自定义logo
         array(
@@ -53,7 +53,7 @@ $options[] = array(
             'type' => 'upload',
             'title' => 'Logo',
             'add_title' => '添加logo',
-            'default' => get_template_directory_uri() . "/images/default/avatar.png"
+            'default' => get_template_directory_uri() . "/images/default/d_logo.png"
         ) ,
         // 自定义文章布局
         array(
@@ -1079,7 +1079,7 @@ $options[] = array(
             'id' => 'i_profile_avatar',
             'type' => 'upload',
             'title' => '头像	',
-            'default' => get_template_directory_uri() . "/images/default/avatar.png",
+            'default' => get_template_directory_uri() . "/images/default/d_avatar.png",
         ) ,
         // 昵称
         array(
