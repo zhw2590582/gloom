@@ -251,7 +251,7 @@ a:hover { color: #444; }
 #content .topbar .layouts .layout_width span { display: block; width: 18px; }
 #content .topbar .layouts .layout_box { display: inline-block; width: 20px; }
 #content .topbar .layouts .layout_box span { display: inline-block; float: left; width: 8px; }
-#content .content_inner { padding: 50px 20px 200px; }
+#content .content_inner { padding: 50px 20px 100px; }
 #content .content_inner .content_header { margin-bottom: 30px; }
 #content .content_inner .content_header .header_left { width: 70%; }
 #content .content_inner .content_header .header_right { width: 30%; padding-left: 15px; }
