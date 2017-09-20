@@ -15,6 +15,11 @@
     return gloom_setting[name];
   }
 
+  // 初始化localStorage
+  if(getStorage('layout')){
+    $('#wrapper').removeClass('layout_box layout_width').addClass('layout_' + getStorage('layout'));
+  }
+
   // 滚动函数
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {

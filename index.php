@@ -2,10 +2,6 @@
   error_reporting(0);
   $slider = cs_get_option('i_slider');
   $slider_effect = cs_get_option('i_slider_effect');
-  $com = cs_get_option('i_post_com');
-  $cat = cs_get_option('i_post_cat');
-  $tag = cs_get_option('i_post_tag');
-  $like = cs_get_option('i_post_like');
   $pagination = cs_get_option('i_pagination');
   $loadmore = cs_get_option('i_ajax_loading');
   $loadend = cs_get_option('i_ajax_end');
@@ -25,7 +21,7 @@
                       if(!empty($my_sliders)) {
                         foreach ($my_sliders as $slider) {
                           echo '<li><a class="bg-img" target="_black" href="'. $slider['i_slider_link'] .'" style="background-image: url('. $slider['i_slider_image'] .')">';
-                          echo '<p class="text-ellipsis">'. $slider['i_slider_text'] .'</p>';
+                          echo '<p class="text-ellipsis bg-gradient">'. $slider['i_slider_text'] .'</p>';
                           echo '</a></li>';
                         }
                       }
@@ -40,7 +36,7 @@
                     if(!empty($my_ad)) {
                       foreach ($my_ad as $ad) {
                         echo '<li class="fl"><a class="bg-img" target="_black" href="'. $ad['i_ad_link'] .'" style="background-image: url('. $ad['i_ad_image'] .')">';
-                        echo '<p class="text-ellipsis">'. $ad['i_ad_text'] .'</p>';
+                        echo '<p class="text-ellipsis bg-gradient">'. $ad['i_ad_text'] .'</p>';
                         echo '</a></li>';
                       }
                     }
@@ -97,43 +93,17 @@
         <?php } ?>
         <!-- archive title 结束  -->
 
-        <div class="posts clearfix" data-pagination="<?php echo $pagination; ?>" data-more="<?php echo $loadmore; ?>" data-end="<?php echo $loadend; ?>" data-num="<?php echo $loadnum; ?>">
+        <div
+          class="posts clearfix"
+          data-pagination="<?php echo $pagination; ?>"
+          data-more="<?php echo $loadmore; ?>"
+          data-end="<?php echo $loadend; ?>"
+          data-num="<?php echo $loadnum; ?>">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php setPostViews(get_the_ID());?>
           <article <?php post_class('index-post'); ?>>
             <div class="post-wrap">
               <?php get_template_part('format', 'standard'); ?>
-              <?php if (!is_page()) { ?>
-                <ul class="post-meta clearfix">
-                  <?php if ($cat) { ?>
-                    <li class="mate-cat fl clearfix">
-                      <i class="fa fa-bookmark"></i>
-                      <?php the_category(''); ?>
-                    </li>
-                  <?php } ?>
-                  <?php if ($tag) { ?>
-                    <?php $posttags = get_the_tags(); if ($posttags) { ?>
-                      <li class="meta-tabs fl clearfix m_hide">
-                        <i class="fa fa-tags"></i>
-                        <?php the_tags('', ' ', ''); ?>
-                      </li>
-                    <?php } ?>
-                  <?php } ?>
-                  <?php if ($like) { ?>
-                    <li class="meta-like fr mr0">
-                      <?php echo getPostLikeLink(get_the_ID()); ?>
-                    </li>
-                  <?php } ?>
-                  <?php if ($com) { ?>
-                    <li class="mate-com fr">
-                      <i class="fa fa-comments-o"></i>
-                      <span class="mate-num">
-                        <?php comments_number('0', '1', '%');?>
-                      </span>
-                    </li>
-                  <?php } ?>
-                </ul>
-              <?php } ?>
             </div>
           </article>
           <?php endwhile; ?>

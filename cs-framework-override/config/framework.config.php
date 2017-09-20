@@ -65,6 +65,7 @@ $options[] = array(
                 'layout_box' => '盒子布局',
                 'layout_width' => '宽屏布局',
             ) ,
+            'help' => '默认布局，会被前端设置覆盖',
             'default' => 'i_width'
         ) ,
         // 分页设置
