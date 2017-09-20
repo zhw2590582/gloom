@@ -1,13 +1,13 @@
 <?php
 /*
-Template Name: 友链页面
+Template Name: 关于页面
 */
 error_reporting(0);
 ?>
 
 <?php get_header(); ?>
 
-                      <!-- 友链 -->
+                      <!-- 关于 -->
         	            <div class="posts">
         								<article <?php post_class('single-post'); ?>>
         									<div class="post-wrap">
@@ -22,9 +22,6 @@ error_reporting(0);
                                   <?php if ( have_posts() ) : the_post(); ?>
                                       <?php the_content(); ?>
                                   <?php endif; ?>
-                                  <ul class="link_box">
-                                      <?php wp_list_bookmarks('orderby=id&category_orderby=id'); ?>
-                                  </ul>
                                 </div>
                               </div>
                             </div>
