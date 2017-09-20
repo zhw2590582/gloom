@@ -182,8 +182,6 @@ a:hover { color: #444; }
 #header .topbar .skin a { display: inline-block; width: 18px; height: 18px; margin-right: 5px; border-radius: 3px; }
 #header .topbar .skin a.skin01 { background: #dadada; border: 1px solid #c7c7c7; }
 #header .topbar .skin a.skin02 { background: #dadada; border: 1px solid #c7c7c7; }
-#header .topbar .skin a.skin03 { background: #dadada; border: 1px solid #c7c7c7; }
-#header .topbar .skin a.skin04 { background: #dadada; border: 1px solid #c7c7c7; }
 #header .topbar .setting { display: inline-block; color: #cecece; }
 #header .logo { margin-bottom: 50px; }
 #header .logo .logo_img { display: block; margin-bottom: 20px; padding: 0 15px; }
