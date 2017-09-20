@@ -8,15 +8,10 @@
         	            <div class="posts clearfix">
         								<article <?php post_class('post-404'); ?>>
         									<div class="post-wrap">
-                            <header class="post-title wb">
-                              <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                404
-                              </a>
-                            </header>
         										<div class="post-inner">
                               <div class="post-right">
                                 <div class="post-content wb clearfix text-c">
-                                  <h1 style="font-size:100px">404</h1>
+                                  <div style="font-size:200px;margin-bottom:0">404</div>
                                   <p>对不起，你要查看的页面已经不存在，请返回！</p>
         												</div>
                               </div>
