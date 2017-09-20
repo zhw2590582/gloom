@@ -113,29 +113,31 @@
 
     // 公告条
     var noticesEl = document.querySelector('.notices');
-    var noticesEffect = noticesEl.dataset.effect;
-    var noticesArr = noticesEl.dataset.notices.split(/\r?\n/).filter(function (item) {
-      return item.trim() !== '';
-    });
-    if(noticesEl && noticesArr.length > 0){
-      if(noticesEffect == 'i_type'){
-        ityped.init(noticesEl, {
-          strings: noticesArr,
-          typeSpeed: 100,
-          backSpeed: 50,
-          startDelay: 1000,
-          backDelay: 3000,
-          loop: true,
-        });
-      } else if (noticesEffect == 'i_fade') {
-        $('.notices').html('<span class="notice hide">' + noticesArr[0] + '</span>');
-        $('.notice').fadeIn(500);
-        var noticesIndex = 1;
-        setInterval(function () {
-          $('.notices').html('<span class="notice hide">' + noticesArr[noticesIndex] + '</span>');
+    if(noticesEl){
+      var noticesEffect = noticesEl.dataset.effect;
+      var noticesArr = noticesEl.dataset.notices.split(/\r?\n/).filter(function (item) {
+        return item.trim() !== '';
+      });
+      if(noticesEl && noticesArr.length > 0){
+        if(noticesEffect == 'i_type'){
+          ityped.init(noticesEl, {
+            strings: noticesArr,
+            typeSpeed: 100,
+            backSpeed: 50,
+            startDelay: 1000,
+            backDelay: 3000,
+            loop: true,
+          });
+        } else if (noticesEffect == 'i_fade') {
+          $('.notices').html('<span class="notice hide">' + noticesArr[0] + '</span>');
           $('.notice').fadeIn(500);
-          noticesIndex = (noticesIndex === noticesArr.length - 1) ? 0 : (noticesIndex + 1);
-        }, 4000)
+          var noticesIndex = 1;
+          setInterval(function () {
+            $('.notices').html('<span class="notice hide">' + noticesArr[noticesIndex] + '</span>');
+            $('.notice').fadeIn(500);
+            noticesIndex = (noticesIndex === noticesArr.length - 1) ? 0 : (noticesIndex + 1);
+          }, 4000)
+        }
       }
     }
 
