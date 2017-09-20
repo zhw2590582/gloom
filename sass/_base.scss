@@ -615,25 +615,6 @@ a {
   }
 }
 
-/* title */
-.archive-title{
-  position: relative;
-  font-size: 18px;
-  font-weight: normal;
-  height: 30px;
-  margin-bottom: 15px;
-  color: #444;
-  border-bottom: 1px solid #e5e5e5;
-
-  span {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #444;
-  }
-}
-
 /* posts */
 .posts{
   article{
@@ -691,6 +672,8 @@ a {
         }
       }
       .post-content{
+        font-size: 16px;
+        line-height: 2 !important;
         margin-bottom: 50px;
       }
       .post-copyright{
@@ -725,6 +708,7 @@ a {
         }
       }
       .post-meta{
+        margin-bottom: 50px;
         li{
           list-style: none;
           margin-right: 10px;

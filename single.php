@@ -37,17 +37,22 @@
               <?php } ?>
             </div>
           <?php } ?>
-
           <div class="post-wrap">
             <?php get_template_part('format', 'standard'); ?>
             <?php if ($link && !is_mobile()) { ?>
               <div class="post-copyright text-c">
                 <div class="post-copyright-inner">
-                  转载原创文章请注明，转载自： <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> » <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                  转载原创文章请注明，转载自：
+                  <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+                    <?php bloginfo('name'); ?>
+                  </a>
+                   »
+                  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <?php the_title(); ?>
+                  </a>
                 </div>
               </div>
             <?php } ?>
-
             <div class="post-related">
               <?php if ($related && !is_mobile()) { ?>
                 <ul class="related_box clearfix">
@@ -73,7 +78,7 @@
                                 href="<?php the_permalink(); ?>"
                                 title="<?php the_title(); ?>"
                                 style="background-image: url('<?php echo post_thumbnail_src(); ?>')">
-                                <p class="bg-gradient"><?php the_title(); ?></p>
+                                <p class="bg-gradient text-ellipsis"><?php the_title(); ?></p>
                               </a>
                             </li>
                         <?php
@@ -97,7 +102,7 @@
                             href="<?php the_permalink(); ?>"
                             title="<?php the_title(); ?>"
                             style="background-image: url('<?php echo post_thumbnail_src(); ?>')">
-                            <p class="bg-gradient"><?php the_title(); ?></p>
+                            <p class="bg-gradient text-ellipsis"><?php the_title(); ?></p>
                           </a>
                         </li>
                         <?php $i++;
@@ -107,42 +112,41 @@
                   ?>
               </ul>
               <?php } ?>
-          </div>
-
-          <ul class="post-meta clearfix">
-            <?php if ($cat) { ?>
-              <li class="mate-cat fl clearfix">
-                <i class="fa fa-bookmark fl"></i>
-                <div class="fl">
-                  <?php the_category(''); ?>
-                </div>
-              </li>
-            <?php } ?>
-            <?php if ($tag) { ?>
-              <?php $posttags = get_the_tags(); if ($posttags) { ?>
-                <li class="meta-tabs fl clearfix">
-                  <i class="fa fa-tags fl"></i>
+            </div>
+            <ul class="post-meta clearfix">
+              <?php if ($cat) { ?>
+                <li class="mate-cat fl clearfix">
+                  <i class="fa fa-bookmark fl"></i>
                   <div class="fl">
-                    <?php the_tags('', ' ', ''); ?>
+                    <?php the_category(''); ?>
                   </div>
                 </li>
               <?php } ?>
-            <?php } ?>
-            <?php if ($like) { ?>
-              <li class="meta-like fr">
-                <?php echo getPostLikeLink(get_the_ID()); ?>
-              </li>
-            <?php } ?>
-            <?php if ($com) { ?>
-              <li class="mate-com fr">
-                <i class="fa fa-comments-o"></i>
-                <span class="mate-num">
-                  <?php comments_number('0', '1', '%');?>
-                </span>
-              </li>
-            <?php } ?>
-          </ul>
-        </div>
+              <?php if ($tag) { ?>
+                <?php $posttags = get_the_tags(); if ($posttags) { ?>
+                  <li class="meta-tabs fl clearfix">
+                    <i class="fa fa-tags fl"></i>
+                    <div class="fl">
+                      <?php the_tags('', ' ', ''); ?>
+                    </div>
+                  </li>
+                <?php } ?>
+              <?php } ?>
+              <?php if ($like) { ?>
+                <li class="meta-like fr">
+                  <?php echo getPostLikeLink(get_the_ID()); ?>
+                </li>
+              <?php } ?>
+              <?php if ($com) { ?>
+                <li class="mate-com fr">
+                  <i class="fa fa-comments-o"></i>
+                  <span class="mate-num">
+                    <?php comments_number('0', '1', '%');?>
+                  </span>
+                </li>
+              <?php } ?>
+            </ul>
+          </div>
         </article>
       <?php endwhile; ?>
     <?php endif; ?>

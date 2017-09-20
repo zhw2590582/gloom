@@ -49,44 +49,44 @@
 
         <!-- archive title 开始  -->
         <?php if(is_search()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               <?php printf('搜索:  %s', '<span>' . get_search_query() . '</span>' ); ?>
             </span>
           </div>
         <?php } else if(is_tag()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               标签： <?php single_tag_title(); ?>
             </span>
           </div>
         <?php } else if(is_day()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               日期： <?php _e('归档'); ?> <?php echo get_the_date(); ?>
             </span>
           </div>
         <?php } else if(is_month()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               日期： <?php echo get_the_date('F Y'); ?>
             </span>
           </div>
         <?php } else if(is_year()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               日期： <?php echo get_the_date('Y'); ?>
             </span>
           </div>
         <?php } else if(is_category()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               分类： <?php single_cat_title(); ?>
             </span>
           </div>
         <?php } else if(is_author()) { ?>
-          <div class="archive-title">
-            <span class="title-inner">
+          <div class="archive-title main-title">
+            <span>
               作者： <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->display_name; ?>
             </span>
           </div>

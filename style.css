@@ -161,6 +161,9 @@ img { max-width: 100%; }
 
 .bg-gradient { color: rgba(255, 255, 255, 0.95); background: #000; background: rgba(0, 0, 0, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(0, 0, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0.2)), color-stop(65%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.66))); background: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.66)); }
 
+.main-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; color: #444; border-bottom: 1px solid #e5e5e5; }
+.main-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #444; }
+
 /* queries */
 /* base */
 /* wrapper */
@@ -266,10 +269,6 @@ a:hover { color: #444; }
 #content .content_inner .content_header .featured li a { position: relative; display: block; width: 100%; height: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; background-color: #eaeaea; }
 #content .content_inner .content_header .featured li a p { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; line-height: 70px; padding: 0 15px; }
 
-/* title */
-.archive-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; color: #444; border-bottom: 1px solid #e5e5e5; }
-.archive-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #444; }
-
 /* posts */
 .posts article { margin-bottom: 20px; }
 .posts article.index-post .post-inner { border: 1px solid #e5e5e5; }
@@ -282,12 +281,13 @@ a:hover { color: #444; }
 .posts article.single-post .post-top .item { margin-right: 20px; }
 .posts article.single-post .post-top .item .fa { margin-right: 5px; }
 .posts article.single-post .post-title a { font-size: 26px; }
-.posts article.single-post .post-content { margin-bottom: 50px; }
+.posts article.single-post .post-content { font-size: 16px; line-height: 2 !important; margin-bottom: 50px; }
 .posts article.single-post .post-copyright { margin-bottom: 30px; }
 .posts article.single-post .post-related { margin-bottom: 30px; }
 .posts article.single-post .post-related li { display: inline-block; width: 25%; height: 130px; padding: 0 5px; }
 .posts article.single-post .post-related li a { position: relative; display: block; width: 100%; height: 100%; border-radius: 5px; overflow: hidden; background-color: #ccc; }
 .posts article.single-post .post-related li a p { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; padding: 25px 10px 0 10px; }
+.posts article.single-post .post-meta { margin-bottom: 50px; }
 .posts article.single-post .post-meta li { list-style: none; margin-right: 10px; }
 .posts article.single-post .post-meta li.meta-like { margin-right: 0; }
 .posts article.single-post .post-meta li.meta-tabs a { display: inline-block; }
@@ -384,6 +384,41 @@ a:hover { color: #444; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-loaded { height: 5px; border-radius: 0; background: #A7A7A7; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-current { height: 5px; border-radius: 0; background: #3caac8; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-mute, .audio-wrapper .mejs-container .mejs-controls .mejs-time, .audio-wrapper .mejs-container .mejs-controls .mejs-time-float { display: none !important; }
+
+#comment-nav-below { text-align: center; margin: 30px 0; }
+
+#commentform { position: relative; margin-bottom: 30px; }
+#commentform input, #commentform textarea { -webkit-appearance: none; resize: none; }
+#commentform input:focus, #commentform textarea:focus { outline: none; }
+#commentform .comment-notes, #commentform label { display: none; }
+#commentform .comment-form-author, #commentform .comment-form-email, #commentform .comment-form-url { position: relative; z-index: 2; display: inline-block; width: 33.33%; float: left; margin-bottom: 15px; padding-right: 2%; }
+#commentform .comment-form-author::before, #commentform .comment-form-email::before, #commentform .comment-form-url::before { position: absolute; font-family: FontAwesome; padding-left: 10px; height: 38px; line-height: 38px; }
+#commentform .comment-form-author input, #commentform .comment-form-email input, #commentform .comment-form-url input { width: 100%; height: 36px; border-radius: 3px; padding: 5px 10px 5px 30px; }
+#commentform .comment-form-url { margin-right: 0; padding-right: 0; }
+#commentform .comment-form-author:before { content: "\f007"; }
+#commentform .comment-form-email:before { content: "\f0e0"; }
+#commentform .comment-form-url:before { content: "\f0ac"; }
+#commentform .comment-form-comment { position: relative; z-index: 1; margin-bottom: 0; }
+#commentform .comment-form-comment #comment { width: 100%; padding: 10px 10px 40px; border-radius: 3px; }
+#commentform .comment-form-comment #error, #commentform .comment-form-comment #loading { position: absolute; bottom: -20px; }
+#commentform .commentPlus { position: absolute; z-index: 3; bottom: 5px; right: 0; left: 0; height: 40px; line-height: 40px; width: 100%; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; -webkit-box-shadow: none; box-shadow: none; }
+#commentform .commentPlus .editor { display: inline-block; float: left; width: 36px; text-align: center; font-size: 14px; cursor: pointer; }
+#commentform .form-submit { position: absolute; z-index: 3; margin: 0; right: 1px; bottom: 6px; display: inline-block; float: right; }
+#commentform .form-submit #submit { width: 100%; text-align: center; font-size: 14px; border-bottom-right-radius: 2px; cursor: pointer; height: 38px; line-height: 38px; display: block; padding: 0 20px; outline: 0; }
+#commentform .comment-form-smilies { position: absolute !important; bottom: 35px; left: 10px; width: 300px; padding: 5px; border-radius: 3px; border: 1px solid #ddd; background: rgba(255, 255, 255, 0.9); }
+#commentform .comment-form-smilies a { display: inline-block; float: left; width: 20px; height: 20px; line-height: 20px; margin: 3px; }
+
+.commentlist .comment { list-style: none; }
+.commentlist .comment .children { padding-left: 15px; }
+.commentlist .comment .success_tip { display: inline-block; margin-bottom: 15px; }
+
+.comment-block { margin-bottom: 25px; border-radius: 3px; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.09); }
+.comment-block .comment-header { height: 40px; line-height: 40px; padding: 0 10px 0 5px; }
+.comment-block .comment-header .author-img { width: 30px; height: 30px; margin-top: 5px; margin-right: 10px; }
+.comment-block .comment-header .author-img img { border-radius: 25px; width: 100%; height: 100%; }
+.comment-block .comment-body { min-height: 50px; padding: 15px; font-size: 13px; line-height: 2; }
+.comment-block .comment-bottom { height: 30px; line-height: 30px; padding: 0 5px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
+.comment-block .comment-bottom span { margin-right: 10px; }
 
 .m_show { display: none; }
 

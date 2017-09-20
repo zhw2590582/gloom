@@ -105,3 +105,21 @@ img{max-width:100%}
   background: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.66));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.66));
 }
+
+.main-title{
+  position: relative;
+  font-size: 18px;
+  font-weight: normal;
+  height: 30px;
+  margin-bottom: 15px;
+  color: #444;
+  border-bottom: 1px solid #e5e5e5;
+
+  span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444;
+  }
+}
