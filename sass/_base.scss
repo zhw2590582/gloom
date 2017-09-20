@@ -17,7 +17,7 @@ $post_h: 230px;
   color: #777777;
 
   &.layout_box{
-    .posts article{
+    .posts article.index-post{
       width: 49%;
       float: left;
       &:nth-of-type(odd){
@@ -635,8 +635,37 @@ a {
 .posts{
   article{
     margin-bottom: 20px;
-    .post-inner{
-      border: 1px solid #e5e5e5;
+    &.index-post{
+      .post-inner{
+        border: 1px solid #e5e5e5;
+      }
+      .post-right{
+        padding: 15px 15px 0 15px;
+        .post-title{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap
+        }
+        .post-content{
+          height: 120px;
+          overflow: hidden;
+          &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            background: #fff;
+            background: rgba(255, 255, 255, 0.5);
+            background: -webkit-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
+            background: -o-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
+            background: -moz-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
+          }
+        }
+      }
     }
     .post-left{
       position: relative;
@@ -687,7 +716,6 @@ a {
     }
     .post-right{
       position: relative;
-      padding: 15px 15px 0 15px;
       .post-title{
         margin-bottom: 15px;
         a{
@@ -700,24 +728,7 @@ a {
       }
       .post-content{
         position: relative;
-        height: 120px;
         line-height: 1.5;
-        overflow: hidden;
-        &::after{
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 30px;
-          background: #fff;
-          background: rgba(255, 255, 255, 0.5);
-          background: -webkit-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
-          background: -o-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
-          background: -moz-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
-          background: linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
-        }
         .read_more{
           display: none;
         }

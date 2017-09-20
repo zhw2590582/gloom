@@ -25,8 +25,8 @@
 
 <div class="post-inner colbox">
   <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
-    <div class="post-left col ">
-        <div class="post-featured" >
+    <div class="post-left col">
+        <div class="post-featured">
           <a
             class="bg-img"
             href="<?php the_permalink(); ?>"
@@ -78,7 +78,7 @@
     </div>
   <?php } ?>
   <div class="post-right col">
-    <header class="post-title text-ellipsis">
+    <header class="post-title">
       <a class="f18" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         <?php the_title(); ?>
       </a>
@@ -98,46 +98,48 @@
         <?php } ?>
       <?php } ?>
     </div>
-    <ul class="post-meta clearfix">
-      <?php if ($cat) { ?>
-        <li class="mate-cat fl clearfix">
-          <i class="fa fa-bookmark fl"></i>
-          <div class="fl">
-            <?php the_category(''); ?>
-          </div>
-        </li>
-      <?php } ?>
-      <?php if ($tag) { ?>
-        <?php $posttags = get_the_tags(); if ($posttags) { ?>
-          <li class="meta-tabs fl clearfix">
-            <i class="fa fa-tags fl"></i>
+    <?php if (!is_single() && !is_page()) { ?>
+      <ul class="post-meta clearfix">
+        <?php if ($cat) { ?>
+          <li class="mate-cat fl clearfix">
+            <i class="fa fa-bookmark fl"></i>
             <div class="fl">
-              <?php the_tags('', ' ', ''); ?>
+              <?php the_category(''); ?>
             </div>
           </li>
         <?php } ?>
-      <?php } ?>
-      <?php if ($like) { ?>
-        <li class="meta-like fr">
-          <?php echo getPostLikeLink(get_the_ID()); ?>
-        </li>
-      <?php } ?>
-      <?php if ($com) { ?>
-        <li class="mate-com fr">
-          <i class="fa fa-comments-o"></i>
-          <span class="mate-num">
-            <?php comments_number('0', '1', '%');?>
-          </span>
-        </li>
-      <?php } ?>
-    </ul>
+        <?php if ($tag) { ?>
+          <?php $posttags = get_the_tags(); if ($posttags) { ?>
+            <li class="meta-tabs fl clearfix">
+              <i class="fa fa-tags fl"></i>
+              <div class="fl">
+                <?php the_tags('', ' ', ''); ?>
+              </div>
+            </li>
+          <?php } ?>
+        <?php } ?>
+        <?php if ($like) { ?>
+          <li class="meta-like fr">
+            <?php echo getPostLikeLink(get_the_ID()); ?>
+          </li>
+        <?php } ?>
+        <?php if ($com) { ?>
+          <li class="mate-com fr">
+            <i class="fa fa-comments-o"></i>
+            <span class="mate-num">
+              <?php comments_number('0', '1', '%');?>
+            </span>
+          </li>
+        <?php } ?>
+      </ul>
+    <?php } ?>
   </div>
 </div>
 
 <?php if ( is_single() && $download && !is_mobile() ) {?>
   <!-- 下载盒子 开始 -->
   <div class="download-wrap m_hide">
-    <div class="post-download <?php if ( !current_user_can('level_10') && $dlview == true ){echo 'dlview';}?>">
+    <div class="post-download <?php if (!current_user_can('level_10') && $dlview == true){echo 'dlview';}?>">
       <div class="dl-item dl-title"><i class="fa fa-download"></i>资源下载</div>
       <div class="dl-box">
         <div class="dl-item dl-web">官方网站：<a href="<?php echo $web; ?>" target="_black">访问</a></div>
