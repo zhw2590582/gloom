@@ -1,18 +1,10 @@
 {
+  "Switch": true,
   "Name": "Gloom",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
-  "Switch": "on",
   "Notice": "描述",
   "Script": "",
-  "Blacklist": ["172", "192", "localhost"],
-  "Update": {
-    "2.0.0": {
-      "1": "发布正式版本"
-    },
-    "1.0.0": {
-      "1": "发布公测版本"
-    }
-  }
+  "Blacklist": ["172", "192", "localhost", "zhw"]
 }
