@@ -37,8 +37,8 @@
 					<div class="topbar clearfix">
 						<?php if ($switcher) {?>
 							<div class="skin clearfix">
-								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="with-tooltip skin01" data-tooltip="布质"></a>
-								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="with-tooltip skin02" data-tooltip="暗黑"></a>
+								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="skin01"></a>
+								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="skin02"></a>
 							</div>
 						<?php } ?>
 						<?php if ($setting) {?>
@@ -48,7 +48,7 @@
 						<?php } ?>
 					</div>
 					<div class="logo text-c">
-						<a class="logo_img" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
+						<a class="logo_img" href="<?php echo home_url('/'); ?>" title="<?php bloginfo('name'); ?>">
 							<img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
 						</a>
 						<p class="blog_name f14"><?php bloginfo('description') ?></p>
