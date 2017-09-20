@@ -1,119 +1,105 @@
 <?php
-error_reporting(0);
-/* 引入后台框架 */
-require_once dirname( __FILE__ ) .'/cs-framework/cs-framework.php';
+  error_reporting(0);
 
-/* 前台加载脚本和样式 */
-function island_scripts_styles() {
+  /* 引入后台框架 */
+  require_once dirname( __FILE__ ) .'/cs-framework/cs-framework.php';
 
-  /* 注册样式 */
-  wp_enqueue_style('style', get_template_directory_uri() . "/style.css", array() , '0.9', 'screen');
-  wp_enqueue_style('font-awesome-css', get_template_directory_uri() . "/cs-framework/assets/css/font-awesome.css", array() , '0.3', 'screen');
+  /* 前台加载脚本和样式 */
+  function island_scripts_styles() {
 
-  /* 自定义皮肤 */
-    wp_register_style('switcher', get_template_directory_uri() . "/skin/switcher.php", array() , '0.3', 'screen');
-    wp_register_style('skin01_cloth', get_template_directory_uri() . "/skin/skin01_cloth.css", array() , '0.3', 'screen');
-    wp_register_style('skin02_black', get_template_directory_uri() . "/skin/skin02_black.css", array() , '0.3', 'screen');
-    wp_register_style('skin03_paper', get_template_directory_uri() . "/skin/skin03_paper.css", array() , '0.3', 'screen');
-    wp_register_style('skin04_steam', get_template_directory_uri() . "/skin/skin04_steam.css", array() , '0.3', 'screen');
-    $skin = cs_get_option('i_skin');
-    $switcher = cs_get_option('i_switcher');
+    /* 注册样式 */
+    wp_enqueue_style('style', get_template_directory_uri() . "/style.css", array() , '0.9', 'screen');
+    wp_enqueue_style('font-awesome-css', get_template_directory_uri() . "/cs-framework/assets/css/font-awesome.css", array() , '0.3', 'screen');
 
-    if ($switcher == true) {
+    /* 自定义皮肤 */
+      wp_register_style('switcher', get_template_directory_uri() . "/skin/switcher.php", array() , '0.3', 'screen');
+      wp_register_style('skin01_cloth', get_template_directory_uri() . "/skin/skin01_cloth.css", array() , '0.3', 'screen');
+      wp_register_style('skin02_black', get_template_directory_uri() . "/skin/skin02_black.css", array() , '0.3', 'screen');
+      wp_register_style('skin03_paper', get_template_directory_uri() . "/skin/skin03_paper.css", array() , '0.3', 'screen');
+      wp_register_style('skin04_steam', get_template_directory_uri() . "/skin/skin04_steam.css", array() , '0.3', 'screen');
+      $skin = cs_get_option('i_skin');
+      $switcher = cs_get_option('i_switcher');
+
+      if ($switcher) {
         wp_enqueue_style('switcher');
-    } else {
-		switch ($skin) {
-			case "skin01_cloth":
-				wp_enqueue_style('skin01_cloth');
-				break;
+      } else {
+  		switch ($skin) {
+  			case "skin01_cloth":
+  				wp_enqueue_style('skin01_cloth');
+  				break;
+  			case "skin02_black":
+  				wp_enqueue_style('skin02_black');
+  				break;
+  			case "skin03_paper":
+  				wp_enqueue_style('skin03_paper');
+  				break;
+        case "skin04_steam":
+  				wp_enqueue_style('skin04_steam');
+  				break;
+  		}
+  	}
 
-			case "skin02_black":
-				wp_enqueue_style('skin02_black');
-				break;
+    /* 注册脚本 */
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('plugins-js', get_template_directory_uri() . '/js/plugins.js', false, '0.3', true);
+    wp_enqueue_script('comments-ajax', get_template_directory_uri() . '/comments-ajax.js', false, '0.4', true);
+    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', false, '2.0', true);
 
-			case "skin03_paper":
-				wp_enqueue_style('skin03_paper');
-				break;
+    /* 代码高亮 */
+    wp_register_script('prism-js', get_template_directory_uri() . '/js/prism.js', false, '0.3', true);
+  	$prettify = cs_get_option( 'i_code_prettify' );
+  	if ($prettify) {
+  		wp_enqueue_style('prism-style', get_template_directory_uri() . "/css/prism.css", array() , '0.9', 'screen');
+  		wp_enqueue_script('prism-js');
+  	}
+  }
+  add_action('wp_enqueue_scripts', 'island_scripts_styles');
 
-      case "skin04_steam":
-				wp_enqueue_style('skin04_steam');
-				break;
-		}
-	}
+  //后台加载脚本和样式
+  function admin_scripts_styles() {
+    wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin.js', false, '0.1', true);
+    wp_enqueue_script('update-js', get_template_directory_uri() . '/js/update.js', false, '0.1', true);
+    wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/css/admin.css', array() );
+  }
+  add_action('admin_enqueue_scripts', 'admin_scripts_styles');
 
-  /* 注册脚本 */
-  wp_enqueue_script('jquery');
-  wp_enqueue_script('plugins-js', get_template_directory_uri() . '/js/plugins.js', false, '0.3', true);
-  wp_enqueue_script('comments-ajax', get_template_directory_uri() . '/comments-ajax.js', false, '0.4', true);
-  wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', false, '2.0', true);
+  /*移除多余head信息*/
+  function wpdaxue_remove_cssjs_ver($src) {
+  	if(strpos($src, 'ver='))
+  		$src = remove_query_arg('ver', $src);
+  	return $src;
+  }
+  function disable_stuff($data) {
+  	return false;
+  }
+  remove_action('wp_head', 'wp_generator');
+  remove_action('wp_head','wlwmanifest_link');
+  remove_action('wp_head','rsd_link');
+  remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+  remove_action( 'wp_head','rest_output_link_wp_head' );
+  remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+  remove_action( 'wp_head', 'feed_links_extra', 3 );
+  remove_action( 'wp_head', 'feed_links', 2 );
+  remove_action('wp_head', 'rel_canonical');
+  add_filter( 'style_loader_src', 'wpdaxue_remove_cssjs_ver', 999 );
+  add_filter( 'script_loader_src', 'wpdaxue_remove_cssjs_ver', 999 );
+  add_filter( 'index_rel_link', 'disable_stuff' );
+  add_filter( 'parent_post_rel_link', 'disable_stuff' );
+  add_filter( 'start_post_rel_link', 'disable_stuff' );
+  add_filter( 'previous_post_rel_link', 'disable_stuff' );
+  add_filter( 'next_post_rel_link', 'disable_stuff' );
 
-  /* 代码高亮 */
-  wp_register_script('prism-js', get_template_directory_uri() . '/js/prism.js', false, '0.3', true);
-	$prettify = cs_get_option( 'i_code_prettify' );
-	if ($prettify == true) {
-		wp_enqueue_style('prism-style', get_template_directory_uri() . "/css/prism.css", array() , '0.9', 'screen');
-		wp_enqueue_script('prism-js');
-	}
+  //禁止主题更新提醒
+  add_filter('pre_site_transient_update_themes',  create_function('$a', "return null;"));
+  remove_action('admin_init', '_maybe_update_themes');
 
-	/* 萤火虫背景 */
-	wp_register_script('circle', get_template_directory_uri() . '/js/circle.js', false, '0.3', true);
-	$circle = cs_get_option( 'i_circle' );
- 	if ( $circle == true && !is_mobile() ) {
-		wp_enqueue_script('circle');
-	}
-
-}
-add_action('wp_enqueue_scripts', 'island_scripts_styles');
-
-//后台加载脚本和样式
-function admin_scripts_styles() {
-  wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin.js', false, '0.1', true);
-  wp_enqueue_script('update-js', get_template_directory_uri() . '/js/update.js', false, '0.1', true);
-  wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/css/admin.css', array() );
-}
-add_action('admin_enqueue_scripts', 'admin_scripts_styles');
-
-/*移除多余信息*/
-function wpdaxue_remove_cssjs_ver( $src ) {
-	if( strpos( $src, 'ver=' ) )
-		$src = remove_query_arg( 'ver', $src );
-	return $src;
-}
-function disable_stuff( $data ) {
-	return false;
-}
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head','wlwmanifest_link');
-remove_action('wp_head','rsd_link');
-remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
-remove_action( 'wp_head','rest_output_link_wp_head' );
-remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-remove_action( 'wp_head', 'feed_links_extra', 3 );
-remove_action( 'wp_head', 'feed_links', 2 );
-remove_action('wp_head', 'rel_canonical');
-add_filter( 'style_loader_src', 'wpdaxue_remove_cssjs_ver', 999 );
-add_filter( 'script_loader_src', 'wpdaxue_remove_cssjs_ver', 999 );
-add_filter( 'index_rel_link', 'disable_stuff' );
-add_filter( 'parent_post_rel_link', 'disable_stuff' );
-add_filter( 'start_post_rel_link', 'disable_stuff' );
-add_filter( 'previous_post_rel_link', 'disable_stuff' );
-add_filter( 'next_post_rel_link', 'disable_stuff' );
-
-//禁止主题更新提醒
-add_filter('pre_site_transient_update_themes',  create_function('$a', "return null;"));
-remove_action('admin_init', '_maybe_update_themes');
-
-/* 加载类名 */
-function load_css($classes) {
+  /* 加载类名 */
+  function load_css($classes) {
     $page = cs_get_option('i_pagination');
-	if ( $page == 'i_ajax' ) {
-        $classes[] = 'ajax_load';
-    }else {
-        $classes[] = '';
-	}
+    $classes[] = $page == 'i_ajax' ? 'ajax_load' : ''
     return $classes;
-}
-add_filter('body_class','load_css');
+  }
+  add_filter('body_class','load_css');
 
 /* 引入密钥验证 */
 include ('verify.php');

@@ -42,9 +42,7 @@
           <?php wp_enqueue_script('mediaelement'); ?>
           <?php wp_enqueue_style('mediaelement'); ?>
           <script>
-            jQuery(document).ready(function($) {
-                $('.audio-wrapper audio').mediaelementplayer();
-            });
+            $('.audio-wrapper audio').mediaelementplayer();
           </script>
         </div>
       <?php } ?>
