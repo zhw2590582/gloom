@@ -172,15 +172,14 @@ $options[] = array(
         // 自定义皮肤
         array(
             'id' => 'i_skin',
-            'type' => 'select',
+            'type' => 'radio',
             'title' => '自定义皮肤',
+            'class' => 'horizontal',
             'options' => array(
-                'skin01' => '布质',
-                'skin02' => '暗黑',
-                'skin03' => '纸质',
-                'skin04' => '朋克',
+                'skin01' => '白色',
+                'skin02' => '黑色',
             ) ,
-            'default' => 'skin01_cloth',
+            'default' => 'skin01'
         ) ,
         // 开启设置按钮
         array(
