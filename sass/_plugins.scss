@@ -604,6 +604,9 @@
       height: 30px;
       margin-top: 5px;
       margin-right: 10px;
+      border-radius: 50%;
+      background: url('./images/default/d_avatar.jpg') no-repeat;
+      background-size: cover;
 
       img {
         border-radius: 25px;

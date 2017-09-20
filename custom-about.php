@@ -1,8 +1,8 @@
 <?php
-/*
-Template Name: 关于页面
-*/
-error_reporting(0);
+  /*
+  Template Name: 关于页面
+  */
+  error_reporting(0);
 ?>
 
 <?php get_header(); ?>

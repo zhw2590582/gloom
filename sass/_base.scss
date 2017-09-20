@@ -305,7 +305,8 @@ a {
             border-radius: 20px;
             overflow: hidden;
             opacity: 0.75;
-            background: #f7f7f7;
+            background: url('./images/default/d_avatar.jpg') no-repeat;
+            background-size: cover;
 
             img {
               vertical-align: top;

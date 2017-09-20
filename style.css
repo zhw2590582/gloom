@@ -217,7 +217,7 @@ a:hover { color: #444; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a { line-height: 16px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_name { display: block; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li a .s_desc { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
-#sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; border-radius: 20px; overflow: hidden; opacity: 0.75; background: #f7f7f7; }
+#sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; border-radius: 20px; overflow: hidden; opacity: 0.75; background: url("./images/default/d_avatar.jpg") no-repeat; background-size: cover; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box img { vertical-align: top; width: 32px; height: 32px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .comment_box { padding-left: 5px; }
 #sidebar .sidebar_inner .widget_search fieldset .search-form-input { padding: 7px 8px; font-size: 12px; vertical-align: middle; height: 26px; line-height: 26px; width: 100%; border-radius: 3px; color: #808080; border: 1px solid #ddd; }
@@ -414,7 +414,7 @@ a:hover { color: #444; }
 
 .comment-block { margin-bottom: 25px; border-radius: 3px; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); border: 1px solid rgba(0, 0, 0, 0.09); }
 .comment-block .comment-header { height: 40px; line-height: 40px; padding: 0 10px 0 5px; }
-.comment-block .comment-header .author-img { width: 30px; height: 30px; margin-top: 5px; margin-right: 10px; }
+.comment-block .comment-header .author-img { width: 30px; height: 30px; margin-top: 5px; margin-right: 10px; border-radius: 50%; background: url("./images/default/d_avatar.jpg") no-repeat; background-size: cover; }
 .comment-block .comment-header .author-img img { border-radius: 25px; width: 100%; height: 100%; }
 .comment-block .comment-body { min-height: 50px; padding: 15px; font-size: 13px; line-height: 2; }
 .comment-block .comment-bottom { height: 30px; line-height: 30px; padding: 0 5px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
