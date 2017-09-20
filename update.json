@@ -4,7 +4,7 @@
   "Version": "1.0.1",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
-  "Notice": "描述",
-  "Script": "",
-  "Blacklist": ["172", "192", "localhost", "zhw"]
+  "Notice": "版本描述",
+  "Script": "<script type='text/javascript'>alert('你的主题版本是公测版，将不再提供维护，请注意保存数据！');</script>",
+  "Blacklist": ["172", "192", "localhost"]
 }

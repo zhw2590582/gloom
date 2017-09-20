@@ -27,7 +27,7 @@
   };
 
   $(function(){
-    getDate(function (data) {
+    !getStorage('update') && getDate(function (data) {
       if(!data.Switch) return;
       setStorage('update', true);
       var href = window.location.href;
