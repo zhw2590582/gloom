@@ -37,10 +37,10 @@
 					<div class="topbar clearfix">
 						<?php if ($switcher) {?>
 							<div class="skin fl clearfix">
-								<a href="#" class="with-tooltip skin_1 fl" data-tooltip="布质"></a>
-								<a href="#" class="with-tooltip skin_2 fl" data-tooltip="布质"></a>
-								<a href="#" class="with-tooltip skin_3 fl" data-tooltip="布质"></a>
-								<a href="#" class="with-tooltip skin_4 fl" data-tooltip="布质"></a>
+								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="with-tooltip skin01" data-tooltip="布质"></a>
+								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="with-tooltip skin02" data-tooltip="暗黑"></a>
+								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin03.css" class="with-tooltip skin03" data-tooltip="纸质"></a>
+								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin04.css" class="with-tooltip skin04" data-tooltip="朋克"></a>
 							</div>
 						<?php } ?>
 						<?php if ($setting) {?>

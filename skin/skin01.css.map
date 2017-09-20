@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAkB,QAAQ;ACC1B,aAAa;ADIX,WAAE,GACA,KAAK,EAAE,IAAI;AACX,iBAAQ,GACN,KAAK,EAAE,IAAI;AAIf,iBAAU,GACR,UAAU,EAAE,IAAI;AAIhB,0BAAU,GACR,UAAU,EAAE,IAAI;AAGlB,yBAAS,GACP,UAAU,EAAE,IAAI;AAKlB,8BAAY,GACV,KAAK,EAAE,IAAI;AAGb,2BAAS,GACP,KAAK,EAAE,IAAI",
+"sources": ["../sass/skin01.scss","../sass/_mixin.scss"],
+"names": [],
+"file": "skin01.css"
+}

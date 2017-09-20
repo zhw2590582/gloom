@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* 布质 */
+/* queries */
+.timeline a { color: #ccc; }
+.timeline a:hover { color: #ccc; }
+.timeline::before { background: #ccc; }
+.timeline .tl-item::before { background: #ccc; }
+.timeline .tl-item::after { background: #ccc; }
+.timeline .tl-wrap .tl-content { color: #ccc; }
+.timeline .tl-wrap .tl-date { color: #ccc; }
+
+/*# sourceMappingURL=skin01.css.map */

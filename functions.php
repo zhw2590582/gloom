@@ -13,10 +13,10 @@
 
     /* 自定义皮肤 */
       wp_register_style('switcher', get_template_directory_uri() . "/skin/switcher.php", array() , '0.3', 'screen');
-      wp_register_style('skin01_cloth', get_template_directory_uri() . "/skin/skin01_cloth.css", array() , '0.3', 'screen');
-      wp_register_style('skin02_black', get_template_directory_uri() . "/skin/skin02_black.css", array() , '0.3', 'screen');
-      wp_register_style('skin03_paper', get_template_directory_uri() . "/skin/skin03_paper.css", array() , '0.3', 'screen');
-      wp_register_style('skin04_steam', get_template_directory_uri() . "/skin/skin04_steam.css", array() , '0.3', 'screen');
+      wp_register_style('skin01', get_template_directory_uri() . "/skin/skin01.css", array() , '0.3', 'screen');
+      wp_register_style('skin02', get_template_directory_uri() . "/skin/skin02.css", array() , '0.3', 'screen');
+      wp_register_style('skin03', get_template_directory_uri() . "/skin/skin03.css", array() , '0.3', 'screen');
+      wp_register_style('skin04', get_template_directory_uri() . "/skin/skin04.css", array() , '0.3', 'screen');
       $skin = cs_get_option('i_skin');
       $switcher = cs_get_option('i_switcher');
 
@@ -24,17 +24,17 @@
         wp_enqueue_style('switcher');
       } else {
   		switch ($skin) {
-  			case "skin01_cloth":
-  				wp_enqueue_style('skin01_cloth');
+  			case "skin01":
+  				wp_enqueue_style('skin01');
   				break;
-  			case "skin02_black":
-  				wp_enqueue_style('skin02_black');
+  			case "skin02":
+  				wp_enqueue_style('skin02');
   				break;
-  			case "skin03_paper":
-  				wp_enqueue_style('skin03_paper');
+  			case "skin03":
+  				wp_enqueue_style('skin03');
   				break;
-        case "skin04_steam":
-  				wp_enqueue_style('skin04_steam');
+        case "skin04":
+  				wp_enqueue_style('skin04');
   				break;
   		}
   	}

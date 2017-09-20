@@ -1,0 +1,36 @@
+@charset "UTF-8"; /* 布质 */
+@import 'mixin';
+
+.timeline {
+
+  a {
+    color: #ccc;
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  &::before {
+    background: #ccc;
+  }
+
+  .tl-item {
+    &::before {
+      background: #ccc;
+    }
+
+    &::after {
+      background: #ccc;
+    }
+  }
+
+  .tl-wrap {
+    .tl-content {
+      color: #ccc;
+    }
+
+    .tl-date {
+      color: #ccc;
+    }
+  }
+}
