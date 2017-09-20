@@ -5,8 +5,8 @@ $topbar_h: 35px;
 $slider_h: 300px;
 $featured_w: 200px;
 $post_h: 230px;
-/* wrapper */
 
+/* wrapper */
 #wrapper {
   position: relative;
   height: auto !important;
@@ -38,7 +38,6 @@ a {
 }
 
 /* header */
-
 #header {
   position: fixed;
   left: 0;
@@ -616,7 +615,7 @@ a {
   }
 }
 
-/* posts */
+/* title */
 .archive-title{
   position: relative;
   font-size: 18px;
@@ -635,6 +634,7 @@ a {
   }
 }
 
+/* posts */
 .posts{
   article{
     margin-bottom: 20px;
@@ -647,7 +647,10 @@ a {
         .post-title{
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap
+          white-space: nowrap;
+          a{
+            font-size: 18px;
+          }
         }
         .post-content{
           height: 120px;
@@ -666,6 +669,57 @@ a {
             background: -o-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
             background: -moz-linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
             background: linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9));
+          }
+        }
+      }
+    }
+    &.single-post{
+      .post-top{
+        margin-bottom: 20px;
+        background: #f7f7f7;
+        padding: 10px;
+        .item{
+          margin-right: 20px;
+          .fa{
+            margin-right: 5px;
+          }
+        }
+      }
+      .post-title{
+        a{
+          font-size: 26px;
+        }
+      }
+      .post-content{
+        margin-bottom: 50px;
+      }
+      .post-copyright{
+        margin-bottom: 30px;
+      }
+      .post-related{
+        li{
+          display: inline-block;
+          width: 25%;
+          height: 130px;
+          padding: 0 10px;
+
+          a{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #ccc;
+            p{
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 50px;
+              padding: 25px 10px 0 10px;
+            }
           }
         }
       }
@@ -722,7 +776,8 @@ a {
       .post-title{
         margin-bottom: 15px;
         a{
-          color: #444 !important;
+          display: block;
+          color: #444;
           line-height: 1.5;
           &:hover{
             color: #02b875 !important;
@@ -775,5 +830,4 @@ a {
 }
 
 /* footer */
-
 #footer {}
