@@ -1,5 +1,6 @@
 <?php
 
+define('THEME_KEY_NAME', ''.wp_get_theme()->display('Name').'_license_key');
 define('YOUR_SPECIAL_SECRET_KEY', '59c3676d1954d4.96181889');
 define('YOUR_LICENSE_SERVER_URL', 'http://update.duapp.com');
 define('YOUR_ITEM_REFERENCE', 'LAOZHAOTHEME');
@@ -12,7 +13,7 @@ function license_management_page() {
     echo '<div class="wrap">';
     echo '<h2>主题密钥验证</h2>';
     if (isset($_REQUEST['activate_license'])) {
-        $license_key = $_REQUEST['theme_license_key'];
+        $license_key = $_REQUEST[THEME_KEY_NAME];
         $api_params = array(
             'slm_action' => 'slm_activate',
             'secret_key' => YOUR_SPECIAL_SECRET_KEY,
@@ -28,7 +29,7 @@ function license_management_page() {
         $license_data = json_decode(wp_remote_retrieve_body($response));
         if($license_data->result == 'success'){
             echo '<div class="verify_serve">服务器返回信息: '.$license_data->message. '</div>';
-            update_option('theme_license_key', $license_key);
+            update_option(THEME_KEY_NAME, $license_key);
         }
         else{
             echo '<div class="verify_serve">服务器返回信息: '.$license_data->message. '</div>';
@@ -36,7 +37,7 @@ function license_management_page() {
 
     }
     if (isset($_REQUEST['deactivate_license'])) {
-        $license_key = $_REQUEST['theme_license_key'];
+        $license_key = $_REQUEST[THEME_KEY_NAME];
         $api_params = array(
             'slm_action' => 'slm_deactivate',
             'secret_key' => YOUR_SPECIAL_SECRET_KEY,
@@ -52,7 +53,7 @@ function license_management_page() {
         $license_data = json_decode(wp_remote_retrieve_body($response));
         if($license_data->result == 'success'){
             echo '<div class="verify_serve">服务器返回信息: '.$license_data->message. '</div>';
-            update_option('theme_license_key', '');
+            update_option(THEME_KEY_NAME, '');
         }
         else{
             echo '<div class="verify_serve">服务器返回信息: '.$license_data->message. '</div>';
@@ -70,9 +71,9 @@ function license_management_page() {
           autocomplete="off"
           type="password"
           id="license_key"
-          name="theme_license_key"
+          name="<?php echo THEME_KEY_NAME ?>"
           placeholder="输入密钥信息"
-          value="<?php echo get_option('theme_license_key'); ?>">
+          value="<?php echo get_option(THEME_KEY_NAME); ?>">
         <ul class="verify_list">
           <li>开启高级选项+自动更新</li>
           <li>多套个性皮肤+功能补给</li>

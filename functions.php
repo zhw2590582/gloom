@@ -285,7 +285,7 @@
   	if ('themes.php' == $pagenow && isset($_GET['activated'])) {
   		global $verify;
   		$Gloom_key = cs_get_customize_option( 'Gloom_key' );
-  		$verify = get_option('theme_license_key');
+  		$verify = get_option(THEME_KEY_NAME);
   		if (!empty($verify) || $Gloom_key == 'zhw2590582' ) {
   			wp_redirect(admin_url('admin.php?page=cs-framework'));
   			exit;
@@ -385,7 +385,7 @@
       global $wp_admin_bar;
       global $verify;
   	  $Gloom_key = cs_get_customize_option( 'Gloom_key' );
-      $verify = get_option('theme_license_key');
+      $verify = get_option(THEME_KEY_NAME);
       if (!empty($verify) || $Gloom_key == 'zhw2590582') {
           if (current_user_can('switch_themes')) {
               $wp_admin_bar->add_menu(array(

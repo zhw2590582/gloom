@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) { die; } // 不能直接访问网页.
 // ===============================================================================================
 global $verify;
 $Gloom_key = cs_get_customize_option('Gloom_key');
-$verify = get_option('theme_license_key');
+$verify = get_option(THEME_KEY_NAME);
 if (!empty($verify) || $Gloom_key == 'zhw2590582') {
     $settings = array(
         'menu_title' => '主题选项',

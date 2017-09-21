@@ -26,7 +26,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="top">
-
 	<!-- wrapper 开始-->
 	<div id="wrapper" class="<?php echo $layout_list; ?>">
 
