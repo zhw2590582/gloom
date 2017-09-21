@@ -26,10 +26,10 @@ error_reporting(0);
                                        <?php $count_posts = wp_count_posts(); $published_posts = $count_posts->publish;
                                        query_posts( 'posts_per_page=-1' );
                                        while ( have_posts() ) : the_post();
-                                           echo '<li class="tl-item"><div class="tl-wrap clearfix">';
-                                           echo '<span class="tl-date fl">';
+                                           echo '<li class="tl-item"><div class="tl-wrap">';
+                                           echo '<div class="tl-date f14">';
                                            the_time(get_option( 'date_format' ));
-                                           echo '</span><div class="tl-content fl">
+                                           echo '</div><div class="tl-content">
                                            <a href="';
                                            the_permalink();
                                            echo '" title="'.esc_attr( get_the_title() ).'">';

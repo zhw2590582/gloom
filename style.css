@@ -106,6 +106,8 @@ body { font-family: "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Micros
 
 a { text-decoration: none; -webkit-transition: all .1s; transition: all .1s; }
 
+ol, ul { margin: 0; padding: 0; list-style: none; }
+
 img { max-width: 100%; }
 
 .clearfix:after, .clearfix:before { content: ""; display: table; }
@@ -326,6 +328,25 @@ a:hover { color: #444; }
 
 /* comments */
 /* pages */
+.timeline { border-left: 1px solid #e5e5e5; }
+.timeline .tl-item { list-style: none; margin-bottom: 20px; padding-left: 15px; margin-left: -1px; border-left: 1px solid #02b875; }
+
+.readers-list li { list-style: none; display: inline-block; width: 20%; padding: 5px; border-radius: 3px; }
+.readers-list li .readers-inner { padding: 5px; border-radius: 5px; overflow: hidden; }
+.readers-list li .readers-inner .avatar-img { width: 40px; height: 40px; }
+.readers-list li .readers-inner .avatar-img .avatar { border-radius: 3px; width: 40px; height: 40px; }
+.readers-list li .readers-inner .avatar-msg { padding-left: 5px; width: 85px; }
+.readers-list li .readers-inner .avatar-msg p { font-size: 13px; overflow: hidden; width: 100%; text-overflow: ellipsis; white-space: nowrap; line-height: 1.6; margin-bottom: 0; }
+
+.link_box .linkcat { text-align: center; margin-bottom: 20px; }
+.link_box .linkcat h2 { font-size: 16px; position: relative; display: inline-block; text-align: center; padding: 10px 0; }
+.link_box .linkcat h2::before { position: absolute; content: ''; height: 2px; width: 100px; top: 18px; left: -120px; }
+.link_box .linkcat h2::after { position: absolute; content: ''; height: 2px; width: 100px; top: 18px; right: -120px; }
+.link_box .linkcat ul { text-align: left; }
+.link_box .blogroll::after { clear: both; display: block; content: " "; }
+.link_box .blogroll li { display: inline-block; width: 25%; padding: 0 10px; margin-bottom: 15px; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.link_box .blogroll li img { float: left; margin: 9px 5px 0 0; width: 15px; height: 15px; }
+
 /* footer */
 #footer { position: relative; z-index: 90; padding-left: 470px; max-width: 2000px; min-height: 120px; height: 120px; }
 #footer .footer-inner { position: relative; width: 100%; height: 100%; padding: 20px 20px 0; }

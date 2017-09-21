@@ -53,6 +53,12 @@ html{
 }
 body{font-family:"Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif}
 a{text-decoration:none;transition:all .1s}
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 img{max-width:100%}
 .clearfix:after,.clearfix:before{content:"";display:table}
 .clearfix:after{clear:both}

@@ -38,7 +38,7 @@
                                           else $url="#";
                                           $avatar = get_avatar( $comment->comment_author_email, $size = '24', $default = get_bloginfo('wpurl').'/avatar/default.jpg' );
                                           $tmp = "
-                                          <li>
+                                          <li class=\"fl\">
                                             <a target=\"_blank\" href=\"".$comment->comment_author_url."\">
                                                 <div class='readers-inner with-tooltip clearfix' data-tooltip=\"".$comment->comment_author_url."\">
                                                     <div class='avatar-img fl'>
