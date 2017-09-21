@@ -57,72 +57,45 @@
 		<!-- 浮动按钮 开始 -->
 		<div id="footer-btn" class="hide">
 			<ul>
-				<?php if ($gotop == true) {
-					echo '<li class="item">
-							<a href="#top" class="icon">
-								<i class="hand fa fa-chevron-up"></i>
+				<?php if($gotop) { ?>
+					<li class="item">
+						<a href="#top" class="icon">
+							<i class="hand fa fa-chevron-up"></i>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($comment && is_single ()) { ?>
+					<li class="item">
+						<a href="#comments" class="comment_btn hand icon">
+							<i class="fa fa-comment-o"></i>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($qrcode) { ?>
+					<li class="item">
+							<a class="icon" href="javascript:void(0)">
+              	<i class="fa fa-qrcode"></i>
 							</a>
-						</li>';
-				}?>
-
-				<?php if ($comment == true && is_single ()) {
-					echo '<li class="item">
-									<a href="#comments" class="comment_btn hand icon"><i class="fa fa-comment-o"></i></a>
-								</li>';
-				}?>
-
-				<?php if ($qrcode == true) {
-					echo '<li class="item">
-									<a class="icon" href="javascript:void(0)">
-                  	<i class="fa fa-qrcode"></i>
-									</a>
-									<div class="show-box">
-										<div class="show-box-inner qr-box">
-											<img src="'. $qrcodeimg .'">
-										</div>
-									</div>
-							</li>';
-				}?>
+							<div class="show-box">
+								<div class="show-box-inner qr-box">
+									<img src="'. $qrcodeimg .'">
+								</div>
+							</div>
+					</li>
+				<?php } ?>
 			</ul>
 		</div>
 		<!-- 浮动按钮 结束 -->
 	<?php }?>
 
-	<?php if ($player_mobi == true && is_mobile() ) { }else{ ?>
-		<?php if ($player == true && ! empty( $player_id ) && function_exists('cue_playlist') ) {?>
-				<!-- 播放器 开始 -->
-				<?php cue_playlist( $player_id ); ?>
-				<!-- 播放器 结束 -->
-		<?php }	 ?>
-	<?php }	 ?>
+	<?php if ($player && !empty($player_id) && function_exists('cue_playlist') && !is_mobile()) {?>
+		<!-- 播放器 开始 -->
+		<?php cue_playlist( $player_id ); ?>
+		<!-- 播放器 结束 -->
+	<?php }?>
 
-	<?php if ( is_single() && !is_mobile() && $download) {?>
-		<!-- 下载弹窗 开始 -->
-    <div class="modal-wrap download-modal hide">
-      <div class="modal-container">
-				<div class="modal-header clearfix">
-					<span class="modal-title fl">
-						资源下载
-					</span>
-					<span class="modal-close"></span>
-				</div>
-        <div class="modal-body text-c">
-          <div class="dl-btn">
-						<a class="btn" href="javascript:void(0)" target="_black">
-							<i class="fa fa-arrow-circle-o-down"></i>点击下载
-						</a>
-					</div>
-          <div class="dl-tqcode">提取码：<span></span></div>
-        </div>
-        <div class="modal-bottom">
-          <span class="ofh">下载声明：<?php echo $shengming ?></span>
-        </div>
-      </div>
-    </div>
-		<!-- 下载弹窗 结束 -->
-	<?php }	?>
 
-  <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
+  <?php if (!is_user_logged_in() && $login && !is_mobile()) { ?>
 		<!-- 登陆弹窗 开始 -->
     <div class="modal-wrap login-modal hide">
       <div class="modal-container">

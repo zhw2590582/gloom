@@ -10,7 +10,7 @@
 
 <?php get_header(); ?>
 
-        <?php if(is_home() && !is_paged() && $slider) { ?>
+        <?php if(is_home() && !is_paged() && $slider && !is_mobile()) { ?>
           <!-- slider 开始 -->
           <div class="content_header clearfix">
             <div class="header_left fl">

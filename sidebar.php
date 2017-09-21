@@ -9,7 +9,7 @@
   $widget2 = cs_get_option('i_widget2');
 ?>
 <!-- sidebar 开始-->
-<aside id="sidebar" class="m_hide">
+<aside id="sidebar">
   <div class="topbar clearfix">
     <div class="widget_btn text-c hand fl on"><?php echo $widget1; ?></div>
     <div class="widget_btn text-c hand fr"><?php echo $widget2; ?></div>

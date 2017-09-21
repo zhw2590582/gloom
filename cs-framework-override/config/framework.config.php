@@ -68,6 +68,18 @@ $options[] = array(
             'help' => '默认布局，会被前端设置覆盖',
             'default' => 'i_width'
         ) ,
+        // 自定义皮肤
+        array(
+            'id' => 'i_skin',
+            'type' => 'radio',
+            'title' => '自定义皮肤',
+            'class' => 'horizontal',
+            'options' => array(
+                'skin01' => '白色',
+                'skin02' => '黑色',
+            ) ,
+            'default' => 'skin01'
+        ) ,
         // 分页设置
         array(
             'type' => 'notice',
@@ -168,18 +180,6 @@ $options[] = array(
             'type' => 'switcher',
             'title' => '开启前端换肤',
             'label' => '一旦开启，自定义皮肤将失效，且默认显示第一套皮肤',
-        ) ,
-        // 自定义皮肤
-        array(
-            'id' => 'i_skin',
-            'type' => 'radio',
-            'title' => '自定义皮肤',
-            'class' => 'horizontal',
-            'options' => array(
-                'skin01' => '白色',
-                'skin02' => '黑色',
-            ) ,
-            'default' => 'skin01'
         ) ,
         // 开启设置按钮
         array(

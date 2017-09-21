@@ -7,10 +7,10 @@
 	$switcher = cs_get_option('i_switcher');
 	$setting = cs_get_option('i_setting');
 	$layout = cs_get_option('i_layout');
+	$layout_list = cs_get_option('i_layout_list');
 	$notices = cs_get_option('i_notices');
 	$notices_text = cs_get_option('i_notices_text');
 	$notices_effect = cs_get_option('i_notices_effect');
-	$layout_list = cs_get_option('i_layout_list');
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
 				<div class="header_inner">
 					<div class="topbar clearfix">
 						<?php if ($switcher) {?>
-							<div class="skin clearfix">
+							<div class="skin fl">
 								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="skin01"></a>
 								<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="skin02"></a>
 							</div>
@@ -66,28 +66,32 @@
 			<!-- header 结束-->
 		<?php } ?>
 
-		<?php get_sidebar(); ?>
+		<?php if (!is_mobile()) { ?>
+			<?php get_sidebar(); ?>
+		<?php } ?>
 
 		<!-- content 开始-->
 		<section id="content" name="content">
-			<div class="topbar clearfix">
-				<?php if ($notices) {?>
-					<i class="fa fa-bell-o fl" aria-hidden="true"></i>
-					<div class="fl notices" data-effect="<?php echo $notices_effect; ?>" data-notices="<?php echo $notices_text; ?>"></div>
-				<?php } ?>
-				<?php if ($layout) {?>
-					<div class="fr layouts clearfix">
-						<a class="layout layout_width fl on" href="#">
-	            <span></span>
-	            <span></span>
-	          </a>
-						<a class="layout layout_box fl" href="#">
-	            <span style="margin-right:2px"></span>
-	            <span></span>
-	            <span style="margin-right:2px"></span>
-	            <span></span>
-	          </a>
-					</div>
-				<?php } ?>
-			</div>
+			<?php if (!is_mobile()) { ?>
+				<div class="topbar clearfix">
+					<?php if ($notices) {?>
+						<i class="fa fa-bell-o fl" aria-hidden="true"></i>
+						<div class="fl notices" data-effect="<?php echo $notices_effect; ?>" data-notices="<?php echo $notices_text; ?>"></div>
+					<?php } ?>
+					<?php if ($layout) {?>
+						<div class="fr layouts clearfix">
+							<a class="layout layout_width fl on" href="#">
+		            <span></span>
+		            <span></span>
+		          </a>
+							<a class="layout layout_box fl" href="#">
+		            <span style="margin-right:2px"></span>
+		            <span></span>
+		            <span style="margin-right:2px"></span>
+		            <span></span>
+		          </a>
+						</div>
+					<?php } ?>
+				</div>
+			<?php } ?>
 	    <div class="content_inner">
