@@ -42,9 +42,43 @@
 							</div>
 						<?php } ?>
 						<?php if ($setting) {?>
-							<a class="fr setting f18" href="#">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-							</a>
+							<div class="fr setting">
+								<a class="fr setting-btn f18" href="#">
+									<i class="fa fa-cog" aria-hidden="true"></i>
+								</a>
+								<div class="setting-pop hide">
+								  <?php if (!is_user_logged_in()) { ?>
+										<?php
+												$login_form_args = array (
+														'form_id' => 'login-form',
+														'label_log_in' => '登录',
+														'remember' => false,
+														'value_remember' => false
+												);
+												wp_login_form($login_form_args);
+										?>
+										<div class="setting-bottom clearfix">
+											<span class="fl">
+												<a href="<?php echo htmlspecialchars(wp_lostpassword_url(get_permalink()), ENT_QUOTES); ?>">忘记密码</a>
+											</span>
+											<?php if (get_option('users_can_register')) { ?>
+												<span class="fr"><?php wp_register('', ''); ?></span>
+											<?php } ?>
+										</div>
+									<?php } else { ?>
+										<div class="admin-list">
+											<a href="<?php echo admin_url('post-new.php') ; ?>">发文章</a>
+											<a href="<?php echo admin_url('edit-comments.php') ; ?>">看评论</a>
+											<a href="<?php if(current_user_can('level_10')){
+												echo admin_url('admin.php?page=cs-framework');
+											} else {
+												echo admin_url('index.php');
+											} ?>">后台管理</a>
+											<a href="<?php echo wp_logout_url(home_url()); ?>">登出</a>
+										</div>
+									<?php } ?>
+								</div>
+							</div>
 						<?php } ?>
 					</div>
 					<div class="logo text-c">

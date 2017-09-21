@@ -1,13 +1,13 @@
 <?php
   /*
-  Template Name: 关于页面
+  Template Name: 默认页面
   */
   error_reporting(0);
 ?>
 
 <?php get_header(); ?>
 
-                      <!-- 关于 -->
+                      <!-- 默认 -->
         	            <div class="posts">
         								<article <?php post_class('single-post'); ?>>
         									<div class="post-wrap">

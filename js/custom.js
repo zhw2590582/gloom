@@ -97,6 +97,18 @@
       $('.sidebar_inner .item').hide().eq(index).show();
     });
 
+    // 登陆弹窗
+    $("#user_login").attr('placeholder', '用户名');
+    $("#user_pass").attr('placeholder', '密码');
+    $(".setting-btn").click(function() {
+      $('.setting-pop').toggleClass('hide');
+      return false;
+    });
+
+    $("#wrapper").click(function(e){
+      ($(e.target).closest(".setting-pop").length == 0) && $('.setting-pop').addClass('hide');
+   })
+
     // 切换布局
     $(".layout").click(function() {
       var index = $(this).index();
