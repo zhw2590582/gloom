@@ -399,6 +399,15 @@ a:hover { color: #444; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-current { height: 5px; border-radius: 0; background: #3caac8; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-mute, .audio-wrapper .mejs-container .mejs-controls .mejs-time, .audio-wrapper .mejs-container .mejs-controls .mejs-time-float { display: none !important; }
 
+.notice-pop { position: fixed; z-index: 10; width: 340px; height: 90px; bottom: 100px; left: 50%; margin-left: -170px; background: #000; background: rgba(18, 18, 18, 0.85); -webkit-box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35); box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35); border-radius: 45px; visibility: visibility; opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); -webkit-transition: all 0.6s ease; transition: all 0.6s ease; }
+.notice-pop.open { visibility: visible; opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+.notice-pop .notice-img { width: 64px; height: 64px; border-radius: 50%; margin: 13px 0 0 13px; }
+.notice-pop .notice-img img { width: 64px; height: 64px; border-radius: 50%; }
+.notice-pop .notice-txt { width: 220px; margin: 13px 0 0 13px; }
+.notice-pop .notice-txt .notice-title { color: #fff; font-size: 13px; margin-bottom: 5px; }
+.notice-pop .notice-txt .notice-content { color: #999; font-size: 12px; max-height: 25px; margin-bottom: 10px; overflow: hidden; }
+.notice-pop .notice-btn a { color: #fff; margin-right: 15px; }
+
 .m_show { display: none; }
 
 /*# sourceMappingURL=style.css.map */

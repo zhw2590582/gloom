@@ -107,7 +107,14 @@
 
     $("#wrapper").click(function(e){
       ($(e.target).closest(".setting-pop").length == 0) && $('.setting-pop').addClass('hide');
-   })
+    });
+
+    // 通知弹窗
+    sessionStorage.getItem("notice") || $(".notice-pop").addClass("open");
+    $(".notice-close").click(function() {
+      $(".notice-pop").hide();
+      sessionStorage.setItem("notice", "hide");
+    });
 
     // 切换布局
     $(".layout").click(function() {

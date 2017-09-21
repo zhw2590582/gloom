@@ -94,55 +94,20 @@
 		<!-- 播放器 结束 -->
 	<?php }?>
 
-
-  <?php if (!is_user_logged_in() && $login && !is_mobile()) { ?>
-		<!-- 登陆弹窗 开始 -->
-    <div class="modal-wrap login-modal hide">
-      <div class="modal-container">
-				<div class="modal-header clearfix">
-					<span class="modal-title fl">
-						登陆
-					</span>
-					<span class="modal-close"></span>
-				</div>
-				<div class="modal-body">
-					<?php
-	            $login_form_args = array (
-	                'form_id' => 'login-form',
-	                'label_log_in' => '登录',
-	                'remember' => false,
-	                'value_remember' => false
-	            );
-	        ?>
-	        <?php wp_login_form($login_form_args); ?>
-				</div>
-				<div class="modal-bottom clearfix">
-					<span class="fl">
-		          <a href="<?php echo htmlspecialchars(wp_lostpassword_url(get_permalink()), ENT_QUOTES); ?>"><?php echo __('忘记密码', 'pinthis'); ?></a>
-		      </span>
-		      <?php if (get_option('users_can_register')) { ?>
-		          <span class="fr"><?php wp_register('', ''); ?></span>
-		      <?php } ?>
-				</div>
-      </div>
-    </div>
-		<!-- 登陆弹窗 结束 -->
-	<?php }	?>
-
 	<?php if ( $notice == true && !is_mobile()  ) { ?>
 		<!-- 公告弹窗 开始 -->
-		<div class="notice clearfix hide">
+		<div class="notice-pop clearfix">
 			<div class="notice-img fl">
 				<img src="<?php echo $notice_img; ?>" alt="" class="">
 			</div>
 			<div class="notice-txt fl">
-				<h5 class="ofh notice-title ofh">
+				<div class="ofh notice-title text-ellipsis">
 					<?php echo $notice_title; ?>
-				</h5>
-				<div class="notice-content wb">
+				</div>
+				<div class="notice-content">
 					<?php echo $notice_text; ?>
 				</div>
-				<div class="notice-btn">
+				<div class="notice-btn f12">
 					<a href="<?php echo $notice_link; ?>">阅读更多</a>
 					<a href="javascript:void(0)" class="notice-close">关闭</a>
 				</div>
