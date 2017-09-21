@@ -8,12 +8,6 @@
 	$comment = cs_get_option( 'i_comment_switch' );
 	$player_id = cs_get_option( 'i_player_id' );
 	$player = cs_get_option('i_player');
-	$player_mobi = cs_get_option('i_player_mobi');
-	$shengming = cs_get_option( 'i_download_shengming' );
-	$login = cs_get_option( 'i_login' );
-	$meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
-	$download = $meta_data['i_download'];
-	$index = $meta_data['i_index'];
 	$footer_text = cs_get_option( 'i_footer_text' );
 	$notice = cs_get_option( 'i_notice' );
 	$notice_img = cs_get_option( 'i_notice_img' );

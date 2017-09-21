@@ -788,83 +788,7 @@ $options[] = array(
         ) ,
     ) ,
 );
-// ------------------------------
-// 边栏                       -
-// ------------------------------
-$options[] = array(
-    'name' => 'sidebar',
-    'title' => '边栏',
-    'icon' => 'fa fa-tasks',
-    'fields' => array(
-        // 边栏
-        array(
-            'id' => 'i_sidebar',
-            'type' => 'switcher',
-            'title' => '启用边栏',
-        ) ,
-        // 边栏轮播图
-        array(
-            'type' => 'notice',
-            'class' => 'info',
-            'content' => '边栏轮播图',
-        ) ,
-        // 自定义轮播图
-        array(
-            'id' => 'i_slider2_custom',
-            'type' => 'group',
-            'title' => '自定义轮播图',
-            'info' => '更多详细设置方式可以浏览使用说明',
-            'button_title' => '添加滑块',
-            'accordion_title' => '滑块',
-            'fields' => array(
-                // 自定义轮播图--标题
-                array(
-                    'id' => 'i_slider2_title',
-                    'type' => 'text',
-                    'title' => '标题',
-                    'attributes' => array(
-                        'placeholder' => '例如：滑块01'
-                    )
-                ) ,
-                // 自定义轮播图--图片
-                array(
-                    'id' => 'i_slider2_image',
-                    'type' => 'upload',
-                    'title' => '图片',
-                ) ,
-                // 自定义轮播图--描述
-                array(
-                    'id' => 'i_slider2_text',
-                    'type' => 'text',
-                    'title' => '描述',
-                    'attributes' => array(
-                        'placeholder' => '输入描述'
-                    )
-                ) ,
-                // 自定义轮播图--链接
-                array(
-                    'id' => 'i_slider2_link',
-                    'type' => 'text',
-                    'title' => '链接',
-                    'attributes' => array(
-                        'placeholder' => 'http://...'
-                    )
-                ) ,
-                // 自定义轮播图--新标签
-                array(
-                    'id' => 'i_slider2_newtab',
-                    'type' => 'switcher',
-                    'title' => '新标签打开',
-                    'dependency' => array(
-                        'i_slider2_link',
-                        '!=',
-                        ''
-                    ) ,
-                ) ,
-            )
-        ) ,
-    ) ,
-);
+
 // ------------------------------
 // 页脚                       -
 // ------------------------------
@@ -904,14 +828,6 @@ $options[] = array(
             'type' => 'switcher',
             'default' => true,
             'title' => '显示回到顶部按钮',
-        ) ,
-        // 开启分享按钮
-        array(
-            'id' => 'i_share',
-            'type' => 'switcher',
-            'title' => '开启分享按钮',
-            'default' => true,
-            'help' => '实际上是插入百度分享代码，更多设置可以参考百度官方网站',
         ) ,
         // 显示评论按钮
         array(
@@ -1238,17 +1154,6 @@ $options[] = array(
         array(
             'type' => 'notice',
             'class' => 'info',
-            'content' => '萤火背景',
-        ) ,
-        // 萤火背景
-        array(
-            'id' => 'i_circle',
-            'type' => 'switcher',
-            'title' => '萤火背景',
-        ) ,
-        array(
-            'type' => 'notice',
-            'class' => 'info',
             'content' => '音乐播放器',
         ) ,
         // 音乐播放器
@@ -1268,12 +1173,6 @@ $options[] = array(
                 '==',
                 'true'
             ) ,
-        ) ,
-        // 手机端是否显示
-        array(
-            'id' => 'i_player_mobi',
-            'type' => 'switcher',
-            'title' => '手机端是否关闭',
         ) ,
     )
 );
