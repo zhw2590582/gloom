@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+/* header */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 92;
+  width: $header_w;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+
+  .header_inner {}
+  /* topbar */
+  .topbar {
+    height: $topbar_h;
+    margin-bottom: 30px;
+    padding: 8px 5px 0;
+    background: #fafafa;
+    border-bottom: 1px solid #e5e5e5;
+
+    .skin {
+      margin-top: 1px;
+
+      a {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+        border-radius: 3px;
+
+        &.skin01 {
+          background: #dadada;
+          border: 1px solid #c7c7c7;
+        }
+
+        &.skin02 {
+          background: #dadada;
+          border: 1px solid #c7c7c7;
+        }
+      }
+    }
+
+    .setting {
+      display: inline-block;
+      color: #cecece;
+    }
+  }
+  /* logo */
+  .logo {
+    margin-bottom: 50px;
+
+    .logo_img {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0 15px;
+    }
+
+    .blog_name {
+      padding: 0 15px;
+      line-height: 1.5;
+      color: #9c9c9c;
+    }
+  }
+  /* menu */
+  .menu {
+    .menu-wrapper {
+      .list {
+        .menu-item {
+          list-style: none;
+          text-align: center;
+
+          a {
+            display: block;
+            font-size: 14px;
+            padding: 10px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:hover {
+              color: #02b875;
+              background: #f7f7f7;
+            }
+          }
+
+          &.current-menu-item {
+            a {
+              color: #02b875;
+              background: #efefef;
+            }
+          }
+
+          &.menu-item-has-children {
+            position: relative;
+
+            &:hover .sub-menu {
+              display: block !important;
+            }
+
+            .sub-menu {
+              position: absolute;
+              z-index: 3;
+              top: 0;
+              left: $header_w - 1px;
+              width: $header_w * 2 / 3;
+              display: none;
+              padding: 5px 0;
+              background: #fff;
+              border: 1px solid #e5e5e5;
+
+              .menu-item {
+                text-align: left;
+
+                a {
+                  font-size: 12px;
+                  padding: 8px 0 8px 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

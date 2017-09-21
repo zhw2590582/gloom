@@ -5,8 +5,8 @@
       type: "GET",
       url: "https://raw.githubusercontent.com/zhw2590582/gloom/master/update.json",
       dataType: "json",
-      success: function(update) {
-        callback(update);
+      success: function(date) {
+        callback(date);
       },
       error: function() {
         console.log('链接出错，请重试！');

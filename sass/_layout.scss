@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* layout */
+
+#wrapper {
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  font-size: 14px;
+  background: #fff;
+  color: #777777;
+
+  &.layout_box{
+    .posts article.index-post{
+      width: 49%;
+      float: left;
+      &:nth-of-type(odd){
+        margin-right: 2%;
+      }
+      .meta-tabs, .mate-cat{
+        display: none;
+      }
+    }
+  }
+}
+
+a {
+  color: #9c9c9c;
+  &:hover {
+    color: #444;
+  }
+}

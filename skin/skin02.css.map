@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": ";AACA,QAAQ;ACAR,aAAa;ADGb,OAAO,GACL,OAAO,EAAE,IAAI",
-"sources": ["../sass/skin02.scss","../sass/_mixin.scss"],
+"mappings": ";AACA,QAAQ;AAGR,OAAO,GACL,OAAO,EAAE,eAAe",
+"sources": ["../sass/skin02.scss"],
 "names": [],
 "file": "skin02.css"
 }

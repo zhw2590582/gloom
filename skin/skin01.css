@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* 白色 */
-/* queries */
-.skin02 { display: none; }
+.skin02 { display: none !important; }
 
 /*# sourceMappingURL=skin01.css.map */
