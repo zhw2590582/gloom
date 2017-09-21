@@ -9,7 +9,6 @@
   z-index: 92;
   width: $header_w;
   height: 100%;
-  border-right: 1px solid #e5e5e5;
 
   .header_inner {}
   /* topbar */
@@ -17,8 +16,6 @@
     height: $topbar_h;
     margin-bottom: 30px;
     padding: 8px 5px 0;
-    background: #fafafa;
-    border-bottom: 1px solid #e5e5e5;
 
     .skin {
       margin-top: 1px;
@@ -98,8 +95,6 @@
             line-height: 25px;
             border-radius: 3px;
             border: none;
-            color: #fff;
-            background: #02b875;
           }
         }
       }
@@ -114,8 +109,7 @@
           display: block;
           padding: 6px 10px 6px 15px;
           &:hover{
-            color: #fff;
-            background: #02b875;
+
           }
         }
       }
@@ -134,7 +128,6 @@
     .blog_name {
       padding: 0 15px;
       line-height: 1.5;
-      color: #9c9c9c;
     }
   }
   /* menu */
@@ -154,15 +147,13 @@
             white-space: nowrap;
 
             &:hover {
-              color: #02b875;
-              background: #f7f7f7;
+
             }
           }
 
           &.current-menu-item {
             a {
-              color: #02b875;
-              background: #efefef;
+
             }
           }
 
@@ -181,8 +172,6 @@
               width: $header_w * 2 / 3;
               display: none;
               padding: 5px 0;
-              background: #fff;
-              border: 1px solid #e5e5e5;
 
               .menu-item {
                 text-align: left;

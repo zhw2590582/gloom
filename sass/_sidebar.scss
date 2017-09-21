@@ -9,14 +9,11 @@
   z-index: 91;
   width: $header_w;
   height: 100%;
-  border-right: 1px solid #e5e5e5;
   overflow: hidden;
 
   .topbar {
     height: $topbar_h;
     line-height: $topbar_h;
-    background: #fafafa;
-    border-bottom: 1px solid #e5e5e5;
 
     .widget_btn {
       width: 50%;
@@ -24,8 +21,7 @@
       line-height: $topbar_h;
 
       &.on {
-        color: #02b875;
-        border-bottom: 1px solid #02b875;
+
       }
     }
   }
@@ -159,8 +155,6 @@
           line-height: 26px;
           width: 100%;
           border-radius: 3px;
-          color: #808080;
-          border: 1px solid #ddd;
         }
 
         .search-button {
@@ -237,10 +231,9 @@
           padding: 3px 0 0 10px;
           .name_inner{
             margin-bottom: 6px;
-            color: #444;
           }
           .fa-check-circle{
-            color: #bbb;
+
           }
         }
       }
@@ -267,15 +260,12 @@
       font-weight: normal;
       height: 30px;
       margin-bottom: 15px;
-      color: #444;
-      border-bottom: 1px solid #e5e5e5;
 
       span {
         position: absolute;
         left: 0;
         bottom: 0;
         padding-bottom: 5px;
-        border-bottom: 1px solid #444;
       }
     }
   }

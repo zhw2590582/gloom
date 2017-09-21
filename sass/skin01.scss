@@ -5,3 +5,32 @@
 .skin01{
   display: none !important;
 }
+
+body{
+  color: #666;
+  background: #fff;
+}
+
+a{
+  color: #888;
+  &:hover{
+    color: #777;
+  }
+}
+
+#wrapper{
+  background: #999;
+}
+
+.main-title{
+  color: #444;
+  border-bottom: 1px solid #e5e5e5;
+  span {
+    border-bottom: 1px solid #444;
+  }
+}
+
+.mouse-tooltip {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+}
