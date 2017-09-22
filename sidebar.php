@@ -11,8 +11,8 @@
 <!-- sidebar 开始-->
 <aside id="sidebar">
   <div class="topbar clearfix">
-    <div class="widget_btn text-c hand fl on"><?php echo $widget1; ?></div>
-    <div class="widget_btn text-c hand fr"><?php echo $widget2; ?></div>
+    <div class="widget_btn text-c hand fl text-ellipsis on"><?php echo $widget1; ?></div>
+    <div class="widget_btn text-c hand fr text-ellipsis"><?php echo $widget2; ?></div>
   </div>
   <div class="sidebar_inner">
     <div class="item">

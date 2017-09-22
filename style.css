@@ -177,11 +177,12 @@ img { max-width: 100%; }
 #header .topbar { height: 35px; margin-bottom: 30px; padding: 8px 10px 0; }
 #header .topbar .skin { margin-top: 1px; }
 #header .topbar .skin a { display: inline-block; width: 35px; height: 18px; border-radius: 20px; }
-#header .topbar .skin a.skin01 { background: #dadada; border: 1px solid #c7c7c7; }
+#header .topbar .skin a.skin01 { background: #dadada; border: 1px solid #c7c7c7; -webkit-box-shadow: 0 1px 0px #ffffff; box-shadow: 0 1px 0px #ffffff; }
+#header .topbar .skin a.skin01::before { content: ""; display: inline-block; width: 16px; height: 14px; margin: 1px 0 0 16px; border-radius: 20px; border: 1px solid #cecece; background: #f9f9f9; -webkit-box-shadow: 0 1px 0px #ffffff inset; box-shadow: 0 1px 0px #ffffff inset; }
 #header .topbar .skin a.skin02 { background: #dadada; border: 1px solid #c7c7c7; -webkit-box-shadow: 0 1px 0px #ffffff; box-shadow: 0 1px 0px #ffffff; }
 #header .topbar .skin a.skin02::before { content: ""; display: inline-block; width: 16px; height: 14px; margin: 1px 0 0 2px; border-radius: 20px; border: 1px solid #cecece; background: #f9f9f9; -webkit-box-shadow: 0 1px 0px #ffffff inset; box-shadow: 0 1px 0px #ffffff inset; }
 #header .topbar .setting { position: relative; display: inline-block; }
-#header .topbar .setting .setting-pop { position: absolute; top: 40px; left: -10px; background: #fff; border-radius: 4px; border: 1px solid rgba(27, 31, 35, 0.15); -webkit-box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15); box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15); }
+#header .topbar .setting .setting-pop { position: absolute; top: 40px; left: -10px; background: #fff; border-radius: 4px; border: 1px solid rgba(27, 31, 35, 0.15); -webkit-box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15); box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15); }
 #header .topbar .setting .setting-pop::before { position: absolute; top: -16px; left: 9px; display: inline-block; content: ""; border: 8px solid transparent; border-bottom-color: rgba(27, 31, 35, 0.15); }
 #header .topbar .setting .setting-pop::after { position: absolute; top: -14px; left: 10px; display: inline-block; content: ""; border: 7px solid transparent; border-bottom-color: #fff; }
 #header .topbar .setting #login-form { width: 200px; padding: 10px; font-size: 12px; }
@@ -206,7 +207,9 @@ img { max-width: 100%; }
 /* sidebar */
 #sidebar { position: fixed; left: 235px; top: 0; bottom: 0; z-index: 91; width: 235px; height: 100%; overflow: hidden; }
 #sidebar .topbar { height: 35px; line-height: 35px; }
-#sidebar .topbar .widget_btn { width: 50%; height: 35px; line-height: 35px; }
+#sidebar .topbar .widget_btn { width: 50%; height: 35px; line-height: 35px; padding: 0 5px; }
+#sidebar .topbar .widget_btn.on { position: relative; }
+#sidebar .topbar .widget_btn.on::before { content: ""; position: absolute; left: 50%; bottom: 0; width: 0; height: 0; }
 #sidebar .sidebar_inner { height: 100%; width: 270px; padding: 20px 30px 50px 10px; overflow-y: scroll; overflow-x: hidden; }
 #sidebar .sidebar_inner aside { margin-bottom: 30px; }
 #sidebar .sidebar_inner aside > ul li { padding-bottom: 5px; margin-bottom: 5px; line-height: 20px; }
@@ -249,7 +252,7 @@ img { max-width: 100%; }
 #content .topbar { position: fixed; z-index: 90; left: 0; top: 0; right: 0; height: 35px; max-width: 2000px; line-height: 35px; padding: 0 20px 0 490px; }
 #content .topbar .fa-bell-o { margin: 10px 10px 0 0; }
 #content .topbar .layouts { margin-top: 8px; }
-#content .topbar .layouts span { height: 8px; margin-bottom: 2px; border-radius: 2px; background: #bbbbbb; }
+#content .topbar .layouts span { height: 8px; margin-bottom: 2px; border-radius: 2px; }
 #content .topbar .layouts .layout_width { display: inline-block; margin-right: 10px; width: 18px; }
 #content .topbar .layouts .layout_width span { display: block; width: 18px; }
 #content .topbar .layouts .layout_box { display: inline-block; width: 20px; }

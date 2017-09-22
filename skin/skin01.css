@@ -3,9 +3,8 @@
 .skin01 { display: none !important; }
 
 body { color: #555; background: #f4f4f4; }
-
-a { color: #888; }
-a:hover { color: #777; }
+body a { color: #888; }
+body a:hover { color: #777; }
 
 #wrapper { background: url("../images/skin/bg.png") no-repeat top left fixed; }
 
@@ -13,5 +12,18 @@ a:hover { color: #777; }
 .main-title span { border-bottom: 1px solid #444; }
 
 .mouse-tooltip { color: #fff; background: rgba(0, 0, 0, 0.6); }
+
+#header .topbar .fa { color: #bbbbbb; }
+#header .topbar .setting-pop a:hover { color: #fff; background: #1d90e6; }
+
+#sidebar .topbar .widget_btn { color: #999; }
+#sidebar .topbar .widget_btn:hover { color: #444; }
+#sidebar .topbar .widget_btn.on { color: #444; border-bottom: 1px solid #444; }
+#sidebar .topbar .widget_btn.on::before { margin-left: -3px; border-right: 5px solid transparent; border-bottom: 3px solid #444; border-left: 5px solid transparent; }
+
+#content .topbar .fa { color: #bbbbbb; }
+#content .topbar .notice { color: #999; }
+#content .topbar .layouts span { background: #bbbbbb; }
+#content .topbar .layouts a:hover span { background: #444; }
 
 /*# sourceMappingURL=skin01.css.map */
