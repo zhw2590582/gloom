@@ -174,6 +174,12 @@ img { max-width: 100%; }
 #wrapper.layout_box .posts article.index-post:nth-of-type(odd) { margin-right: 2%; }
 #wrapper.layout_box .posts article.index-post .post-left { width: 170px; }
 #wrapper.layout_box .posts article.index-post .meta-tabs, #wrapper.layout_box .posts article.index-post .mate-cat { display: none; }
+#wrapper.sidebar_off .sidebar_switcher { left: 234px; }
+#wrapper.sidebar_off .sidebar_switcher .fa-angle-left { display: none; }
+#wrapper.sidebar_off .sidebar_switcher .fa-angle-right { display: inline-block; }
+#wrapper.sidebar_off #sidebar, #wrapper.sidebar_off #topbar .item2 { display: none; }
+#wrapper.sidebar_off #content { padding-left: 235px; }
+#wrapper.sidebar_off #topbar .item3, #wrapper.sidebar_off #footer { padding-left: 255px; }
 
 #topbar { position: fixed; z-index: 99; width: 100%; max-width: 2000px; height: 36px; line-height: 36px; }
 #topbar::before { content: ""; position: fixed; z-index: -1; left: 0; top: 0; right: 0; height: 36px; width: 100%; }
@@ -261,6 +267,9 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner #profile .profile-social li { list-style: none; float: left; width: 20%; height: 20px; line-height: 20px; font-size: 18px; text-align: center; }
 #sidebar .sidebar_inner .widget-title { position: relative; font-size: 16px; font-weight: normal; height: 30px; margin-bottom: 15px; }
 #sidebar .sidebar_inner .widget-title span { position: absolute; left: 0; bottom: -1px; padding-bottom: 5px; }
+
+.sidebar_switcher { position: fixed; z-index: 97; left: 469px; top: 50%; width: 10px; height: 60px; line-height: 60px; text-align: center; border-top-right-radius: 15px; border-bottom-right-radius: 15px; }
+.sidebar_switcher .fa-angle-right { display: none; }
 
 /* content */
 #content { position: relative; padding-left: 470px; max-width: 2000px; padding-top: 36px; }
@@ -357,8 +366,9 @@ img { max-width: 100%; }
 .link_box .blogroll li img { float: left; margin: 9px 5px 0 0; width: 15px; height: 15px; }
 
 /* footer */
-#footer { position: relative; z-index: 90; padding-left: 490px; padding-right: 20px; max-width: 2000px; min-height: 120px; height: 120px; }
+#footer { position: relative; z-index: 90; padding-left: 490px; padding-right: 20px; max-width: 2000px; }
 #footer .footer-inner { position: relative; width: 100%; height: 100%; padding: 20px 20px 0; border-top-left-radius: 2px; border-bottom-right-radius: 2px; }
+#footer .footer-inner .footer-text { word-break: break-all; padding-bottom: 50px; min-height: 100px; }
 #footer .footer-inner .footer-end { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 35px; line-height: 35px; margin: 10px 0; text-align: center; }
 
 /* plugins */
@@ -429,7 +439,7 @@ img { max-width: 100%; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-current { height: 5px; border-radius: 0; background: #3caac8; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-mute, .audio-wrapper .mejs-container .mejs-controls .mejs-time, .audio-wrapper .mejs-container .mejs-controls .mejs-time-float { display: none !important; }
 
-.notice-pop { position: fixed; z-index: 10; width: 340px; height: 90px; bottom: 100px; left: 50%; margin-left: -170px; background: #000; background: rgba(18, 18, 18, 0.85); -webkit-box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35); box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35); border-radius: 45px; visibility: visibility; opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); -webkit-transition: all 0.6s ease; transition: all 0.6s ease; }
+.notice-pop { position: fixed; z-index: 99; width: 340px; height: 90px; bottom: 100px; left: 50%; margin-left: -170px; background: #000; background: rgba(18, 18, 18, 0.85); -webkit-box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35); box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35); border-radius: 45px; visibility: visibility; opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); -webkit-transition: all 0.6s ease; transition: all 0.6s ease; }
 .notice-pop.open { visibility: visible; opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
 .notice-pop .notice-img { width: 64px; height: 64px; border-radius: 50%; margin: 13px 0 0 13px; }
 .notice-pop .notice-img img { width: 64px; height: 64px; border-radius: 50%; }

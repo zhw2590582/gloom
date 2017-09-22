@@ -168,5 +168,5 @@
 		<?php } ?>
 
 		<!-- content 开始-->
-		<section id="content" name="content">
+		<section id="content">
 	    <div class="content_inner">

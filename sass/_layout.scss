@@ -34,6 +34,27 @@
       }
     }
   }
+
+  &.sidebar_off{
+    .sidebar_switcher{
+      left: $header_w - 1px;
+      .fa-angle-left{
+        display: none;
+      }
+      .fa-angle-right{
+        display: inline-block;
+      }
+    }
+    #sidebar, #topbar .item2{
+      display: none;
+    }
+    #content{
+      padding-left: $header_w;
+    }
+    #topbar .item3, #footer{
+      padding-left: $header_w + 20px;
+    }
+  }
 }
 
 #topbar{

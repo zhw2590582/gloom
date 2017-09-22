@@ -97,6 +97,11 @@
       $('.sidebar_inner .item').hide().eq(index).show();
     });
 
+    // 切换边栏
+    $(".sidebar_switcher").click(function() {
+      $('#wrapper').toggleClass('sidebar_off');
+    });
+
     // 登陆弹窗
     $("#user_login").attr('placeholder', '用户名');
     $("#user_pass").attr('placeholder', '密码');
