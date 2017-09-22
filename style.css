@@ -175,7 +175,7 @@ img { max-width: 100%; }
 #wrapper.layout_box .posts article.index-post .post-left { width: 170px; }
 #wrapper.layout_box .posts article.index-post .meta-tabs, #wrapper.layout_box .posts article.index-post .mate-cat { display: none; }
 
-#topbar { position: fixed; z-index: 99; width: 100%; height: 36px; line-height: 36px; }
+#topbar { position: fixed; z-index: 99; width: 100%; max-width: 2000px; height: 36px; line-height: 36px; }
 #topbar::before { content: ""; position: fixed; z-index: -1; left: 0; top: 0; right: 0; height: 36px; width: 100%; }
 #topbar .item1 { width: 235px; height: 100%; padding: 0 10px 0; }
 #topbar .item1 .skin { margin-top: 1px; }
@@ -357,9 +357,9 @@ img { max-width: 100%; }
 .link_box .blogroll li img { float: left; margin: 9px 5px 0 0; width: 15px; height: 15px; }
 
 /* footer */
-#footer { position: relative; z-index: 90; padding-left: 470px; max-width: 2000px; min-height: 120px; height: 120px; }
-#footer .footer-inner { position: relative; width: 100%; height: 100%; padding: 20px 20px 0; }
-#footer .footer-inner .footer-end { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 35px; line-height: 35px; text-align: center; }
+#footer { position: relative; z-index: 90; padding-left: 490px; padding-right: 20px; max-width: 2000px; min-height: 120px; height: 120px; }
+#footer .footer-inner { position: relative; width: 100%; height: 100%; padding: 20px 20px 0; border-top-left-radius: 2px; border-bottom-right-radius: 2px; }
+#footer .footer-inner .footer-end { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 35px; line-height: 35px; margin: 10px 0; text-align: center; }
 
 /* plugins */
 #mouse-tooltip { position: absolute; z-index: 9999; top: 0; left: 0; pointer-events: none; }

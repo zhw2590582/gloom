@@ -28,7 +28,7 @@
 			<div class="footer-inner">
 	      <?php if ($footer_text && !is_mobile()) {?>
 	        <div class="footer-text wb clearfix">
-	            <?php echo $edit ?>
+	          <?php echo $edit ?>
 	        </div>
 	      <?php }?>
 				<div class="footer-end">
@@ -109,7 +109,6 @@
 		</div>
 		<!-- 公告弹窗 结束 -->
 	<?php }?>
-
 
 	<?php if(!empty($tongji)){?>
 		<!-- 统计代码 开始 -->
