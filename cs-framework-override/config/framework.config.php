@@ -759,35 +759,6 @@ $options[] = array(
         ) ,
     ) ,
 );
-// ------------------------------
-// 下载                       -
-// ------------------------------
-$options[] = array(
-    'name' => 'download',
-    'title' => '下载',
-    'icon' => 'fa fa-download',
-    'fields' => array(
-        // 评论回复可见
-        array(
-            'id' => 'i_download_view',
-            'type' => 'switcher',
-            'title' => '评论回复可见',
-        ) ,
-        // 解压密码
-        array(
-            'id' => 'i_download_jieya',
-            'type' => 'text',
-            'title' => '解压密码',
-            'after' => '<p class="cs-text-muted">留空即无</p>',
-        ) ,
-        // 下载声明
-        array(
-            'id' => 'i_download_shengming',
-            'type' => 'textarea',
-            'title' => '下载声明',
-        ) ,
-    ) ,
-);
 
 // ------------------------------
 // 页脚                       -

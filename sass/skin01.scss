@@ -144,6 +144,11 @@ body{
         color: #8f8e94;
       }
     }
+    &.single-post{
+      .post-top{
+        background: #f4f4f4;
+      }
+    }
     .post-sticky{
       color: #fff;
       background: #02b875;
@@ -170,4 +175,14 @@ body{
       color: #fff;
       background: #02b875;
     }
+}
+
+.post-download {
+  background: #f4f4f4;
+  .link{
+    color: #02b875;
+  }
+  .reply{
+    color: red;
+  }
 }

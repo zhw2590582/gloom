@@ -97,6 +97,15 @@
   }
   add_filter('body_class','load_css');
 
+  /* 手机类名 */
+  function mobile_css($classes) {
+    if (is_mobile()) {
+      $classes[] = 'mobile';
+    }
+    return $classes;
+  }
+  add_filter('body_class','mobile_css');
+
   /* 引入密钥验证 */
   include ('verify.php');
 

@@ -11,12 +11,10 @@
   $tag = cs_get_option('i_post_tag');
   $like = cs_get_option('i_post_like');
 
-  $jieya = cs_get_option('i_download_jieya');
-  $dlview = cs_get_option('i_download_view');
-
   $meta_data = get_post_meta(get_the_ID(), 'standard_options', true);
   $music = $meta_data['i_post_music'];
   $download = $meta_data['i_download'];
+  $dlview = $meta_data['i_download_view'];
   $web = $meta_data['i_download_web'];
   $charge = $meta_data['i_download_charge'];
   $link = $meta_data['i_download_link'];
@@ -138,16 +136,16 @@
 
 <?php if ( is_single() && $download && !is_mobile() ) {?>
   <!-- 下载盒子 开始 -->
-  <div class="download-wrap m_hide">
-    <div class="post-download <?php if (!current_user_can('level_10') && $dlview == true){echo 'dlview';}?>">
-      <div class="dl-item dl-title"><i class="fa fa-download"></i>资源下载</div>
-      <div class="dl-box">
-        <div class="dl-item dl-web">官方网站：<a href="<?php echo $web; ?>" target="_black">访问</a></div>
-        <div class="dl-item dl-fei">软件性质：<?php if ( $charge == 'i_charge01' ) {echo '免费';}else { echo '收费';} ?></div>
-        <div class="dl-item dl-link">下载地址：<a href="javascript:void(0)" data-dl="<?php echo $link; ?>" data-code="<?php if ( $code ) {echo $code;}else { echo '无';} ?>"><span>点击下载</span></a></div>
-        <div class="dl-code">解压密码：<?php if ( $jieya ) {echo $jieya;}else { echo '无';} ?></div>
-      </div>
-      <div class="dl-view">资源评论回复可见！</div>
+  <div class="download-wrap">
+    <div class="post-download <?php if (!current_user_can('level_10') && $dlview == true){ echo 'dlview'; }?>">
+      <p><i class="fa fa-download"></i>资源下载</p>
+      <p>官方网站：<a href="<?php echo $web; ?>" target="_black">访问</a></p>
+      <p>软件性质：<?php if ($charge == 'i_charge01'){ echo '免费'; } else { echo '收费'; } ?></p>
+      <p>下载地址：
+        <a class="link" href="<?php echo $link; ?>" target="_blank">点击下载</a>
+        <a class="reply" href="javascript:void(0)">资源评论回复可见！</a>
+      </p>
+      <p>提取密码：<?php if ($code) { echo $code; }else { echo '无';} ?></p>
     </div>
   </div>
   <!-- 下载盒子 结束 -->

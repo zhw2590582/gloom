@@ -290,9 +290,11 @@ img { max-width: 100%; }
 .posts article.index-post .post-right .post-title a { font-size: 20px; }
 .posts article.index-post .post-right .post-content { height: 130px; line-height: 1.7; overflow: hidden; }
 .posts article.index-post .post-right .post-content::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 30px; background: #fff; background: rgba(255, 255, 255, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(255, 255, 255, 0.1)), color-stop(35%, rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.9))); background: linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9)); }
+.posts article.single-post { padding: 15px; }
 .posts article.single-post .post-top { margin-bottom: 20px; padding: 10px; }
 .posts article.single-post .post-top .item { margin-right: 20px; }
 .posts article.single-post .post-top .item .fa { margin-right: 5px; }
+.posts article.single-post .post-top .item.edit { margin-right: 0; }
 .posts article.single-post .post-title a { font-size: 26px; }
 .posts article.single-post .post-content { font-size: 16px; line-height: 2 !important; margin-bottom: 50px; }
 .posts article.single-post .post-copyright { margin-bottom: 30px; }
@@ -300,7 +302,6 @@ img { max-width: 100%; }
 .posts article.single-post .post-related li { display: inline-block; width: 25%; height: 130px; padding: 0 5px; }
 .posts article.single-post .post-related li a { position: relative; display: block; width: 100%; height: 100%; border-radius: 5px; overflow: hidden; }
 .posts article.single-post .post-related li a p { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50px; padding: 25px 10px 0 10px; }
-.posts article.single-post .post-meta { margin-bottom: 50px; }
 .posts article.single-post .post-meta li { list-style: none; margin-right: 10px; }
 .posts article.single-post .post-meta li.meta-like { margin-right: 0; }
 .posts article.single-post .post-meta li.meta-tabs a { display: inline-block; }
@@ -437,6 +438,13 @@ img { max-width: 100%; }
 .notice-pop .notice-txt .notice-content { color: #999; font-size: 12px; max-height: 25px; margin-bottom: 10px; overflow: hidden; }
 .notice-pop .notice-btn a { color: #fff; margin-right: 15px; }
 
-.m_show { display: none; }
+.download-wrap { margin: 30px 0; }
+.download-wrap .post-download { padding: 10px; }
+.download-wrap .post-download .fa { margin-right: 10px; }
+.download-wrap .post-download p { height: 30px; line-height: 30px; }
+.download-wrap .post-download .link { display: inline-block; }
+.download-wrap .post-download .reply { display: none; }
+.download-wrap .dlview .link { display: none; }
+.download-wrap .dlview .reply { display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

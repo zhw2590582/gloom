@@ -181,6 +181,12 @@ $options[]    = array(
         ),
 
         array(
+          'id'    	  => 'i_download_view',
+          'type'      => 'switcher',
+          'title'     => '回复可见',
+        ),
+
+        array(
           'id'         => 'i_download_web',
           'type'       => 'text',
           'title'      => '官方网站',

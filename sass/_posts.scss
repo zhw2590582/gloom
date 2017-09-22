@@ -46,6 +46,7 @@
       }
     }
     &.single-post{
+      padding: 15px;
       .post-top{
         margin-bottom: 20px;
         padding: 10px;
@@ -53,6 +54,9 @@
           margin-right: 20px;
           .fa{
             margin-right: 5px;
+          }
+          &.edit{
+            margin-right: 0;
           }
         }
       }
@@ -97,7 +101,6 @@
         }
       }
       .post-meta{
-        margin-bottom: 50px;
         li{
           list-style: none;
           margin-right: 10px;
