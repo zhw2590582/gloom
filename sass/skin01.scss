@@ -7,31 +7,32 @@
 }
 
 body{
-  color: #555;
+  color: #888;
   background: #f4f4f4;
   a{
     color: #888;
     &:hover{
-      color: #777;
+      color: #02b875;
     }
   }
 }
 
 #wrapper{
-  background: url("../images/skin/bg.png") repeat-y fixed;
+  background: #f4f4f4;
 }
 
 .main-title{
   color: #444;
   border-bottom: 1px solid #e5e5e5;
   span {
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #02b875;
   }
 }
 
 .mouse-tooltip {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  color: #777;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
 }
 
 .bg-img{
@@ -39,11 +40,10 @@ body{
 }
 
 #topbar{
-  background: url("../images/skin/topbar2.png") repeat-x;
-  &::before{
-    background: url("../images/skin/topbar.png") no-repeat;
-  }
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
   .item1{
+    border-right: 1px solid #e5e5e5;
     .fa{
       color: #bbbbbb;
     }
@@ -57,18 +57,19 @@ body{
     }
   }
   .item2{
+    border-right: 1px solid #e5e5e5;
     .widget_btn{
       color: #999;
       &:hover{
         color: #444;
       }
       &.on{
-        color: #444;
-        border-bottom: 1px solid #444;
+        color: #02b875;
+        border-bottom: 1px solid #02b875;
         &::before{
           margin-left: -3px;
           border-right: 5px solid transparent;
-          border-bottom: 3px solid #444;
+          border-bottom: 3px solid #02b875;
           border-left: 5px solid transparent;
         }
       }
@@ -86,18 +87,31 @@ body{
         background: #bbbbbb;
       }
       a:hover span{
-        background: #444;
+        background: #02b875;
       }
     }
   }
 }
 
 #header{
-
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  .blog_name {
+    color: #999;
+  }
+  .sub-menu{
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+  .menu-item a:hover, .current_page_item a{
+    color: #02b875;
+    background: #f4f4f4;
+  }
 }
 
 #sidebar{
-
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
 }
 
 #content{

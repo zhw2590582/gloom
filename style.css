@@ -161,7 +161,7 @@ img { max-width: 100%; }
 
 .bg-img { background-size: cover; background-position: center center; background-repeat: no-repeat; }
 
-.bg-gradient { color: rgba(255, 255, 255, 0.95); background: #000; background: rgba(0, 0, 0, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(0, 0, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0.2)), color-stop(65%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.66))); background: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.66)); }
+.bg-gradient { opacity: .75; color: rgba(255, 255, 255, 0.95); background: #000; background: rgba(0, 0, 0, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(0, 0, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0.2)), color-stop(65%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.66))); background: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.66)); }
 
 .main-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; }
 .main-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; }
@@ -405,13 +405,13 @@ img { max-width: 100%; }
 #awaiting_comments a { color: #d32; font-size: 14px; text-decoration: none; }
 
 .audio-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.audio-wrapper .mejs-container { height: 100% !important; overflow: hidden; background: rgba(0, 0, 0, 0.3); }
+.audio-wrapper .mejs-container { height: 100% !important; overflow: hidden; background: transparent; }
 .audio-wrapper .mejs-container .mejs-inner { height: 100%; }
 .audio-wrapper .mejs-container .mejs-controls { position: relative; background: transparent; height: 100%; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-pause, .audio-wrapper .mejs-container .mejs-controls .mejs-play { position: absolute; left: 50%; top: 50%; height: 50px; width: 50px; margin-left: -25px; margin-top: -25px; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-pause button, .audio-wrapper .mejs-container .mejs-controls .mejs-play button { height: 50px; width: 50px; line-height: 50px; margin: 0; background: none; font-family: FontAwesome; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-pause button:focus, .audio-wrapper .mejs-container .mejs-controls .mejs-play button:focus { outline: none; }
-.audio-wrapper .mejs-container .mejs-controls .mejs-play button:before { color: rgba(255, 255, 255, 0.75); content: "\f144"; font-size: 60px; line-height: 60px; }
+.audio-wrapper .mejs-container .mejs-controls .mejs-play button:before { color: rgba(255, 255, 255, 0.9); content: "\f144"; font-size: 50px; line-height: 50px; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-pause button:before { color: rgba(255, 255, 255, 0.6); content: "\f04c"; font-size: 40px; line-height: 50px; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail { position: absolute; top: 0; height: 5px; width: 100% !important; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total { position: absolute; top: 0; margin: 0; height: 5px; border-radius: 0; width: 100% !important; background: rgba(0, 0, 0, 0.2); }

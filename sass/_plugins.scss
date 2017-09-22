@@ -310,7 +310,7 @@
   .mejs-container {
     height: 100% !important;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.3);
+    background: transparent;
 
     .mejs-inner {
       height: 100%;
@@ -348,10 +348,10 @@
       .mejs-play {
         button {
           &:before {
-            color: rgba(255, 255, 255, 0.75);
+            color: rgba(255, 255, 255, 0.9);
             content: "\f144";
-            font-size: 60px;
-            line-height: 60px;
+            font-size: 50px;
+            line-height: 50px;
           }
         }
       }
