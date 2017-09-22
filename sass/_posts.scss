@@ -2,7 +2,12 @@
 /* posts */
 
 .posts{
+  .ias-trigger-prev{
+    display: none !important;
+  }
   article{
+    padding: 10px;
+    border-radius: 2px;
     margin-bottom: 20px;
     &.index-post{
       .post-inner{

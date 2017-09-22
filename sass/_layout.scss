@@ -26,6 +26,9 @@
       &:nth-of-type(odd){
         margin-right: 2%;
       }
+      .post-left{
+        width: $featured_w - 30px;
+      }
       .meta-tabs, .mate-cat{
         display: none;
       }
