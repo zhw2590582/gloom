@@ -48,11 +48,32 @@ body{
       color: #bbbbbb;
     }
     .setting-pop{
+      background: #fff;
+      border: 1px solid rgba(27,31,35,0.15);
+      box-shadow: 0 1px 5px rgba(27,31,35,0.15);
+      &::before{
+        border: 8px solid transparent;
+        border-bottom-color: rgba(27,31,35,0.15);
+      }
+      &::after{
+        border: 7px solid transparent;
+        border-bottom-color: #fff;
+      }
       a{
         &:hover{
           color: #fff;
-          background: #1d90e6;
+          background: #02b875;
         }
+      }
+    }
+    #login-form{
+      .input{
+        border: 1px solid #ddd;
+      }
+      #wp-submit{
+        color: #fff;
+        border: 1px solid #02b875;
+        background: #02b875;
       }
     }
   }

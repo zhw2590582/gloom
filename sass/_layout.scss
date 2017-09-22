@@ -138,18 +138,13 @@
         top: $topbar_h + 5px;
         left: -10px;
         line-height: 1.2;
-        background: #fff;
         border-radius: 4px;
-        border: 1px solid rgba(27,31,35,0.15);
-        box-shadow: 0 1px 5px rgba(27,31,35,0.15);
         &::before{
           position: absolute;
           top: -16px;
           left: 9px;
           display: inline-block;
           content: "";
-          border: 8px solid transparent;
-          border-bottom-color: rgba(27,31,35,0.15);
         }
         &::after{
           position: absolute;
@@ -157,8 +152,6 @@
           left: 10px;
           display: inline-block;
           content: "";
-          border: 7px solid transparent;
-          border-bottom-color: #fff;
         }
       }
       #login-form{
@@ -175,7 +168,6 @@
             height: 25px;
             line-height: 25px;
             padding: 0 5px;
-            border: 1px solid #ddd;
             border-radius: 3px;
           }
           #wp-submit{
@@ -197,9 +189,6 @@
         a{
           display: block;
           padding: 6px 10px 6px 15px;
-          &:hover{
-
-          }
         }
       }
     }
