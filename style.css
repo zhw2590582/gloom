@@ -285,7 +285,7 @@ img { max-width: 100%; }
 /* posts */
 .posts .ias-trigger-prev { display: none !important; }
 .posts article { padding: 10px; border-radius: 2px; margin-bottom: 20px; }
-.posts article.index-post .post-right { padding: 0 15px 0 15px; }
+.posts article.index-post .post-right { padding: 0 0 0 15px; }
 .posts article.index-post .post-right .post-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .posts article.index-post .post-right .post-title a { font-size: 20px; }
 .posts article.index-post .post-right .post-content { height: 130px; overflow: hidden; }
@@ -321,8 +321,8 @@ img { max-width: 100%; }
 .posts article .post-right .post-title a { display: inline-block; line-height: 1.5; }
 .posts article .post-right .post-content { position: relative; line-height: 1.5; }
 .posts article .post-right .post-content .read_more { display: none; }
-.posts article .post-right .post-meta { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 15px; }
-.posts article .post-right .post-meta li { list-style: none; margin-right: 10px; }
+.posts article .post-right .post-meta { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 0 0 15px; }
+.posts article .post-right .post-meta li { list-style: none; margin-right: 15px; }
 .posts article .post-right .post-meta li.meta-like { margin-right: 0; }
 .posts article .post-right .post-meta li.meta-tabs a { display: inline-block; }
 .posts article .post-right .post-meta li.mate-cat li { display: inline-block; }

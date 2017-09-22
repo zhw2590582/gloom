@@ -14,7 +14,7 @@
 
       }
       .post-right{
-        padding: 0 15px 0 15px;
+        padding: 0 0 0 15px;
         .post-title{
           overflow: hidden;
           text-overflow: ellipsis;
@@ -199,10 +199,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 0 15px;
+        padding: 0 0 0 15px;
         li{
           list-style: none;
-          margin-right: 10px;
+          margin-right: 15px;
           &.meta-like{
             margin-right: 0;
           }
