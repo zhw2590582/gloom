@@ -154,7 +154,7 @@
         </article>
       <?php endwhile; ?>
     <?php endif; ?>
-    <?php if(is_single ()) { ?>
+    <?php if(is_single() && !is_mobile()) { ?>
       <?php if ('open' == $post->comment_status) { ?>
       <div id="comment-jump" class="comments">
         <?php comments_template(); ?>

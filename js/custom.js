@@ -243,6 +243,15 @@
       });
     }
 
+    //自适应菜单
+    $(".m-menu").click(function() {
+        $("#m-menu").addClass("open");
+    });
+
+    $(".m-menu-close").click(function() {
+        $("#m-menu").removeClass("open");
+    });
+
     // 图像懒加载
     echo.init({offset: 100, throttle: 250, unload: false});
 

@@ -56,4 +56,8 @@ body a:hover { color: #02b875; }
 .post-download .link { color: #02b875; }
 .post-download .reply { color: red; }
 
+#m-header { background: #fff; border-bottom: 1px solid #ddd; }
+
+#m-menu { background: #fff; border-left: 1px solid #ddd; }
+
 /*# sourceMappingURL=skin01.css.map */
