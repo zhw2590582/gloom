@@ -5,15 +5,9 @@
   $profile_name = cs_get_option('i_profile_name');
   $profile_title = cs_get_option('i_profile_title');
   $profile_content = cs_get_option('i_profile_content');
-  $widget1 = cs_get_option('i_widget1');
-  $widget2 = cs_get_option('i_widget2');
 ?>
 <!-- sidebar 开始-->
 <aside id="sidebar">
-  <div class="topbar clearfix">
-    <div class="widget_btn text-c hand fl text-ellipsis on"><?php echo $widget1; ?></div>
-    <div class="widget_btn text-c hand fr text-ellipsis"><?php echo $widget2; ?></div>
-  </div>
   <div class="sidebar_inner">
     <div class="item">
       <?php if ($profile == true) {?>

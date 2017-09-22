@@ -10,29 +10,7 @@
   width: $header_w;
   height: 100%;
   overflow: hidden;
-
-  .topbar {
-    height: $topbar_h;
-    line-height: $topbar_h;
-
-    .widget_btn {
-      width: 50%;
-      height: $topbar_h;
-      line-height: $topbar_h;
-      padding: 0 5px;
-      &.on {
-        position: relative;
-        &::before{
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          width: 0;
-          height: 0;
-        }
-      }
-    }
-  }
+  padding-top: $topbar_h;
 
   .sidebar_inner {
     height: 100%;

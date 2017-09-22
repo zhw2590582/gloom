@@ -15,17 +15,15 @@ body a:hover { color: #777; }
 
 .mouse-tooltip { color: #fff; background: rgba(0, 0, 0, 0.6); }
 
-#header .topbar .fa { color: #bbbbbb; }
-#header .topbar .setting-pop a:hover { color: #fff; background: #1d90e6; }
-
-#sidebar .topbar .widget_btn { color: #999; }
-#sidebar .topbar .widget_btn:hover { color: #444; }
-#sidebar .topbar .widget_btn.on { color: #444; border-bottom: 1px solid #444; }
-#sidebar .topbar .widget_btn.on::before { margin-left: -3px; border-right: 5px solid transparent; border-bottom: 3px solid #444; border-left: 5px solid transparent; }
-
-#content .topbar .fa { color: #bbbbbb; }
-#content .topbar .notice { color: #999; }
-#content .topbar .layouts span { background: #bbbbbb; }
-#content .topbar .layouts a:hover span { background: #444; }
+#topbar .item1 .fa { color: #bbbbbb; }
+#topbar .item1 .setting-pop a:hover { color: #fff; background: #1d90e6; }
+#topbar .item2 .widget_btn { color: #999; }
+#topbar .item2 .widget_btn:hover { color: #444; }
+#topbar .item2 .widget_btn.on { color: #444; border-bottom: 1px solid #444; }
+#topbar .item2 .widget_btn.on::before { margin-left: -3px; border-right: 5px solid transparent; border-bottom: 3px solid #444; border-left: 5px solid transparent; }
+#topbar .item3 .fa { color: #bbbbbb; }
+#topbar .item3 .notice { color: #999; }
+#topbar .item3 .layouts span { background: #bbbbbb; }
+#topbar .item3 .layouts a:hover span { background: #444; }
 
 /*# sourceMappingURL=skin01.css.map */
