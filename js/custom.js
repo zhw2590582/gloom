@@ -110,7 +110,7 @@
     });
 
     // 通知弹窗
-    sessionStorage.getItem("notice") || $(".notice-pop").addClass("open");
+    sessionStorage.getItem("notice") && $(".notice-pop").remove() || $(".notice-pop").addClass("open");
     $(".notice-close").click(function() {
       $(".notice-pop").hide();
       sessionStorage.setItem("notice", "hide");

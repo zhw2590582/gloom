@@ -54,7 +54,7 @@
         </div>
       <?php } ?>
       <?php if (is_sticky()) { ?>
-        <div class="post-sticky with-tooltip m_hide" data-tooltip="置顶文章"></div>
+        <div class="post-sticky f12">置顶</div>
       <?php } ?>
       <div class="post-tool bg-gradient">
         <?php if ($view) { ?>

@@ -311,6 +311,7 @@ img { max-width: 100%; }
 .posts article .post-left .post-tool { position: absolute; left: 0; right: 0; bottom: 0; height: 80px; padding: 40px 5px 0 5px; }
 .posts article .post-left .post-tool .view { margin-bottom: 5px; }
 .posts article .post-left .post-tool .fa { width: 20px; text-align: center; }
+.posts article .post-left .post-sticky { position: absolute; left: 0; top: 0; padding: 3px 5px; }
 .posts article .post-left .post-edit { position: absolute; left: 0; top: 0; width: 50px; height: 30px; text-align: center; line-height: 30px; }
 .posts article .post-left .post-edit .fa { width: 20px; text-align: center; }
 .posts article .post-right { position: relative; }
