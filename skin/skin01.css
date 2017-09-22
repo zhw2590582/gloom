@@ -6,13 +6,14 @@ body { color: #555; background: #f4f4f4; }
 body a { color: #888; }
 body a:hover { color: #777; }
 
-#wrapper { background: url("../images/skin/bg.png") no-repeat top left fixed; }
-#wrapper::after { background: url("../images/skin/bg2.png") repeat-y top left fixed; }
+#wrapper { background: url("../images/skin/bg.png") repeat-y fixed; }
 
 .main-title { color: #444; border-bottom: 1px solid #e5e5e5; }
 .main-title span { border-bottom: 1px solid #444; }
 
 .mouse-tooltip { color: #fff; background: rgba(0, 0, 0, 0.6); }
+
+.bg-img { background-color: #ececec; }
 
 #topbar { background: url("../images/skin/topbar2.png") repeat-x; }
 #topbar::before { background: url("../images/skin/topbar.png") no-repeat; }

@@ -18,10 +18,7 @@ body{
 }
 
 #wrapper{
-  background: url("../images/skin/bg.png") no-repeat top left fixed;
-  &::after{
-    background: url("../images/skin/bg2.png") repeat-y top left fixed;
-  }
+  background: url("../images/skin/bg.png") repeat-y fixed;
 }
 
 .main-title{
@@ -35,6 +32,10 @@ body{
 .mouse-tooltip {
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.bg-img{
+  background-color: #ececec;
 }
 
 #topbar{

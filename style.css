@@ -284,10 +284,10 @@ img { max-width: 100%; }
 /* posts */
 .posts .ias-trigger-prev { display: none !important; }
 .posts article { padding: 10px; border-radius: 2px; margin-bottom: 20px; }
-.posts article.index-post .post-right { padding: 15px 15px 0 15px; }
+.posts article.index-post .post-right { padding: 0 15px 0 15px; }
 .posts article.index-post .post-right .post-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.posts article.index-post .post-right .post-title a { font-size: 18px; }
-.posts article.index-post .post-right .post-content { height: 120px; overflow: hidden; }
+.posts article.index-post .post-right .post-title a { font-size: 20px; }
+.posts article.index-post .post-right .post-content { height: 130px; overflow: hidden; }
 .posts article.index-post .post-right .post-content::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 30px; background: #fff; background: rgba(255, 255, 255, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(255, 255, 255, 0.1)), color-stop(35%, rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.9))); background: linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9)); }
 .posts article.single-post .post-top { margin-bottom: 20px; padding: 10px; }
 .posts article.single-post .post-top .item { margin-right: 20px; }
@@ -318,7 +318,7 @@ img { max-width: 100%; }
 .posts article .post-right .post-title a { display: inline-block; line-height: 1.5; }
 .posts article .post-right .post-content { position: relative; line-height: 1.5; }
 .posts article .post-right .post-content .read_more { display: none; }
-.posts article .post-right .post-meta { position: absolute; left: 0; right: 0; bottom: 10px; padding: 0 15px; }
+.posts article .post-right .post-meta { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 15px; }
 .posts article .post-right .post-meta li { list-style: none; margin-right: 10px; }
 .posts article .post-right .post-meta li.meta-like { margin-right: 0; }
 .posts article .post-right .post-meta li.meta-tabs a { display: inline-block; }

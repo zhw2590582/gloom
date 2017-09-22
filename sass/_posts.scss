@@ -14,17 +14,17 @@
 
       }
       .post-right{
-        padding: 15px 15px 0 15px;
+        padding: 0 15px 0 15px;
         .post-title{
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           a{
-            font-size: 18px;
+            font-size: 20px;
           }
         }
         .post-content{
-          height: 120px;
+          height: 130px;
           overflow: hidden;
           &::after{
             content: '';
@@ -189,7 +189,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 10px;
+        bottom: 0;
         padding: 0 15px;
         li{
           list-style: none;
