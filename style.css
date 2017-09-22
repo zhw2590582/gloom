@@ -288,7 +288,7 @@ img { max-width: 100%; }
 .posts article.index-post .post-right { padding: 0 0 0 15px; }
 .posts article.index-post .post-right .post-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .posts article.index-post .post-right .post-title a { font-size: 20px; }
-.posts article.index-post .post-right .post-content { height: 130px; overflow: hidden; }
+.posts article.index-post .post-right .post-content { height: 130px; line-height: 1.7; overflow: hidden; }
 .posts article.index-post .post-right .post-content::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 30px; background: #fff; background: rgba(255, 255, 255, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(255, 255, 255, 0.1)), color-stop(35%, rgba(255, 255, 255, 0.2)), color-stop(65%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.9))); background: linear-gradient(transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9)); }
 .posts article.single-post .post-top { margin-bottom: 20px; padding: 10px; }
 .posts article.single-post .post-top .item { margin-right: 20px; }
@@ -328,6 +328,12 @@ img { max-width: 100%; }
 .posts article .post-right .post-meta li.mate-cat li { display: inline-block; }
 .posts article .post-right .post-meta li .fa { margin-right: 5px; margin-top: 2px; }
 .posts .ias-trigger, .posts .ias-noneleft { display: block; float: left; margin-top: 20px; width: 100%; }
+.posts .ias-trigger a, .posts .ias-noneleft a { display: inline-block; height: 30px; line-height: 30px; padding: 0 20px; }
+
+.posts-nav .nav-inside { display: inline-block; }
+.posts-nav .nav-inside .page-numbers { display: inline-block; float: left; position: relative; margin-left: -1px; min-width: 30px; padding: 0 5px; height: 30px; text-align: center; line-height: 30px; }
+.posts-nav .nav-inside .page-numbers:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.posts-nav .nav-inside .page-numbers:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
 
 /* comments */
 /* pages */

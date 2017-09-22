@@ -139,6 +139,11 @@ body{
   article{
     background: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    &.index-post{
+      .post-content{
+        color: #8f8e94;
+      }
+    }
     .post-sticky{
       color: #fff;
       background: #02b875;
@@ -150,4 +155,19 @@ body{
       }
     }
   }
+  .ias-trigger a{
+    background: #fff;
+    border: 1px solid #e1e1e1;
+  }
+}
+
+.page-numbers {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+
+    &.current,
+    &:hover {
+      color: #fff;
+      background: #02b875;
+    }
 }

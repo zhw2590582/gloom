@@ -123,8 +123,8 @@
           <div class="posts-nav text-c">
             <div class="nav-inside clearfix">
               <?php echo paginate_links(array(
-                'prev_text'          =>'<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-                'next_text'          =>'<i class="fa fa-chevron-right" aria-hidden="true"></i>',
+                'prev_text'          =>'<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                'next_text'          =>'<i class="fa fa-angle-right" aria-hidden="true"></i>',
                 'before_page_number' => '',
                 'mid_size'           => 2,
               ));?>

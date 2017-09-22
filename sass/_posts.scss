@@ -25,6 +25,7 @@
         }
         .post-content{
           height: 130px;
+          line-height: 1.7;
           overflow: hidden;
           &::after{
             content: '';
@@ -229,5 +230,40 @@
     float: left;
     margin-top: 20px;
     width: 100%;
+    a{
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 20px;
+    }
+  }
+}
+
+//文章分页
+.posts-nav {
+  .nav-inside {
+    display: inline-block;
+
+    .page-numbers {
+      display: inline-block;
+      float: left;
+      position: relative;
+      margin-left: -1px;
+      min-width: 30px;
+      padding: 0 5px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+
+      &:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
   }
 }
