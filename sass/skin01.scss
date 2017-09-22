@@ -19,9 +19,6 @@ body{
 
 #wrapper{
   background: url("../images/skin/bg.png") no-repeat top left fixed;
-  &::before{
-    background: url("../images/skin/topbar.png") repeat-x top left fixed;
-  }
   &::after{
     background: url("../images/skin/bg2.png") repeat-y top left fixed;
   }
@@ -41,6 +38,10 @@ body{
 }
 
 #topbar{
+  background: url("../images/skin/topbar2.png") repeat-x;
+  &::before{
+    background: url("../images/skin/topbar.png") no-repeat;
+  }
   .item1{
     .fa{
       color: #bbbbbb;

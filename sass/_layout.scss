@@ -8,17 +8,6 @@
   min-height: 100%;
   font-size: 14px;
 
-  &::before{
-    content: "";
-    position: fixed;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: $topbar_h;
-    width: 100%;
-  }
-
   &::after{
     content: "";
     position: fixed;
@@ -50,6 +39,16 @@
   width: 100%;
   height: $topbar_h;
   line-height: $topbar_h;
+  &::before{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: $topbar_h;
+    width: 100%;
+  }
   .item1{
     width: $header_w;
     height: 100%;
