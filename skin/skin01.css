@@ -7,6 +7,8 @@ body a { color: #888; }
 body a:hover { color: #777; }
 
 #wrapper { background: url("../images/skin/bg.png") no-repeat top left fixed; }
+#wrapper::before { background: url("../images/skin/topbar.png") repeat-x top left fixed; }
+#wrapper::after { background: url("../images/skin/bg2.png") repeat-y top left fixed; }
 
 .main-title { color: #444; border-bottom: 1px solid #e5e5e5; }
 .main-title span { border-bottom: 1px solid #444; }

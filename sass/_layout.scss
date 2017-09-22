@@ -8,6 +8,28 @@
   min-height: 100%;
   font-size: 14px;
 
+  &::before{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: $topbar_h;
+    width: 100%;
+  }
+
+  &::after{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1000px;
+    height: 100%;
+  }
+
   &.layout_box{
     .posts article.index-post{
       width: 49%;
