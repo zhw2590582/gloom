@@ -163,8 +163,8 @@ img { max-width: 100%; }
 
 .bg-gradient { opacity: .75; color: rgba(255, 255, 255, 0.95); background: #000; background: rgba(0, 0, 0, 0.5); background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, rgba(0, 0, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0.2)), color-stop(65%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.66))); background: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.66)); }
 
-.main-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; }
-.main-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; }
+.main-title { position: relative; font-size: 16px; font-weight: normal; height: 30px; margin-bottom: 15px; }
+.main-title span { position: absolute; left: 0; bottom: -1px; padding-bottom: 5px; }
 
 /* layout */
 #wrapper { position: relative; height: auto !important; height: 100%; min-height: 100%; font-size: 14px; }
@@ -241,7 +241,7 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box { width: 32px; border-radius: 20px; overflow: hidden; opacity: 0.75; background: url("./images/default/d_avatar.jpg") no-repeat; background-size: cover; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .avatar-box img { vertical-align: top; width: 32px; height: 32px; }
 #sidebar .sidebar_inner .cs_widget_comment #comment-list li .comment_box { padding-left: 5px; }
-#sidebar .sidebar_inner .widget_search fieldset .search-form-input { padding: 7px 8px; font-size: 12px; vertical-align: middle; height: 26px; line-height: 26px; width: 100%; border-radius: 3px; }
+#sidebar .sidebar_inner .widget_search fieldset .search-form-input { padding: 7px 8px; font-size: 12px; vertical-align: middle; height: 26px; line-height: 26px; width: 100%; }
 #sidebar .sidebar_inner .widget_search fieldset .search-button { display: none; }
 #sidebar .sidebar_inner .widget_calendar #wp-calendar { margin: 0; width: 100%; font-size: 13px; font-size: 0.928571429rem; line-height: 1.846153846; }
 #sidebar .sidebar_inner .widget_calendar #wp-calendar #today, #sidebar .sidebar_inner .widget_calendar #wp-calendar th { text-align: center; font-weight: normal; }
@@ -258,8 +258,8 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner #profile .profile-header .name .name_inner { margin-bottom: 6px; }
 #sidebar .sidebar_inner #profile .profile-content { line-height: 1.5; margin-bottom: 15px; }
 #sidebar .sidebar_inner #profile .profile-social li { list-style: none; float: left; width: 20%; height: 20px; line-height: 20px; font-size: 18px; text-align: center; }
-#sidebar .sidebar_inner .widget-title { position: relative; font-size: 18px; font-weight: normal; height: 30px; margin-bottom: 15px; }
-#sidebar .sidebar_inner .widget-title span { position: absolute; left: 0; bottom: 0; padding-bottom: 5px; }
+#sidebar .sidebar_inner .widget-title { position: relative; font-size: 16px; font-weight: normal; height: 30px; margin-bottom: 15px; }
+#sidebar .sidebar_inner .widget-title span { position: absolute; left: 0; bottom: -1px; padding-bottom: 5px; }
 
 /* content */
 #content { position: relative; padding-left: 470px; max-width: 2000px; padding-top: 36px; }

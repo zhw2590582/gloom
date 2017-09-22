@@ -71,7 +71,7 @@
         <?php } ?>
       </div>
       <?php if(current_user_can('level_10')){ ?>
-        <div class="post-edit f13">
+        <div class="post-edit f13 hide">
           <?php edit_post_link('<i class="fa fa-edit"></i>编辑', '<div class="edit-link">', '</div>' ); ?>
         </div>
       <?php } ?>

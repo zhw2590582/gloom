@@ -21,8 +21,8 @@ body{
   background: #f4f4f4;
 }
 
-.main-title{
-  color: #444;
+.main-title, .widget-title{
+  color: #666;
   border-bottom: 1px solid #e5e5e5;
   span {
     border-bottom: 1px solid #02b875;
@@ -112,6 +112,20 @@ body{
 #sidebar{
   background: #fff;
   border-right: 1px solid #e5e5e5;
+  #profile{
+    .name{
+      color: #999;
+      .name_inner{
+        color: #666;
+      }
+    }
+    .profile-content{
+      color: #888;
+    }
+  }
+  .search-form-input{
+    border: 1px solid #e5e5e5;
+  }
 }
 
 #content{

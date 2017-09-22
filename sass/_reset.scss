@@ -115,14 +115,14 @@ img{max-width:100%}
 
 .main-title{
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   height: 30px;
   margin-bottom: 15px;
   span {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     padding-bottom: 5px;
   }
 }

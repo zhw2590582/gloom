@@ -8,8 +8,8 @@ body a:hover { color: #02b875; }
 
 #wrapper { background: #f4f4f4; }
 
-.main-title { color: #444; border-bottom: 1px solid #e5e5e5; }
-.main-title span { border-bottom: 1px solid #02b875; }
+.main-title, .widget-title { color: #666; border-bottom: 1px solid #e5e5e5; }
+.main-title span, .widget-title span { border-bottom: 1px solid #02b875; }
 
 .mouse-tooltip { color: #777; background: #ffffff; border: 1px solid #e5e5e5; }
 
@@ -35,6 +35,10 @@ body a:hover { color: #02b875; }
 #header .menu-item a:hover, #header .current_page_item a { color: #02b875; background: #f4f4f4; }
 
 #sidebar { background: #fff; border-right: 1px solid #e5e5e5; }
+#sidebar #profile .name { color: #999; }
+#sidebar #profile .name .name_inner { color: #666; }
+#sidebar #profile .profile-content { color: #888; }
+#sidebar .search-form-input { border: 1px solid #e5e5e5; }
 
 .posts article { background: #fff; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
 
