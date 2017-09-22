@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta charset="<?php bloginfo('charset'); ?>" />
 	<title><?php if(function_exists('show_wp_title')){show_wp_title();} ?></title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,minimal-ui">
@@ -111,7 +111,7 @@
 
 		<!-- header 开始-->
 		<?php if (!is_mobile()) { ?>
-		  <header id="header" class="m_hide">
+		  <header id="header">
 				<div class="header_inner">
 					<div class="logo text-c">
 						<a class="logo_img" href="<?php echo home_url('/'); ?>" title="<?php bloginfo('name'); ?>">

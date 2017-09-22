@@ -53,8 +53,9 @@
                 </div>
               </div>
             <?php } ?>
-            <div class="post-related">
-              <?php if ($related && !is_mobile()) { ?>
+
+            <?php if ($related && !is_mobile()) { ?>
+              <div class="post-related">
                 <ul class="related_box clearfix">
                   <?php
                     $post_num = 4;
@@ -110,10 +111,12 @@
                     }
                   if ( $i  == 0 )  echo '<div class="r_title"></div>';
                   ?>
-              </ul>
-              <?php } ?>
-            </div>
-            <ul class="post-meta clearfix">
+                </ul>
+              </div>
+            <?php } ?>
+
+            <?php if(!is_mobile()) { ?>
+              <ul class="post-meta clearfix">
               <?php if ($cat) { ?>
                 <li class="mate-cat fl clearfix">
                   <i class="fa fa-bookmark fl"></i>
@@ -146,6 +149,7 @@
                 </li>
               <?php } ?>
             </ul>
+            <?php } ?>
           </div>
         </article>
       <?php endwhile; ?>

@@ -1,2 +1,15 @@
 @charset "UTF-8";
 // mobile
+
+.mobile{
+  .m_hide{
+    display: none !important;
+  }
+  #content{
+    padding-left: 0;
+    article{
+      width: auto !important;
+      margin-right: auto !important;
+    }
+  }
+}

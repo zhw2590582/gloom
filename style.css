@@ -447,4 +447,8 @@ img { max-width: 100%; }
 .download-wrap .dlview .link { display: none; }
 .download-wrap .dlview .reply { display: inline-block; }
 
+.mobile .m_hide { display: none !important; }
+.mobile #content { padding-left: 0; }
+.mobile #content article { width: auto !important; margin-right: auto !important; }
+
 /*# sourceMappingURL=style.css.map */

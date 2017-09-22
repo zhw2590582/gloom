@@ -1,19 +1,20 @@
 <?php
 	error_reporting(0);
-	$edit = cs_get_option( 'i_footer_edit' );
-	$copyright = cs_get_option( 'i_foot_copyright' );
-	$gotop = cs_get_option( 'i_gotop' );
-	$qrcode = cs_get_option( 'i_qrcode' );
-	$qrcodeimg = cs_get_option( 'i_qrcode_image' );
-	$comment = cs_get_option( 'i_comment_switch' );
-	$player_id = cs_get_option( 'i_player_id' );
+	$edit = cs_get_option('i_footer_edit');
+	$copyright = cs_get_option('i_foot_copyright');
+	$gotop = cs_get_option('i_gotop');
+	$qrcode = cs_get_option('i_qrcode');
+	$qrcodeimg = cs_get_option('i_qrcode_image');
+	$comment = cs_get_option('i_comment_switch');
+	$player_id = cs_get_option( 'i_player_id');
 	$player = cs_get_option('i_player');
-	$footer_text = cs_get_option( 'i_footer_text' );
-	$notice = cs_get_option( 'i_notice' );
-	$notice_img = cs_get_option( 'i_notice_img' );
-	$notice_title = cs_get_option( 'i_notice_title' );
-	$notice_text = cs_get_option( 'i_notice_text' );
-	$notice_link = cs_get_option( 'i_notice_link' );
+	$footer_text = cs_get_option('i_footer_text');
+	$notice = cs_get_option('i_notice');
+	$notice_img = cs_get_option('i_notice_img');
+	$notice_title = cs_get_option('i_notice_title');
+	$notice_text = cs_get_option('i_notice_text');
+	$notice_link = cs_get_option('i_notice_link');
+	$tongji = cs_get_option('i_js_tongji');
 ?>
 
 			<a href="#top" class="post-top"></a>
@@ -22,27 +23,26 @@
 	<!-- content 结束-->
 
 	<!-- footer 开始-->
-	<footer id="footer">
-		<div class="footer-inner">
-      <?php if ($footer_text && !is_mobile()) {?>
-        <div class="footer-text wb clearfix m_hide">
-            <?php echo $edit ?>
-        </div>
-      <?php }?>
-			<div class="footer-end">
+	<?php if (!is_mobile()) { ?>
+		<footer id="footer">
+			<div class="footer-inner">
+	      <?php if ($footer_text && !is_mobile()) {?>
+	        <div class="footer-text wb clearfix">
+	            <?php echo $edit ?>
+	        </div>
+	      <?php }?>
+				<div class="footer-end">
 					<?php if(!empty($copyright)){
 						echo ''.$copyright.'';
 					} else {
 						echo'&copy; '.date("Y").' All Rights Reserved.';
 					} ?>
 					<a href="http://zhw-island.com/" target="_blank"> Theme by Gloom</a>
-					<?php if(!empty($tongji)){?>
-						echo '<script>'.$tongji.'</script>';
-					<?php }?>
+				</div>
 			</div>
-		</div>
-	</footer>
-	<!-- footer 结束-->
+		</footer>
+		<!-- footer 结束-->
+	<?php }?>
 
 </div>
 <!-- wrapper 结束-->
@@ -110,7 +110,13 @@
 		<!-- 公告弹窗 结束 -->
 	<?php }?>
 
-	<?php wp_footer(); ?>
 
+	<?php if(!empty($tongji)){?>
+		<!-- 统计代码 开始 -->
+		<div class="hide"><script><?php echo $tongji; ?></script></div>
+		<!-- 统计代码 结束 -->
+	<?php }?>
+
+	<?php wp_footer(); ?>
 </body>
 </html>

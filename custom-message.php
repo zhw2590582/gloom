@@ -58,7 +58,7 @@
                                           </li>";
                                           $output .= $tmp;
                                        }
-                                      $output = "<ul class=\"readers-list m_hide clearfix\">".$output."<div class='clearfix'></div></ul>";
+                                      $output = "<ul class=\"readers-list clearfix\">".$output."<div class='clearfix'></div></ul>";
                                       echo $output ;
                                   }?>
                                   <!-- end 读者墙 -->

@@ -96,7 +96,7 @@
         <?php } ?>
       <?php } ?>
     </div>
-    <?php if (!is_single() && !is_page()) { ?>
+    <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
       <ul class="post-meta clearfix">
         <?php if ($cat) { ?>
           <li class="mate-cat fl clearfix">
