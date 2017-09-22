@@ -15,17 +15,16 @@
   .topbar {
     height: $topbar_h;
     margin-bottom: 30px;
-    padding: 8px 5px 0;
+    padding: 8px 10px 0;
 
     .skin {
       margin-top: 1px;
 
       a {
         display: inline-block;
-        width: 18px;
+        width: 35px;
         height: 18px;
-        margin-right: 5px;
-        border-radius: 3px;
+        border-radius: 20px;
 
         &.skin01 {
           background: #dadada;
@@ -35,6 +34,18 @@
         &.skin02 {
           background: #dadada;
           border: 1px solid #c7c7c7;
+          box-shadow: 0 1px 0px #ffffff;
+          &::before{
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 14px;
+            margin: 1px 0 0 2px;
+            border-radius: 20px;
+            border: 1px solid #cecece;
+            background: #f9f9f9;
+            box-shadow: 0 1px 0px #ffffff inset;
+          }
         }
       }
     }

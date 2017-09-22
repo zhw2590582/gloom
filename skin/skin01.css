@@ -2,12 +2,12 @@
 /* 白色 */
 .skin01 { display: none !important; }
 
-body { color: #666; background: #fff; }
+body { color: #555; background: #f4f4f4; }
 
 a { color: #888; }
 a:hover { color: #777; }
 
-#wrapper { background: #999; }
+#wrapper { background: url("../images/skin/bg.png") no-repeat top left fixed; }
 
 .main-title { color: #444; border-bottom: 1px solid #e5e5e5; }
 .main-title span { border-bottom: 1px solid #444; }

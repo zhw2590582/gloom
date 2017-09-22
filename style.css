@@ -174,11 +174,12 @@ img { max-width: 100%; }
 
 /* header */
 #header { position: fixed; left: 0; top: 0; bottom: 0; z-index: 92; width: 235px; height: 100%; /* topbar */ /* logo */ /* menu */ }
-#header .topbar { height: 35px; margin-bottom: 30px; padding: 8px 5px 0; }
+#header .topbar { height: 35px; margin-bottom: 30px; padding: 8px 10px 0; }
 #header .topbar .skin { margin-top: 1px; }
-#header .topbar .skin a { display: inline-block; width: 18px; height: 18px; margin-right: 5px; border-radius: 3px; }
+#header .topbar .skin a { display: inline-block; width: 35px; height: 18px; border-radius: 20px; }
 #header .topbar .skin a.skin01 { background: #dadada; border: 1px solid #c7c7c7; }
-#header .topbar .skin a.skin02 { background: #dadada; border: 1px solid #c7c7c7; }
+#header .topbar .skin a.skin02 { background: #dadada; border: 1px solid #c7c7c7; -webkit-box-shadow: 0 1px 0px #ffffff; box-shadow: 0 1px 0px #ffffff; }
+#header .topbar .skin a.skin02::before { content: ""; display: inline-block; width: 16px; height: 14px; margin: 1px 0 0 2px; border-radius: 20px; border: 1px solid #cecece; background: #f9f9f9; -webkit-box-shadow: 0 1px 0px #ffffff inset; box-shadow: 0 1px 0px #ffffff inset; }
 #header .topbar .setting { position: relative; display: inline-block; }
 #header .topbar .setting .setting-pop { position: absolute; top: 40px; left: -10px; background: #fff; border-radius: 4px; border: 1px solid rgba(27, 31, 35, 0.15); -webkit-box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15); box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15); }
 #header .topbar .setting .setting-pop::before { position: absolute; top: -16px; left: 9px; display: inline-block; content: ""; border: 8px solid transparent; border-bottom-color: rgba(27, 31, 35, 0.15); }
