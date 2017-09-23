@@ -2,6 +2,10 @@
 /* 白色 */
 @import 'mixin';
 
+.skin01{
+  display: none !important;
+}
+
 $bg_body: #f4f4f4; // 背景色
 $bg_block: #fff; // 块背景色
 $bd_c: #e5e5e5; // 描边色
@@ -13,10 +17,7 @@ $text_c4: #bbb; // 文本色4
 $link_c: #888; // 链接色
 $link_c_h: #02b875; // 链接悬停色
 $hold_c: #ececec; // 占位色
-
-.skin01{
-  display: none !important;
-}
+$text_block: #f6f8fa; // 文本块
 
 body{
   color: $text_c1;
@@ -24,7 +25,7 @@ body{
   a{
     color: $link_c;
     &:hover{
-      color: #02b875;
+      color: $link_c_h;
     }
   }
 }
@@ -185,7 +186,7 @@ body{
     }
     &.single-post{
       .post-top{
-        background: $bg_body;
+        background: $text_block;
       }
     }
     .post-sticky{
@@ -216,7 +217,8 @@ body{
 }
 
 .post-download {
-  background: $bg_body;
+  color: $text_c3;
+  background: $text_block;
   .link{
     color: $link_c_h;
   }

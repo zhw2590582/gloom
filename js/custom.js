@@ -98,8 +98,14 @@
     });
 
     // 切换边栏
+    sessionStorage.getItem("sidebar") && $('#wrapper').addClass('sidebar_off');
     $(".sidebar_switcher").click(function() {
       $('#wrapper').toggleClass('sidebar_off');
+      if($('#wrapper').hasClass('sidebar_off')){
+        sessionStorage.setItem("sidebar", "off");
+      } else {
+        sessionStorage.removeItem("sidebar");
+      }
     });
 
     // 登陆弹窗

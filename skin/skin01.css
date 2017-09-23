@@ -50,7 +50,7 @@ body a:hover { color: #02b875; }
 
 .posts article { background: #fff; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
 .posts article.index-post .post-content { color: #666; }
-.posts article.single-post .post-top { background: #f4f4f4; }
+.posts article.single-post .post-top { background: #f6f8fa; }
 .posts article .post-sticky { color: #fff; background: #02b875; }
 .posts article .post-title a { color: #666; }
 .posts article .post-title a:hover { color: #02b875; }
@@ -59,7 +59,7 @@ body a:hover { color: #02b875; }
 .page-numbers { background: #fff; border: 1px solid #e5e5e5; }
 .page-numbers.current, .page-numbers:hover { color: #fff; background: #02b875; }
 
-.post-download { background: #f4f4f4; }
+.post-download { color: #666; background: #f6f8fa; }
 .post-download .link { color: #02b875; }
 .post-download .reply { color: red; }
 
