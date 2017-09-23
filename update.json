@@ -3,7 +3,7 @@
   "Version": "1.0.1",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
-  "Notice": "版本描述",
+  "Notice": "修复几个样式bug",
   "Script": "<script type='text/javascript'></script>",
   "Blacklist": ["172", "192", "localhost"]
 }
