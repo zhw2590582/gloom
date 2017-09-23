@@ -30,6 +30,11 @@ a {
   }
 }
 
+h1,h2,h3,h4,h5{
+  border-left: 2px solid $link_c_h;
+  background: $text_block;
+}
+
 #wrapper {
   background: $bg_body;
 }
