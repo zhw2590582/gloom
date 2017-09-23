@@ -397,9 +397,7 @@ img { max-width: 100%; }
 .readers-list li .readers-inner .avatar-msg p { font-size: 13px; overflow: hidden; width: 100%; text-overflow: ellipsis; white-space: nowrap; line-height: 1.6; margin-bottom: 0; }
 
 .link_box .linkcat { text-align: center; margin-bottom: 20px; }
-.link_box .linkcat h2 { font-size: 16px; position: relative; display: inline-block; text-align: center; padding: 10px 0; }
-.link_box .linkcat h2::before { position: absolute; content: ''; height: 2px; width: 100px; top: 18px; left: -120px; }
-.link_box .linkcat h2::after { position: absolute; content: ''; height: 2px; width: 100px; top: 18px; right: -120px; }
+.link_box .linkcat h2 { font-size: 16px; text-align: left; }
 .link_box .linkcat ul { text-align: left; }
 .link_box .blogroll::after { clear: both; display: block; content: " "; }
 .link_box .blogroll li { display: inline-block; width: 25%; padding: 0 10px; margin-bottom: 15px; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
