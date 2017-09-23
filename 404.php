@@ -12,7 +12,7 @@
                               <div class="post-right">
                                 <div class="post-content wb clearfix text-c">
                                   <div style="font-size:200px;margin-bottom:0">404</div>
-                                  <p>对不起，你要查看的页面已经不存在，请返回！</p>
+                                  <p style="margin-bottom:200px">对不起，你要查看的页面已经不存在，请返回！</p>
         												</div>
                               </div>
         										</div>

@@ -260,7 +260,7 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .widget_tag_cloud .tagcloud a { float: left; margin-right: 10px; margin-bottom: 10px; }
 #sidebar .sidebar_inner #profile .profile-header { margin-bottom: 10px; }
 #sidebar .sidebar_inner #profile .profile-header .avatar { width: 20%; }
-#sidebar .sidebar_inner #profile .profile-header .avatar img { vertical-align: bottom; border-radius: 5px; }
+#sidebar .sidebar_inner #profile .profile-header .avatar img { height: 100%; width: 100%; vertical-align: bottom; border-radius: 5px; }
 #sidebar .sidebar_inner #profile .profile-header .name { width: 80%; padding: 3px 0 0 10px; }
 #sidebar .sidebar_inner #profile .profile-header .name .name_inner { margin-bottom: 6px; }
 #sidebar .sidebar_inner #profile .profile-content { line-height: 1.5; margin-bottom: 15px; }

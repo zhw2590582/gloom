@@ -13,7 +13,7 @@
       <?php if ($profile == true) {?>
         <aside id="profile" class="widget">
           <div class="profile-header clearfix">
-            <div class="avatar fl">
+            <div class="avatar fl avatar-img">
               <img src="<?php echo $profile_avatar; ?>" alt="" />
             </div>
             <div class="name fl">
