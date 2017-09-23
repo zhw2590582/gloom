@@ -30,11 +30,6 @@ a {
   }
 }
 
-h1,h2,h3,h4,h5{
-  border-left: 2px solid $link_c_h;
-  background: $text_block;
-}
-
 #wrapper {
   background: $bg_body;
 }
@@ -240,10 +235,13 @@ h1,h2,h3,h4,h5{
 
     .post-title a {
       color: $text_c3;
-
       &:hover {
         color: $link_c_h;
       }
+    }
+    h1,h2,h3,h4,h5{
+      border-left: 2px solid $link_c_h;
+      background: $text_block;
     }
     blockquote{
       border-left: 2px solid $link_c_h;

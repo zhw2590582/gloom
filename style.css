@@ -108,8 +108,6 @@ a { text-decoration: none; -webkit-transition: all .1s; transition: all .1s; }
 
 ol, ul { margin: 0; padding: 0; list-style: none; }
 
-h1, h2, h3, h4, h5 { font-weight: normal; margin: 15px 0; padding-left: 10px; }
-
 img { max-width: 100%; }
 
 .clearfix:after, .clearfix:before { content: ""; display: table; }
@@ -332,6 +330,7 @@ img { max-width: 100%; }
 .posts article .post-right .post-title { margin-bottom: 15px; }
 .posts article .post-right .post-title a { display: inline-block; line-height: 1.5; }
 .posts article .post-right .post-content { position: relative; line-height: 1.5; }
+.posts article .post-right .post-content h1, .posts article .post-right .post-content h2, .posts article .post-right .post-content h3, .posts article .post-right .post-content h4, .posts article .post-right .post-content h5 { font-weight: normal; margin: 15px 0; padding-left: 10px; }
 .posts article .post-right .post-content blockquote { font-size: 14px; padding: 10px; margin-bottom: 20px; }
 .posts article .post-right .post-content .read_more { display: none; }
 .posts article .post-right .post-meta { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 0 0 15px; }

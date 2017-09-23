@@ -7,8 +7,6 @@ body { color: #888; background: #f4f4f4; }
 a { color: #888; }
 a:hover { color: #02b875; }
 
-h1, h2, h3, h4, h5 { border-left: 2px solid #02b875; background: #f6f8fa; }
-
 #wrapper { background: #f4f4f4; }
 
 .main-title, .widget-title { color: #666; border-bottom: 1px solid #e5e5e5; }
@@ -59,6 +57,7 @@ h1, h2, h3, h4, h5 { border-left: 2px solid #02b875; background: #f6f8fa; }
 .posts article .post-sticky { color: #fff; background: #02b875; }
 .posts article .post-title a { color: #666; }
 .posts article .post-title a:hover { color: #02b875; }
+.posts article h1, .posts article h2, .posts article h3, .posts article h4, .posts article h5 { border-left: 2px solid #02b875; background: #f6f8fa; }
 .posts article blockquote { border-left: 2px solid #02b875; background: #f6f8fa; }
 .posts .ias-trigger a { background: #fff; border: 1px solid #e5e5e5; }
 

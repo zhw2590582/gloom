@@ -195,6 +195,11 @@
       .post-content{
         position: relative;
         line-height: 1.5;
+        h1,h2,h3,h4,h5{
+          font-weight: normal;
+          margin: 15px 0;
+          padding-left: 10px;
+        }
         blockquote{
           font-size: 14px;
           padding: 10px;
