@@ -53,7 +53,7 @@ $options[] = array(
             'type' => 'upload',
             'title' => 'Logo',
             'add_title' => '添加logo',
-            'default' => get_template_directory_uri() . "/images/default/d_logo.png"
+            'default' => get_template_directory_uri() . "/images/default/logo.png"
         ) ,
         // 自定义文章布局
         array(
