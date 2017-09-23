@@ -32,7 +32,7 @@
             <?php if (has_post_thumbnail()) { ?>
               style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"
             <?php } else { ?>
-              style="background-image: url('<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1, $feature_num)?>.png')"
+              style="background-image: url('<?php bloginfo('template_directory'); ?>/images/thumbnails/img<?php echo rand(1, $feature_num)?>.png')"
             <?php } ?>
           >
           </a>

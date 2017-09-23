@@ -583,7 +583,7 @@
           $post_thumbnail_src = $matches[1][0];
           if (empty($post_thumbnail_src)) {
               $feature_num = cs_get_option( 'i_feature_num' );
-              echo ''.get_template_directory_uri().'/images/thumbnail/img'.rand(1,$feature_num).'.png';
+              echo ''.get_template_directory_uri().'/images/thumbnails/img'.rand(1,$feature_num).'.png';
           }
       };
       echo $post_thumbnail_src;
