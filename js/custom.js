@@ -3,21 +3,29 @@
   var temp = $("script").last().attr("src");
   var url = temp.substring(0, temp.indexOf("js"));
 
-  // 操作localStorage
+  // 操作sessionStorage
   var storageName = "gloom_setting";
   var setStorage = function(name, value) {
-    var gloom_setting = JSON.parse(localStorage.getItem(storageName)) || {};
+    var gloom_setting = JSON.parse(sessionStorage.getItem(storageName)) || {};
     gloom_setting[name] = value;
-    localStorage.setItem(storageName, JSON.stringify(gloom_setting));
+    sessionStorage.setItem(storageName, JSON.stringify(gloom_setting));
   }
   var getStorage = function(name) {
-    var gloom_setting = JSON.parse(localStorage.getItem(storageName)) || {};
+    var gloom_setting = JSON.parse(sessionStorage.getItem(storageName)) || {};
     return gloom_setting[name];
   }
 
-  // 初始化localStorage
+  // 初始化sessionStorage
   if(getStorage('layout')){
     $('#wrapper').removeClass('layout_box layout_width').addClass('layout_' + getStorage('layout'));
+  }
+  if(!getStorage('sidebar')){
+    $('#wrapper').addClass('sidebar_off');
+  }
+  if(getStorage('notice')){
+    $(".notice-pop").remove();
+  } else {
+    $(".notice-pop").addClass("open");
   }
 
   // 滚动函数
@@ -98,13 +106,12 @@
     });
 
     // 切换边栏
-    sessionStorage.getItem("sidebar") && $('#wrapper').addClass('sidebar_off');
     $(".sidebar_switcher").click(function() {
       $('#wrapper').toggleClass('sidebar_off');
       if($('#wrapper').hasClass('sidebar_off')){
-        sessionStorage.setItem("sidebar", "off");
+        setStorage('sidebar', false);
       } else {
-        sessionStorage.removeItem("sidebar");
+        setStorage('sidebar', true);
       }
     });
 
@@ -121,10 +128,9 @@
     });
 
     // 通知弹窗
-    sessionStorage.getItem("notice") && $(".notice-pop").remove() || $(".notice-pop").addClass("open");
     $(".notice-close").click(function() {
       $(".notice-pop").hide();
-      sessionStorage.setItem("notice", "hide");
+      setStorage('notice', true);
     });
 
     // 切换布局

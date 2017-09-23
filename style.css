@@ -369,7 +369,7 @@ img { max-width: 100%; }
 #footer { position: relative; z-index: 90; padding-left: 490px; padding-right: 20px; max-width: 2000px; }
 #footer .footer-inner { position: relative; width: 100%; height: 100%; padding: 20px 20px 0; border-top-left-radius: 2px; border-bottom-right-radius: 2px; }
 #footer .footer-inner .footer-text { word-break: break-all; padding-bottom: 50px; min-height: 100px; }
-#footer .footer-inner .footer-end { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 35px; line-height: 35px; margin: 10px 0; text-align: center; }
+#footer .footer-inner .footer-end { height: 35px; line-height: 35px; margin: 10px 0; text-align: center; }
 
 #footer-btn { position: fixed; z-index: 100; bottom: 100px; right: 20px; }
 #footer-btn a { display: block; width: 35px; height: 35px; line-height: 35px; text-align: center; border-radius: 3px; margin-bottom: 10px; color: #fff; background: rgba(0, 0, 0, 0.3); }
