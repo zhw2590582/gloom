@@ -21,13 +21,12 @@ $text_block: #f6f8fa; // 文本块
 body {
   color: $text_c1;
   background: $bg_body;
+}
 
-  a {
-    color: $link_c;
-
-    &:hover {
-      color: $link_c_h;
-    }
+a {
+  color: $link_c;
+  &:hover {
+    color: $link_c_h;
   }
 }
 
@@ -201,7 +200,9 @@ body {
   border: 1px solid $bd_c;
 }
 
-#content {}
+#content {
+
+}
 
 .posts {
   article {
@@ -222,6 +223,9 @@ body {
       .post-title {
         border-bottom: 1px solid $bd_c;
       }
+      .post-content{
+        color: $text_c3;
+      }
     }
 
     .post-sticky {
@@ -235,6 +239,10 @@ body {
       &:hover {
         color: $link_c_h;
       }
+    }
+    blockquote{
+      border-left: 2px solid $link_c_h;
+      background: $text_block;
     }
   }
 
@@ -257,12 +265,11 @@ body {
 
 .post-download {
   color: $text_c3;
+  border-left: 2px solid $link_c_h;
   background: $text_block;
-
   .link {
     color: $link_c_h;
   }
-
   .reply {
     color: red;
   }
@@ -287,7 +294,6 @@ body {
 
 .timeline {
   border-left: 1px solid $bd_c;
-
   .tl-item {
     border-left: 1px solid $link_c_h;
   }

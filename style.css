@@ -330,6 +330,7 @@ img { max-width: 100%; }
 .posts article .post-right .post-title { margin-bottom: 15px; }
 .posts article .post-right .post-title a { display: inline-block; line-height: 1.5; }
 .posts article .post-right .post-content { position: relative; line-height: 1.5; }
+.posts article .post-right .post-content blockquote { font-size: 14px; padding: 10px; margin-bottom: 20px; }
 .posts article .post-right .post-content .read_more { display: none; }
 .posts article .post-right .post-meta { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 0 0 15px; }
 .posts article .post-right .post-meta li { list-style: none; margin-right: 15px; }
@@ -490,7 +491,7 @@ img { max-width: 100%; }
 .notice-pop .notice-btn a { color: #fff; margin-right: 15px; }
 
 .download-wrap { margin: 30px 0; }
-.download-wrap .post-download { padding: 10px; border-radius: 3px; }
+.download-wrap .post-download { padding: 10px; }
 .download-wrap .post-download .fa { margin-right: 10px; }
 .download-wrap .post-download p { height: 30px; line-height: 30px; }
 .download-wrap .post-download .link { display: inline-block; }

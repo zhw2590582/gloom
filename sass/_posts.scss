@@ -195,6 +195,11 @@
       .post-content{
         position: relative;
         line-height: 1.5;
+        blockquote{
+          font-size: 14px;
+          padding: 10px;
+          margin-bottom: 20px;
+        }
         .read_more{
           display: none;
         }

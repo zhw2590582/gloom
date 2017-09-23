@@ -3,8 +3,9 @@
 .skin01 { display: none !important; }
 
 body { color: #888; background: #f4f4f4; }
-body a { color: #888; }
-body a:hover { color: #02b875; }
+
+a { color: #888; }
+a:hover { color: #02b875; }
 
 #wrapper { background: #f4f4f4; }
 
@@ -52,15 +53,17 @@ body a:hover { color: #02b875; }
 .posts article.index-post .post-content { color: #666; }
 .posts article.single-post .post-top { background: #f6f8fa; }
 .posts article.single-post .post-title { border-bottom: 1px solid #e5e5e5; }
+.posts article.single-post .post-content { color: #666; }
 .posts article .post-sticky { color: #fff; background: #02b875; }
 .posts article .post-title a { color: #666; }
 .posts article .post-title a:hover { color: #02b875; }
+.posts article blockquote { border-left: 2px solid #02b875; background: #f6f8fa; }
 .posts .ias-trigger a { background: #fff; border: 1px solid #e5e5e5; }
 
 .page-numbers { background: #fff; border: 1px solid #e5e5e5; }
 .page-numbers.current, .page-numbers:hover { color: #fff; background: #02b875; }
 
-.post-download { color: #666; background: #f6f8fa; }
+.post-download { color: #666; border-left: 2px solid #02b875; background: #f6f8fa; }
 .post-download .link { color: #02b875; }
 .post-download .reply { color: red; }
 

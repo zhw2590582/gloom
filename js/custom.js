@@ -19,7 +19,7 @@
   if(getStorage('layout')){
     $('#wrapper').removeClass('layout_box layout_width').addClass('layout_' + getStorage('layout'));
   }
-  if(!getStorage('sidebar')){
+  if(getStorage('sidebar') === false){
     $('#wrapper').addClass('sidebar_off');
   }
   if(getStorage('notice')){
