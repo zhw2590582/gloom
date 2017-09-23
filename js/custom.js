@@ -60,7 +60,7 @@
         $(".commentlist").remove();
         $("#loading-comments").slideDown();
         $body.animate({
-          scrollTop: $("#comments-title").offset().top - 65
+          scrollTop: $(".comments-title").offset().top - 65
         }, 800);
       },
       dataType: "html",

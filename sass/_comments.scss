@@ -1,2 +1,227 @@
 @charset "UTF-8";
 /* comments */
+//评论
+#comment-jump{
+
+}
+#comment-nav-below {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#commentform {
+  position: relative;
+  margin-bottom: 30px;
+
+  input,
+  textarea {
+    -webkit-appearance: none;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .comment-notes,
+  label {
+    display: none;
+  }
+
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+    margin-bottom: 15px;
+    padding-right: 2%;
+
+    &::before {
+      position: absolute;
+      font-family: FontAwesome;
+      padding-left: 10px;
+      height: 38px;
+      line-height: 38px;
+    }
+
+    input {
+      width: 100%;
+      height: 36px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 5px 10px 5px 30px;
+    }
+  }
+
+  .comment-form-url {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .comment-form-author:before {
+    content: "\f007";
+  }
+
+  .comment-form-email:before {
+    content: "\f0e0";
+  }
+
+  .comment-form-url:before {
+    content: "\f0ac";
+  }
+
+  .comment-form-comment {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+
+    #comment {
+      width: 100%;
+      padding: 10px;
+      padding-bottom: 40px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    #error,
+    #loading {
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+  .commentPlus {
+    position: absolute;
+    z-index: 3;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: none;
+
+    .editor {
+      display: inline-block;
+      float: left;
+      width: 36px;
+      text-align: center;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+
+  .form-submit {
+    position: absolute;
+    z-index: 3;
+    margin: 0;
+    right: 1px;
+    bottom: 6px;
+    display: inline-block;
+    float: right;
+
+    #submit {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      border-bottom-right-radius: 2px;
+      cursor: pointer;
+      height: 38px;
+      line-height: 38px;
+      display: block;
+      padding: 0 20px;
+      outline: 0;
+    }
+  }
+
+  .comment-form-smilies {
+    position: absolute !important;
+    bottom: 35px;
+    left: 10px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.9);
+
+    a {
+      display: inline-block;
+      float: left;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      margin: 3px;
+    }
+  }
+}
+
+//评论展示
+.commentlist {
+  .comment {
+    .children {
+      padding-left: 15px;
+    }
+    .success_tip {
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.comment-block {
+  margin-bottom: 25px;
+  border-radius: 3px;
+
+  .comment-header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 10px;
+    .author-img {
+      height: 30px;
+      width: 30px;
+      margin-top: 5px;
+      margin-right: 10px;
+      background: url("./images/default/d_avatar.jpg") no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .comment-body {
+    min-height: 80px;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .comment-bottom {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+#loading-comments{
+  text-align: center;
+  margin: 50px 0;
+}
+
+.comment-reply-title, .logged-in-as{
+  margin-bottom: 20px;
+}

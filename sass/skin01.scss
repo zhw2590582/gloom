@@ -2,10 +2,9 @@
 /* 白色 */
 @import 'mixin';
 
-.skin01{
+.skin01 {
   display: none !important;
 }
-
 $bg_body: #f4f4f4; // 背景色
 $bg_block: #fff; // 块背景色
 $bd_c: #e5e5e5; // 描边色
@@ -19,24 +18,28 @@ $link_c_h: #02b875; // 链接悬停色
 $hold_c: #ececec; // 占位色
 $text_block: #f6f8fa; // 文本块
 
-body{
+body {
   color: $text_c1;
   background: $bg_body;
-  a{
+
+  a {
     color: $link_c;
-    &:hover{
+
+    &:hover {
       color: $link_c_h;
     }
   }
 }
 
-#wrapper{
+#wrapper {
   background: $bg_body;
 }
 
-.main-title, .widget-title{
+.main-title,
+.widget-title {
   color: $text_c3;
   border-bottom: 1px solid $bd_c;
+
   span {
     border-bottom: 1px solid $link_c_h;
   }
@@ -48,59 +51,73 @@ body{
   border: 1px solid $bd_c;
 }
 
-.bg-img, .avatar-img{
+.avatar-img,
+.bg-img {
   background-color: $hold_c;
 }
 
-#topbar{
+#topbar {
   background: $bg_block;
   border-bottom: 1px solid $bd_c;
-  .item1{
+
+  .item1 {
     border-right: 1px solid $bd_c;
-    .fa{
+
+    .fa {
       color: $text_c4;
     }
-    .setting-pop{
+
+    .setting-pop {
       background: $bg_block;
       border: 1px solid rgba(27,31,35,0.15);
       box-shadow: 0 1px 5px rgba(27,31,35,0.15);
-      &::before{
+
+      &::before {
         border: 8px solid transparent;
         border-bottom-color: rgba(27,31,35,0.15);
       }
-      &::after{
+
+      &::after {
         border: 7px solid transparent;
         border-bottom-color: $bg_block;
       }
-      a{
-        &:hover{
+
+      a {
+        &:hover {
           color: $bg_block;
           background: $link_c_h;
         }
       }
     }
-    #login-form{
-      .input{
+
+    #login-form {
+      .input {
         border: 1px solid $bd_c;
       }
-      #wp-submit{
+
+      #wp-submit {
         color: $bg_block;
         border: 1px solid $link_c_h;
         background: $link_c_h;
       }
     }
   }
-  .item2{
+
+  .item2 {
     border-right: 1px solid $bd_c;
-    .widget_btn{
+
+    .widget_btn {
       color: $text_c0;
-      &:hover{
+
+      &:hover {
         color: $link_c_h;
       }
-      &.on{
+
+      &.on {
         color: $link_c_h;
         border-bottom: 1px solid $link_c_h;
-        &::before{
+
+        &::before {
           margin-left: -3px;
           border-right: 5px solid transparent;
           border-bottom: 3px solid $link_c_h;
@@ -109,153 +126,221 @@ body{
       }
     }
   }
-  .item3{
-    .fa{
+
+  .item3 {
+    .fa {
       color: $text_c4;
     }
-    .notice{
+
+    .notice {
       color: $text_c0;
     }
-    .layouts{
-      span{
+
+    .layouts {
+      span {
         background: $text_c4;
       }
-      a:hover span{
+
+      a:hover span {
         background: $link_c_h;
       }
     }
   }
 }
 
-#header{
+#header {
   background: $bg_block;
   border-right: 1px solid $bd_c;
+
   .blog_name {
     color: $text_c0;
   }
-  .sub-menu{
+
+  .sub-menu {
     background: $bg_block;
     border: 1px solid $bd_c;
   }
-  .menu-item a:hover, .current_page_item a{
+
+  .current_page_item a,
+  .menu-item a:hover {
     color: $link_c_h;
     background: $bg_body;
   }
 }
 
-#sidebar{
+#sidebar {
   background: $bg_block;
   border-right: 1px solid $bd_c;
-  #profile{
-    .name{
+
+  #profile {
+    .name {
       color: $text_c0;
-      .name_inner{
+
+      .name_inner {
         color: $text_c3;
       }
-      .fa{
+
+      .fa {
         color: $link_c_h;
       }
     }
-    .profile-content{
+
+    .profile-content {
       color: $text_c1;
     }
   }
-  .search-form-input{
+
+  .search-form-input {
     border: 1px solid $bd_c;
   }
 }
 
-.sidebar_switcher{
+.sidebar_switcher {
   color: $text_c4;
   background: $bg_block;
   border: 1px solid $bd_c;
 }
 
-#content{
+#content {}
 
-}
-
-.posts{
-  article{
+.posts {
+  article {
     background: $bg_block;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-    &.index-post{
-      .post-content{
+
+    &.index-post {
+      .post-content {
         color: $text_c3;
       }
     }
-    &.single-post{
-      .post-top{
+
+    &.single-post {
+      .post-top {
         background: $text_block;
       }
-      .post-title{
+
+      .post-title {
         border-bottom: 1px solid $bd_c;
       }
     }
-    .post-sticky{
+
+    .post-sticky {
       color: $bg_block;
       background: $link_c_h;
     }
-    .post-title a{
+
+    .post-title a {
       color: $text_c3;
-      &:hover{
+
+      &:hover {
         color: $link_c_h;
       }
     }
   }
-  .ias-trigger a{
+
+  .ias-trigger a {
     background: $bg_block;
     border: 1px solid $bd_c;
   }
 }
 
 .page-numbers {
-    background: $bg_block;
-    border: 1px solid $bd_c;
-    &.current,
-    &:hover {
-      color: $bg_block;
-      background: $link_c_h;
-    }
+  background: $bg_block;
+  border: 1px solid $bd_c;
+
+  &.current,
+  &:hover {
+    color: $bg_block;
+    background: $link_c_h;
+  }
 }
 
 .post-download {
   color: $text_c3;
   background: $text_block;
-  .link{
+
+  .link {
     color: $link_c_h;
   }
-  .reply{
+
+  .reply {
     color: red;
   }
 }
 
 #footer {
-  .footer-inner{
+  .footer-inner {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
     background: $bg_block;
   }
 }
 
-#m-header{
+#m-header {
   background: $bg_block;
   border-bottom: 1px solid $bd_c;
 }
 
-#m-menu{
+#m-menu {
   background: $bg_block;
   border-left: 1px solid $bd_c;
 }
 
-.timeline{
+.timeline {
   border-left: 1px solid $bd_c;
-  .tl-item{
+
+  .tl-item {
     border-left: 1px solid $link_c_h;
   }
 }
 
-.readers-list li{
-  .readers-inner{
+.readers-list li {
+  .readers-inner {
     border: 1px solid $bd_c;
+  }
+}
+
+#comment-jump {
+  #commentform {
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .fa {
+      &::before {
+        color: $text_c3;
+      }
+    }
+
+    input[type="text"],
+    textarea {
+      background: $bg_block;
+      border: 1px solid $bd_c;
+    }
+
+    .commentPlus {
+      border-top: 1px solid $bd_c;
+    }
+
+    input[type=submit] {
+      border: 1px solid $bd_c;
+      color: $bg_block;
+      background: $link_c_h;
+      border: 1px solid $link_c_h;
+    }
+  }
+
+  .comment-block {
+    background: $bg_block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    .comment-header {
+      border-bottom: 1px solid $bd_c;
+      .author-name{
+        color: $link_c_h;
+      }
+    }
+    .comment-body {
+    }
+    .comment-bottom a {
+      color: $text_c2;
+    }
   }
 }
