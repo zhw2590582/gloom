@@ -7,7 +7,7 @@
 
   #content {
     padding-top: 50px;
-    padding-left: 0;
+    padding-left: 0 !important;
     .content_inner{
       padding: 10px 10px 50px;
     }
@@ -17,6 +17,11 @@
       padding: 10px 10px 40px;
       .post-right{
         padding: 0 !important;
+        .post-title{
+          overflow: visible;
+          text-overflow: inherit;
+          white-space: inherit;
+        }
       }
     }
   }

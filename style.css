@@ -461,10 +461,11 @@ img { max-width: 100%; }
 .download-wrap .dlview .reply { display: inline-block; }
 
 .mobile .m_hide { display: none !important; }
-.mobile #content { padding-top: 50px; padding-left: 0; }
+.mobile #content { padding-top: 50px; padding-left: 0 !important; }
 .mobile #content .content_inner { padding: 10px 10px 50px; }
 .mobile #content article { width: auto !important; margin-right: auto !important; padding: 10px 10px 40px; }
 .mobile #content article .post-right { padding: 0 !important; }
+.mobile #content article .post-right .post-title { overflow: visible; text-overflow: inherit; white-space: inherit; }
 .mobile #m-header { position: fixed; top: 0; left: 0; right: 0; z-index: 10; height: 50px; line-height: 50px; padding: 0 10px; }
 .mobile #m-header .m-back { font-size: 18px; text-align: center; width: 30px; }
 .mobile #m-header .m-logo { font-size: 16px; padding: 0 15px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

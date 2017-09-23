@@ -871,7 +871,7 @@
   	}
   	return $content;
   }
-  add_filter( 'the_content', 'article_index' );
+  //add_filter( 'the_content', 'article_index' );
 
 /* 自定义评论输出 */
 function island_comment($comment, $args, $depth) {

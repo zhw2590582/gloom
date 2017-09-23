@@ -224,20 +224,6 @@ $options[]    = array(
 
       ),
     ),
-
-    array(
-      'name'   => 'aside_section_3',
-      'title' => ' 目录',
-      'icon'  => 'fa fa-list-ul',
-      'fields' => array(
-
-      	array(
-          'id'    	  => 'i_index',
-          'type'      => 'switcher',
-          'title'     => '文章目录',
-        ),
-      ),
-    ),
   ),
 );
 
