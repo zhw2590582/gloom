@@ -51,6 +51,7 @@ body a:hover { color: #02b875; }
 .posts article { background: #fff; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
 .posts article.index-post .post-content { color: #666; }
 .posts article.single-post .post-top { background: #f6f8fa; }
+.posts article.single-post .post-title { border-bottom: 1px solid #e5e5e5; }
 .posts article .post-sticky { color: #fff; background: #02b875; }
 .posts article .post-title a { color: #666; }
 .posts article .post-title a:hover { color: #02b875; }

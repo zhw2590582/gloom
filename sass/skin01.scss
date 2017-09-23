@@ -188,6 +188,9 @@ body{
       .post-top{
         background: $text_block;
       }
+      .post-title{
+        border-bottom: 1px solid $bd_c;
+      }
     }
     .post-sticky{
       color: $bg_block;

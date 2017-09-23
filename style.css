@@ -219,7 +219,7 @@ img { max-width: 100%; }
 #header { position: fixed; left: 0; top: 0; bottom: 0; z-index: 92; width: 235px; height: 100%; padding-top: 36px; /* logo */ /* menu */ }
 #header .header_inner { padding: 20px 0 0; }
 #header .logo { margin-bottom: 50px; }
-#header .logo .logo_img { display: block; margin-bottom: 20px; padding: 0 15px; }
+#header .logo .logo_img { display: block; margin-bottom: 20px; padding: 0 40px; }
 #header .logo .blog_name { padding: 0 15px; line-height: 1.5; }
 #header .menu .menu-wrapper .list .menu-item { list-style: none; text-align: center; }
 #header .menu .menu-wrapper .list .menu-item a { display: block; font-size: 14px; padding: 10px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
