@@ -3,8 +3,6 @@
 	$edit = cs_get_option('i_footer_edit');
 	$copyright = cs_get_option('i_foot_copyright');
 	$gotop = cs_get_option('i_gotop');
-	$qrcode = cs_get_option('i_qrcode');
-	$qrcodeimg = cs_get_option('i_qrcode_image');
 	$comment = cs_get_option('i_comment_switch');
 	$player_id = cs_get_option( 'i_player_id');
 	$player = cs_get_option('i_player');
@@ -50,34 +48,16 @@
   <?php if (!is_mobile()) { ?>
 		<!-- 浮动按钮 开始 -->
 		<div id="footer-btn" class="hide">
-			<ul>
-				<?php if($gotop) { ?>
-					<li class="item">
-						<a href="#top" class="icon">
-							<i class="hand fa fa-chevron-up"></i>
-						</a>
-					</li>
-				<?php } ?>
-				<?php if($comment && is_single ()) { ?>
-					<li class="item">
-						<a href="#comments" class="comment_btn hand icon">
-							<i class="fa fa-comment-o"></i>
-						</a>
-					</li>
-				<?php } ?>
-				<?php if($qrcode) { ?>
-					<li class="item">
-							<a class="icon" href="javascript:void(0)">
-              	<i class="fa fa-qrcode"></i>
-							</a>
-							<div class="show-box">
-								<div class="show-box-inner qr-box">
-									<img src="'. $qrcodeimg .'">
-								</div>
-							</div>
-					</li>
-				<?php } ?>
-			</ul>
+			<?php if($gotop) { ?>
+				<a href="#top" class="top_btn">
+					<i class="fa fa-angle-up" aria-hidden="true"></i>
+				</a>
+			<?php } ?>
+			<?php if($comment && is_single ()) { ?>
+				<a href="#comments" class="comment_btn">
+					<i class="fa fa-comment-o" aria-hidden="true"></i>
+				</a>
+			<?php } ?>
 		</div>
 		<!-- 浮动按钮 结束 -->
 	<?php }?>

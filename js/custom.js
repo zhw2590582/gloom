@@ -68,7 +68,7 @@
 
   // 滚动显示
   $(window).scroll(function() {
-    if ($(window).scrollTop() > 400) {
+    if ($(window).scrollTop() > 200) {
       $("#article-index").fadeIn();
       $("#footer-btn").fadeIn();
     } else {

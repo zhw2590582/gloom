@@ -807,25 +807,6 @@ $options[] = array(
             'default' => true,
             'title' => '显示评论按钮',
         ) ,
-        // 显示二维码
-        array(
-            'id' => 'i_qrcode',
-            'type' => 'switcher',
-            'title' => '显示二维码',
-        ) ,
-        // 插入二维码
-        array(
-            'id' => 'i_qrcode_image',
-            'type' => 'upload',
-            'title' => '插入二维码',
-            'default' => get_template_directory_uri() . "/images/default/qrcode.png",
-            'help' => '建议二维码尺寸不超过250px',
-            'dependency' => array(
-                'i_qrcode',
-                '==',
-                'true'
-            ) ,
-        ) ,
         // 版权信息
         array(
             'type' => 'notice',
@@ -1339,7 +1320,6 @@ $options[] = array(
             'id' => 'i_notice',
             'type' => 'switcher',
             'title' => '启用公告弹窗',
-            'label' => 'Cookie默认保存1小时',
         ) ,
         // 封面
         array(
