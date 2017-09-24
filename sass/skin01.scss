@@ -219,6 +219,12 @@ a {
       border-left: 2px solid $link_c_h;
       background: $text_block;
     }
+    .textload{
+      background: $bg_block;
+      p{
+        background: $bg_body;
+      }
+    }
   }
   .ias-trigger a {
     background: $bg_block;

@@ -131,6 +131,16 @@
         <?php } ?>
       </ul>
     <?php } ?>
+    <?php if (!is_single() && !is_page() && !is_mobile()) { ?>
+      <div class="textload">
+        <p class="title"></p>
+        <p class="content"></p>
+        <p class="content"></p>
+        <p class="content"></p>
+        <p class="content"></p>
+        <p class="content"></p>
+      </div>
+    <?php } ?>
   </div>
 </div>
 

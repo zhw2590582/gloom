@@ -339,6 +339,10 @@ img { max-width: 100%; }
 .posts article .post-right .post-meta li.meta-tabs a { display: inline-block; }
 .posts article .post-right .post-meta li.mate-cat li { display: inline-block; }
 .posts article .post-right .post-meta li .fa { margin-right: 5px; margin-top: 2px; }
+.posts article .textload { position: absolute; left: 0; top: 0; right: 0; bottom: 0; padding-left: 15px; }
+.posts article .textload p { width: 100%; height: 20px; margin-bottom: 10px; }
+.posts article .textload p.title { height: 30px; margin-bottom: 20px; }
+.posts article .textload p:last-child { width: 50%; }
 .posts .ias-trigger, .posts .ias-noneleft { display: block; float: left; margin-top: 20px; width: 100%; }
 .posts .ias-trigger a, .posts .ias-noneleft a { display: inline-block; height: 30px; line-height: 30px; padding: 0 20px; }
 

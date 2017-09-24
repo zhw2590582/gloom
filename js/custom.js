@@ -219,6 +219,11 @@
       $(this).prop("src", url + "images/default/d_favicon.ico");
     });
 
+    //文字加载效果
+    setTimeout(function () {
+      $('.textload').fadeOut();
+    },500);
+
     // 加载更多
     if($('body').hasClass('home') || $('body').hasClass('archive')){
       var posts = $('.posts');
@@ -257,6 +262,9 @@
             $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
           }
         });
+        setTimeout(function () {
+          $('.textload').fadeOut();
+        },500);
       });
     }
 
