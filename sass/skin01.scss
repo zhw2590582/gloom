@@ -38,7 +38,6 @@ a {
 .widget-title {
   color: $text_c3;
   border-bottom: 1px solid $bd_c;
-
   span {
     border-bottom: 1px solid $link_c_h;
   }
@@ -58,34 +57,22 @@ a {
 #topbar {
   background: $bg_block;
   border-bottom: 1px solid $bd_c;
-
   .item1 {
     border-right: 1px solid $bd_c;
-
     .fa {
       color: $text_c4;
     }
-
     .setting-pop {
       background: $bg_block;
       border: 1px solid rgba(27,31,35,0.15);
       box-shadow: 0 1px 5px rgba(27,31,35,0.15);
-
       &::before {
         border: 8px solid transparent;
         border-bottom-color: rgba(27,31,35,0.15);
       }
-
       &::after {
         border: 7px solid transparent;
         border-bottom-color: $bg_block;
-      }
-
-      a {
-        &:hover {
-          color: $bg_block;
-          background: $link_c_h;
-        }
       }
     }
 
@@ -93,7 +80,6 @@ a {
       .input {
         border: 1px solid $bd_c;
       }
-
       #wp-submit {
         color: $bg_block;
         border: 1px solid $link_c_h;
@@ -104,18 +90,14 @@ a {
 
   .item2 {
     border-right: 1px solid $bd_c;
-
     .widget_btn {
       color: $text_c0;
-
       &:hover {
         color: $link_c_h;
       }
-
       &.on {
         color: $link_c_h;
         border-bottom: 1px solid $link_c_h;
-
         &::before {
           margin-left: -3px;
           border-right: 5px solid transparent;
@@ -130,16 +112,13 @@ a {
     .fa {
       color: $text_c4;
     }
-
     .notice {
       color: $text_c0;
     }
-
     .layouts {
       span {
         background: $text_c4;
       }
-
       a:hover span {
         background: $link_c_h;
       }
@@ -150,16 +129,13 @@ a {
 #header {
   background: $bg_block;
   border-right: 1px solid $bd_c;
-
   .blog_name {
     color: $text_c0;
   }
-
   .sub-menu {
     background: $bg_block;
     border: 1px solid $bd_c;
   }
-
   .current_page_item a,
   .menu-item a:hover {
     color: $link_c_h;
@@ -170,25 +146,20 @@ a {
 #sidebar {
   background: $bg_block;
   border-right: 1px solid $bd_c;
-
   #profile {
     .name {
       color: $text_c0;
-
       .name_inner {
         color: $text_c3;
       }
-
       .fa {
         color: $link_c_h;
       }
     }
-
     .profile-content {
       color: $text_c1;
     }
   }
-
   .search-form-input {
     border: 1px solid $bd_c;
   }
@@ -208,18 +179,15 @@ a {
   article {
     background: $bg_block;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-
     &.index-post {
       .post-content {
         color: $text_c3;
       }
     }
-
     &.single-post {
       .post-top {
         background: $text_block;
       }
-
       .post-title {
         border-bottom: 1px solid $bd_c;
       }
@@ -227,12 +195,10 @@ a {
         color: $text_c3;
       }
     }
-
     .post-sticky {
       color: $bg_block;
       background: $link_c_h;
     }
-
     .post-title a {
       color: $text_c3;
       &:hover {
@@ -248,7 +214,6 @@ a {
       background: $text_block;
     }
   }
-
   .ias-trigger a {
     background: $bg_block;
     border: 1px solid $bd_c;
@@ -258,7 +223,6 @@ a {
 .page-numbers {
   background: $bg_block;
   border: 1px solid $bd_c;
-
   &.current,
   &:hover {
     color: $bg_block;
@@ -318,17 +282,14 @@ a {
         color: $text_c3;
       }
     }
-
     input[type="text"],
     textarea {
       background: $bg_block;
       border: 1px solid $bd_c;
     }
-
     .commentPlus {
       border-top: 1px solid $bd_c;
     }
-
     input[type=submit] {
       border: 1px solid $bd_c;
       color: $bg_block;
