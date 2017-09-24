@@ -74,6 +74,12 @@ a {
         border: 7px solid transparent;
         border-bottom-color: $bg_block;
       }
+      .admin-list{
+        a:hover{
+          color: $bg_block;
+          background: $link_c_h;
+        }
+      }
     }
 
     #login-form {
