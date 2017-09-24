@@ -1,9 +1,9 @@
 {
   "Name": "Gloom",
-  "Version": "1.0.1",
+  "Version": "1.0.2",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
-  "Notice": "修复几个样式bug",
+  "Notice": "添加两个常用的短代码功能",
   "Script": "<script type='text/javascript'></script>",
   "Blacklist": ["172", "192", "localhost"]
 }

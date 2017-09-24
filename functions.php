@@ -106,6 +106,9 @@
   }
   add_filter('body_class','mobile_css');
 
+  /* 引入短代码 */
+  include ('shortcode.php');
+
   /* 引入密钥验证 */
   include ('verify.php');
 
