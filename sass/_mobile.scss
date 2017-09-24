@@ -105,4 +105,14 @@
       }
     }
   }
+
+  .link_box .blogroll li{
+    width: 100%;
+  }
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
 }
