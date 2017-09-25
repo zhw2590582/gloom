@@ -315,7 +315,7 @@ a {
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     .comment-header {
       border-bottom: 1px solid $bd_c;
-      .author-name{
+      .author-name, .author-name a{
         color: $link_c_h;
       }
     }
