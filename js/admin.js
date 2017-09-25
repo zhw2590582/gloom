@@ -56,4 +56,21 @@ jQuery(document).ready(function($) {
       }
     })
     .change();
+
+  /*	转义标签 */
+  $(document).on('blur','[data-sub-depend-id=content]',function(){
+    if($('[data-clone-id]').data('cloneId') === 'code_prettify'){
+      var entityMap = {
+        '<': '&lt;',
+        '>': '&gt;'
+      };
+      function escapeHtml (string) {
+        return String(string).replace(/[<>]/g, function fromEntityMap (s) {
+          return entityMap[s];
+        });
+      }
+      $(this).val(escapeHtml($(this).val()));
+    }
+  })
+
 });
