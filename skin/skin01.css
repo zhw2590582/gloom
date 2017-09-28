@@ -2,12 +2,12 @@
 /* 治愈 */
 .skin01 { display: none !important; }
 
-body { color: #8e7d67; background: #d9d4c1 url("../images/skin/bg.jpg"); }
+body { color: #8e7d67; background: #d9d4c1 url("../images/skin/body.png"); }
 
 a { color: #7d6b56; }
 a:hover { color: #ca5d43; }
 
-#wrapper { background: #d9d4c1 url("../images/skin/bg.jpg"); }
+#wrapper { background: #d9d4c1 url("../images/skin/body.png"); }
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] { background: #e8e6df !important; }
 
@@ -18,7 +18,7 @@ a:hover { color: #ca5d43; }
 
 .avatar-img, .bg-img { background-color: #eae8dd; }
 
-#topbar { background: #7d6c58 url("../images/skin/header_bg.png") repeat-x; border-bottom: 1px solid #5d5142; text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px; }
+#topbar { background: #7d6c58 url("../images/skin/header.png") repeat-x; border-bottom: 1px solid #5d5142; text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px; }
 #topbar .item1 { border-right: 1px solid #5d5142; }
 #topbar .item1 .skin02 { background: #756550 !important; border: 1px solid #5d5142 !important; -webkit-box-shadow: 0 1px 0px #a08f79 !important; box-shadow: 0 1px 0px #a08f79 !important; }
 #topbar .item1 .skin02::before { border: 1px solid #675641 !important; background: #98876f !important; -webkit-box-shadow: 0 1px 0px #c7b498 inset !important; box-shadow: 0 1px 0px #c7b498 inset !important; }
