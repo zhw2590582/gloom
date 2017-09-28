@@ -1,9 +1,9 @@
 {
   "Name": "Gloom",
-  "Version": "1.0.2",
+  "Version": "1.0.3",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
-  "Notice": "添加两个常用的短代码功能",
+  "Notice": "添加一套致郁皮肤",
   "Script": "<script type='text/javascript'></script>",
   "Blacklist": ["172", "192", "localhost"]
 }
