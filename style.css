@@ -268,7 +268,8 @@ img { max-width: 100%; }
 #sidebar .sidebar_inner .widget-title { position: relative; font-size: 16px; font-weight: normal; height: 30px; margin-bottom: 15px; }
 #sidebar .sidebar_inner .widget-title span { position: absolute; left: 0; bottom: -1px; padding-bottom: 5px; }
 
-.sidebar_switcher { position: fixed; z-index: 97; left: 469px; top: 50%; width: 10px; height: 60px; line-height: 60px; text-align: center; border-top-right-radius: 15px; border-bottom-right-radius: 15px; }
+.sidebar_switcher { position: fixed; z-index: 97; left: 469px; top: 0; bottom: 0; height: 100%; }
+.sidebar_switcher .sidebar_switcher_inner { position: absolute; top: 50%; width: 10px; height: 60px; line-height: 60px; text-align: center; border-top-right-radius: 15px; border-bottom-right-radius: 15px; }
 .sidebar_switcher .fa-angle-right { display: none; }
 
 /* content */

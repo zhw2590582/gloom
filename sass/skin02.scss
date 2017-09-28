@@ -112,6 +112,7 @@ a {
 
   .item2 {
     border-right: 1px solid $bd_c2;
+    border-left: 1px solid #96856b;
     color: $c_header;
     .widget_btn {
       color: $c_header;
@@ -169,6 +170,7 @@ a {
 #sidebar {
   background: $bg_block;
   border-right: 1px solid $bd_c;
+  border-left: 1px solid #ffffff;
   #profile {
     .name {
       color: $text_c0;
@@ -189,12 +191,21 @@ a {
 }
 
 .sidebar_switcher {
-  color: $text_c3;
-  background: $bg_block;
-  border: 1px solid $bd_c;
-}
-
-#content {
+  .sidebar_switcher_inner{
+    color: $text_c3;
+    background: $bg_block;
+    border: 1px solid $bd_c;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 11px;
+    background: url('../images/skin/sidebar.png') repeat-y;
+  }
 }
 
 .posts {
