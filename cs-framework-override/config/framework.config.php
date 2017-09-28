@@ -75,8 +75,8 @@ $options[] = array(
             'title' => '自定义皮肤',
             'class' => 'horizontal',
             'options' => array(
-                'skin01' => '淡雅',                
-                'skin02' => '致郁',
+                'skin01' => '致郁',                
+                'skin02' => '淡雅',
             ) ,
             'default' => 'skin01'
         ) ,

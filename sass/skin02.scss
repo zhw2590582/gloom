@@ -1,27 +1,23 @@
 @charset "UTF-8";
-/* 治愈 */
+/* 淡雅 */
 @import 'mixin';
 
 .skin02 {
   display: none !important;
 }
 
-$bg_body: #d9d4c1 url('../images/skin/bg.jpg'); // 背景色
-$bg_block: #f6f5f0; // 块背景色
-$bg_header: #7d6c58 url('../images/skin/header_bg.png') repeat-x;
-$c_header: #dcd1c3;
-$c_header_h: #efeae3;
-$bd_c: #c1b8ac; // 描边色
-$bd_c2: #5d5142;
-$text_c0: #ad9b83; // 文本色0
-$text_c1: #8e7d67; // 文本色1
-$text_c2: #776752; // 文本色2
-$text_c3: #86755f; // 文本色3
+$bg_body: #f4f4f4; // 背景色
+$bg_block: #fff; // 块背景色
+$bd_c: #e5e5e5; // 描边色
+$text_c0: #999; // 文本色0
+$text_c1: #888; // 文本色1
+$text_c2: #777; // 文本色2
+$text_c3: #666; // 文本色3
 $text_c4: #bbb; // 文本色4
-$link_c: #7d6b56; // 链接色
-$link_c_h: #ca5d43; // 链接悬停色
-$hold_c: #eae8dd; // 占位色
-$text_block: #e8e6df; // 文本块
+$link_c: #888; // 链接色
+$link_c_h: #02b875; // 链接悬停色
+$hold_c: #ececec; // 占位色
+$text_block: #f6f8fa; // 文本块
 
 body {
   color: $text_c1;
@@ -39,10 +35,6 @@ a {
   background: $bg_body;
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"]{
-  background:$text_block !important;
-}
-
 .main-title,
 .widget-title {
   color: $text_c3;
@@ -54,7 +46,7 @@ a {
 
 .mouse-tooltip {
   color: $text_c2;
-  background: #fff;
+  background: $bg_block;
   border: 1px solid $bd_c;
 }
 
@@ -64,38 +56,27 @@ a {
 }
 
 #topbar {
-  background: $bg_header;
-  border-bottom: 1px solid $bd_c2;
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px;
+  background: $bg_block;
+  border-bottom: 1px solid $bd_c;
   .item1 {
-    border-right: 1px solid $bd_c2;
-    .skin01{
-      background: #756550 !important;
-      border: 1px solid #5d5142 !important;
-      box-shadow: 0 1px 0px #a08f79 !important;
-      &::before{
-        border: 1px solid #675641 !important;
-        background: #98876f !important;
-        box-shadow: 0 1px 0px #c7b498 inset !important;
-      }
-    }
+    border-right: 1px solid $bd_c;
     .fa {
-      color: $c_header;
+      color: $text_c4;
     }
     .setting-pop {
-      background: #ffffff;
-      border: 1px solid rgba(27, 31, 35, 0.15);
-      box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15);
+      background: $bg_block;
+      border: 1px solid rgba(27,31,35,0.15);
+      box-shadow: 0 1px 5px rgba(27,31,35,0.15);
       &::before {
         border: 8px solid transparent;
-        border-bottom-color: rgba(27, 31, 35, 0.15);
+        border-bottom-color: rgba(27,31,35,0.15);
       }
       &::after {
         border: 7px solid transparent;
         border-bottom-color: $bg_block;
       }
-      .admin-list {
-        a:hover {
+      .admin-list{
+        a:hover{
           color: $bg_block;
           background: $link_c_h;
         }
@@ -104,7 +85,7 @@ a {
 
     #login-form {
       .input {
-        border: 1px solid #c3b4a1;
+        border: 1px solid $bd_c;
       }
       #wp-submit {
         color: $bg_block;
@@ -115,16 +96,14 @@ a {
   }
 
   .item2 {
-    border-right: 1px solid $bd_c2;
-    border-left: 1px solid #96856b;
-    color: $c_header;
+    border-right: 1px solid $bd_c;
     .widget_btn {
-      color: $c_header;
+      color: $text_c0;
       &:hover {
-        color: $c_header_h;
+        color: $link_c_h;
       }
       &.on {
-        color: $c_header_h;
+        color: $link_c_h;
         border-bottom: 1px solid $link_c_h;
         &::before {
           margin-left: -3px;
@@ -138,17 +117,17 @@ a {
 
   .item3 {
     .fa {
-      color: $c_header;
+      color: $text_c4;
     }
     .notice {
-      color: $c_header;
+      color: $text_c0;
     }
     .layouts {
       span {
-        background: $c_header;
+        background: $text_c4;
       }
       a:hover span {
-        background: $c_header_h;
+        background: $link_c_h;
       }
     }
   }
@@ -167,14 +146,13 @@ a {
   .current_page_item a,
   .menu-item a:hover {
     color: $link_c_h;
-    background: #e8e5da;
+    background: $bg_body;
   }
 }
 
 #sidebar {
   background: $bg_block;
   border-right: 1px solid $bd_c;
-  border-left: 1px solid #ffffff;
   #profile {
     .name {
       color: $text_c0;
@@ -196,37 +174,23 @@ a {
 
 .sidebar_switcher {
   .sidebar_switcher_inner{
-    color: $text_c3;
+    color: $text_c4;
     background: $bg_block;
     border: 1px solid $bd_c;
   }
-  &::before{
-    content: "";
-    position: absolute;
-    left: -5px;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: 11px;
-    background: url('../images/skin/sidebar.png') repeat-y;
-  }
+}
+
+#content {
+
 }
 
 .posts {
   article {
     background: $bg_block;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     &.index-post {
       .post-content {
         color: $text_c0;
-        &::after{
-          background: rgba(246, 245, 240, 0.5);
-          background: -webkit-linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
-          background: -o-linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
-          background: -moz-linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
-          background: linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
-        }
       }
     }
     &.single-post {
@@ -236,7 +200,7 @@ a {
       .post-title {
         border-bottom: 1px solid $bd_c;
       }
-      .post-content {
+      .post-content{
         color: $text_c3;
       }
     }
@@ -250,22 +214,18 @@ a {
         color: $link_c_h;
       }
     }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
+    h1,h2,h3,h4,h5{
       border-left: 2px solid $link_c_h;
       background: $text_block;
     }
-    blockquote {
+    blockquote{
       border-left: 2px solid $link_c_h;
       background: $text_block;
     }
-    .textload {
+    .textload{
       background: $bg_block;
-      p {
-        background: #e8e5da;
+      p{
+        background: $bg_body;
       }
     }
   }
@@ -337,7 +297,7 @@ a {
         color: $text_c3;
       }
     }
-    input[type='text'],
+    input[type="text"],
     textarea {
       background: $bg_block;
       border: 1px solid $bd_c;
@@ -345,7 +305,7 @@ a {
     .commentPlus {
       border-top: 1px solid $bd_c;
     }
-    input[type='submit'] {
+    input[type=submit] {
       border: 1px solid $bd_c;
       color: $bg_block;
       background: $link_c_h;
@@ -355,12 +315,10 @@ a {
 
   .comment-block {
     background: $bg_block;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     .comment-header {
       border-bottom: 1px solid $bd_c;
-      .author-name,
-      .author-name a {
+      .author-name, .author-name a{
         color: $link_c_h;
       }
     }
