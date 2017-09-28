@@ -9,6 +9,8 @@ a:hover { color: #ca5d43; }
 
 #wrapper { background: #d9d4c1 url("../images/skin/bg.jpg"); }
 
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background: #e8e6df !important; }
+
 .main-title, .widget-title { color: #86755f; border-bottom: 1px solid #c1b8ac; }
 .main-title span, .widget-title span { border-bottom: 1px solid #ca5d43; }
 

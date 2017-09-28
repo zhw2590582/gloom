@@ -39,6 +39,10 @@ a {
   background: $bg_body;
 }
 
+:not(pre) > code[class*="language-"], pre[class*="language-"]{
+  background:$text_block !important;
+}
+
 .main-title,
 .widget-title {
   color: $text_c3;
