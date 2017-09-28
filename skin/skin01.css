@@ -23,9 +23,9 @@ a:hover { color: #ca5d43; }
 #topbar .item1 .skin02 { background: #756550 !important; border: 1px solid #5d5142 !important; -webkit-box-shadow: 0 1px 0px #a08f79 !important; box-shadow: 0 1px 0px #a08f79 !important; }
 #topbar .item1 .skin02::before { border: 1px solid #675641 !important; background: #98876f !important; -webkit-box-shadow: 0 1px 0px #c7b498 inset !important; box-shadow: 0 1px 0px #c7b498 inset !important; }
 #topbar .item1 .fa { color: #dcd1c3; }
-#topbar .item1 .setting-pop { background: #ffffff; border: 1px solid rgba(27, 31, 35, 0.15); -webkit-box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15); box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15); }
+#topbar .item1 .setting-pop { text-shadow: none; background: #ffffff; border: 1px solid rgba(27, 31, 35, 0.15); -webkit-box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15); box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15); }
 #topbar .item1 .setting-pop::before { border: 8px solid transparent; border-bottom-color: rgba(27, 31, 35, 0.15); }
-#topbar .item1 .setting-pop::after { border: 7px solid transparent; border-bottom-color: #f6f5f0; }
+#topbar .item1 .setting-pop::after { border: 7px solid transparent; border-bottom-color: #ffffff; }
 #topbar .item1 .setting-pop .admin-list a:hover { color: #f6f5f0; background: #ca5d43; }
 #topbar .item1 #login-form .input { border: 1px solid #c3b4a1; }
 #topbar .item1 #login-form #wp-submit { color: #f6f5f0; border: 1px solid #ca5d43; background: #ca5d43; }
