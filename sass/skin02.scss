@@ -1,7 +1,358 @@
 @charset "UTF-8";
-/* 致郁 */
+/* 治愈 */
 @import 'mixin';
 
-.skin02{
+.skin02 {
   display: none !important;
+}
+
+$bg_body: #d9d4c1 url('../images/skin/bg.jpg'); // 背景色
+$bg_block: #f6f5f0; // 块背景色
+$bg_header: #7d6c58 url('../images/skin/header_bg.png') repeat-x;
+$c_header: #dcd1c3;
+$c_header_h: #efeae3;
+$bd_c: #c1b8ac; // 描边色
+$bd_c2: #5d5142;
+$text_c0: #ad9b83; // 文本色0
+$text_c1: #8e7d67; // 文本色1
+$text_c2: #776752; // 文本色2
+$text_c3: #86755f; // 文本色3
+$text_c4: #bbb; // 文本色4
+$link_c: #7d6b56; // 链接色
+$link_c_h: #ca5d43; // 链接悬停色
+$hold_c: #eae8dd; // 占位色
+$text_block: #e8e6df; // 文本块
+
+body {
+  color: $text_c1;
+  background: $bg_body;
+}
+
+a {
+  color: $link_c;
+  &:hover {
+    color: $link_c_h;
+  }
+}
+
+#wrapper {
+  background: $bg_body;
+}
+
+.main-title,
+.widget-title {
+  color: $text_c3;
+  border-bottom: 1px solid $bd_c;
+  span {
+    border-bottom: 1px solid $link_c_h;
+  }
+}
+
+.mouse-tooltip {
+  color: $text_c2;
+  background: #fff;
+  border: 1px solid $bd_c;
+}
+
+.avatar-img,
+.bg-img {
+  background-color: $hold_c;
+}
+
+#topbar {
+  background: $bg_header;
+  border-bottom: 1px solid $bd_c2;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px;
+  .item1 {
+    border-right: 1px solid $bd_c2;
+    .skin01{
+      background: #756550 !important;
+      border: 1px solid #5d5142 !important;
+      box-shadow: 0 1px 0px #a08f79 !important;
+      &::before{
+        border: 1px solid #675641 !important;
+        background: #98876f !important;
+        box-shadow: 0 1px 0px #c7b498 inset !important;
+      }
+    }
+    .fa {
+      color: $c_header;
+    }
+    .setting-pop {
+      background: #ffffff;
+      border: 1px solid rgba(27, 31, 35, 0.15);
+      box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15);
+      &::before {
+        border: 8px solid transparent;
+        border-bottom-color: rgba(27, 31, 35, 0.15);
+      }
+      &::after {
+        border: 7px solid transparent;
+        border-bottom-color: $bg_block;
+      }
+      .admin-list {
+        a:hover {
+          color: $bg_block;
+          background: $link_c_h;
+        }
+      }
+    }
+
+    #login-form {
+      .input {
+        border: 1px solid #c3b4a1;
+      }
+      #wp-submit {
+        color: $bg_block;
+        border: 1px solid $link_c_h;
+        background: $link_c_h;
+      }
+    }
+  }
+
+  .item2 {
+    border-right: 1px solid $bd_c2;
+    color: $c_header;
+    .widget_btn {
+      color: $c_header;
+      &:hover {
+        color: $c_header_h;
+      }
+      &.on {
+        color: $c_header_h;
+        border-bottom: 1px solid $link_c_h;
+        &::before {
+          margin-left: -3px;
+          border-right: 5px solid transparent;
+          border-bottom: 3px solid $link_c_h;
+          border-left: 5px solid transparent;
+        }
+      }
+    }
+  }
+
+  .item3 {
+    .fa {
+      color: $c_header;
+    }
+    .notice {
+      color: $c_header;
+    }
+    .layouts {
+      span {
+        background: $c_header;
+      }
+      a:hover span {
+        background: $c_header_h;
+      }
+    }
+  }
+}
+
+#header {
+  background: $bg_block;
+  border-right: 1px solid $bd_c;
+  .blog_name {
+    color: $text_c0;
+  }
+  .sub-menu {
+    background: $bg_block;
+    border: 1px solid $bd_c;
+  }
+  .current_page_item a,
+  .menu-item a:hover {
+    color: $link_c_h;
+    background: #e8e5da;
+  }
+}
+
+#sidebar {
+  background: $bg_block;
+  border-right: 1px solid $bd_c;
+  #profile {
+    .name {
+      color: $text_c0;
+      .name_inner {
+        color: $text_c3;
+      }
+      .fa {
+        color: $link_c_h;
+      }
+    }
+    .profile-content {
+      color: $text_c1;
+    }
+  }
+  .search-form-input {
+    border: 1px solid $bd_c;
+  }
+}
+
+.sidebar_switcher {
+  color: $text_c3;
+  background: $bg_block;
+  border: 1px solid $bd_c;
+}
+
+#content {
+}
+
+.posts {
+  article {
+    background: $bg_block;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    &.index-post {
+      .post-content {
+        color: $text_c0;
+        &::after{
+          background: rgba(246, 245, 240, 0.5);
+          background: -webkit-linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
+          background: -o-linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
+          background: -moz-linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
+          background: linear-gradient(transparent, rgba(246, 245, 240, 0.1) 20%, rgba(246, 245, 240, 0.2) 35%, rgba(246, 245, 240, 0.5) 65%, rgba(246, 245, 240, 0.9)) !important;
+        }
+      }
+    }
+    &.single-post {
+      .post-top {
+        background: $text_block;
+      }
+      .post-title {
+        border-bottom: 1px solid $bd_c;
+      }
+      .post-content {
+        color: $text_c3;
+      }
+    }
+    .post-sticky {
+      color: $bg_block;
+      background: $link_c_h;
+    }
+    .post-title a {
+      color: $text_c3;
+      &:hover {
+        color: $link_c_h;
+      }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      border-left: 2px solid $link_c_h;
+      background: $text_block;
+    }
+    blockquote {
+      border-left: 2px solid $link_c_h;
+      background: $text_block;
+    }
+    .textload {
+      background: $bg_block;
+      p {
+        background: #e8e5da;
+      }
+    }
+  }
+  .ias-trigger a {
+    background: $bg_block;
+    border: 1px solid $bd_c;
+  }
+}
+
+.page-numbers {
+  background: $bg_block;
+  border: 1px solid $bd_c;
+  &.current,
+  &:hover {
+    color: $bg_block;
+    background: $link_c_h;
+  }
+}
+
+.post-download {
+  color: $text_c3;
+  border-left: 2px solid $link_c_h;
+  background: $text_block;
+  .link {
+    color: $link_c_h;
+  }
+  .reply {
+    color: red;
+  }
+}
+
+#footer {
+  .footer-inner {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    background: $bg_block;
+  }
+}
+
+#m-header {
+  background: $bg_block;
+  border-bottom: 1px solid $bd_c;
+}
+
+#m-menu {
+  background: $bg_block;
+  border-left: 1px solid $bd_c;
+}
+
+.timeline {
+  border-left: 1px solid $bd_c;
+  .tl-item {
+    border-left: 1px solid $link_c_h;
+  }
+}
+
+.readers-list li {
+  .readers-inner {
+    border: 1px solid $bd_c;
+  }
+}
+
+#comment-jump {
+  #commentform {
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    .fa {
+      &::before {
+        color: $text_c3;
+      }
+    }
+    input[type='text'],
+    textarea {
+      background: $bg_block;
+      border: 1px solid $bd_c;
+    }
+    .commentPlus {
+      border-top: 1px solid $bd_c;
+    }
+    input[type='submit'] {
+      border: 1px solid $bd_c;
+      color: $bg_block;
+      background: $link_c_h;
+      border: 1px solid $link_c_h;
+    }
+  }
+
+  .comment-block {
+    background: $bg_block;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    .comment-header {
+      border-bottom: 1px solid $bd_c;
+      .author-name,
+      .author-name a {
+        color: $link_c_h;
+      }
+    }
+    .comment-body {
+    }
+    .comment-bottom a {
+      color: $text_c2;
+    }
+  }
 }

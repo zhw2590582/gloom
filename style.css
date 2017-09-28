@@ -370,7 +370,7 @@ img { max-width: 100%; }
 #commentform .comment-form-comment #error, #commentform .comment-form-comment #loading { position: absolute; bottom: -20px; }
 #commentform .commentPlus { position: absolute; z-index: 3; bottom: 5px; right: 0; left: 0; height: 40px; line-height: 40px; width: 100%; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; -webkit-box-shadow: none; box-shadow: none; }
 #commentform .commentPlus .editor { display: inline-block; float: left; width: 36px; text-align: center; font-size: 14px; cursor: pointer; }
-#commentform .form-submit { position: absolute; z-index: 3; margin: 0; right: 1px; bottom: 6px; display: inline-block; float: right; }
+#commentform .form-submit { position: absolute; z-index: 3; margin: 0; right: 2px; bottom: 5px; display: inline-block; float: right; }
 #commentform .form-submit #submit { width: 100%; text-align: center; font-size: 14px; border-bottom-right-radius: 2px; cursor: pointer; height: 38px; line-height: 38px; display: block; padding: 0 20px; outline: 0; }
 #commentform .comment-form-smilies { position: absolute !important; bottom: 35px; left: 10px; width: 300px; padding: 5px; border-radius: 3px; border: 1px solid #ddd; background: rgba(255, 255, 255, 0.9); }
 #commentform .comment-form-smilies a { display: inline-block; float: left; width: 20px; height: 20px; line-height: 20px; margin: 3px; }
@@ -521,4 +521,5 @@ img { max-width: 100%; }
 .mobile .menu-content a .fa { margin-right: 5px; }
 .mobile .link_box .blogroll li { width: 100%; }
 .mobile .comment-form-author, .mobile .comment-form-email, .mobile .comment-form-url { width: 100% !important; padding-right: 0 !important; }
+
 /*# sourceMappingURL=style.css.map */
