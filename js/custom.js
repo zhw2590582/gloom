@@ -222,7 +222,7 @@
     }
 
     // Tooltip
-    $('.tagcloud a,.blogroll a').each(function(i) {
+    $('.blogroll a').each(function(i) {
       var formattedDate = $(this).attr('title');
       $(this).attr('data-tooltip', function(n, v) {
         return formattedDate;

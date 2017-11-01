@@ -31,7 +31,7 @@ a:hover { color: #02b875; }
 #topbar .item2 .widget_btn.on { color: #02b875; border-bottom: 1px solid #02b875; }
 #topbar .item2 .widget_btn.on::before { margin-left: -3px; border-right: 5px solid transparent; border-bottom: 3px solid #02b875; border-left: 5px solid transparent; }
 #topbar .item3 .fa { color: #bbb; }
-#topbar .item3 .notice { color: #999; }
+#topbar .item3 .notices { color: #999; }
 #topbar .item3 .layouts span { background: #bbb; }
 #topbar .item3 .layouts a:hover span { background: #02b875; }
 

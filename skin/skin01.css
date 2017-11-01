@@ -33,7 +33,7 @@ a:hover { color: #ca5d43; }
 #topbar .item2 .widget_btn.on { color: #efeae3; border-bottom: 1px solid #ca5d43; }
 #topbar .item2 .widget_btn.on::before { margin-left: -3px; border-right: 5px solid transparent; border-bottom: 3px solid #ca5d43; border-left: 5px solid transparent; }
 #topbar .item3 .fa { color: #dcd1c3; }
-#topbar .item3 .notice { color: #dcd1c3; }
+#topbar .item3 .notices { color: #dcd1c3; }
 #topbar .item3 .layouts span { background: #dcd1c3; }
 #topbar .item3 .layouts a:hover span { background: #efeae3; }
 
