@@ -361,7 +361,8 @@ a {
         color: $link_c_h;
       }
     }
-    .comment-body {
+    .comment-body a{
+      color: $link_c_h;
     }
     .comment-bottom a {
       color: $text_c2;
