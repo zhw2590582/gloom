@@ -87,7 +87,7 @@ a:hover { color: #02b875; }
 #comment-jump #commentform input[type=submit] { border: 1px solid #e5e5e5; color: #fff; background: #02b875; border: 1px solid #02b875; }
 #comment-jump .comment-block { background: #fff; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
 #comment-jump .comment-block .comment-header { border-bottom: 1px solid #e5e5e5; }
-#comment-jump .comment-block .comment-header .author-name, #comment-jump .comment-block .comment-header .author-name a { color: #02b875; }
+#comment-jump .comment-block .comment-header .author-name, #comment-jump .comment-block .comment-header .author-name a, .comment-body a { color: #02b875; }
 #comment-jump .comment-block .comment-bottom a { color: #777; }
 
 /*# sourceMappingURL=skin02.css.map */
