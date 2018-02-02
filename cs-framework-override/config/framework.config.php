@@ -1,5 +1,7 @@
 <?php
-if (!defined('ABSPATH')) { die; } // 不能直接访问网页.
+if (!defined('ABSPATH')) {
+    die;
+} // 不能直接访问网页.
 // ===============================================================================================
 // -----------------------------------------------------------------------------------------------
 // Island 主题框架设置
@@ -19,6 +21,20 @@ if (!empty($verify) || $Gloom_key == 'zhw2590582') {
     );
 } else {
 };
+
+// 播放器
+$playlists = get_posts(array(
+    'post_type'      => 'cue_playlist',
+    'orderby'        => 'title',
+    'order'          => 'asc',
+    'posts_per_page' => -1,
+));
+
+$playlistsSelect = array();
+foreach ( $playlists as $playlist ) {
+    $playlistsSelect[ $playlist->ID ] = $playlist->post_title;
+}
+
 // ===============================================================================================
 // -----------------------------------------------------------------------------------------------
 // 框架选项
@@ -75,7 +91,7 @@ $options[] = array(
             'title' => '自定义皮肤',
             'class' => 'horizontal',
             'options' => array(
-                'skin01' => '致郁',                
+                'skin01' => '致郁',
                 'skin02' => '淡雅',
             ) ,
             'default' => 'skin01'
@@ -1118,14 +1134,10 @@ $options[] = array(
         // 歌单ID
         array(
             'id' => 'i_player_id',
-            'type' => 'number',
-            'title' => '歌单ID',
-            'dependency' => array(
-                'i_player',
-                '==',
-                'true'
-            ) ,
-        ) ,
+            'type' => 'select',
+            'title' => '选择歌单',
+            'options' => $playlistsSelect,
+        )
     )
 );
 // ------------------------------
