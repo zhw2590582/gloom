@@ -19,7 +19,7 @@
                                   </a>
                                 </header>
                                 <div class="post-content">
-                                  <?php if ( have_posts() ) : the_post(); ?>
+                                  <?php if (have_posts()) : the_post(); ?>
                                       <?php the_content(); ?>
                                   <?php endif; ?>
                                 </div>

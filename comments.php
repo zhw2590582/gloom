@@ -1,6 +1,10 @@
 <?php
-	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) die ('请勿直接加载该页面，谢谢!');
-	if ( post_password_required() ) { ?> <p class="nocomments"><?php _e('该文章受密码保护，请输入密码以访问。'); ?></p> <?php return; }
+    if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) {
+        die('请勿直接加载该页面，谢谢!');
+    }
+    if (post_password_required()) {
+        ?> <p class="nocomments"><?php _e('该文章受密码保护，请输入密码以访问。'); ?></p> <?php return;
+    }
 ?>
 
 <div id="comments" class="clearfix">
@@ -19,7 +23,7 @@
     <?php wp_list_comments("callback=island_comment"); ?>
     <div class="clearfix"></div>
   </ul>
-  <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+  <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // are there comments to navigate through?>
   <nav id="comment-nav-below" class="posts-nav" role="navigation">
     <div class="nav-inside">
     	<?php paginate_comments_links('prev_next=0');?>
