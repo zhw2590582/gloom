@@ -51,7 +51,7 @@
         <?php if(is_search()) { ?>
           <div class="archive-title main-title">
             <span>
-              <?php printf('搜索:  %s', '<span>' . get_search_query() . '</span>' ); ?>
+              搜索： <?php echo get_search_query(); ?>
             </span>
           </div>
         <?php } else if(is_tag()) { ?>
@@ -63,7 +63,7 @@
         <?php } else if(is_day()) { ?>
           <div class="archive-title main-title">
             <span>
-              日期： <?php _e('归档'); ?> <?php echo get_the_date(); ?>
+              日期： <?php echo get_the_date(); ?>
             </span>
           </div>
         <?php } else if(is_month()) { ?>
