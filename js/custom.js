@@ -275,9 +275,8 @@
     }, 500);
 
     // 加载更多
-    if ($('body').hasClass('home') || $('body').hasClass('archive')) {
-      var posts = $('.posts');
-      if (posts.data('pagination') != 'i_ajax') return;
+	var posts = $('.posts');
+    if (posts.data('pagination') == 'i_ajax' && ($('body').hasClass('home') || $('body').hasClass('archive'))) {
       var more = posts.data('more');
       var end = posts.data('end');
       var num = posts.data('num');
