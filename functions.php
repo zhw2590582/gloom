@@ -368,35 +368,6 @@
       add_filter('admin_body_class', 'add_admin_body_class');
   }
 
-  /* 添加选项按钮到工具栏 */
-  function tie_admin_bar()
-  {
-      global $wp_admin_bar;
-      global $verify;
-      $Gloom_key = cs_get_customize_option('Gloom_key');
-      $verify = get_option(THEME_KEY_NAME);
-      if (!empty($verify) || $Gloom_key == 'zhw2590582') {
-          if (current_user_can('switch_themes')) {
-              $wp_admin_bar->add_menu(array(
-                  'parent' => 0,
-                  'id' => 'mpanel_page',
-                  'title' => 'Gloom 主题选项',
-                  'href' => admin_url('admin.php?page=cs-framework')
-              ));
-          }
-      } else {
-          if (current_user_can('switch_themes')) {
-              $wp_admin_bar->add_menu(array(
-                  'parent' => 0,
-                  'id' => 'mpanel_verify',
-                  'title' => '主题未验证',
-                  'href' => admin_url('options-general.php?page=' . get_stylesheet_directory() . '/verify.php')
-              ));
-          }
-      }
-  }
-  add_action('wp_before_admin_bar_render', 'tie_admin_bar');
-
   /* 默认配置 */
   if (!isset($content_width)) {
       $content_width = 690;
