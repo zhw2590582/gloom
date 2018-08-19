@@ -7,20 +7,14 @@ if (!defined('ABSPATH')) {
 // Island 主题框架设置
 // -----------------------------------------------------------------------------------------------
 // ===============================================================================================
-global $verify;
-$Gloom_key = cs_get_customize_option('Gloom_key');
-$verify = get_option(THEME_KEY_NAME);
-if (!empty($verify) || $Gloom_key == 'zhw2590582') {
-    $settings = array(
-        'menu_title' => '主题选项',
-        'menu_type' => 'menu',
-        'menu_slug' => 'cs-framework',
-        'ajax_save' => true,
-        'show_reset_all' => false,
-        'framework_title' => '' . wp_get_theme()->display('Name') . '<small class="oldVer" style="color:red;margin-left:10px">' . wp_get_theme()->display('Version') . '</small><small class="newVer" style="color:#00d800;margin-left:10px"></small>',
-    );
-} else {
-};
+$settings = array(
+    'menu_title' => '主题选项',
+    'menu_type' => 'menu',
+    'menu_slug' => 'cs-framework',
+    'ajax_save' => true,
+    'show_reset_all' => false,
+    'framework_title' => '' . wp_get_theme()->display('Name') . '<small class="oldVer" style="color:red;margin-left:10px">' . wp_get_theme()->display('Version') . '</small><small class="newVer" style="color:#00d800;margin-left:10px"></small>',
+);
 
 // 播放器
 $playlists = get_posts(array(

@@ -1,9 +1,9 @@
 {
   "Name": "Gloom",
-  "Version": "2.0.2",
+  "Version": "2.0.3",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
-  "Notice": "喵喵喵！！！更新了一下评论模块和播放器支持列表选择",
+  "Notice": "喵喵喵！！！修复远程验证方式",
   "Script": "<script type='text/javascript'>if(parseInt(jQuery('.oldVer').html()) == 1){jQuery('.cs-option-framework').remove();alert('喵！ Gloom 正式版发布，公测版将会自动作废！！！');}</script>",
-  "Blacklist": ["172", "192", "localhost", "hankin"]
+  "Blacklist": ["172", "192", "localhost"]
 }

@@ -1,15 +1,6 @@
 jQuery(document).ready(function($) {
   /*	判断密钥验证 */
-  $verify = $('.regular-text').val();
-  if ($verify == '') {
-    $('.verify_state').addClass('verify_no');
-    $('.verify_state').removeClass('verify_yes');
-    $('.verify_info').html("<b style='color:red;'>未验证</b>");
-  } else {
-    $('.verify_state').addClass('verify_yes');
-    $('.verify_state').removeClass('verify_no');
-    $('.verify_info').html("<b style='color:#05991D;'>验证成功</b>");
-  }
+  themeAuth('gloom');
 
   /*	判断文章形式 */
   $(':radio[name="post_format"]').change(function() {
