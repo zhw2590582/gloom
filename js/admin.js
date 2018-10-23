@@ -1,6 +1,4 @@
 jQuery(document).ready(function($) {
-  /*	判断密钥验证 */
-  themeAuth('gloom');
 
   /*	判断文章形式 */
   $(':radio[name="post_format"]').change(function() {
